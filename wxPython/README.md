@@ -38,6 +38,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 （二）显示出一个窗口
 
+```pyhton
 #!/usr/bin/python
 #coding:utf-8
   
@@ -52,6 +53,7 @@ def main():
 if __name__ == '__main__':
   main()
 #这便是一个最简单的可视化窗口的实现
+```
 
 （三）添加可视化组建及简单布局
 
