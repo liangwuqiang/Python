@@ -5,7 +5,7 @@ http://www.jb51.net/article/79670.htm
 这篇文章主要介绍了在Ubuntu系统下安装使用Python的GUI工具wxPython的方法,
 wxPython可以为Python提供强大的图形化界面开发支持,需要的朋友可以参考下
 
-（一）wxpython的安装
+## （一）wxpython的安装
 
     Ubuntu下的安装，还是比较简单的。
 ```bash	
@@ -36,62 +36,67 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-（二）显示出一个窗口
+## （二）显示出一个窗口
 
 ```pyhton
 #!/usr/bin/python
 #coding:utf-8
   
 import wx
-  
+
+
 def main():
-  app = wx.App()
-  win = wx.Frame(None)
-  win.Show()
-  app.MainLoop()
+    app = wx.App()
+    win = wx.Frame(None)
+    win.Show()
+    app.MainLoop()
   
 if __name__ == '__main__':
-  main()
-#这便是一个最简单的可视化窗口的实现
+    main()
+
+# 这便是一个最简单的可视化窗口的实现
 ```
 
-（三）添加可视化组建及简单布局
+## （三）添加可视化组建及简单布局
 
-#coding:utf-8
+```python
+# coding:utf-8
   
 import wx
-  
+
+
 def main():
-  app = wx.App()
-  win = wx.Frame(None,title='NotePad',size=(440,320))
-  #很明显，title就是标题，size就是大小
+    app = wx.App()
+    win = wx.Frame(None, title='测试窗口NotePad', size=(880, 640))
+    # 很明显，title就是标题，size就是大小
   
-  bt_open = wx.Button(win,label='open',pos=(275,2),size=(80,30))
-  bt_save = wx.Button(win,label='save',pos=(355,2),size=(80,30))
-  #label就是按钮显示的标签，pos是控件左上角的相对位置，size就是控件的绝对大小
+    bt_open = wx.Button(win, label='open', pos=(275, 2), size=(80, 30))
+    bt_save = wx.Button(win, label='save', pos=(355, 2), size=(80, 30))
+    # label就是按钮显示的标签，pos是控件左上角的相对位置，size就是控件的绝对大小
   
-  text_title = wx.TextCtrl(win,pos=(5,2),size=(265,30))
-  text_content = wx.TextCtrl(win,pos=(5,34),size=(430,276),style=wx.TE_MULTILINE|wx.HSCROLL)
-  #style样式，wx.TE_MULTILINE使其能够多行输入，wx.HSCROOL使其具有水平滚动条
+    text_title = wx.TextCtrl(win, pos=(5, 2), size=(265, 30))
+    text_content = wx.TextCtrl(win, pos=(5, 34), size=(430, 276), style=wx.TE_MULTILINE|wx.HSCROLL)
+    # style样式，wx.TE_MULTILINE使其能够多行输入，wx.HSCROOL使其具有水平滚动条
   
-  win.Show()
-  app.MainLoop()
+    win.Show()
+    app.MainLoop()
   
 if __name__ == '__main__':
-  main()
+    main()
   
-#做过桌面软件开发的，对这个肯定很熟悉。
-#由于之前学过一点VB，VC，Delphi等，学起来感觉很简单。
-#将wx提供的控件添加到某个Frame上，并进行各自的属性设置即可完成
-#由于文本控件的size属性，设置的为绝对值。这样就会有一些问题......
+# 做过桌面软件开发的，对这个肯定很熟悉。
+# 由于之前学过一点VB，VC，Delphi等，学起来感觉很简单。
+# 将wx提供的控件添加到某个Frame上，并进行各自的属性设置即可完成
+# 由于文本控件的size属性，设置的为绝对值。这样就会有一些问题......
+```
 
-（四）界面布局管理
+## （四）界面布局管理
 
     由于之前的控件直接绑定在Frame上，这样会有一些问题。下面将使用Panel面板进行管理。
 
-	
-## 当然，之前说将各种控件的位置都写成绝对位置和大小，会有一些问题。这是不对的
-## 有时需要动态布局，而有时则需要静态布局
+```python	
+# 当然，之前说将各种控件的位置都写成绝对位置和大小，会有一些问题。这是不对的
+# 有时需要动态布局，而有时则需要静态布局
   
 import wx
   
@@ -130,11 +135,12 @@ if __name__ == '__main__':
   
 #这个是动态布局。当然这只是一个视图而已。
 #这只是个表面而已，灵魂不在此！
+```
 
-（五）添加控件的事件处理
+## （五）添加控件的事件处理
 
     直接上代码。
-
+```python
 #!/usr/bin/python
 #coding:utf-8
   
@@ -181,17 +187,16 @@ panel.SetSizer(bsizer_all)
   
 win.Show()
 app.MainLoop()
-                             47,0-1    Bot
   
 #######################################################
 #   打开，保存功能基本实现，但还存在很多bug。    #
 #   怎么也算自己的第二个Python小程序吧！！     #  
 ###########################################################################
-
-（六）ListCtrl列表控件的使用示例
+```
+## （六）ListCtrl列表控件的使用示例
 ListCtrl这个控件比较强大，是我比较喜欢使用的控件之一。
 下面是list_report.py中提供的简单用法：
-
+```python
 import wx
 import sys, glob, random
 import data
@@ -234,7 +239,7 @@ app = wx.PySimpleApp()
 frame = DemoFrame()
 frame.Show()
 app.MainLoop()
-
+```
  
 
 如何获取选中的项目？
