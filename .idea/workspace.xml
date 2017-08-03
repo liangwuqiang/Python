@@ -2,18 +2,192 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b9ae41-d412-4b84-a590-5faa1375a688" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pdf/wxPython.in.Action中文版.pdf" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wxPython/simpleGUI.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wxPython/simpleGUI6.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/media/simpleGUI.py" afterPath="$PROJECT_DIR$/wxPython/6_list_report.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Python.iml" afterPath="$PROJECT_DIR$/.idea/Python.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/wxPython.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/new.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/open.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/save.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/splash.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/bitmap.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-10/open.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-12/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-12/image.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-12/image.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-12/image.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-12/image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-12/masked-portrait.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/icon01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/icon02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/icon03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/icon04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/icon05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/icon06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/icon07.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/icon08.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/sm_down.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/sm_up.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/smicon01.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/smicon02.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/smicon03.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/smicon04.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/smicon05.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/smicon06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/helpfiles/testing.hhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/sound1.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/sound2.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/bare.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/hello.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/python_compare.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/sample.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/spare.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-02/dialog_scratch.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-02/images.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-02/insert.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-02/startup.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-02/toolbar.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-03/customEvent.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-03/double_event_one.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-03/menu_event.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-03/mouse_event.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-04/PyWrap.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-04/images.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-04/pycrust-foundation.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-04/pywrap" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-04/spare.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-05/abstractmodel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-05/badExample.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-05/generictable.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-05/goodExample.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-05/gridGeneric.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-05/gridModel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-05/gridNoModel.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-05/lineuptable.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-05/modelExample.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-05/testEventExample.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-05/testExample.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/example1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/example2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/example3.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/example4.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/example5.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/example6.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/example7.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/bitmap_button.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/button.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/checkbox.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/choice.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/combo_box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/gauge.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/generic_button.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/list_box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/radio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/radio_box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/slider.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/spinner.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/static_text.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/text_ctrl.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-07/text_ctrl_multiple.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-08/frame_subclass.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-08/help_context.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-08/images.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-08/mdi.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-08/miniframe.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-08/scroll_window.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-08/shaped_frame.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-08/shaped_frame_mobile.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-08/simple_frame.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-08/splitter.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/choice_box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/color_box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/dir_box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/file_box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/font_box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/image_box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/message_box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/modal_dialog.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/progress_box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/startup_tip.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/text_box.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/tips.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/validator1.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/validator2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/validator3.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-09/wizard.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-10/add_items.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-10/create_just_menu.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-10/create_simple_menu.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-10/disable_item.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-10/fancy_items.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-10/find_item.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-10/popupmenu.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-10/sub_menu.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-10/toggle_items.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-10/update_ui.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-10/with_accelerator.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-11/basicflexgridsizer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-11/basicgridsizer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-11/blockwindow.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-11/bordergridsizer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-11/boxsizer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-11/gridbagsizer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-11/mingridsizer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-11/prependgridsizer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-11/realworld.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-11/resizeflexgridsizer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-11/resizegridsizer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-11/staticboxsizer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-12/draw_image.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-12/images.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-12/radargraph.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/data.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/list_icon.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/list_list.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/list_report.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/list_report_colsort.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/list_report_etc.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/list_report_virtual.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-13/list_smicon.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-14/grid_attr.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-14/grid_basic.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-14/grid_editor.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-14/grid_headers.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-14/grid_renderer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-14/grid_size.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-14/grid_table.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-14/grid_table_basic.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-14/grid_table_header.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-15/data.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-15/tree_icons.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-15/tree_misc.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-15/tree_simple.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-15/tree_treelist.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-15/tree_virtual.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/helpfiles/Index.hhk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/helpfiles/another.hhc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/helpfiles/another.hhp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/helpfiles/another.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/helpfiles/book1.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/helpfiles/book2.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/helpfiles/contents.hhc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/helpfiles/main.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/helpfiles/page2-b.htm" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/html_help.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/html_tag.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/html_window.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/html_window_loadpage.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-16/html_window_related.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-17/printing.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-17/sample-text.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/clipboard.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/customcomposite.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/drop_source.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/drop_target.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/sound.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/timer.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/worker_threads.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/xrcsample.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/xrcsample.xrc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wxPython/README.md" afterPath="$PROJECT_DIR$/wxPython/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wxPython/simpleGUI2.py" afterPath="$PROJECT_DIR$/wxPython/simpleGUI2.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wxPython/simpleGUI3.py" afterPath="$PROJECT_DIR$/wxPython/simpleGUI3.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wxPython/simpleGUI4.py" afterPath="$PROJECT_DIR$/wxPython/simpleGUI4.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wxPython/simpleGUI5.py" afterPath="$PROJECT_DIR$/wxPython/simpleGUI5.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,77 +201,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="playMP3.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/media/playMP3.py">
+      <file leaf-file-name="bare.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/bare.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="264">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="saveLog.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/media/saveLog.py">
+      <file leaf-file-name="clipboard.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/clipboard.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <state relative-caret-position="-1344">
+              <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wxPython/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="2124">
-                <caret line="201" column="7" lean-forward="false" selection-start-line="201" selection-start-column="7" selection-end-line="201" selection-end-column="7" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="simpleGUI4.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wxPython/simpleGUI4.py">
+      <file leaf-file-name="hello.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/hello.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="simpleGUI3.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wxPython/simpleGUI3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="simpleGUI5.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wxPython/simpleGUI5.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="804">
-              <caret line="37" column="33" lean-forward="false" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="6_list_report.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wxPython/6_list_report.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#34#43#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -143,11 +272,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1653" />
-    <option name="y" value="-4" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1565" />
+    <option name="y" value="123" />
     <option name="width" value="1430" />
-    <option name="height" value="864" />
+    <option name="height" value="836" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -196,16 +325,6 @@
             </path>
             <path>
               <item name="Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-              <item name="pdf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-              <item name="wxPython" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -222,6 +341,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pdf" />
     </key>
   </component>
@@ -237,37 +357,37 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.simpleGUI5">
-    <configuration name="simpleGUI (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.clipboard">
+    <configuration name="bare" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wxPython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wxPythonInAction-src/Chapter-01" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wxPython/simpleGUI2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/bare.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="simpleGUI2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="clipboard" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wxPython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wxPythonInAction-src/Chapter-18" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wxPython/simpleGUI3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/clipboard.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -324,19 +444,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.simpleGUI (1)" />
-      <item index="1" class="java.lang.String" itemvalue="Python.simpleGUI2" />
-      <item index="2" class="java.lang.String" itemvalue="Python.simpleGUI3" />
-      <item index="3" class="java.lang.String" itemvalue="Python.simpleGUI4" />
-      <item index="4" class="java.lang.String" itemvalue="Python.simpleGUI5" />
+      <item index="0" class="java.lang.String" itemvalue="Python.simpleGUI3" />
+      <item index="1" class="java.lang.String" itemvalue="Python.simpleGUI4" />
+      <item index="2" class="java.lang.String" itemvalue="Python.simpleGUI5" />
+      <item index="3" class="java.lang.String" itemvalue="Python.bare" />
+      <item index="4" class="java.lang.String" itemvalue="Python.clipboard" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.simpleGUI5" />
-        <item index="1" class="java.lang.String" itemvalue="Python.simpleGUI4" />
-        <item index="2" class="java.lang.String" itemvalue="Python.simpleGUI3" />
-        <item index="3" class="java.lang.String" itemvalue="Python.simpleGUI2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.simpleGUI (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.clipboard" />
+        <item index="1" class="java.lang.String" itemvalue="Python.bare" />
+        <item index="2" class="java.lang.String" itemvalue="Python.simpleGUI5" />
+        <item index="3" class="java.lang.String" itemvalue="Python.simpleGUI4" />
+        <item index="4" class="java.lang.String" itemvalue="Python.simpleGUI3" />
       </list>
     </recent_temporary>
   </component>
@@ -366,13 +486,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="-4" width="1440" height="904" extended-state="6" />
-    <editor active="true" />
+    <frame x="1565" y="123" width="1430" height="836" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2718795" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27384394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3606789" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -636,14 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/media/playMP3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wxPython/simpleGUI3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -702,6 +813,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wxPython/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-192">
+            <caret line="201" column="7" lean-forward="false" selection-start-line="201" selection-start-column="7" selection-end-line="201" selection-end-column="7" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/media/saveLog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8">
@@ -710,14 +832,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wxPython/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="2124">
-            <caret line="201" column="7" lean-forward="false" selection-start-line="201" selection-start-column="7" selection-end-line="201" selection-end-column="7" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/media/playMP3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/hello.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/bare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-18/clipboard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1344">
+          <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
