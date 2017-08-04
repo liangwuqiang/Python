@@ -14,6 +14,12 @@ tk.mainloop()
 ## Tkinter控件
 
 #### Button(按钮)
+Button(frame, text="QUIT", fg="red", command=frame.quit)
+
+destroy只有你在特殊的环境下运行这个例子才需要;
+当时间循环被终止的时候，它会明确的释放这个窗口。
+一些开发环境只有调用这个方法才会终止Python进程。
+
 #### Entry(输入框)
 #### Label(标签)
 ![](images/de7382bc.png)

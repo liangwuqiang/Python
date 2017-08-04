@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b9ae41-d412-4b84-a590-5faa1375a688" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/someSimple/images/045e691b.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/someSimple/images/de7382bc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/preferred-vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/someSimple/Tkinter控件使用方法.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/someSimple/a.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/someSimple/aSimpleHelloWorld.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/someSimple/b.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/someSimple/c.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/someSimple/d.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/someSimple/e.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/someSimple/f.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/someSimple/g.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/someSimple/h.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pdf/wxPython.in.Action中文版.pdf" afterPath="$PROJECT_DIR$/wxPythonInAction-src/wxPython.in.Action中文版.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/someSimple/i.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/hello.py" afterPath="$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/hello.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/someSimple/Tkinter控件使用方法.md" afterPath="$PROJECT_DIR$/someSimple/Tkinter控件使用方法.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,8 +32,8 @@
         <entry file="file://$PROJECT_DIR$/someSimple/Tkinter控件使用方法.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="248">
-                <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+              <first_editor relative-caret-position="270">
+                <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -66,48 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="python_compare.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/python_compare.py">
+      <file leaf-file-name="i.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/someSimple/i.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="227">
+              <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="save.bmp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/save.bmp">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="example1.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/example1.py">
+      <file leaf-file-name="Tkinter.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/lib/python2.7/lib-tk/Tkinter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1995">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="h.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/someSimple/h.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="f.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/someSimple/f.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
+            <state relative-caret-position="141">
+              <caret line="2144" column="8" lean-forward="false" selection-start-line="2144" selection-start-column="8" selection-end-line="2144" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -166,6 +126,7 @@
         <option value="$PROJECT_DIR$/someSimple/f.py" />
         <option value="$PROJECT_DIR$/someSimple/h.py" />
         <option value="$PROJECT_DIR$/someSimple/Tkinter控件使用方法.md" />
+        <option value="$PROJECT_DIR$/someSimple/i.py" />
       </list>
     </option>
   </component>
@@ -222,49 +183,7 @@
             <path>
               <item name="Python" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python" type="462c0819:PsiDirectoryNode" />
-              <item name="wxPythonInAction-src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-              <item name="wxPythonInAction-src" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter-01" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-              <item name="wxPythonInAction-src" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter-02" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-              <item name="wxPythonInAction-src" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter-03" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-              <item name="wxPythonInAction-src" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter-04" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-              <item name="wxPythonInAction-src" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter-05" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-              <item name="wxPythonInAction-src" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter-06" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Python" type="462c0819:PsiDirectoryNode" />
-              <item name="wxPythonInAction-src" type="462c0819:PsiDirectoryNode" />
-              <item name="Chapter-07" type="462c0819:PsiDirectoryNode" />
+              <item name="someSimple" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Python" type="b2602c69:ProjectViewProjectNode" />
@@ -285,12 +204,12 @@
     <property name="settings.editor.splitter.proportion" value="0.1799861" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/wxPythonInAction-src" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pdf" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wxPythonInAction-src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -305,24 +224,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.h">
-    <configuration name="d" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/someSimple" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/someSimple/d.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
+  <component name="RunManager" selected="Python.i">
     <configuration name="e" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -391,20 +293,37 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="i" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/someSimple" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/someSimple/i.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.d" />
-      <item index="1" class="java.lang.String" itemvalue="Python.e" />
-      <item index="2" class="java.lang.String" itemvalue="Python.f" />
-      <item index="3" class="java.lang.String" itemvalue="Python.g" />
-      <item index="4" class="java.lang.String" itemvalue="Python.h" />
+      <item index="0" class="java.lang.String" itemvalue="Python.e" />
+      <item index="1" class="java.lang.String" itemvalue="Python.f" />
+      <item index="2" class="java.lang.String" itemvalue="Python.g" />
+      <item index="3" class="java.lang.String" itemvalue="Python.h" />
+      <item index="4" class="java.lang.String" itemvalue="Python.i" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.h" />
-        <item index="1" class="java.lang.String" itemvalue="Python.f" />
-        <item index="2" class="java.lang.String" itemvalue="Python.g" />
-        <item index="3" class="java.lang.String" itemvalue="Python.e" />
-        <item index="4" class="java.lang.String" itemvalue="Python.d" />
+        <item index="0" class="java.lang.String" itemvalue="Python.i" />
+        <item index="1" class="java.lang.String" itemvalue="Python.h" />
+        <item index="2" class="java.lang.String" itemvalue="Python.f" />
+        <item index="3" class="java.lang.String" itemvalue="Python.g" />
+        <item index="4" class="java.lang.String" itemvalue="Python.e" />
       </list>
     </recent_temporary>
   </component>
@@ -437,7 +356,7 @@
     <frame x="1440" y="-4" width="1440" height="904" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15494978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15494978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38451612" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -468,13 +387,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/media/playMP3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/media/simpleGUI.py" />
     <entry file="file://$PROJECT_DIR$/media/mediaList.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -709,13 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python2.7/lib-tk/Tkinter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="889" column="0" lean-forward="false" selection-start-line="889" selection-start-column="0" selection-end-line="889" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/someSimple/c.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -753,34 +658,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/someSimple/h.py">
+    <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/example1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="2266">
+          <caret line="103" column="18" lean-forward="true" selection-start-line="103" selection-start-column="18" selection-end-line="103" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/someSimple/Tkinter控件使用方法.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="248">
-            <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <js_state />
-          </second_editor>
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/save.bmp">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/hello.py">
+    <entry file="file://$PROJECT_DIR$/someSimple/h.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -796,15 +687,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/save.bmp">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-01/hello.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wxPythonInAction-src/Chapter-06/example1.py">
+    <entry file="file:///usr/lib/python2.7/lib-tk/Tkinter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1995">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="141">
+          <caret line="2144" column="8" lean-forward="false" selection-start-line="2144" selection-start-column="8" selection-end-line="2144" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/someSimple/Tkinter控件使用方法.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="270">
+            <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/someSimple/i.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
           <folding />
         </state>
       </provider>
