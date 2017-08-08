@@ -22,14 +22,17 @@ html_template = """
 def parse_url_to_html(url, index):
     """ 通过url获得文本内容,并存入文件中 """
     try:
-        print(url)
-        print(index)
-        # url = "https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001432339247097eea476bf61f8496092cc1b663eae1848000"
-        response = requests.get(url)
-        soup = BeautifulSoup(response.content, "html.parser")
+        print("测试开始")
+        url2 = "https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001432339247097eea476bf61f8496092cc1b663eae1848000"
+        if url.split() == url2:
+            print(url)
+            print(index)
+        print("测试结束")
+        # response = requests.get(url)
+        # soup = BeautifulSoup(response.content, "html.parser")
         # 本地测试
-        # with open("test.html") as f:  # 本地测试
-        #     soup = BeautifulSoup(f.read(), "html.parser")  # 本地测试
+        with open("test.html") as f:  # 本地测试
+            soup = BeautifulSoup(f.read(), "html.parser")  # 本地测试
 
         # 正文内容
         body = soup.find_all(class_="x-wiki-content")[0]
@@ -62,7 +65,7 @@ def parse_url_to_html(url, index):
         with open(filename, 'w') as f:
             f.write(html)
 
-        time.sleep(5)
+        time.sleep(1)
 
     except Exception as e:
         print(e)
