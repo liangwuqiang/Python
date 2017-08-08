@@ -22,26 +22,8 @@ html_template = """
 def parse_url_to_html(url, index):
     """ 通过url获得文本内容,并存入文件中 """
     try:
-<<<<<<< HEAD
-        print("测试开始")
-        url2 = "https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001432339247097eea476bf61f8496092cc1b663eae1848000"
-        if url.split() == url2:
-            print(url)
-            print(index)
-        print("测试结束")
         # response = requests.get(url)
         # soup = BeautifulSoup(response.content, "html.parser")
-=======
-        # print('测试开始')
-        # url2 = "https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/00143278155868605a65e244e6642dfa533753e6338ab5b000"
-        # url3 = "https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014323396477522f8ff26917934f53b49559ab4dc5eab2000"
-        # if url.strip() == url2:
-        #     print(url)
-        #     print(index)
-        # print('测试结束')
-        response = requests.get(url)
-        soup = BeautifulSoup(response.content, "html.parser")
->>>>>>> 930707110a1902649f2bbb3a22e0ad5362809db2
         # 本地测试
         with open("test.html") as f:  # 本地测试
             soup = BeautifulSoup(f.read(), "html.parser")  # 本地测试
@@ -89,12 +71,6 @@ def main():
     #       "0014323396477522f8ff26917934f53b49559ab4dc5eab2000"
     # file_index = 0
     with open("list.txt") as f:
-        # for url in f.readlines():
-            # parse_url_to_html(url, file_index)
-            # print(url)
-            # print(file_index)
-            # file_index += 1
-            # time.sleep(2)
         htmls = [parse_url_to_html(url.strip(), index) for index, url in enumerate(f.readlines())]
         return htmls
 
