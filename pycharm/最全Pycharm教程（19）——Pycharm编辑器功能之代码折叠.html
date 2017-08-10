@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（19）——Pycharm编辑器功能之代码折叠</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在一些情况下，如果某些代码显得不太重要，我们可以通过Pycharm的代码折叠功能将其折叠为一行。在接下来的部分我们将介绍代码折叠功能基本用法。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、代码可折叠轮廓线以及折叠开关</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，我们观察一下代码左侧的折叠线。这条细线显示在代码左侧，标记了代码块区域。当代码处于未折叠状态时，线的开头和结尾分别显示折叠开关<img alt="" src="images/a6739f7664583686fc350fcb74b4e3e6.png" style="border:0px">和<img alt="" src="images/480370f6d634eb489de0217cddb4dfab.png" style="border:0px">；当代码块折叠之后，两个开关标志将会合并成一个<img alt="" src="images/831769d8ad9c0625f63f738dbac5eca2.png" style="border:0px">，折叠后的代码只显示第一行，其他行隐藏在三个点号后面。单击这个加号的标志即可将折叠代码展开。</img></img></img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　将鼠标指针悬停在折叠线上，折叠线会加粗显示：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/57143ad57861cd168e7cb62dfe261b4d.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　注意在这里我们可以取消折叠先的显示。单开设置对话框，在<strong>Editor</strong>节点下，单击<strong>Code Folding</strong>页面，取消<strong>Show code folding outline</strong>复选框的勾选。当折叠线不可见时，我们只能通过菜单命令（<strong>Code | Folding | Expand/Collapse</strong>）或者快捷键来实现代码的折叠。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、浏览折叠后隐藏的代码</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　加入你希望能够在不展开代码块的情况下查看折叠代码的内容，操作非常简单，只需将鼠标指针悬停在三个点号上，Pycharm就会弹出一个临时窗口来显示折叠的代码内容：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/215dd0c54203634aedcdfc0db5d1e946.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm也会默认将超出当前编辑区域的代码块显示完整。如下图所示：文件开头的代码部分在当前编辑环境下不可见（超出当前编辑框的显示范围）， 不过我们不必拖动滚动条来浏览那部分未显示的内容，只需将鼠标悬停在代码块结束标记<img alt="" src="images/480370f6d634eb489de0217cddb4dfab.png" style="border:0px">，Pycharm会自动弹出窗口来补全显示当前的代码块：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/b467aeb24f654eabc5317d743bb58984.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、默认代码块的折叠规则</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　默认情况下折叠先会标记类和函数的实现部分，折叠也是针对这部分代码块进行的，即默认折叠一个类、一个函数。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、折叠任意代码片</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　假设，你希望折叠几句零散的程序，而这些语句并不属于默认可折叠的代码块（不是一个完整的类或函数），如何做到？</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先选中你希望折叠的代码片</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/13d451876b8b6a30248691609b048a7c.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然后进行以下操作（三选一即可）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　在主菜单选择<strong>Code | Folding | Fold Selection/Remove Region</strong>菜单命令。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　右击选中的代码片，在快捷菜单中选择<strong>Folding | Fold Selection/Remove Region</strong></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　按下<strong>Ctrl+Period</strong>快捷键</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9a60d97ac9faeaba03031068f8f209cb.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时选中的代码片被折叠隐藏。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　需要注意的就是所选代码片应该位于类体或者函数体内，如果我们选择了类或函数开头的定义部分，是无法对这部分代码进行折叠隐藏的。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、使用双行注释来注释代码</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm提供了两种逻辑代码块环绕注释方式<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/surrounding-blocks-of-code-with-language-constructs.html" rel="nofollow" target="_blank">surround</a>：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　VisualStudio模式：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/e41b6e9daed68d5aaefb23c9b47476aa.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　NetBeans模式：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/bf1f3ce1b2def9713a6b1240adfe18c5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　具体操作如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）选中待环绕注释的代码块</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）以下操作二选一</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　使用<strong>Code | Surround with</strong>主菜单命令</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　按下<strong>Ctrl+Alt+T</strong></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）在弹出的快捷菜单中选择需要的注释风格：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/7e4ecfe23abb3c6c2b2ac723d377c52a.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（4）输入一些必要的注释描述</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当通过这种方法对代码片进行环绕注释之后，折叠开关会显示在注释行左侧：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/a7652eadc18c355845ca7a83c1beb5bd.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击折叠开关可折叠对应代码片，只显示添加的环绕注释信息：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4e5fc298a00be46503c5c1ac30699d4a.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多有关代码折叠功能的信息参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/code-folding.html" rel="nofollow" target="_blank">here</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　</p>
+</div>
+</body></html>

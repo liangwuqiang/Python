@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（42）——Pycharm扩展功能之Emacs外部编辑器</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　介绍如何将Emacs定义为一个Pycharm外部编辑器。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Pycharm版本为2.7或更高</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）下载了<a class="external-link" href="http://www.gnu.org/software/emacs/#Obtaining" rel="nofollow" target="_blank">downloaded</a>Emacs并正确安装</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、配置Emacs</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　打开设置对话框，在IDE settings节点下，打开 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/external-tools.html" rel="nofollow" target="_blank">External tools</a>页，确认Emacs的安装情况。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，在 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/external-tools.html" rel="nofollow" target="_blank">External tools</a>页，单击绿色加号，打开 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/edit-tool-dialog.html" rel="nofollow" target="_blank">Create/Edit
+ tool dialog box</a>对话框：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　做以下工作：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）输入工具名（Emacs）、简要描述（open Emacs）</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）指定出现的菜单栏工具组。这里放到Editors菜单组中，也可以放到主菜单栏</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）取消Open console勾选</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（4）定义Emacs二进制文件位置，可以手动输入也可以浏览选择</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（5）在<span class="shortcut">Parameters栏</span>输入默认打开的文件路径$FilePath$</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（6）指定工作目录（例如$ProjectFileDir$）</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（7）单击OK</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/84495a17dc8e427432af566b5c70fbf5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　设置生效。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、在Emacs中打开当前文件</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击<span class="shortcut">Tools菜单栏中的Editors节点中的<span class="shortcut">Emacs命令：</span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut"><img alt="" src="images/76f6da7fedacfed68e852037c5f0abe4.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+ </p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　打开<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/opening-and-reopening-files-in-the-editor.html" rel="nofollow" target="_blank">open a file in the PyCharm editor</a>对话框，在<span class="shortcut">Tools菜单，选择Editors→Emacs：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut"><img alt="" src="images/9ec4ed26539ac7ae72a51185bd371607.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、指定快捷键</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　打开设置对话框，在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/keymap.html" rel="nofollow" target="_blank">Keymap</a>页的下拉列表中找到External Tools节点，展开Editors，右击Emacs节点，选择Add keyboard shortcut：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4e5c8c617a103e374c6b5a9c0bd1195d.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　打开<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/enter-keyboard-shortcut-dialog.html" rel="nofollow" target="_blank">Enter keyboard shortcut</a> 对话框，这里输入Ctrl+Alt+Shift+E组合：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/1bc0eb30c6123f82c1a6ca4542194156.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　没有提示冲突，单击OK按钮，快捷键设置完成：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/615c92285b7ed621b0142bd410c1d429.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　</p>
+</div>
+</body></html>

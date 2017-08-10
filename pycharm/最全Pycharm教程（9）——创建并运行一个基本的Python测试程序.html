@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（9）——创建并运行一个基本的Python测试程序</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50100121" target="_blank">最全Pycharm教程（1）——定制外观</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50113593" target="_blank">最全Pycharm教程（2）——代码风格</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50130991" target="_blank">最全Pycharm教程（3）——代码的调试、运行</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50135135" target="_blank">最全Pycharm教程（4）——有关Python解释器的相关配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50144201" target="_blank">最全Pycharm教程（5）——Python快捷键相关设置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50148219" target="_blank">最全Pycharm教程（6）——将Pycharm作为Vim编辑器使用</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50170551" target="_blank">最全Pycharm教程（7）——虚拟机VM的配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50158239" target="_blank">最全Pycharm教程（8）——Django工程的创建和管理</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这里我们着重介绍Pycharm如何帮助我们创建并运行一个基本的测试程序。至于如何编写具体的测试程序，参见之前的文章。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　确认你电脑上已经安装了Python解释器，2.4到3.3的版本均可。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、创建一个简单的Python工程</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在主菜单中，选择<strong>File | New Project </strong></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在创建工程对话框中，输入工程名称（这里暂定为TestSamples），选择工程类型（这里选择一个空的工程），并指定Python解释器版本：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/15a3249c54a6ca1f07b71150ac43aea3.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击OK，选择显示工程所需窗口，这里我们选择第一个选项——在一个独立的新窗口打开我们的工程：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/50826318dd28f67c99277e8e881c73be.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、创建一个Python类</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　按下<strong>Alt+Insert，</strong>选择Python file：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/b9fbf5991d1811443338f004fe4877f3.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在新建Python对话框中，输入文件名称：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/47cb559a9083db302de121469ad00be9.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　可以看到新建的Python文件中已经定义好了__author<em> __</em>以及__project__变量，接下来我们创建一个简单的脚本来实现解二次方程的功能：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/515cc904aea6d1cc04ee2c07c50fa965.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、创建测试程序</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　右击类名，在快捷菜单中选择<strong>Go to | Test</strong>（也可以直接按<strong>Ctrl+Shift+T</strong>）：<br>
+</br></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/0c3689c54560c349b50ba7adf92f96c3.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在<strong>Create test</strong>对话框中，输入路径和名称，勾选复选框中的<strong>test_demo</strong>函数选项：<br>
+</br></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/86fc712e6d2fca99c3b2eff133b1918f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　结果如下 ：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/7c3ae7ceb9e5e338eb15ea2d5b4b8a3e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如你所见，所创建的测试程序满足<a class="external-link" href="http://docs.python.org/2/library/unittest.html" rel="nofollow" target="_blank">Python unit testing framework</a>标准——从unittest模块中导入响应的测试类，并将测试函数名称加上 “test”前缀。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然而，目前的测试单元只是一个基本的框架，需要进行修改。首先导入相关模块：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/29bdee9c883a9b1274258ae63c2f6279.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在输入时建议使用拼写提示功能，通过<strong>Ctrl+Space</strong>组合键，Pycharm将给出合适的模块及类名称提示：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/00ac148498842ce9f9e4fddd0477edd4.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果import声明的语句显示为灰色，则说明当前导入的模块还没有被使用。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们创建一个函数用来抛出判别式为负数的异常，向test类中加入以下代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4aae814d736f1d7d7e44285d37c77c6d.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　测试单元的最终代码如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/eb1b6e2bea7cca011ccebcfc2736a19b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　我们的测试方案包含两个测试方法：test_negative_discr and test_demo，当然后者通常不会被执行。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　注意此时的import语句已经不再变灰色，因为我们已经在test_negative_discr函数中用到了Solver类。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、创建测试方案的其他方法</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　让我们尝试其他方法来创建测试方案。按下Alt+Insert组合键，在弹出的菜单中选择<strong>Python file</strong>，接下来在<strong>New Python file</strong>对话框Kind中选择Python unit test选项，然后键入测试方案名称：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/bfb7c3cb66c5c25e34f9a0593ce6e161.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时Pycharm会创建并初始化一个解决方案程序，打开并编辑它：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/e5371d3515e8f1761b9f27fe718279b6.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　和之前的步骤类似，最终的测试代码为：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/a027d12e6b05a23faa736d0d4709e212.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、运行测试单元</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　为了执行我们的测试单元，Pycharm建议使用一个新的配置文件 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/run-debug-configuration.html" rel="nofollow" target="_blank">run/debug configuration</a>，这个配置模板已经是预先定义好的，我们直接使用即可。按下<strong>Ctrl+Shift+F10</strong>，或者在类内右击，选择<strong>Run
+ unittests in test_solver</strong>：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　运行结果如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/b69892d58f8059f2bf5de5cf0c35c8af.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　 </p>
+</div>
+</body></html>

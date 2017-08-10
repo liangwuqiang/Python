@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（29）——再探IDE，速成手册</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）确认安装了Python解释器，版本2.4到3.4均可。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）注意Pycharm有两个发布版本：社区版和专业版，详见 <a class="external-link" href="http://www.jetbrains.com/pycharm/features/editions_comparison_matrix.html" rel="nofollow" target="_blank">Edition Comparison Matrix</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、初始化安装</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　第一次安装Pycharm时，安装程序会咨询你几个重要问题：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）是否已经预先保存了设置信息（例如早期版本的配置信息）</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）许可证信息</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）选择何种快捷键配置和背景主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4be83a70bb60da232dd6b96b497c0cf3.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　注意这里Pycharm预设了好几种快捷键方案，有诸如Eclipse或者Visual Studio的，也有针对Emacs粉丝量身打造的GNOME、KDE等等。具体参见设置对话框中<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/keymap.html" rel="nofollow" target="_blank">Keymap page</a>页的快捷键方案列表。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　对于Vim专业户，PyCharm建议使用<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Configuring+PyCharm+to+work+as+a+Vim+editor" rel="nofollow" target="_blank">IdeaVim plugin</a>插件。同样对于那些习惯Emacs开发的用户，Python同样提供了相关外部插件<strong> <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Configuring+PyCharm+to+work+as+a+Vim+editor" rel="nofollow" target="_blank">use
+ it as an external editor</a></strong>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然我们可以在后期对初始设置进行更改，详见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/configuring-keyboard-shortcuts.html" rel="nofollow" target="_blank">documentation</a>以及以下两篇教程：</p>
+<ul style="margin-left:0px; padding-left:40px; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Getting+Started+with+PyCharm" rel="nofollow" target="_blank">Getting started with PyCharm</a></li><li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Configuring+keyboard+schemes" rel="nofollow" target="_blank">Configuring keyboard schemes</a></li></ul>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、欢迎界面设置</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果你第一次使用Pycharm（尚未创建工程），则你会首先进入欢迎界面 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/welcome-screen.html" rel="nofollow" target="_blank">Welcome screen</a>。单击Configure，Pycharm会提示你来核实当前有关环境、插件、导入导出以及其他相关的外部配置。再次单击Configure，进入<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/settings-preferences-dialog.html" rel="nofollow" target="_blank">Settings/Preferences
+ dialog</a>配置对话框，注意这里对话框标题默认为“Default Project”：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/d3900b202832a5834fe69b3b38d1f8e4.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这就意味着每次你创建新的工程时都会默认使用如上配置。假设你希望所有新创建的工程都使用相同的解释器，可以在Default Project settings中设置 <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Configuring+Interpreters+with+PyCharm" rel="nofollow" target="_blank">define such an interpreter</a>：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/6e42d764800ac129b98456fbc5295cf8.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这里同样可以设置默认的编辑环境。例如你希望一直显示代码的行号，则需要在设置对话框中，展开Editor节点，在 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/editor-appearance.html" rel="nofollow" target="_blank">Appearance page</a>页面将“Show line numbers”所对应的复选框勾选：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9b49f7ebe41e429dfc00559c21018ac2.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来假设你希望使用特定的颜色主题，OK，选择基本主题，拷贝，然后改变配色方案即可（系统预设的颜色主题是不可更改的）。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然字体大小也是可以改变的。这些都需要在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/editor-colors-and-fonts.html" rel="nofollow" target="_blank">Colors and Fonts settings</a>页面进行操作。同样的你需要先创建一个主题备份，定义编辑器的字体大小，这些设置会作用于编辑器字体，但不会对其他控件区域的字体造成改变。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　我们可以在预览窗口预览更改后的效果：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9e8b3fc269ac19f72611bd6caec25822.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多详细的外观主题设置参见教程<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/What+my+PyCharm+looks+like%2C+or+choosing+Look+and+Feel" rel="nofollow" target="_blank">What my PyCharm looks like</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然在一个项目创建完成后，我们仍可以随时对其进行更改，这将在下面的章节<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/What+my+PyCharm+looks+like%2C+or+choosing+Look+and+Feel" rel="nofollow" target="_blank">What my PyCharm looks like</a>进行讨论。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最后，你可以选择隐藏/显示用户界面的一些控件：工具栏按钮、菜单栏按钮、主工具栏按钮等。Pycharm还允许你选择视图模式，详见：</p>
+<ul style="margin-left:0px; padding-left:40px; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/pycharm-tool-windows.html" rel="nofollow" target="_blank">PyCharm tool windows</a></li><li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/viewing-modes.html" rel="nofollow" target="_blank">Presentation and Full Screen viewing modes</a></li></ul>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、工程</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　你在Pycharm中所做的任何操作都应该属于某个工程。最有意思的是Pycharm的工程管理器，它允许我们在一个框架下打开多个工程<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/opening-multiple-projects.html" rel="nofollow" target="_blank">open multiple projects in one frame</a>。当你创建了一个新的工程（File
+ →New Project）或者打开一个现有的工程（File →Open），Pycharm会咨询你用哪种方式打开：单独在一个新窗口，还是添加到当前窗口。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　你可以根据需要在一个窗口中打开多个工程。此时第一个工程被认为是主工程，其他工程的符号在主工程中均可用。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　尝试创建一个新的工程作为练习，并输入一些代码。详见<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Getting+Started+with+PyCharm" rel="nofollow" target="_blank">Getting started with PyCharm</a>，重点参见 <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Getting+Started+with+PyCharm#GettingStartedwithPyCharm-CreatingasimplePythonprojectinPyCharm" rel="nofollow" target="_blank">Creating
+ a simple project</a>部分。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、工程类型</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm提供了各种各样的工程类型：Django、Flask、Pyramid、web2py等等。创建工程时根据需要在列表中选择对应的工程类型。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/a717ae6debbc797b24ea08336a80f4df.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　可见Pycahrm支持所有的Python主流框架，并会帮助生成对应的文件结构以及必要组件，详见：</p>
+<ul style="margin-left:0px; padding-left:40px; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/django.html" rel="nofollow" target="_blank">Django</a></li><li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/flask.html" rel="nofollow" target="_blank">Flask</a></li><li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/pyramid.html" rel="nofollow" target="_blank">Pyramid</a></li><li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/google-app-engine.html" rel="nofollow" target="_blank">Google App Engine</a></li><li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://web2py/" rel="nofollow" target="_blank">Web2Py</a></li></ul>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、开始</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时工程已经创建完毕，在开始工作之前，按两下<span class="shortcut">Shift键，会弹出一个窗口，供我们查找和跳转：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut"><img alt="" src="images/58fa75abd5d0d88c2d54d9753face7dc.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如你所见，在这里可以搜索Pycharm的任何信息，命令、设置信息、文件信息、控件等等。这只是Pycharm搜索导航功能的一部分。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、工程的私人订制</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击主工具栏的设置按钮进入设置对话框，<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/settings-preferences-dialog.html" rel="nofollow" target="_blank">Settings/Preferences dialog box</a>，在这里可以改变项目结构、控件安装、调节开发环境。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　一些设置是主要针对具体工程的，如工程解释器类型、配置属性、文件颜色等。其他例如编辑框设置、快捷键、生成模板等则是针对整体的开发环境，无需依赖某个具体工程。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　8、工程解释器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Python解释器时必需的，若解释器配置失效，Pycharm会给出如下错误提示：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4d4a81913dba6b9c1de8e9ba57bfd4df.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在Pycharm你可以同时定义若干解释器，然后选择一个应用于工程中。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　总之，必须明确告诉Pycharm使用哪个解释器以方便其<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/project-interpreter.html" rel="nofollow" target="_blank">use a different interpreter for each project</a>：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/11b79f568c62cb8ccd871ccb62f0f037.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm解释器类型包括以下几种：</p>
+<ul style="margin-left:0px; padding-left:40px; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<li style="margin-left:0px; padding-left:0px"><a href="http://confluence.jetbrains.com/display/PYH/Exploring+the+IDE.+Quick+Start+Guide#ExploringtheIDE.QuickStartGuide-local" target="_blank">Local</a></li><li style="margin-left:0px; padding-left:0px"><a href="http://confluence.jetbrains.com/display/PYH/Exploring+the+IDE.+Quick+Start+Guide#ExploringtheIDE.QuickStartGuide-remote" target="_blank">Remote</a></li><li style="margin-left:0px; padding-left:0px"><a href="http://confluence.jetbrains.com/display/PYH/Exploring+the+IDE.+Quick+Start+Guide#ExploringtheIDE.QuickStartGuide-venv" target="_blank">Virtual environments</a></li></ul>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　9、本地解释器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最直接的使用解释器的方式，下载Python解释器，安装到本地，执行……，详见 <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Configuring+Interpreters+with+PyCharm#ConfiguringInterpreterswithPyCharm-Localinterpreter" rel="nofollow" target="_blank">tutorial</a>或者<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/configuring-local-python-interpreters.html" rel="nofollow" target="_blank">product
+ documentation</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　10、远程解释器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm允许使用远程解释器，例如通过可靠的服务器来完成。此前Pycharm需要先通过 <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Configuring+Interpreters+with+PyCharm#ConfiguringInterpreterswithPyCharm-RemoteinterpreterviaSSH" rel="nofollow" target="_blank">SSH connection</a>或者 <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Configuring+Interpreters+with+PyCharm#ConfiguringInterpreterswithPyCharm-Remoteinterpreterviavirtualbox" rel="nofollow" target="_blank">Vagrant
+ box</a>来进行远程解释器配置，详见 <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Configuring+Interpreters+with+PyCharm" rel="nofollow" target="_blank">Configuring interpreters with PyCharm</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<strong>　　</strong>11、虚拟环境</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　重要性？假设你正在使用Django 1.6编写一个工程，同时你需要支持另外一个要求使用Django 1.2的工程，此时你需要通过某种手段来保证你操作环境的安全性和一致性，也就是通过一个工具创建一个Python编译器的拷贝。具体如何创建虚拟环境参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/creating-virtual-environment.html" rel="nofollow" target="_blank">documentation</a>以及<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Configuring+Interpreters+with+PyCharm#ConfiguringInterpreterswithPyCharm-Virtualenvironment" rel="nofollow" target="_blank">tutorial</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　12、第三方库及其路径</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如论哪个版本的解释器，Pycharm能够帮助我们安装和更新一些必需的第三方库。例如当Pycharm检测到一些缺失的或者待更新的第三方库之后，会提示我们进行安装和更新：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/fab711af937998c599edb7ba8370bf5c.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　对于路径的更新也同样适用。如果安装或更新了库，建议重新扫描一下Python的安装目录。单击<img alt="" src="images/cd0cb15e83c9ce2eef4b39d66d068df1.png" style="border:0px">按钮，选择more。然后在工程解释器设置对话框中，选择要浏览的解释器，单击<img alt="" src="images/01e981f4dff779db1e9379d9be7eeb85.png" style="border:0px">按钮，在解释器路径对话框中，单击<img alt="" src="images/976d4f688aa7f294f00f49050c3c5cf0.png" style="border:0px">按钮进行库更新。</img></img></img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/2336b7d76e7db0ab9211688913f90033.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　其他详细信息参见 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/python-interpreters.html" rel="nofollow" target="_blank">product documentation</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　13、VCS（版本控制系统）</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm帮助我们对已有工程进行版本控制。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然我们可以对其进行微调。在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/settings-preferences-dialog.html" rel="nofollow" target="_blank">Settings/Preferences dialog</a>对话框中单击Version Control节点（Project Settings→Version Control），默认情况下只能看到工程的根目录，但是你可以将你的应用分割成更小的块进行管理。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/settings-preferences-dialog.html" rel="nofollow" target="_blank">Settings/Preferences dialog</a>对话框中，更改的命令行为将会应用于所有的版本控制系统：创建/删除文件的确认信息、后台控制方式等等。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多内容参见：</p>
+<ul style="margin-left:0px; padding-left:40px; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Version+control+basics" rel="nofollow" target="_blank">Version control basics</a></li><li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Using+PyCharm%27s+Git+integration+locally" rel="nofollow" target="_blank">Using PyCharm's Git integration locally</a></li><li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Sharing+via+a+remote+repository" rel="nofollow" target="_blank">Sharing via a remote repository</a></li></ul>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　也可以参考Pycharm文档：</p>
+<ul style="margin-left:0px; padding-left:40px; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/version-control-with-pycharm.html" rel="nofollow" target="_blank">Version control with PyCharm</a></li><li style="margin-left:0px; padding-left:0px"><a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/version-control-with-pycharm-2.html" rel="nofollow" target="_blank">Version control procedures</a></li></ul>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　14、文件颜色</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　你的工程中可能包含若干工程，每个工程目录下的文件名都可能相同（例如<span class="code">init.py, models.py, tests.py, views.py等</span>），当它们同时在编辑器中打开时，为了方便区分其各自归属于哪个工程，Pycahrm通过其标签颜色来进行标记（Settings/Preferences→Project Settings→File Colors）。尝试将你的工程分片，然后分别制定其文件配色方案。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多信息参见 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/configuring-scopes-and-file-colors.html" rel="nofollow" target="_blank">Configuring scopes and file colors</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　15、IDE和编辑器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　IDE的职责在于改善编程环境，优化视觉体验，提高操作效率。因此Pycharm允许我们对IDE以及编辑器进行各种各样的私人订制，如快捷键、滚动条、高亮显示等等。详情参见</p>
+<ul style="margin-left:0px; padding-left:40px; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<li style="margin-left:0px; padding-left:0px"><a class="external-link" href="https://www.jetbrains.com/pycharm/help/configuring-project-and-ide-settings.html" rel="nofollow" target="_blank">Configuring project and IDE settings</a></li></ul>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　以上这些设置都是在设置对话框中完成的<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/settings-preferences-dialog.html" rel="nofollow" target="_blank">Settings/Preferences dialog</a>。单击主工具栏的设置按钮，打开对应页面进行设置即可，推荐在优先在这些页面中作调整： <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/appearance.html" rel="nofollow" target="_blank">Appearance</a>、<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/keymap.html" rel="nofollow" target="_blank">Keymap</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　16、外观</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在Settings/Preferences→Appearance and Behavior→Appearance页面中定制外观。单击Look and feel下拉列表，选择喜欢的主题。这里单击Apply按钮预览选中主题效果，无需关闭对话框，直到满意为止。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多信息参见<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/What+my+PyCharm+looks+like%2C+or+choosing+Look+and+Feel#WhatmyPyCharmlookslike%2CorchoosingLookandFeel-HowdoIchooseLook%26FeelofmyPyCharm%3F" rel="nofollow" target="_blank">How
+ do I choose look and feel for my PyCharm?</a>以及<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/appearance.html" rel="nofollow" target="_blank">product documentation</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　17、编辑器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　所有编辑器相关设置都在 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/editor.html" rel="nofollow" target="_blank">Editor</a>节点下（Settings/Preferences→Editor），包括配色方案、字体、高亮显示机制等等。并且可以在预览窗口快速预览所作的更改。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多信息参见<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/What+my+PyCharm+looks+like%2C+or+choosing+Look+and+Feel#WhatmyPyCharmlookslike%2CorchoosingLookandFeel-HowdoIchangecolorschemeoftheeditor%3F" rel="nofollow" target="_blank">How
+ do I change color scheme of the editor</a>以及<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/editor.html" rel="nofollow" target="_blank">product documentation</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　18、快捷键</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　快捷键的设置取决于你的操作习惯。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　通过Settings/Preferences→Appearance and Behavior→Keymap打开快捷键设置窗口，选择对应的快捷键方案，设置特定的快捷键组合。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这里有一个强力的快捷键Ctrl + Back Quote，能够在不同主题间切换而无需打开设置对话框。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多信息参见<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Configuring+keyboard+schemes" rel="nofollow" target="_blank">Configuring keyboard schemes</a>以及<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/configuring-keyboard-shortcuts.html" rel="nofollow" target="_blank">product
+ documentation</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　19、外部编辑器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycahrm可以借助外部插件来转换为其他编辑器形式，例如Emacs等，详见 <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Using+Emacs+as+an+external+editor" rel="nofollow" target="_blank">Using Emacs as an external editor</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　20、后台任务</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm对一些耗时较长的任务会给出进度条，我们可以将其隐藏在后台（仍保持可见），详见 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/working-with-background-tasks.html" rel="nofollow" target="_blank">Working with Background Tasks</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　21、代码智能</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm在编写代码过程中会给出一些方便的智能提示，主要体现在：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）拼写提示（Ctrl+Space）<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Code+completion" rel="nofollow" target="_blank">code completion</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）使用生成模板 <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Creating+and+applying+live+templates+%28code+snippets%29" rel="nofollow" target="_blank">Creating and applying live templates (code snippets)</a>， <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/live-templates.html" rel="nofollow" target="_blank">product
+ documentation</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）代码快速定型<a class="external-link" href="http://confluence.jetbrains.com/pages/viewpage.action?pageId=51958847#CodeQualityAssistanceTipsandTricks%2CorHowtomakeyourcodelookpretty%3F-Quickfixesintentionsoncemore" rel="nofollow" target="_blank">Quick fixes and
+ intention actions once more</a>和 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/intention-actions.html" rel="nofollow" target="_blank">product documentation</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　22、宏的使用</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　使用宏能够简化编辑过程，详见<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Using+macros" rel="nofollow" target="_blank">Using macros</a>和 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/using-macros-in-the-editor.html" rel="nofollow" target="_blank">documentation</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　23、多文件工作环境</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　默认情况下，Pycharm通过单独编辑选项卡来打开文件：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/11e5dc603b1e78fe4e27418901f4c2a9.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　我们可以手动交换这些选项卡的顺序、固定或者非固定、靠边显示、拆分等等：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/6c78cc082ccf8dd37c92712a8007e2c4.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　详见 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/managing-editor-tabs.html" rel="nofollow" target="_blank">section Managing editor tabs</a>以及 <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Managing+editor+tabs" rel="nofollow" target="_blank">tutorial</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　24、显示代码分析</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm会给出各种各样的提示来帮助你发现并改正代码中的错误。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，在输入代码时它会以红色波浪线标记所有的语法错误，同时在右槽对应行给出标记，在下方状态来显示错误信息，鼠标悬停在对应标记上时也会显示简要的错误提示信息：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/6e6289b6b764cb15a4c2dda2ce848258.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　同时Pycharm还会通过在左侧显示红色、黄色灯泡图标来指示错误和警告。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来是静态代码分析，也就是代码检查，并在右槽给出对应标记。红色代表错误，黄色代表警告，右槽顶部代表该文件的整体错误情况。绿色代表一切正常，红色和黄色代表有错误发生。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　同时右下方状态栏的Hector图标用来指示当前的纠错等级。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/c7bd37f6c2cb8f56ea658698085c5ea5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果你对自己的编程能力很有自信，可以单击它以关闭代码检查。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然而如果你希望对整个工程进行代码检查以提高代码质量，选择Code→Inspect Code，在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/inspection-tool-window.html" rel="nofollow" target="_blank">Inspection tool window</a>显示代码检查结果：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f28df168e8540e351c9bea6d7a3edab2.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多信息参见<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Syntax+highlighting+and+error+indication" rel="nofollow" target="_blank">Syntax highlighting and error indication</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　25、创建高质量代码</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　详见<a class="external-link" href="http://confluence.jetbrains.com/pages/viewpage.action?pageId=51958847" rel="nofollow" target="_blank">Code Quality Assistance Tips and Tricks, or How to make your code look pretty?</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　26、浏览文档信息</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm有一下几种浏览文档的方式：</p>
+<ul style="margin-left:0px; padding-left:40px; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<li style="margin-left:0px; padding-left:0px">Quick definition</li><li style="margin-left:0px; padding-left:0px">Quick documentation</li><li style="margin-left:0px; padding-left:0px">External documentation</li><li style="margin-left:0px; padding-left:0px">Parameter info</li><li style="margin-left:0px; padding-left:0px">Error description</li></ul>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这些方式都有直接的菜单命令相对应，以及快捷键设置：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/43fbbfa7948d16658ed512677985468f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　详见<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Viewing+documentation" rel="nofollow" target="_blank">Viewing documentation</a>以及 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/viewing-reference-information.html" rel="nofollow" target="_blank">Viewing
+ reference information</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　27、搜索与查找</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　28、源码搜索</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最基本的查找方式就是Ctrl+F命令：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/8e038d0464fb6c88179d5c6fdf4a0da8.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm运行进行更深层次的查找：特定目录、任何范围、整个工程（Ctrl+Shift+F）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/de5eff84e5ad3ffe9d6fa21b5d34ae0d.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm还可以查找某个符号的所有应用环境<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/finding-usages.html" rel="nofollow" target="_blank">search for usages</a>，按下Alt+F7，或者使用快捷菜单的Find Usages命令：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/21212173e5fd8a58fbe2dc757fe8b28a.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　还有其他类似的命令：Ctrl+F7实现跳转；Ctrl+Shift+F7以代码着色的方式浏览Usages；Ctrl+Alt+F7以弹出窗口的形式搜索整个工程。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　可以通过中间键单击或者Ctrl+B跳转到对应声明。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Ctrl+N：按名称快速查找一个类；Ctrl+Shift+N：按名称快速查找一个文件；Ctrl+Shift+Alt+N;按名称快速查找一个符号，这些查找均可以使用名称通配符。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/685a879ca30131ea6d8120967f73940b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　29、IDE控件搜索</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　我们这里只是简要介绍。以<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/navigating-between-files-and-tool-windows.html" rel="nofollow" target="_blank">switcher</a>为例，按下Ctrl+Tab显示switcher，按住Ctrl不放，使用<span class="shortcut">Tab键或者方向键来滚动到目标位置：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut"><img alt="" src="images/30abd353167b7e9e33ddeea3949a522f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果你选择一个IDE组件，然后想在其他组件中浏览它，使用<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/navigating-between-ide-components.html" rel="nofollow" target="_blank">Select Target</a>（Alt+F1）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/b15ded505e2dfc5cdb752eda9923a68e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最后通过<span class="shortcut">Esc键返回编辑框。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut">　　30、命令搜索</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut">　　可以通过简单的命令搜索<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/navigating-to-action.html" rel="nofollow" target="_blank">invoke it by name</a>来找到并使用相应的命令（不使用主菜单）。按下Ctrl+Shift+A，输入对应字母：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut"><img alt="" src="images/4361ff20c9a8dc3a38ae59d199b294a0.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　注意你可以在这里搜索主菜单中并不包含的命令，只需再次按下Ctrl+Shift+A即可。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　31、搜索导航任意位置</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　按两下Shift，或者单击主工具栏右端的<img alt="" src="images/96e88bb52640e24fa03211cc46c3da9a.png" style="border:0px">按钮，打开<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/searching-everywhere.html" rel="nofollow" target="_blank">Search
+ everywhere</a>对话框，在这里面可以查找任何内容。</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多信息参见 <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Exploring+navigation+and+search" rel="nofollow" target="_blank">Exploring navigation and search</a>，<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/navigating-through-the-source-code.html" rel="nofollow" target="_blank">Navigating
+ through the source</a>，<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/searching-through-the-source-code.html" rel="nofollow" target="_blank">Searching through the source code</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　32、重构代码</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm建议根据当前代码环境进行重构。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/27edf8fdc9353c2af5320bb293615e6e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　33、运行、调试、测试程序</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　34、运行代码</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　通过右键快捷菜单或者Ctrl+Shift+F10快捷键运行代码，如果想使用其他配置信息来运行，需要在主菜单栏中进行选择，然后按下Shift+F10。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　详情参考 <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Code+running+assistance" rel="nofollow" target="_blank">Code running assistance</a>以及<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/running.html" rel="nofollow" target="_blank">Running</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm允许远程调试运行 <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Configuring+PyCharm+to+work+on+a+VM" rel="nofollow" target="_blank">virtual machine and Vagrant boxes</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　35、REPL控制台窗口</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在<span class="shortcut">Tools菜单下，选择加载Python或者Django控制台的命令。Pycahrm控制台能够高亮显示代码、拼写提示、显示历史命令（Ctrl+Up/Down）</span> </p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm也可以将编辑器中的代码放到控制台中运行。选中代码，然后按下Alt+Shift+I快捷键（也可以使用快捷菜单中的命令），更多信息参见<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Code+running+assistance#Coderunningassistance-REPLRunninganinteractiveconsole" rel="nofollow" target="_blank">REPL
+ - running an interactive console</a>以及<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/working-with-consoles.html" rel="nofollow" target="_blank">Working with consoles</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　36、本地终端</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选择Tools→Open Terminal的主菜单命令，进入命令行操作模式：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<img alt="" src="images/f952d59494828ebeac0d328aa3359bd2.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多信息参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/working-with-embedded-local-terminal.html" rel="nofollow" target="_blank">product documentation</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　37、调试</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　调试方法很简单，选择待调试脚本，指定配置文件，按下Shift+F9。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选择运行/调试配置文件的快捷键：<span class="shortcut">Alt+Shift+F10/<span class="shortcut"> Alt+Shift+F9</span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多信息参见 <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Debugger" rel="nofollow" target="_blank">Debugger</a>、<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Breakpoints" rel="nofollow" target="_blank">Breakpoints</a>、<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Code+running+assistance#Coderunningassistance-Debugrun" rel="nofollow" target="_blank">Debug
+ run</a>以及<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debugging.html" rel="nofollow" target="_blank">Debugging</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　38、测试</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm提供如下测试途径：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）创建测试类</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）指定测试用的配置文件</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）运行/调试测试类</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（4）查看结果</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm支持以下主流的Python测试框架： <a class="external-link" href="http://docs.python.org/3.3/library/unittest.html#module-unittest" rel="nofollow" target="_blank">Unittest</a>, <a class="external-link" href="http://docs.python.org/3.3/library/doctest.html#module-doctest" rel="nofollow" target="_blank">Doctest</a>, <a class="external-link" href="http://nose.readthedocs.org/en/latest/" rel="nofollow" target="_blank">Nosetest</a>, <a class="external-link" href="http://pytest.org/latest/" rel="nofollow" target="_blank">py.test</a> 和 <a class="external-link" href="https://github.com/dag/attest" rel="nofollow" target="_blank">Attest</a>，并预先设定好了相关配置文件。　　</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多信息参见<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Creating+and+running+a+Python+unit+test" rel="nofollow" target="_blank">Creating and running a Python unit test</a>、<a class="external-link" href="http://pedrokroger.net/getting-started-pycharm-python-ide/#Unit_tests" rel="nofollow" target="_blank">Unit
+ tests</a>、<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/testing.html" rel="nofollow" target="_blank">Testing</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　39、远程操作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，将本地脚本文件上传至远端服务器，具体参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/configuring-synchronization-with-a-web-server.html" rel="nofollow" target="_blank">Configuring Synchronization with a Web Server</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来就可以远程调试运行相关文件了。具体参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/comparing-deployed-files-and-folders-with-their-local-versions.html" rel="nofollow" target="_blank">compare local and remote folders, and synchronize local copy
+ with that deployed on the server</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　40、数据库以及SQL支持</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm在数据库方面提供了相关支持。一旦你获得了某个数据库的权限，你就可以借助Pycharm，利用已有许可证书向其中存储更多相同格式的数据源。Pycharm在数据连接过程中提供帮助。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多信息参见 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/data-sources.html" rel="nofollow" target="_blank">product documentation</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　41、多编程语言支持</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm支持Python、<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/javascript-specific-guidelines.html" rel="nofollow" target="_blank">JavaScript</a>、 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/coffeescript-support.html" rel="nofollow" target="_blank">CoffeeScript</a>、<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/markup-languages-and-style-sheets.html" rel="nofollow" target="_blank">HTML、XML</a>等编程语言。其强力的代码助手能够满足各种编程语言的需求。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　同时Pycharm还支持JavaScript的代码调试，详见 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/javascript-specific-guidelines.html" rel="nofollow" target="_blank">JavaScript-Specific Guidelines</a>以及<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Debugging+JavaScript+with+PyCharm" rel="nofollow" target="_blank">Debugging
+ JavaScript with PyCharm</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　42、大功告成</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这是Pycharm的俗称手册，简要介绍了其各个特征，方便大家快速入门，请开始实践吧。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　</p>
+</div>
+</body></html>

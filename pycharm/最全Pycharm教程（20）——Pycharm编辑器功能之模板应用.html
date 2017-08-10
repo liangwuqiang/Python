@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（20）——Pycharm编辑器功能之模板应用</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm自带了很多灵活的模板，但针对python本身的模板只有一个。这里我们将详细介绍如何针对Python类来创建模板并使用。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　对于Python编程以及基本模板的使用我们这里不再赘述。关于模板的类型、缩写、变量名、以及存储的相关信息参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/live-templates.html" rel="nofollow" target="_blank">Live Templates</a>；模板的使用方法参见 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/creating-code-constructs-by-live-templates.html" rel="nofollow" target="_blank">Creating
+ Code Constructs by Live Templates</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm版本为2.7或者更高，请大家自行安装。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、模板的私人订制</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、创建一个根模板</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　打开设置对话框（单击工具栏的设置按钮，或者按Ctrl+Alt+S快捷键），在IDE Settings设置下单击<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/live-templates-2.html" rel="nofollow" target="_blank">Live Templates</a>：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/36ccd9d9da9ce0b970c4f5ed7b3ab596.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击绿色加号，等待奇迹。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，注意到在user下面出现了一个新的分组。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　其次，选中user组后出现一个名为&lt;abbreviation&gt;的根模板</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最后，界面上有缩写、描述说明、模板内容等输入窗口。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/be1ac5e5ea9d7ede2c4ca7c34901e907.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、指定模板的缩写和上下文环境</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　第一步，输入模板缩写 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/live-template-abbreviation.html" rel="nofollow" target="_blank">template abbreviation</a>，这里定义为class。然后输入描述说明description（可选），指定模板应用的上下文环境（这里选择Python）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/cfb51d2c0733fc9de5c2ad8c1c759e04.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最上方expansion值选择默认的Tap即可。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、定义模板文本</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在模板文本栏中输入以下代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/7931abd3b23473e45b3db4ad8138a678.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　其中使用$标记包围的部分为模板变量<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/live-template-variables.html" rel="nofollow" target="_blank">template variables</a>，Pycharm将其标记为红色方便我们辨认：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/88d69e701e7e0be23225d2a5543a8ad3.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这些模板变量目前为空，接下来我们对其进行定义。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、编辑模板变量</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　点击<strong>Edit variables</strong>按钮：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/11c4b2efc81dedb11749e7380d0ba37d.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在<strong>Edit template variables</strong>对话框中显示了当前的模板变量列表：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9c9eb1beff04adbd9db149b24484f292.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　对于变量$object$，我们给出其缺省值（object），单击OK按钮：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/3ea8bab5d253d247d8d78daadb766523.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　上面列表中所显示的变量并不包含 $END$，可见Pyhcarm不希望我们对其进行更改。这是因为 $END$已经进行了预定义，因此是不可编辑状态。它用来指示模板展开后输入光标的默认位置，方便我们对模板对应的代码进行完善。我们这里这个光标会默认置于类声明之后。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、保存自定义模板</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　非常简单，单击设置窗口中的OK按钮即可。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、使用自定义模板</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，创建一个Python文件，这里命名为myPythonFile：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/0e74e4eb6c34448b69d6201c39050872.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　编辑这个新建的Python文件。接下来我们在其中创建一个类声明。输入模板缩写class，会发现我们自定义的模板已经出现在提示列表中了，没错，就是我们刚才定义的那个：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/a7873640a2c7c8533e2d5b5e15d284bf.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　按下Tap键选择该项。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　正如期望的那样，缩写名成功扩展成为了一个基本的Python类。红色下划线标记了接下来期望输入的位置，当你输入类名时（对应模板变量class），就会插入到当前红色波浪线所在位置：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/02156d3f25f67be2d8aaccf1e04b0175.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　注意这里的模板变量class已经应用两次了：在类的声明语句和构造函数中。在构造函数中Pycharm对其进行了自动填充（填充为self）。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　输入类名，回车，红色波浪线移动到下一行，输入对应内容，最后回车：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/6d81f03edfaa1a60a1d3162ff2c9c95e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最终，光标定位在类末尾。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多自定义模板信息参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/creating-code-constructs-by-live-templates.html" rel="nofollow" target="_blank">Creating Code Constructs by Live Templates</a>。</p>
+</div>
+</body></html>

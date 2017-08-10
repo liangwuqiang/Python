@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（7）——虚拟机VM的配置</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span style="line-height:1.5">　　</span><a href="http://blog.csdn.net/u013088062/article/details/50100121" style="line-height:1.5" target="_blank">最全Pycharm教程（1）——定制外观</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50113593" target="_blank">最全Pycharm教程（2）——代码风格</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50130991" target="_blank">最全Pycharm教程（3）——代码的调试、运行</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50135135" target="_blank">最全Pycharm教程（4）——有关Python解释器的相关配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50144201" target="_blank">最全Pycharm教程（5）——Python快捷键相关设置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50148219" target="_blank">最全Pycharm教程（6）——将Pycharm作为Vim编辑器使用</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50158239" target="_blank">最全Pycharm教程（8）——Django工程的创建和管理</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　设想这样一种情况，你在一个平台上操作你的工程，但你希望在另外一个平台上完善并运行它，这就是为什么Pycharm做了很多工作来支持远程调试。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在虚拟机上运行一个工程主要包含以下步骤：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）定义一个虚拟框架<a href="http://confluence.jetbrains.com/display/PYH/Configuring+PyCharm+to+work+on+a+VM#ConfiguringPyCharmtoworkonaVM-create" target="_blank">define a virtual box</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）需要在虚拟框架下配置一个远程的解释器<a href="http://confluence.jetbrains.com/display/PYH/Configuring+PyCharm+to+work+on+a+VM#ConfiguringPyCharmtoworkonaVM-config" target="_blank">configure a remote interpreter</a> </p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）在远程控制台加载当前工程<a href="http://confluence.jetbrains.com/display/PYH/Configuring+PyCharm+to+work+on+a+VM#ConfiguringPyCharmtoworkonaVM-connect" target="_blank">launch your script in the remote console</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　确定你的Pycharm已经拥有以下环境：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）安装了<a class="external-link" href="https://www.virtualbox.org/" rel="nofollow" target="_blank">Oracle's Virtual Box</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）安装了<a class="external-link" href="http://www.vagrantup.com/" rel="nofollow" target="_blank">Vagrant</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）将一下这些可执行文件添加到环境变量中</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　Vagrant安装文件下的vagrant.bat文件，这部分工作应该由安装程序自动完成</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　Oracle's VirtualBox安装文件下的VBoxManage.exe文件。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　确保Pycharm的<strong>Vagrant</strong>插件可用：单击主工具栏中的设置按钮，在设置对话框中打开 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/plugins-2.html" rel="nofollow" target="_blank">Plugins</a>页面，显示插件默认可用：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/402fbdbbc74c03f24127f181aa508925.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　至此准备工作完成，正式开始。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、创建一个虚拟的virtual box</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在设置对话框中（单击主工具栏的设置按钮），单击 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/vagrant-2.html" rel="nofollow" target="_blank">Vagrant</a>界面，然后输入可执行文件路径以及实例路径。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果框架已经预先定义好，以上选项就会出现在一个下拉列表中，从中选择一个即可：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/d678f5a4c827f246dbaadda4600bc1cb.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果当前没有合适的virtual box，则可通过单击绿色的加号来添加一个，输入框架名称和下载地址：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/00baa23edbd6951e654289e0d553adf1.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击OK，Pycharm开始自动下载VM模板：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/093b3022e786f31be6dfa4348f9e2c43.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　至此你已经新建了一个virtual box并已经将其添加到了当前环境中。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　注意<strong>Tool </strong>菜单下的<strong>Vagrant</strong> 命令，这个命令与标准的Vagrant行为相关联。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　一旦创建了Vagrant box，就需要在工程存根下对其进行初始化。在主菜单上单击<strong>Tools | Vagrant，</strong>选择 <strong>Init in Project Root:</strong></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/8b0d3fb5cc57da814475dfd4662a4e5b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选择你准备初始化的Vagrant box：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/c5494a3267e3d741fd0b42bf3e0b1e73.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时会创建对应的Vagrantfile文件，可以根据要求对其进行更改：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/e38f4497afc415952c7e95452e7d7884.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　初始化完成后，执行vagrant up命令（在<strong>Vagrant</strong> 菜单中选择<strong>Up</strong> 命令）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/7a7e47fcc43f55717064d94a61506401.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm会自动运行<strong>vagrant up </strong>命令，并在控制台界面显示输出结果：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4614e7cf04dadd1181c0763faef93cd2.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、在虚拟机上配置远程解释器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　再次打开设置对话框（单击主工具栏上的设置按钮），选择<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/project-interpreter.html" rel="nofollow" target="_blank">Project Interpreter</a>页面，在这里你可以从下拉列表中选择一个对应的解释器，但是如果当前没有可用的解释器，我们就需要单击<strong>Configure Interpreters</strong>来自定义一个：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/358ea0cdb5c475a2ca41d75cf6476472.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时会打开<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/python-interpreters.html" rel="nofollow" target="_blank">Python Interpreters</a>界面，单击绿色的加号来选择一个远程的解释器：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/ae4ae4baafb4a454411729b8bdda6edb.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在<strong>Configure Remote Python Interpreter</strong> 对话框中，需要进行服务器配置。这些设置可以手动设定，也可以从已经定义好的Vagrant配置文件中导入，在这里我们选择第二个方式。 单击 Fill from Vagrant configuration按钮，将会根据配置文件的内容自动填充相关设置属性值：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/04e0d24a8aa0f1ec8608db99127eeee7.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　为了确认是否配置成功，单击<strong>Test connection... </strong>按钮：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f353f4f6d4bbf789a525a7bd0b79c8ec.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　将其设置为默认解释器：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4988b6929b91263d5ce38c06edad0f06.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　从现在开始我们就可以在VM虚拟机上运行所有的脚本工程了：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/8321ad44dd6fb37c6edb938a74ceeb70.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们通过SSH来登录virtual box。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、链接SSH终端机</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　为什么需要登录呢？因为Pycharm要求你这么做。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在主菜单中选择<strong>Tools | Run SSH Terminal</strong>，如果你定义了不止一个主机（host），则选择一个你想要建立链接的（我们这里选择远程解释器）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/253712041ebd1b515a670c7514111ced.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<br>
+</br></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　观察<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/run-tool-window.html" rel="nofollow" target="_blank">Run tool window</a>窗口的控制台运行信息：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/aff8affa84a53dd875237d0363566e02.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　现在你已经能够和virtual box进行直接交互了，首先我们先确认你的工程目录是否进行了完整映射。只需观察vagrant's默认的共享文件夹信息：<br>
+</br></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/088725ef1c88f0d126640a9a9776fb80.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来运行一个可用的脚本文件，例如Solver.py：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/1b93bb4b97e76ce1a77445975d073c59.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　大功告成。</p>
+</div>
+</body></html>

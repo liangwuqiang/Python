@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（12）——Pycharm调试器之Java脚本调试</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span style="line-height:1.5">　　</span><a href="http://blog.csdn.net/u013088062/article/details/50100121" style="line-height:1.5" target="_blank">最全Pycharm教程（1）——定制外观</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50113593" target="_blank">最全Pycharm教程（2）——代码风格</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50130991" target="_blank">最全Pycharm教程（3）——代码的调试、运行</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50135135" target="_blank">最全Pycharm教程（4）——有关Python解释器的相关配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50144201" target="_blank">最全Pycharm教程（5）——Python快捷键相关设置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50148219" target="_blank">最全Pycharm教程（6）——将Pycharm作为Vim编辑器使用</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50170551" target="_blank">最全Pycharm教程（7）——虚拟机VM的配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50158239" target="_blank">最全Pycharm教程（8）——Django工程的创建和管理</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50183789" target="_blank">最全Pycharm教程（9）——创建并运行一个基本的Python测试程序</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50214459" target="_blank">最全Pycharm教程（10）——Pycharm调试器总篇</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50216015" target="_blank">最全Pycharm教程（11）——Pycharm调试器之断点篇</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、总览</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　对于Web开发而言，调试Java脚本是十分重要的。为了显示Pycharm对于Java脚本的强大调试能力，我们这里创建一个非常简单的脚本，用以展示一些简单的浏览器页面，然后在服务器上对其进行调试。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　为了能够在外部服务器上进行调试，需要在上面运行程序文件，同时在你的电脑上拷贝一份。不过没关系，无论Web服务器是运行在物理远端还是运行在你的电脑上，其中的应用程序都可以看成是一个远程服务程序。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当一个使用JavaScript生成的远程文件打开时，调试器会告诉Pycharm当前处理文件的名称以及对应的行号。Pycharm会打开本地副本并定位到相应的行。Pycharm的这种行为使得服务端和客户端的文件进程保持同步。这种通信机制成为映射（mapping），在debug配置文件中保留了相关的设置信息。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Pycharm版本为3.0或者更高。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）使用谷歌浏览器（这篇教程是基于谷歌Chorme的）</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）你已经安装了JetBrains IDE Support外部插件。如果你是第一次加载调试器，Pycharm会给出你关于安装JetBrains IDE Support外部插件的重要性。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　举个例子，对于浏览器，当在地址栏的右侧显示<img alt="" src="images/b19ac228ab26e4fb201f73ca290ce02d.png" style="border:0px">图标，并且非透明，说明插件已经安装并且成功激活。</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　可以在<a class="external-link" href="https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji" rel="nofollow" target="_blank">https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji</a>下载和安装JetBrains
+ IDE Support外部扩展。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　建议使用<a class="external-link" href="http://www.apachefriends.org/index.html" rel="nofollow" target="_blank">XAMPP</a>作为服务端程序（文章是针对XAMPP的）。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、创建一个简单的工程</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在主菜单中选择File→New Project，选择一个空工程，命名为MyJSProject：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/5aeff66cf4c4a3550b5798513ba392f4.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在一个独立的窗口中打开这个工程：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/795848d2506895b8e8704a12772af452.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、实例准备</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，创建一个HTML页面。在工程管理窗口中按下Alt+Insert，在弹出的快捷菜单中选择HTML文件类型，命名为numbers：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/3888f0f5709ff20447ac2db66238ca93.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm会在生成的HTML文件中添加一些原始内容。接下来，向其中嵌入一个JavaScript文件，在&lt;body&gt;标签下输入一下代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/60d098a279fe289ff3a7fcc4889af447.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在输入代码时注意体会Pycharm的拼写提示功能：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/85d37c6f5100f242a274471375a0b638.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　完成后，注意文件名<strong>numbers.js</strong>以高亮的形式给出。这说明当前的JavaScript文件不存在。在将光标定位在名称“numbers”上，按下Alt+Enter（或者单击左侧的小黄色灯泡）；会给出快捷提示——创建一个缺省文件：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/63908d43c9598f9fc91225cd52e1b2f5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　通过这个快捷方法，已将创建好了原始的JavaScript文件，接下来输入下面代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/2b602ec246c18ac69ae8e4494ba3d739.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　 5、设置断点</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来在JavaScript文件中插入断点，非常简单，在右侧单击即可：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/3063d161d2229124b4f072433e234fa7.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、配置服务器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、创建一个服务器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　打开Settings/Preferences对话框（Ctrl+Alt+S或者单击主菜单的设置按钮），单击<a class="external-link" href="http://www.jetbrains.com/idea/webhelp/deployment.html" rel="nofollow" target="_blank">Deployment page</a>页面的绿色的加号，将服务器命名为<span class="code">MyRemoteServer，指定类型为local or mounted
+ server。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　8、配置映射连接</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　接下来配置创建的服务器。在<span class="shortcut">Connection选项卡中，输入需要加载的本地文件的目录，这里为C:\xampp\htdocs，也就意味着将从这个目录来上传本地文件：</span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/a81cfb93685a546b7e93af06fa609b00.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击Mappings选项卡，在这里定义本地路径，服务器的部署路径（与Connection选项卡的设置相同），以及服务器的Web路径：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/175941184592f60583656b6d4e56b898.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　9、定义项目的默认服务器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　指定创建的服务器为当前项目的默认服务器，只需在<a class="external-link" href="http://www.jetbrains.com/idea/webhelp/deployment.html" rel="nofollow" target="_blank">Deployment toolbar</a>中单击<img alt="" src="images/c41eb41556627aff3f7674bdc007a398.png" style="border:0px">按钮。</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　10、预览服务器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来需要确认我们的服务程序能够在Pycharm的可视化窗口中顺利上传和运行。在主菜单中选择Tools → Deployment → Browse Remote Hosts。远程Host控制窗口会显示当前新开启的服务：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/3e749def0e5d8b1ca31dddc90d39a6d6.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　11、向服务器应用中部署文件</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在Pycharm中这个操作非常简单。在主菜单中选择Tools → Deployment → Upload to MyRemoteServer，确保新目录C:\xampp\htdocs已经在服务器上顺利创建。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/393c7f3edec444f53b1f76d17a004866.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　另一种方式可以通过右击文件，在快捷菜单中进行操作。当然二者都需要通过Upload to MyRemoteServer命令来完成。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　12、调试</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　13、开始调试</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　开始调试后，将会在浏览器中显示你的HTML页面，同时调试窗口 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debug-tool-window.html" rel="nofollow" target="_blank">Debug tool window</a>开启。应有程序会在命中第一个断点的时候停止，并用蓝色标记代码行：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/3a3cbeed26b4f02d96080be4bcfe2d4f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多有关断点的信息参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/breakpoints.html" rel="nofollow" target="_blank">product documentation</a>中的<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Breakpoints" rel="nofollow" target="_blank">Breakpoints</a>部分。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　对应用程序进行更为深入的调试，相关的调试信息会显示在调试窗口以及浏览器上：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/edbbd83f60bf2e89d1d824e5be6de0fd.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击<img alt="" src="images/3ee9f2a716814e8da835afb6f0a04ddf.png" style="border:0px">和<img alt="" src="images/03e8db2228a778326dbfefb54477f9d3.png" style="border:0px">控制代码的调试进程，通过关闭黄色标志或者单价Cancel按钮来终止调试。 </img></img></p>
+</div>
+</body></html>

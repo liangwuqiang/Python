@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（6）——将Pycharm作为Vim编辑器使用</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50100121" target="_blank">最全Pycharm教程（1）——定制外观</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50113593" target="_blank">最全Pycharm教程（2）——代码风格</a><br>
+</br></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50130991" target="_blank">最全Pycharm教程（3）——代码的调试、运行</a><br>
+</br></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50135135" target="_blank">最全Pycharm教程（4）——有关Python解释器的相关配置</a><br>
+</br></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50144201" target="_blank">最全Pycharm教程（5）——Python快捷键相关设置</a>　　</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果你是Vim的粉丝，并且不打算使用其他类型的编辑器，那么这篇教程将会比较适合你。这里将会详细介绍如何在Pycharm <strong>IdeaVim</strong>插件的帮助下下载、安装、使用Vim。至于有关Python编程以及Vim的用法，详见<a class="external-link" href="http://python.org/" rel="nofollow" target="_blank">official website</a>， <a class="external-link" href="http://vim.wikia.com/wiki/Tutorial" rel="nofollow" target="_blank">Vim
+ documentation</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　安装2.7或者更高版本的Pycharm</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、下载安装IdeaVim插件</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在Pycharm的主工具栏中单击设置按钮，在<strong>IDE Settings</strong>界面下选择 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/plugins-2.html" rel="nofollow" target="_blank">Plugins</a>页面。此时将会显示当前平台下安装的所有插件。然而IdeaVim并不在其中，此时需要单击<strong>Browse JetBrains</strong> plugins按钮，在搜索栏中键入vim来找到对应的插件：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/0652022cbd14369581daabeb30aab70e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　安装插件：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/11b8648abc84a13246f3e7b363eed0fb.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　重启Pycharm后即可使用：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/aaf91936fae7bab942ba1738c80743f1.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、重启后的变化</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Vim和Pycharm都是基于键盘输入的文本编辑软件，响应的IdeaVim插件的快捷键设置很可能与Pycharm的快捷键设置相冲突，这也是为什么Pycharm需要根据已有的快捷键配置来重新创建一套Vim版的快捷键方案。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当Pycharm重启之后，你将会看到<strong>Vim Keymap settings</strong>对话框，在这里选择一个快捷键配置方案来作为当前Vim环境下的快捷键方案：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/c38d433184e337e7fc996dab2b6ff12a.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　我们这里选择默认的配置，单击OK，可以看到Pycharm创建了一份新的快捷键配置：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/d3738ce734d52c9bfad8a5c23a625fd1.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来再次查看快捷键设置界面。单击设置按钮进入<strong>Settings</strong>对话框，在<strong>IDE Settings</strong>下单击<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/keymap.html" rel="nofollow" target="_blank">Keymap</a>页面。在对应的快捷键配置下拉列表中会出现一个名为Vim的方案名称，其中定义了一些默认的快捷键组合，例如Ctrl+V代表粘贴等等：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/1b5f11ff3bf94ea26ef5c218dd56342f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然而这里还有一个更重要的Pycharm界面设置，在主工具栏中单击<strong>Tools，</strong>选择<strong>Vim Emulator</strong>命令:</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/27de35cd83c1c0701724ce25e6f632a1.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当你安装了IdeaVim插件之后，这条命令是默认选中的（前面有对号），也就是意味着当前的Vim仿真器可用。取消勾选，Pycharm就会回到正常的快捷键状体；再次勾选，Pycharm就会重新加载Vim版的快捷键配置方案：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/b0732f4690038ad06790f0f9f4bd02be.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、编辑模式</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　现在，我们就可以在Vim模式下进行编辑了，此时我们的输入光标为一个黑色小块，意味着我们当前处于 <a class="external-link" href="http://vimdoc.sourceforge.net/htmldoc/intro.html#Normal" rel="nofollow" target="_blank">Normal</a>模式：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/c3d4078f42661f23379462b6f300a9e7.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果你想变为<a class="external-link" href="http://vimdoc.sourceforge.net/htmldoc/insert.html#Insert" rel="nofollow" target="_blank">Insert</a>模式，按下i键，光标将会变为一条竖线：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/b2883e912387f5cf78ef02be1ea384d7.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在这个模式下米可以输入新的代码或者对当前代码进行修改。当然你还可以选择其他模式，例如按r键进入<a class="external-link" href="http://vimdoc.sourceforge.net/htmldoc/insert.html#Replace" rel="nofollow" target="_blank">Replace</a>输入模式。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　顺便说一句，为了快速进入Vim仿真，可以查看状态栏的相关提示信息：<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/status-bar.html" rel="nofollow" target="_blank">Status bar</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px; text-align:center">
+<img alt="" src="images/b856ef45ffe099b6a402eb695d2bd198.png" style="border:0px"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　按下Esc键，回到正常编辑模式。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　IdeaVim拥有很多VIm编辑器的特征，例如缩写形式、快捷键组合、各种各样的命令等等，详见：<a class="external-link" href="http://plugins.jetbrains.com/plugin/?id=164" rel="nofollow" target="_blank">a lot more</a>。</p>
+</div>
+</body></html>

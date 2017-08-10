@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（3）——代码的调试、运行</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50100121" target="_blank">最全Pycharm教程（1）——定制外观</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50113593" target="_blank">最全Pycharm教程（2）——代码风格</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Python版本为2.7或者更高版本</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）已经创建了一个Python工程并且添加了内容，具体参考： <a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Getting+Started+with+PyCharm" rel="nofollow" target="_blank">Getting Started tutorial</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、第一步——运行代码</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　打开之前编写的Solver.py文件，在编辑框中右键，选择快捷菜单中的“Run 'Solver'”选项。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/73287419e24d960dc07084d6cab72f80.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时脚本文件正常运行并在调试工具窗口中显示程序的输出值：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/2dbbdce9a64f1063b81d2434feecb959.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们对这两步操作的具体内容做详细的解释。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、什么是Run/Debug模式</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　每个需要运行/调试的脚本文件都需要一个特殊的配置文件来指定其脚本名称、所在目录以及其他重要的运行调试信息。Pycharm已经集成了这种配置文件，避免用户手动去创建。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　每次当你单击Run或者Debug按钮时（或者在快捷菜单中执行相同操作），实际上都是将当前的运行/调试配置文件加载到当前的调试模型中。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果你仔细观察第一张图片就会发现，在组合框中根本就没有 run/debug的相关信息，知道第二张图片中它们才出现。这就意味着当执行运行/调试命令的时候，Solver脚本的run/debug配置文件才会自动生成，正如现在所显示的这样。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时再主工具栏中Run（绿色箭头按钮）和Debug（绿色甲壳虫按钮）两个按钮变得可用： </p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/8e322246c966a080270a530c9b22ecd1.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　同时这两个图标还是半透明，也就意味着他们<a href="http://www.jetbrains.com/pycharm/help/temporary-and-permanent-run-debug-configurations.html" target="_blank">临时</a>的，即由Pycharm自动创建的。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　OK，单击下拉箭头查看当前的可用命令操作：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/57be59050ebd1cd4fe2fd83eb48b6845.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果你已经设置了多个run/debug配置方案，它们将都会显示在这里下拉列表中，单击选中一个作为当前工程的run/debug配置文件。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、保存run/debug配置信息</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在上图的下拉列表中，单击Edit configuration选项，打开run/debug配置编辑窗口：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/0f26c81faf8243e21ac3248fde097f24.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在左侧目录中将会出现两个节点：Python和Default。在第一个节点目录下有一个单一的配置选项'Solver'，在第二个选项下则有很多配置信息。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这意味着什么呢？</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在Default节点下，你只能看到框架的名称或者模式名称，如果你<a href="http://www.jetbrains.com/pycharm/help/creating-and-editing-run-debug-configurations.html" target="_blank">创建一个新的Run/Debug配置文件</a>，它将会在所选中的模式分支下进行创建，如果你更改了Default节点下的设置，相应的与其相关的所有配置文件都会更改。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　例如，你想将Pycharm中所用到的Python解释器替换成远程或者本地解释器，就可以通过更改Python页面下的解释器设置，这样所有新建的调试配置文件都会使用这个新的解释器。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　早Python节点下，只用单一的配置选项'Solver'，它属于Python类型的配置，但与Default节点下的Python机制并不相同，它使用一个非透明的图标进行的表示，这是用来指示当前配置文件的保存状态的，当你保存配置文件之后图标即变为非透明状态。例如，我们在Python类型下为当前的Solver脚本新建一个配置文件，取名'Solver1'。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果你对已存在的配置文件做了任何更改，这些更改只会应用于对应的脚本区域。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、正式运行</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　我们已经能够通过一种<a href="http://confluence.jetbrains.com/display/PYH/Code+running+assistance#Coderunningassistance-first_run" target="_blank">非常直接的方式</a>，接下来我们寻求其他方法来运行脚本。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　正如我们所知，运行脚本意味着加载当前的调试配置文件，因此，运行脚本主要遵循以下流程：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）在主工具栏中，单击run/debug组框，确认当前的调试配置文件信息</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）做下面的工作（三选一即可）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　单击运行按钮，加载配置文件</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　按下Shift+F10快捷键</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　在主菜单上，选择Run → Run</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时，我们可以在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/run-tool-window.html" rel="nofollow" target="_blank">Run tool window</a>.窗口中观察程序的运行结果。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、运行测试程序</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　我们这里并不讨论代码测试的重要性，而是探讨Pycharm如何帮助我们完成这一功能。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、选择一个测试器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，需要指定一个测试器。单击工具栏的设置按钮，打开Settings/Preferences对话框，然后单击进入<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/python-integrated-tools.html" rel="nofollow" target="_blank">Python Intergated Tools</a>页面（可以通过搜索功能找到），默认选择如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/10cc6052613774bbc6c50894fb453eaa.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在这里我们选择Nosetests，保存并关闭对话框。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　8、创建一个test程序块</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先我们创建一个test实例。Pycharm提供了一种非常智能的创建测试代码的方法：单击选中类名然后按下Ctrl+Shift+T快捷键，或者在主菜单中选择Navigate → Test，如果test程序已存在，则会直接跳转到对应代码，否则创建它：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/39a7121a4c1c58d3b00a4f827003042d.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　按照系统提示进行操作，Pycharm会显示如下对话框：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/838de556205d5fc24131929687cce807.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击OK按钮，查看创建结果：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/c91eb1cbb50f2e0072b1559c699c5658.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时Pycharm已经自动创建了一个测试类，当然这只是一个类框架，需要我们手动编写测试函数。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　9、运行测试代码</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　一切就绪后，右击测试类名，在弹出的快捷菜单中选择运行命令：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/24a96f05a80afeba24fc09b290158db5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　观察运行状态栏中 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/test-runner-tab.html" rel="nofollow" target="_blank">Test Runner tab</a>的输出结果：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/b5f8a5d6260cc231d35eafa27718d1d4.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　10、调试运行</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先要弄清楚，为什么要进行调试？假设我们的程序在运行过程中命中了一个错误，那我们如何定位错误发生的位置？这就需要进行调试。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在Pycharm中我们可以在其中直接对程序进行调试，唯一需要做的准备工作就是在程序必要的地方加设断点，接下来我们进行详细的介绍：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　11、什么是断点？</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　一个<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/breakpoints.html" rel="nofollow" target="_blank">breakpoint</a>标记了一个行的位置，当程序运行到该行代码的时候，Pycharm会将程序暂时挂起以方便我们对程序的运行状态进行分析。Pycharm支持若干中类型的断点 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/types-of-breakpoints.html" rel="nofollow" target="_blank">types
+ of breakpoints</a>，可以通过对应<a href="http://www.jetbrains.com/pycharm/help/breakpoints-icons-and-statuses.html" target="_blank">图标</a>进行分辨。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这里我们采用Python的行断点为例进行介绍</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　12、设置断点</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　方法非常简单，单击代码左侧的空白灰色槽即可：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/21ec22e9fce8083957c9a4aef74ad2af.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　注意断点会将对应的代码行标记为红色，这种颜色标记目前还不能被用户所更改，我们会尽快出台解决方案。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　顺便说一句，取消断点的操作也很简单，在同样位置再次单击即可。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当你将鼠标指针悬停在断点上方时，Pycharm会显示断点的关键信息，行号以及脚本属性，如果你希望更改该断点的属性，右击断点：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/af0c17d58f41220376340eda4976514a.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　可以尝试对断点属性进行个性化更改，然后观察图标的变化。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　13、代码调试</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来，我们正式开始对代码进行调试。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先从配置文件组框中选择同名的'Solver'文件作为当前调试的配置文件，然后单击调试按钮（绿色甲壳虫样式的按钮）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/3a50c0f52d1a7a30602ba9cce1a2df70.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来会Pycharm会执行以下操作：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）PyCharm开始运行，并在断点处暂停</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）断点所在代码行变蓝，意味着Pycharm程序进程已经到达断点处，但尚未执行断点所标记的代码。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debug-tool-window.html" rel="nofollow" target="_blank">Debug tool window</a>窗口出现，显示当前重要调试信息，并允许用户对调试进程进行更改。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f3eafc2c891dbf4b0de1e86d4da3ec24.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　虽然Pycharm使用手册中已经完整提供了调试窗口中所有控件的功能信息，我们这里仍然对其进行简要介绍。我们发现窗口分为两个选项卡：Debugger tab and the Console tab。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Debugger窗口分为三个可见区域：<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debug-tool-window-frames.html" rel="nofollow" target="_blank">Frames</a>, <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debug-tool-window-variables.html" rel="nofollow" target="_blank">Variables</a>,
+ 和 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debug-tool-window-watches.html" rel="nofollow" target="_blank">Watches</a>。这些窗口列出了当前的框架、运行的进程，方便用户查看程序空间中变量的状态等。当你选择一个框架，就会显示出相关的变量信息，当然这些区域都是可以<a href="http://www.jetbrains.com/pycharm/help/debug-tool-window.html#hide_restore" target="_blank">折叠隐藏</a>的。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）Console窗口显示当前的控制台输出信息，默认这个窗口位于Debugger之下，可以通过单击其标签将其前置显示。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然我们可以改变这些窗口的摆放位置，如果你不喜欢程序的默认排版的话。具体参加<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debug-tool-window.html#move" rel="nofollow" target="_blank">Moving tabs and areas</a>章节。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Debugger窗口的工作模式：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　OK，现在程序暂停在了第一断点处，Frames窗口显示的是Solver脚本的第7行代码所对应的进程demo，相关变量a、b、c已经定义，但变量d尚未进行定义。接下来？</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　按下F9（或者左侧工具栏的绿色箭头），程序会继续运行到下一断点处，通过这种方式你可以将每个断点都运行一遍，观察变量的变化。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多有关 Debugger窗口的信息参见软件手册：<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debugging.html" rel="nofollow" target="_blank">product documentation</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Console窗口的工作模式：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　为什么需要用到Console窗口呢？当我们需要查看程序给出的错误信息，或者进行一些额外的临时运算时，就需要在这个窗口里面进行。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击Console选项卡使其前置：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/c5bdf8696ff867e39e0d98710b432cba.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然后单击左侧工具栏中的命令符按钮，显示Python的命令提示符：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4c6976404f814a821636da936e675e18.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时激活了控制台机制，尝试在其中执行一些Python命令：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4a5a9d7fb93ad8c6b8ae305462befaf3.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　注意到控制台窗口提供了代码的拼写提示（Ctrl+Space）以及历史记忆（<span class="shortcut">Up/Down keys</span>）功能，更多信息参见： <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/using-debug-console.html" rel="nofollow" target="_blank">Using Debug Console</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最后，如果你希望Console窗口一直处于可用状态，只需将其移动成为一个单独的窗口即可：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/41cba14e4d4d9f60a09d92c3a27d9f68.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　14、再次运行</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在完成了本次调试运行并再次加载调试配置文件之后，我们可以再次运行调试，单击工具栏的run按钮即可。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　15、REPL——在控制台界面调试程序</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最后，如果你更习惯工作于控制台环境下，也可以将Pycharm设置成为控制台模式。在主菜单中选择Tools → Run Python Console...来加载控制台：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/560b89702a4f80c56f20edb3406f4e6b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时console窗口将会被激活，并显示为一个单独的窗口：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/81f77be96169df09443edca43e4345c7.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在这个控制台窗口中我们可以做很多有意思的事情，接下来我们演示如何将最近编写的Solver.py文件中的代码导入到控制台：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　打开Solver.py文件（打开的方法多种多样，例如<span class="shortcut">Ctrl+E - <span class="shortcut">View → Recent Files</span></span>），全选文件中的代码内容（<span class="shortcut">Ctrl+A, or <span class="shortcut">Edit → Select All</span></span>），然后按下Alt+Shift+E（或者右击在弹出的快捷菜单中选择Execute
+ Selection in Console）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9baf1cec597f9077607ad05207ba9686.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时，Pycharm就会自动将选中的代码导入到控制台界面，方便我们对其进行编辑：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/c1f7b298396063d6d728188fe8b1d599.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+ </p>
+</div>
+</body></html>

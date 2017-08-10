@@ -1,0 +1,1188 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    
+<head>  
+        
+            <link rel="canonical" href="http://blog.csdn.net/u013088062/article/details/50388329"/> 
+
+   
+
+  
+ <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848"> 
+       
+    <title>我的Pycharm，我做主 - 陈俊岭的程序员之路
+        - CSDN博客</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="之间花了一周多的时间把Pycharm官方帮助文档翻译了一遍，一共43篇博客，累得要屎，感悟颇多。　　发牢骚之前先总结点干货，这里把所有的翻译文档列成如下目录，方便大家索引：　　最全Pycharm教程（1）——定制外观　　最全Pycharm教程（2）——代码风格　　最全Pycharm教程（3）——代码的调试、运行　　最全Pycharm教程（4）——有关Pyth" />
+
+    <meta name="keywords" content="Pycharm" />
+
+   
+    <script src="http://static.blog.csdn.net/scripts/blog_static_head.min.js" type="text/javascript"></script>
+
+    
+        <!--new top-->
+       
+       
+        <!--new top-->
+    
+      <!-- ad begin -->
+         
+    <!-- ad end-->
+
+    <link rel="Stylesheet" type="text/css" href="http://static.blog.csdn.net/skin/skin-yellow/css/style.css?v=1.1" />
+
+    
+
+    <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="/u013088062/rss/list" />
+    <link rel="shortcut icon" href="http://c.csdnimg.cn/public/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/default.css" />
+ 
+
+
+
+    <link href="http://c.csdnimg.cn/blog/csdn_public_blog_detail.min.css" type="text/css" rel="stylesheet" />
+     
+         <link rel="stylesheet" href="http://static.blog.csdn.net/css/csdn_blog_detail.min.css" />
+
+  
+
+
+    <!-- 请置于所有广告位代码之前 --> 
+            <script src="http://dup.baidustatic.com/js/ds.js"></script>
+
+</head>
+
+
+<body>
+     
+
+    <!-- 广告位开始 -->
+        
+    <!-- 广告位结束 -->
+
+    
+   
+      <!--new top-->
+    <script id="toolbar-tpl-scriptId" fixed="true" prod="blog" skin="black" src="http://c.csdnimg.cn/public/common/toolbar/js/html.js" type="text/javascript"></script>
+     <!--new top-->
+    <div id="container">
+        <div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h2>
+                <a href="http://blog.csdn.net/u013088062">陈俊岭的程序员之路</a></h2>
+            <h3>天道酬勤</h3>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        
+     
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg">
+    </div>
+    <div class="navigator">
+        <ul>           
+                <li id="btnContents"><a href="http://blog.csdn.net/u013088062?viewmode=contents"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_mulu'])">
+                    <img src="http://static.blog.csdn.net/images/ico_list.gif">目录视图</span></a></li>
+                <li id="btnView"><a href="http://blog.csdn.net/u013088062?viewmode=list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_zhaiyao'])">
+                    <img src="http://static.blog.csdn.net/images/ico_summary.gif">摘要视图</span></a></li>
+                <li id="btnRss"><a href="http://blog.csdn.net/u013088062/rss/list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_RSS'])">
+                    <img src="http://static.blog.csdn.net/images/ico_rss.gif">订阅</span></a></li>                
+            
+
+            </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = "u013088062";
+    var _blogger = username;
+    var blog_address = "http://blog.csdn.net/u013088062";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "";  
+</script>
+
+        <div id="body">
+            <div id="main">
+                <div class="main">
+                        <div class="ad_class">
+<div class="notice tracking-ad" data-mod='popu_3' > 
+
+
+<a href="http://blog.csdn.net/epubit17/article/details/76066685">
+<font color=red><strong>赠书 | AI专栏（AI圣经！《深度学习》中文版）</strong></font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp
+
+
+<a href="http://blog.csdn.net/broadview2006/article/details/77053543">
+<font color=blue><strong>每周荐书：分布式、深度学习算法、iOS（评论送书）</strong></font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp
+
+
+<a href="http://blog.csdn.net/blogdevteam/article/details/74550215">
+<font color=red><strong>【获奖公布】征文 | 你会为 AI 转型么？</strong></font></a>
+
+</div>                        </div>
+
+                        
+
+
+
+  
+
+
+
+
+
+
+<script   type="text/javascript" src="http://static.blog.csdn.net/scripts/category.js"></script>
+
+  <script type="text/ecmascript">
+      window.quickReplyflag = true;
+      var isBole = false; 
+      var fasrc="http://my.csdn.net/my/favorite/miniadd?t=%e6%88%91%e7%9a%84Pycharm%ef%bc%8c%e6%88%91%e5%81%9a%e4%b8%bb&u=http://blog.csdn.net/u013088062/article/details/50388329"
+    </script>
+<div id="article_details" class="details">
+    <div class="article_title">   
+         <span class="ico ico_type_Original"></span>
+
+    <h1>
+        <span class="link_title"><a href="/u013088062/article/details/50388329">
+        <font color="red">[置顶]</font>
+        我的Pycharm，我做主        
+           
+        </a>
+        </span>
+
+         
+    </h1>
+</div>
+
+   
+
+        <div class="article_manage clearfix">
+        <div class="article_l">
+            <span class="link_categories">
+            标签：
+              <a href='http://www.csdn.net/tag/Pycharm' target=_blank onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_tag']);">Pycharm</a>
+            </span>
+        </div>
+        <div class="article_r">
+            <span class="link_postdate">2015-12-23 17:00</span>
+            <span class="link_view" title="阅读次数">12100人阅读</span>
+            <span class="link_comments" title="评论次数"> <a href="#comments" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_pinglun'])">评论</a>(24)</span>
+            <span class="link_collect tracking-ad" data-mod="popu_171"> <a href="javascript:void(0);" onclick="javascript:collectArticle('%e6%88%91%e7%9a%84Pycharm%ef%bc%8c%e6%88%91%e5%81%9a%e4%b8%bb','50388329');return false;" title="收藏">收藏</a></span>
+             <span class="link_report"> <a href="#report" onclick="javascript:report(50388329,2);return false;" title="举报">举报</a></span>
+
+        </div>
+    </div>    <style type="text/css">        
+            .embody{
+                padding:10px 10px 10px;
+                margin:0 -20px;
+                border-bottom:solid 1px #ededed;                
+            }
+            .embody_b{
+                margin:0 ;
+                padding:10px 0;
+            }
+            .embody .embody_t,.embody .embody_c{
+                display: inline-block;
+                margin-right:10px;
+            }
+            .embody_t{
+                font-size: 12px;
+                color:#999;
+            }
+            .embody_c{
+                font-size: 12px;
+            }
+            .embody_c img,.embody_c em{
+                display: inline-block;
+                vertical-align: middle;               
+            }
+             .embody_c img{               
+                width:30px;
+                height:30px;
+            }
+            .embody_c em{
+                margin: 0 20px 0 10px;
+                color:#333;
+                font-style: normal;
+            }
+    </style>
+    <script  type="text/javascript">
+        $(function () {
+            try
+            {
+                var lib = eval("("+$("#lib").attr("value")+")");
+                var html = "";
+                if (lib.err == 0) {
+                    $.each(lib.data, function (i) {
+                        var obj = lib.data[i];
+                        //html += '<img src="' + obj.logo + '"/>' + obj.name + "&nbsp;&nbsp;";
+                        html += ' <a href="' + obj.url + '" target="_blank">';
+                        html += ' <img src="' + obj.logo + '">';
+                        html += ' <em><b>' + obj.name + '</b></em>';
+                        html += ' </a>';
+                    });
+                    if (html != "") {
+                        setTimeout(function () {
+                            $("#lib").html(html);                      
+                            $("#embody").show();
+                        }, 100);
+                    }
+                }      
+            } catch (err)
+            { }
+            
+        });
+    </script>
+      <div class="category clearfix">
+        <div class="category_l">
+           <img src="http://static.blog.csdn.net/images/category_icon.jpg">
+            <span>分类：</span>
+        </div>
+        <div class="category_r">
+                    <label  onclick="GetCategoryArticles('5935163','u013088062','top','50388329');">
+                        <span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_fenlei']);">Python编程<em>（58）</em></span>
+                      <img class="arrow-down" src="http://static.blog.csdn.net/images/arrow_triangle _down.jpg" style="display:inline;">
+                      <img class="arrow-up" src="http://static.blog.csdn.net/images/arrow_triangle_up.jpg" style="display:none;">
+                        <div class="subItem">
+                            <div class="subItem_t"><a  href="http://blog.csdn.net/u013088062/article/category/5935163"  target="_blank">作者同类文章</a><i class="J_close">X</i></div>
+                            <ul class="subItem_l" id="top_5935163">                            
+                            </ul>
+                        </div>
+                    </label>                    
+        </div>
+    </div>
+        <div   class="bog_copyright">         
+            <p  class="copyright_p" >版权声明：本文为博主原创文章，转载时麻烦注明源文章链接，谢谢合作</p>
+        </div>
+
+  
+
+  
+  
+     
+
+
+<div id="article_content" class="article_content tracking-ad" data-mod=popu_307  data-dsm = "post" >
+
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　之间花了一周多的时间把Pycharm官方帮助文档翻译了一遍，一共43篇博客，累得要屎，感悟颇多。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　发牢骚之前先总结点干货，这里把所有的翻译文档列成如下目录，方便大家索引：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50100121" target="_blank">最全Pycharm教程（1）——定制外观</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50113593" target="_blank">最全Pycharm教程（2）——代码风&#26684;</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50130991" target="_blank">最全Pycharm教程（3）——代码的调试、运行</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50135135" target="_blank">最全Pycharm教程（4）——有关Python解释器的相关配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50144201" target="_blank">最全Pycharm教程（5）——Python快捷键相关设置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50148219" target="_blank">最全Pycharm教程（6）——将Pycharm作为Vim编辑器使用</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50170551" target="_blank">最全Pycharm教程（7）——虚拟机VM的配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50158239" target="_blank">最全Pycharm教程（8）——Django工程的创建和管理</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50183789" target="_blank">最全Pycharm教程（9）——创建并运行一个基本的Python测试程序</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50214459" target="_blank">最全Pycharm教程（10）——Pycharm调试器总篇</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50216015" target="_blank">最全Pycharm教程（11）——Pycharm调试器之断点篇</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50221825" target="_blank">最全Pycharm教程（12）——Pycharm调试器之Java脚本调试</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50246781" target="_blank">最全Pycharm教程（13）——Pycharm部署</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50249751" target="_blank">最全Pycharm教程（14）——Pycharm编辑器功能总篇</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50250915" target="_blank">最全Pycharm教程（15）——Pycharm编辑器功能之自动生成&#26684;式</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50251413" target="_blank">最全Pycharm教程（16）——Pycharm编辑器功能之代码自动生成</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50252295" target="_blank">最全Pycharm教程（17）——Pycharm编辑器功能之自动导入模块</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50259501" target="_blank">最全Pycharm教程（18）——Pycharm编辑器功能之代码拼写提示</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50260985" target="_blank">最全Pycharm教程（19）——Pycharm编辑器功能之代码折叠</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50262567" target="_blank">最全Pycharm教程（20）——Pycharm编辑器功能之模板应用</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50263637" target="_blank">最全Pycharm教程（21）——Pycharm编辑器功能之代码快速修改</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50264865" target="_blank">最全Pycharm教程（22）——Pycharm编辑器功能之窗口选项卡管理</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50265771" target="_blank">最全Pycharm教程（23）——Pycharm编辑器功能之代码高亮显示及错误提示机制</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50320107" target="_blank">最全Pycharm教程（24）——Pycharm编辑器功能之宏定义</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50320675" target="_blank">最全Pycharm教程（25）——Pycharm编辑器功能之查看帮助文档</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50323393" target="_blank">最全Pycharm教程（26）——Pycharm搜索导航之文件名、符号名搜索</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50324237" target="_blank">最全Pycharm教程（27）——Pycharm搜索导航之跳转到声明与定义</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50325135" target="_blank">最全Pycharm教程（28）——Pycharm搜索导航之搜索应用实例</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50332873" target="_blank">最全Pycharm教程（29）——再探IDE，速成手册</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50337263" target="_blank">最全Pycharm教程（30）——Pycharm中的File Watchers</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50339339" target="_blank">最全Pycharm教程（31）——Pyhcarm实战</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50341841" target="_blank">最全Pycharm教程（32）——根据FHS在Linux上安装Pycharm</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50343531" target="_blank">最全Pycharm教程（33）——使用Pycharm编写IPython Notebook文件</a>　　　　</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50345483" target="_blank">最全Pycharm教程（34）——Pycharm内置终端以及远程SSH工具的使用</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50346181" target="_blank">最全Pycharm教程（35）——Pycharm中使用Vagrant</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50346719" target="_blank">最全Pycharm教程（36）——Pycharm中Vagrant高级技巧</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50349833" target="_blank">最全Pycharm教程（37）——Pycharm版本控制之基础篇</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50349983" target="_blank">最全Pycharm教程（38）——Pycharm版本控制之远程共享</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50350520" target="_blank">最全Pycharm教程（39）——Pycharm版本控制之本地Git用法</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50351699" target="_blank">最全Pycharm教程（40）——Pycharm扩展功能之捆绑插件TextMate</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50352606" target="_blank">最全Pycharm教程（41）——Pycharm扩展功能之便签注释</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50352779" target="_blank">最全Pycharm教程（42）——Pycharm扩展功能之Emacs外部编辑器</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50353202" target="_blank">最全Pycharm教程（43）——Pycharm扩展功能之UML类图使用</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　一、不妥之处</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　说实话这个教程翻译得还是有一些不完善的地方，主要有一下几点：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、教程中的跳转链接没有处理好</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在翻译过程中只是按照目录翻译了官方文档的内容，至于文档内部的链接地址则没有仔细处理，都是直接跳转到了原有的英文原版的链接界面。对于教程各个篇章之间的链接跳转也没有做详细处理，也是直接跳到了原版。没办法，因为链接实在太多太复杂了，大家直接从这个目录上进入到对应模块吧。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、部分名词未进行翻译</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　由于译者经验有限，在加上这里观法给出的帮助文档所涉及的范围实在是太广，以致某些专有名词译者之前并没有接触过，有道、谷歌等翻译机构给出的译文又不尽合理，因此选择了保留原有名词，望相关领域的大牛给予帮助。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、解释性语言经过适当改动</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　教程的前半部分一般都是严&#26684;按照官方文档的内容进行翻译，包括以下幽默的引用、辅助性的提问等等。在后半部分教程，尤其是后十篇，由于期间回了趟家，课题安排又比较紧，所以加快了翻译进度。对于一些重复性的解释、意义不大的提问等等都予以省略，但主要的操作解释部分的说明依然是完全按照官方文档的说明进行了直译，避免发生歧义。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　二、注意事项</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、速成手册</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　不得不说，这个教程规模实在是有点庞大，不过其中有两篇是独立的速成手册，分别是<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50332873" target="_blank">最全Pycharm教程（29）——再探IDE，速成手册</a>和<a target="_blank" href="http://blog.csdn.net/u013088062/article/details/50339339" target="_blank">最全Pycharm教程（31）——Pyhcarm实战</a>，如果你希望尽快掌握Pycharm的基本功能，建议直接阅读这两篇教程即可。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、版本问题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm目前已经更新到了5.0版，相对于之前的2.x、3.x版本，在界面设计上有了较大改变，所以在实际操作中可能会出现选项卡找不到的情况。不过Pycharm提供了设置搜索功能，在不能顺利某个设置页时，可以直接在设置对话框的搜索栏中输入对应设置页的名称来进行定位。</p>
+   
+</div>
+
+
+
+
+<!-- Baidu Button BEGIN -->
+
+
+
+
+<div class="bdsharebuttonbox tracking-ad" style="float: right;" data-mod="popu_172">
+<a href="#" class="bds_more" data-cmd="more" style="background-position:0 0 !important; background-image: url(http://bdimg.share.baidu.com/static/api/img/share/icons_0_16.png?v=d754dcc0.png) !important"></a>
+<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"  style="background-position:0 -52px !important"></a>
+<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"style="background-position:0 -104px !important"></a>
+<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"style="background-position:0 -260px !important"></a>
+<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"style="background-position:0 -208px !important"></a>
+<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"style="background-position:0 -1612px !important" ></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+<!-- Baidu Button END -->
+
+   
+
+<!--172.16.140.15-->
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1536434" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+
+
+ 
+
+
+        <div id="digg" ArticleId="50388329" >
+            <dl id="btnDigg" class="digg digg_disable"  onclick="btndigga();">
+               
+                 <dt>顶</dt>
+                <dd>24</dd>
+            </dl>
+           
+              
+            <dl id="btnBury" class="digg digg_disable"  onclick="btnburya();">
+              
+                  <dt>踩</dt>
+                <dd>0</dd>               
+            </dl>
+            
+        </div>
+     <div class="tracking-ad" data-mod="popu_222"><a href="javascript:void(0);" >&nbsp;</a>   </div>
+    <div class="tracking-ad" data-mod="popu_223"> <a href="javascript:void(0);" >&nbsp;</a></div>
+    <script type="text/javascript">
+        function btndigga() {
+            $(".tracking-ad[data-mod='popu_222'] a").click();
+        }
+        function btnburya() {
+            $(".tracking-ad[data-mod='popu_223'] a").click();
+        }
+            </script>
+
+   <ul class="article_next_prev">
+                <li class="prev_article"><span  onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian']);location.href='http://blog.csdn.net/u013088062/article/details/50353202';">上一篇</span><a href="http://blog.csdn.net/u013088062/article/details/50353202" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian'])">最全Pycharm教程（43）——Pycharm扩展功能之UML类图使用</a></li>
+                <li class="next_article"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian']);location.href='http://blog.csdn.net/u013088062/article/details/50407707';">下一篇</span><a href="http://blog.csdn.net/u013088062/article/details/50407707" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian'])">Python配置第三方库Theano的曲折之路</a></li>
+    </ul>
+
+    <div style="clear:both; height:10px;"></div>
+
+
+      
+</div>
+
+
+<div id="suggest"></div>
+         <script  language="javascript" type='text/javascript'>     
+             $(function(){
+                 $.get("/u013088062/svc/GetSuggestContent/50388329",function(data){
+                     $("#suggest").html(data);
+                 });     
+             });             
+         </script>  
+
+        <dl class="blog-ass-articl tracking-ad" id="res-relatived" data-mod="popu_84"  > 
+             <dt><span>猜你在找</span></dt>    
+           
+    
+           
+
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/huiyiCourse/series_detail/54?utm_source=blog7" title="【直播】机器学习&amp;数据挖掘7周实训--韦玮" strategy="undefined" target="_blank">【直播】机器学习&amp;数据挖掘7周实训--韦玮</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/471?utm_source=blog7" title="【套餐】系统集成项目管理工程师顺利通关--徐朋" strategy="undefined" target="_blank">【套餐】系统集成项目管理工程师顺利通关--徐朋</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/huiyiCourse/series_detail/55?utm_source=blog7" title="【直播】3小时掌握Docker最佳实战-徐西宁" strategy="undefined" target="_blank">【直播】3小时掌握Docker最佳实战-徐西宁</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/505?utm_source=blog7" title="【套餐】机器学习系列套餐（算法+实战）--唐宇迪" strategy="undefined" target="_blank">【套餐】机器学习系列套餐（算法+实战）--唐宇迪</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/huiyiCourse/series_detail/52?utm_source=blog7" title="【直播】计算机视觉原理及实战--屈教授" strategy="undefined" target="_blank">【直播】计算机视觉原理及实战--屈教授</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/178?utm_source=blog7" title="【套餐】微信订阅号+服务号Java版 v2.0--翟东平" strategy="undefined" target="_blank">【套餐】微信订阅号+服务号Java版 v2.0--翟东平</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/huiyiCourse/series_detail/47?utm_source=blog7" title="【直播】机器学习之矩阵--黄博士" strategy="undefined" target="_blank">【直播】机器学习之矩阵--黄博士</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/178?utm_source=blog7" title="【套餐】微信订阅号+服务号Java版 v2.0--翟东平" strategy="undefined" target="_blank">【套餐】微信订阅号+服务号Java版 v2.0--翟东平</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/huiyiCourse/series_detail/48?utm_source=blog7" title="【直播】机器学习之凸优化--马博士" strategy="undefined" target="_blank">【直播】机器学习之凸优化--马博士</a>
+                        </dd>
+                        <dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px; white-space: nowrap;">
+                             <a href="http://edu.csdn.net/combo/detail/484?utm_source=blog7" title="【套餐】Javascript 设计模式实战--曾亮" strategy="undefined" target="_blank">【套餐】Javascript 设计模式实战--曾亮</a>
+                        </dd>
+
+                  
+              
+                 
+        </dl>
+
+
+
+
+            
+                                    
+            
+                                    
+
+        <!-- 广告位开始 -->
+        <!-- 广告位结束 -->
+
+
+<div class="comment_class">
+    <div id="comment_title" class="panel_head">
+        <span class="see_comment">查看评论</span><a name="comments"></a></div>
+    <div id="comment_list">
+    </div>
+    <div id="comment_bar">
+    </div>
+    <div id="comment_form">
+    </div>
+    <div class="announce">
+        * 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+</div>
+
+<script type="text/javascript">
+    var fileName = '50388329';
+    var commentscount = 24;
+    var islock = false
+</script>
+
+    <div id="ad_bot">
+    </div>
+<div id="report_dialog">
+</div>
+
+<div id="d-top"  style="bottom:60px;">
+
+        <a id="quick-reply" class="btn btn-top q-reply" title="快速回复" style="display:none;">
+            <img src="http://static.blog.csdn.net/images/blog-icon-reply.png" alt="快速回复">
+        </a>    
+    <a id="d-top-a" class="btn btn-top backtop"  style="display: none;" title="返回顶部" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_huidaodingbu'])" style="">         
+         <img src="http://static.blog.csdn.net/images/top.png" alt="TOP">
+    </a>
+</div>
+<script type="text/javascript">
+    $(function ()
+    {
+        $("#ad_frm_0").height("90px");
+        
+        setTimeout(function(){
+            $("#ad_frm_2").height("200px");
+        },1000);    
+    });
+  
+</script>
+<style type="text/css">
+    .tag_list
+    {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #D7CBC1;
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        list-style: none outside none;
+        margin: 10px 2% 0 1%;
+        padding: 1px;
+    }
+    .tag_list h5
+    {
+        background: none repeat scroll 0 0 #E0DBD3;
+        color: #47381C;
+        font-size: 12px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        margin: 0;
+    }
+    .tag_list h5 a
+    {
+        color: #47381C;
+    }
+    .classify
+    {
+        margin: 10px 0;
+        padding: 4px 12px 8px;
+    }
+    .classify a
+    {
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+</style>
+
+
+
+
+
+<div id="pop_win" style="display:none ;position: absolute; z-index: 10000; border: 1px solid rgb(220, 220, 220); top: 222.5px; left: 630px; opacity: 1; background: none 0px 0px repeat scroll rgb(255, 255, 255);">
+    
+</div>
+<div id="popup_mask"></div>
+<style>
+    #popup_mask
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+        left: 0px;
+        top: 0px;
+        opacity: 0.3;
+        filter: alpha(opacity=30);
+        display: none;
+    }
+
+</style>
+
+
+
+
+<script type="text/javascript">
+    $(function(){        
+        
+        setTimeout(function(){
+            $(".comment_body:contains('回复')").each(function(index,item){
+                var u=$(this).text().split('：')[0].toString().replace("回复","")
+                var thisComment=$(this);
+                if(u)
+                {
+                    $.getJSON("https://passport.csdn.net/get/nick?callback=?", {users: u}, function(a) {
+                        if(a!=null&&a.data!=null&&a.data.length>0)
+                        {
+                            nick=a.data[0].n; 
+                            if(u!=nick)
+                            {
+                                thisComment.text(thisComment.text().replace(u,nick));  
+                            }
+                        }       
+                    });  
+                }
+            });         
+
+        },200);  
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },5000);
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },10000);
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },15000);
+        
+        setTimeout(function(){
+            $("a img[src='http://js.tongji.linezing.com/stats.gif']").parent().css({"position":"absolute","left":"50%"});
+        },300);
+    });
+
+    function loginbox(){
+        var $logpop=$("#pop_win");
+        $logpop.html('<iframe src="https://passport.csdn.net/account/loginbox?service=http://static.blog.csdn.net/callback.htm" frameborder="0" height="600" width="400" scrolling="no"></iframe>');
+
+        $('#popup_mask').css({
+            opacity: 0.5,
+            width: $( document ).width() + 'px',
+            height:  $( document ).height() + 'px'
+        });
+        $('#popup_mask').css("display","block");
+ 
+        $logpop.css( {
+            top: ($( window ).height() - $logpop.height())/ 2  + $( window 
+       ).scrollTop() + 'px',
+            left:($( window ).width() - $logpop.width())/ 2
+        } );
+ 
+        setTimeout( function () {
+            $logpop.show();
+            $logpop.css( {
+                opacity: 1
+            } );
+        }, 200 );
+ 
+        $('#popup_mask').unbind("click");
+        $('#popup_mask').bind("click", function(){
+            $('#popup_mask').hide();
+            var $clopop = $("#pop_win");
+            $("#common_ask_div_sc").css("display","none");
+            $clopop.css( {
+                opacity: 0
+            } );
+            setTimeout( function () {
+                $clopop.hide();
+            }, 350 );
+            return false;
+        });
+    }   
+
+    var articletitle='我的Pycharm，我做主';
+
+</script>
+
+
+
+
+
+
+
+
+
+
+                        <div class="clear">
+                        </div>
+                    </div>                   
+                
+            </div>
+                   
+           <div id="side">
+               
+    <div class="side">
+
+
+<div id="custom_column_41038272" class="panel">
+<ul class="panel_head"><span>个人简介</span></ul>
+<ul class="panel_body">
+燕山大学研究生，目前研三。邮箱：1095988845@qq.com，交流请发邮件，评论和私信可能无法及时回复，谢谢。
+</ul>
+</div><div id="panel_Profile" class="panel">
+<ul class="panel_head"><span>个人资料</span></ul>
+<ul class="panel_body profile">
+<div id="blog_userface">
+    <a href="http://my.csdn.net/u013088062" target="_blank">
+    <img src="http://avatar.csdn.net/5/1/7/1_u013088062.jpg" title="访问我的空间" style="max-width:90%"/>
+    </a>
+    <br />
+    <span><a href="http://my.csdn.net/u013088062" class="user_name" target="_blank">u013088062</a></span>
+</div>
+<div class="interact">
+
+    <a href="javascript:void(0);" class="attent" id="span_add_follow" title="[加关注]"></a>
+
+ <a href="javascript:void(0);" class="letter"  title="[发私信]" onclick="window.open('http://msg.csdn.net/letters/model?receiver=u013088062','_blank','height=350,width=700');_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_sixin'])"></a>  
+</div>
+<div id="blog_medal">
+                       <div class="ico_expert"  onclick="javascript:location='http://blog.csdn.net/experts/rule.html'" title="CSDN认证专家" style="cursor:pointer;width:60px;height:60px;background:url('http://c.csdnimg.cn/jifen/images/xunzhang/xunzhang/bokezhuanjiamiddle.png') no-repeat" ></div>
+                <div id="bms_box">
+                                            <a  target="_blank">
+                                                    <img src="http://c.csdnimg.cn/jifen/images/xunzhang/xunzhang/zhuanlandaren.png" onmouseover="m_over_m(this,2)" onmouseout="m_out_m()" alt="6" >
+                                            </a>
+               </div>
+</div>
+<ul id="blog_rank">
+    <li>访问：<span>928136次</span></li>
+    <li>积分：<span>9527</span> </li>    
+    <li >等级： <span style="position:relative;display:inline-block;z-index:1" >
+            <img src="http://c.csdnimg.cn/jifen/images/xunzhang/jianzhang/blog6.png" alt="" style="vertical-align: middle;" id="leveImg">
+            <div id="smallTittle" style=" position: absolute;  left: -24px;  top: 25px;  text-align: center;  width: 101px;  height: 32px;  background-color: #fff;  line-height: 32px;  border: 2px #DDDDDD solid;  box-shadow: 0px 2px 2px rgba (0,0,0,0.1);  display: none;   z-index: 999;">
+            <div style="left: 42%;  top: -8px;  position: absolute;  width: 0;  height: 0;  border-left: 10px solid transparent;  border-right: 10px solid transparent;  border-bottom: 8px solid #EAEAEA;"></div>
+            积分：9527 </div>
+        </span>  </li>
+    <li>排名：<span>第1850名</span></li>
+</ul>
+<ul id="blog_statistics">
+    <li>原创：<span>134篇</span></li>
+    <li>转载：<span>2篇</span></li>
+    <li>译文：<span>0篇</span></li>
+    <li>评论：<span>452条</span></li>
+</ul>
+</ul>
+</div>
+
+
+<div id="panel_Category" class="panel">
+    <ul class="panel_head"><span>博客专栏</span></ul>
+    <ul class="panel_body" id="sp_column">
+    <table cellpadding="0" cellspacing="0"><tr>
+    <td style="padding:10px 10px 0 0;">
+    <a href="http://blog.csdn.net/column/details/tiny-cnn.html" target="_blank"><img src="http://img.blog.csdn.net/20160314162127202" style="width:75px;height:75px;" /></a>
+    </td>
+    <td style="padding:10px 0; vertical-align:top;">
+    <a href="http://blog.csdn.net/column/details/tiny-cnn.html" target="_blank">C++实现卷积神经网络</a>
+    <p>文章：12篇</p>
+    <span>阅读：70431</span>
+    </td>
+    </tr></table>
+    <table cellpadding="0" cellspacing="0"><tr>
+    <td style="padding:10px 10px 0 0;">
+    <a href="http://blog.csdn.net/column/details/genderrecogtion.html" target="_blank"><img src="http://img.blog.csdn.net/20160118142412604" style="width:75px;height:75px;" /></a>
+    </td>
+    <td style="padding:10px 0; vertical-align:top;">
+    <a href="http://blog.csdn.net/column/details/genderrecogtion.html" target="_blank">C++开发人脸性别识别教程</a>
+    <p>文章：20篇</p>
+    <span>阅读：102250</span>
+    </td>
+    </tr></table>
+    <table cellpadding="0" cellspacing="0"><tr>
+    <td style="padding:10px 10px 0 0;">
+    <a href="http://blog.csdn.net/column/details/literature.html" target="_blank"><img src="http://img.blog.csdn.net/20151228150612430" style="width:75px;height:75px;" /></a>
+    </td>
+    <td style="padding:10px 0; vertical-align:top;">
+    <a href="http://blog.csdn.net/column/details/literature.html" target="_blank">文献阅读笔记</a>
+    <p>文章：11篇</p>
+    <span>阅读：23823</span>
+    </td>
+    </tr></table>
+    <table cellpadding="0" cellspacing="0"><tr>
+    <td style="padding:10px 10px 0 0;">
+    <a href="http://blog.csdn.net/column/details/pythonplane.html" target="_blank"><img src="http://img.blog.csdn.net/20151221101302274" style="width:75px;height:75px;" /></a>
+    </td>
+    <td style="padding:10px 0; vertical-align:top;">
+    <a href="http://blog.csdn.net/column/details/pythonplane.html" target="_blank">Python编写微信打飞机小游戏</a>
+    <p>文章：12篇</p>
+    <span>阅读：39479</span>
+    </td>
+    </tr></table>
+    <table cellpadding="0" cellspacing="0"><tr>
+    <td style="padding:10px 10px 0 0;">
+    <a href="http://blog.csdn.net/column/details/pycharm.html" target="_blank"><img src="http://img.blog.csdn.net/20151221101426413" style="width:75px;height:75px;" /></a>
+    </td>
+    <td style="padding:10px 0; vertical-align:top;">
+    <a href="http://blog.csdn.net/column/details/pycharm.html" target="_blank">Pycharm教程</a>
+    <p>文章：44篇</p>
+    <span>阅读：478016</span>
+    </td>
+    </tr></table>
+    <table cellpadding="0" cellspacing="0"><tr>
+    <td style="padding:10px 10px 0 0;">
+    <a href="http://blog.csdn.net/column/details/python-game.html" target="_blank"><img src="http://img.blog.csdn.net/20151216102543513" style="width:75px;height:75px;" /></a>
+    </td>
+    <td style="padding:10px 0; vertical-align:top;">
+    <a href="http://blog.csdn.net/column/details/python-game.html" target="_blank">Python编程</a>
+    <p>文章：4篇</p>
+    <span>阅读：18485</span>
+    </td>
+    </tr></table>
+    <table cellpadding="0" cellspacing="0"><tr>
+    <td style="padding:10px 10px 0 0;">
+    <a href="http://blog.csdn.net/column/details/opencv-go.html" target="_blank"><img src="http://img.blog.csdn.net/20151123180553520" style="width:75px;height:75px;" /></a>
+    </td>
+    <td style="padding:10px 0; vertical-align:top;">
+    <a href="http://blog.csdn.net/column/details/opencv-go.html" target="_blank">opencv编程实践</a>
+    <p>文章：5篇</p>
+    <span>阅读：15648</span>
+    </td>
+    </tr></table>
+    <table cellpadding="0" cellspacing="0"><tr>
+    <td style="padding:10px 10px 0 0;">
+    <a href="http://blog.csdn.net/column/details/chenjunling.html" target="_blank"><img src="http://img.blog.csdn.net/20151217163342079" style="width:75px;height:75px;" /></a>
+    </td>
+    <td style="padding:10px 0; vertical-align:top;">
+    <a href="http://blog.csdn.net/column/details/chenjunling.html" target="_blank">深度学习</a>
+    <p>文章：18篇</p>
+    <span>阅读：138334</span>
+    </td>
+    </tr></table>
+    </ul>
+</div><div id="hotarticls" class="panel tracking-ad" data-mod="popu_340">
+<ul class="panel_head">
+    <span>       
+阅读排行    </span>
+</ul>
+
+<ul class="panel_body itemlist">
+<li>
+<a href="/u013088062/article/details/50100121" title="最全Pycharm教程（1）——定制外观">最全Pycharm教程（1）——定制外观</a><span>(51552)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50130991" title="最全Pycharm教程（3）——代码的调试、运行">最全Pycharm教程（3）——代码的调试、运行</a><span>(38596)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50113593" title="最全Pycharm教程（2）——代码风格">最全Pycharm教程（2）——代码风格</a><span>(30131)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50158239" title="最全Pycharm教程（8）——Django工程的创建和管理">最全Pycharm教程（8）——Django工程的创建和管理</a><span>(23528)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50135135" title="最全Pycharm教程（4）——有关Python解释器的相关配置">最全Pycharm教程（4）——有关Python解释器的相关配置</a><span>(20366)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50893901" title="有关深度学习领域的几点想法">有关深度学习领域的几点想法</a><span>(18473)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50183789" title="最全Pycharm教程（9）——创建并运行一个基本的Python测试程序">最全Pycharm教程（9）——创建并运行一个基本的Python测试程序</a><span>(17391)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50252295" title="最全Pycharm教程（17）——Pycharm编辑器功能之自动导入模块">最全Pycharm教程（17）——Pycharm编辑器功能之自动导入模块</a><span>(16105)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/51118744" title="深度学习卷积神经网络大事件一览">深度学习卷积神经网络大事件一览</a><span>(13999)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/48676057" title="深度学习Matlab工具箱代码详解">深度学习Matlab工具箱代码详解</a><span>(13631)</span>
+</li>
+</ul>
+</div>
+<div id="hotarticls2" class="panel tracking-ad" data-mod="popu_341">
+<ul class="panel_head"><span>评论排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="/u013088062/article/details/50850459" title="C++卷积神经网络实例：tiny_cnn代码详解（2）——代码试运行">C++卷积神经网络实例：tiny_cnn代码详解（2）——代码试运行</a><span>(33)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50439630" title="C++开发人脸性别识别教程（4）——OpenCv的人脸检测函数">C++开发人脸性别识别教程（4）——OpenCv的人脸检测函数</a><span>(32)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50487588" title="C++开发人脸性别识别教程（8）——搭建MFC框架之读取文件夹信息">C++开发人脸性别识别教程（8）——搭建MFC框架之读取文件夹信息</a><span>(30)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50810988" title="Matlab人脸检测方法（Face Parts Detection）详解">Matlab人脸检测方法（Face Parts Detection）详解</a><span>(29)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50499797" title="C++开发人脸性别识别教程（9）——搭建MFC框架之显示图片">C++开发人脸性别识别教程（9）——搭建MFC框架之显示图片</a><span>(24)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50388329" title="我的Pycharm，我做主">我的Pycharm，我做主</a><span>(24)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50425018" title="图像处理入门教程">图像处理入门教程</a><span>(20)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/51901061" title="如何撰写一篇受人欢迎的博客">如何撰写一篇受人欢迎的博客</a><span>(17)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50033793" title="PCANet中PCA算法为什么没有起到降维的作用？">PCANet中PCA算法为什么没有起到降维的作用？</a><span>(17)</span>
+</li>
+<li>
+<a href="/u013088062/article/details/50480518" title="C++开发人脸性别识别教程（6）——通过SVM实现性别识别">C++开发人脸性别识别教程（6）——通过SVM实现性别识别</a><span>(16)</span>
+</li>
+</ul>
+</div>
+<div id="newcomments" class="panel">
+<ul class="panel_head"><span>最新评论</span></ul>
+<ul class="panel_body itemlist">
+    <li>
+   
+         <a href="/u013088062/article/details/50039573#comments">《PCANet: A Simple Deep Learning Baseline for Image Classification》中文翻译总结</a>
+    <p style="margin:0px;"><a href="/qq_33067421" class="user_name">qq_33067421</a>:
+请问楼主有没有代码
+    </p>
+    </li>
+    <li>
+   
+         <a href="/u013088062/article/details/50499797#comments">C++开发人脸性别识别教程（9）——搭建MFC框架之显示图片</a>
+    <p style="margin:0px;"><a href="/xxc1084891228" class="user_name">xxc1084891228</a>:
+为什么我用此方法读取某以文件夹内的图片并显示时，只能读取到文件夹内的一部分图片？？？我文件内有20张...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/u013088062/article/details/50216015#comments">最全Pycharm教程（11）——Pycharm调试器之断点篇</a>
+    <p style="margin:0px;"><a href="/u013998480" class="user_name">u013998480</a>:
+我在Pycharm中设置了断点，但是Debug后，并没有在断点除停下来，而是程序运行结束，是什么原因...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/u013088062/article/details/50507125#comments">C++开发人脸性别识别教程（10）——添加图片的人脸检测程序</a>
+    <p style="margin:0px;"><a href="/xxc1084891228" class="user_name">xxc1084891228</a>:
+为什么程序运行会在 加载分类器的地方产生中断，这是什么原因？（第二行代码处）m_boolInitOK...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/u013088062/article/details/50810988#comments">Matlab人脸检测方法（Face Parts Detection）详解</a>
+    <p style="margin:0px;"><a href="/qq_35323001" class="user_name">qq_35323001</a>:
+楼主，求一份这个实验的代码，1210568677@qq.com,谢谢~
+    </p>
+    </li>
+    <li>
+   
+         <a href="/u013088062/article/details/50850459#comments">C++卷积神经网络实例：tiny_cnn代码详解（2）——代码试运行</a>
+    <p style="margin:0px;"><a href="/weixin_39561809" class="user_name">weixin_39561809</a>:
+博主你好，我也是在那个网站下的，下载下来的跟您不太一样，能把那份数据发给我吗，想借鉴一下您的经验学习...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/u013088062/article/details/50850459#comments">C++卷积神经网络实例：tiny_cnn代码详解（2）——代码试运行</a>
+    <p style="margin:0px;"><a href="/weixin_39561809" class="user_name">weixin_39561809</a>:
+博主，你好。我下载的压缩包里面的文件和你的不大一样，我按照步骤进行编译总是出现很多错误，能发一份完整...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/u013088062/article/details/49722387#comments">Python编写微信打飞机小游戏（二）</a>
+    <p style="margin:0px;"><a href="/qq_23245457" class="user_name">qq_23245457</a>:
+screen.blit(me.image1, me.rect)怎么在背景上显示不了小飞机？
+    </p>
+    </li>
+    <li>
+   
+         <a href="/u013088062/article/details/48662303#comments">深度学习Matlab工具箱代码注释——cnnff.m</a>
+    <p style="margin:0px;"><a href="/m0_37861293" class="user_name">m0_37861293</a>:
+@makenothing:请问你解决问题了么
+    </p>
+    </li>
+    <li>
+   
+         <a href="/u013088062/article/details/48662303#comments">Matlab人脸检测方法（Face Parts Detection）详解</a>
+    <p style="margin:0px;"><a href="/Sail_li" class="user_name">Sail_li</a>:
+你好，我看了你的代码，实践了一下，当读入图片多的时候会报错，可以发份原代码给我吗？邮箱1260235...
+    </p>
+    </li>
+</ul>
+</div>
+    </div>
+    <div class="clear">
+    </div>
+
+
+           </div>   
+
+            <div class="clear">
+            </div>
+        </div>
+
+        
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="http://passport.csdn.net/content/loginbox/login.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function __get_code_toolbar(snippet_id) {
+            return $("<span class='tracking-ad' data-mod='popu_167'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "' target='_blank' title='在CODE上查看代码片'  style='text-indent:0;'><img src='https://code.csdn.net/assets/CODE_ico.png' width=12 height=12 alt='在CODE上查看代码片' style='position:relative;top:1px;left:2px;'/></a></span>"
+                    + "<span class='tracking-ad' data-mod='popu_170'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "/fork' target='_blank' title='派生到我的代码片' style='text-indent:0;'><img src='https://code.csdn.net/assets/ico_fork.svg' width=12 height=12 alt='派生到我的代码片' style='position:relative;top:2px;left:2px;'/></a></span>");
+        }
+        
+        $("[code_snippet_id]").each(function () {
+            __s_id = $(this).attr("code_snippet_id");
+            if (__s_id != null && __s_id != "" && __s_id != 0 && parseInt(__s_id) > 70020) {
+                __code_tool = __get_code_toolbar(__s_id);
+                $(this).prev().find(".tools").append(__code_tool);
+            }
+        });
+
+        $(".bar").show();
+    });
+</script>
+
+
+
+
+
+    </div>
+      <!--new top-->
+    
+
+     
+
+   
+   
+     <!--new top-->
+   
+   
+
+    
+    
+    
+   
+
+   
+
+
+       <script type="text/javascript" src="http://static.blog.csdn.net/public/res/bower-libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+          <script type="text/javascript">
+              //$(function () {
+              //    setTimeout(function () {
+              //        var searchtitletags = articletitle + ',' + $("#tags").html();
+              //        searchService({
+              //            index: 'blog',
+              //            query: searchtitletags,
+              //            from: 5,
+              //            size: 5,
+              //            appendTo: '#res',
+              //            url: 'recommend',
+              //            his: 2,
+              //            client: "blog_cf_enhance",
+              //            tmpl: '<dd style="background:url(http://static.blog.csdn.net/skin/default/images/blog-dot-red3.gif) no-repeat 0 10px;"><a href="#{ url }" title="#{ title }" strategy="#{ strategy }">#{ title }</a></dd>'
+              //        });
+              //    }, 1000);
+              //});
+
+         </script>
+    
+    <script src="http://static.blog.csdn.net/scripts/csdn_blog_detail.min.js" type="text/javascript"></script>
+        
+    <script type="text/javascript" src="http://c.csdnimg.cn/blog/csdn_public_blog_detail.min.js?20170719001"></script>
+
+    <script type="text/javascript" src="http://medal.blog.csdn.net/showblogmedal.ashx?blogid=2226909"></script>
+
+     
+    
+
+
+  <div id="a52b5334d" style="width: 1px; height: 1px; display: none;">
+                    <script id="adJs52b5334"></script>
+                    <script>document.getElementById("adJs52b5334").src = "http://ads.csdn.net/js/opt/52b5334.js?t=" + Math.random();</script>
+   </div>
+
+    
+    
+        
+     
+
+    
+          
+    <div class="pop_CA_cover"  style="display:none"></div>
+    <div class="pop pop_CA"  style="display:none">
+          <div class="CA_header">
+            收藏助手
+            <span class="cancel_icon"  id="fapancle"  onclick="$('.pop_CA').hide();$('.pop_CA_cover').hide();"></span>
+          </div>
+          <iframe src="" id="fa" frameborder="0" width="100%" height="360"  scrolling="no" ></iframe>
+    </div>
+
+
+        <script type="text/javascript">
+
+            $(function () {
+                var fromjs = $("#fromjs");
+                if (fromjs.length > 0) {
+                    $("#fromjs .markdown_views pre").addClass("prettyprint");
+                    prettyPrint();
+
+                    $('pre.prettyprint code').each(function () {
+                        var lines = $(this).text().split('\n').length;
+                        var $numbering = $('<ul/>').addClass('pre-numbering').hide();
+                        $(this).addClass('has-numbering').parent().append($numbering);
+                        for (i = 1; i <= lines; i++) {
+                            $numbering.append($('<li/>').text(i));
+                        };
+                        $numbering.fadeIn(1700);
+                    });
+
+                    $('.pre-numbering li').css("color", "#999");
+                }
+            });
+
+            $(".markdown_views a[target!='_blank']").attr("target", "_blank");
+
+            //$(".toc a[target='_blank']").attr("target", "");
+
+            setTimeout(function () {
+                $(".toc a[target='_blank']").attr("target", "");
+            }, 500);
+
+        </script>
+
+</body>
+</html>   

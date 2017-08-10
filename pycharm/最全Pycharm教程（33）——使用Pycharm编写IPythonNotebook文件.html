@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（33）——使用Pycharm编写IPythonNotebook文件</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　详细介绍如何使用PyCharm创建一个IPython Notebook（<strong>基于Web技术的交互式计算文档格式</strong>）并运行。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）已经创建一个工程，这里使用C:/SampleProjects/py/IPythonNotebookExample目录下的工程。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）在设置对话框的<a class="external-link" href="https://www.jetbrains.com/pycharm/webhelp/project-interpreter.html" rel="nofollow" target="_blank">Project Interpreter page</a>页面中，</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　创建一个虚拟环境<a class="external-link" href="https://www.jetbrains.com/pycharm/webhelp/creating-virtual-environment.html" rel="nofollow" target="_blank">created a virtual environment</a>，这里创建了针对Python.2.7.8的虚拟环境</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　安装了以下库<a class="external-link" href="https://www.jetbrains.com/pycharm/webhelp/installing-uninstalling-and-upgrading-packages.html" rel="nofollow" target="_blank">installed the following packages</a>：</p>
+<ul style="margin-left:0px; padding-left:40px; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<li style="margin-left:0px; padding-left:0px">Jinja2</li><li style="margin-left:0px; padding-left:0px">ipython</li><li style="margin-left:0px; padding-left:0px">matplotlib</li><li style="margin-left:0px; padding-left:0px">numpy</li><li style="margin-left:0px; padding-left:0px">pyzmq</li><li style="margin-left:0px; padding-left:0px">tornado</li><li style="margin-left:0px; padding-left:0px">sympy</li></ul>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然Pycharm可以帮助我们自动进行安装。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、创建一个IPython Notebook文件</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　右击工程名，选择New → File：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f83a28139125d82924c677abf2b3efcb.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　输入名称及其外部扩展 <span class="code">MatplotlibExample.ipynb：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/410e8d81c3fc7f2b64a3004487586ffb.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时在<a class="external-link" href="https://www.jetbrains.com/pycharm/webhelp/project-tool-window.html" rel="nofollow" target="_blank">Project tool window</a>显示了一个新创建的文件：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/7237e48b063f7af4bb04816806bf79ba.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　双击打开它，这是一个空的IPython Notebook文件，以<img alt="" src="images/c3995caa3f468f12f60d4eeb93035f8c.png" style="border:0px">为标记，并有着与真正的IPython Notebook非常相似的工具栏：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/34cb1ffecef8bebe2eb7673a740f964c.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、填充并运行一个文件胞</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击第一个元胞，输入代码，这里键入<span class="code">matplotlib库的配置代码：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/2875ecc3bea543bdad9b32a469f43a0f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击工具栏上的<img alt="" src="images/04b1e6e8b6d52823cecf8b1b662ef1f4.png" style="border:0px">（或者Shift+Enter）运行，Pycharm会弹出一个对话框显示IPython Notebook服务运行的URL地址：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/80d9e56ce079fa58b608fbc2ccca20bf.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击OK：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f8d796ed33444913c264f570cca00a80.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　可以通过浏览器来打开这个链接：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f62e42d15aa67b3dadfe2b92952877bd.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在设置对话框中的 <a class="external-link" href="https://www.jetbrains.com/pycharm/webhelp/ipython-notebook.html" rel="nofollow" target="_blank">IPython Notebook</a>中指定了其默认的URL。接下来我们开始真正使用IPython Notebook。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、使用cells</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，写上import语句：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/012e9f04d7c1e57176a8ea71bf4f40ec.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当你运行第一个cell时，Pycharm会默认创建下一个空的cell：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/b83643003a02a21c3fd3b222ade7430e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　输入代码（体会拼写助手功能）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/c99da3ebf083b3d994a48f28571e9bb4.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击<img alt="" src="images/04b1e6e8b6d52823cecf8b1b662ef1f4.png" style="border:0px">再次运行，无输出，但有创建了一个新的cell。</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在新的cell里面输入如下代码;</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/85e2f65e4433a96f8dda0c0c1d6ec174.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　运行这个cell，报错：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/db3a8ad2c9ea67eb308115f898ecbbe1.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　变量需要提前定义，因此我们再添加一个新的cell。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、添加cell</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击import语句所在cell（变绿框），单击绿色的加号（或者是Alt+Enter快捷键）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/d3a230ffdbbc338cf1ddb55f89134411.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　输入变量定义代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/a2798c2b2bb0092e6af1e30c1a6f8b03.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　先运行这个cell，在运行下一个cell，输出正常：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4e896c9255e412474a811e9192318f6d.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、cell的剪贴板操作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在工具栏中，除了<img alt="" src="images/34dd0ac75e961cf25525a782f7312cf3.png" style="border:0px">和<img alt="" src="images/40305e93dfe879558456d88e258e856f.png" style="border:0px">按钮，还有<img alt="" src="images/13b73cbc939c82cf32870f8ae2f7a3a4.png" style="border:0px">（Ctrl+X）、<img alt="" src="images/ebbfd7cf491129d7dffd42b633875ad5.png" style="border:0px">（Ctrl+C）以及<img alt="" src="images/2a6f26094d8a26ef0b775a4a6024cd5d.png" style="border:0px">（Ctrl+V）按钮，如果单击<img alt="" src="images/13b73cbc939c82cf32870f8ae2f7a3a4.png" style="border:0px">，则删除当前cell，并将其缓存于剪贴板上。</img></img></img></img></img></img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<img alt="" src="images/2a6f26094d8a26ef0b775a4a6024cd5d.png" style="border:0px">是粘贴，<img alt="" src="images/ebbfd7cf491129d7dffd42b633875ad5.png" style="border:0px">是复制，其余按钮功能大家自己体会。</img></img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　8、选择风格</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　工具栏右侧下拉菜单用于指定界面风格，这里默认为code分割。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击import语句的cell，单击<img alt="" src="images/34dd0ac75e961cf25525a782f7312cf3.png" style="border:0px">，默认创建code风格的cell，输入一下代码：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/0a045bf63c7870379849c5f9d72a5842.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击下拉箭头选择Markdown模式：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/36fb46f9eb16eea912f3d1a991bcddb5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　cell外观发生响应改变：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/1cfbe7a1fad3384dab8a1f6cc3b642ac.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击<img alt="" src="images/40305e93dfe879558456d88e258e856f.png" style="border:0px">：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9b98b925048bd2d500a09a3a1e76be44.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　OK，接下来可以选择你喜欢的style类型:</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/fca5abffc7d28c841e85d0efda39d25b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　9、输入格式</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　添加一个新的cell，选择Markdown格式，输入以下代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/d46b0b111c07cf253fc83085cec84d33.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击<img alt="" src="images/40305e93dfe879558456d88e258e856f.png" style="border:0px">：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/979e0001a93f2a0955e9c6f041d97989.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　正如你所见，IPython Notebook可以实现Latex格式的公式编辑。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来尝试更复杂的功能，显示公式的计算结果。添加一个cell，输入一下代码（来自<a class="external-link" href="http://nbviewer.ipython.org/github/ipython/ipython/blob/2.x/examples/Notebook/SymPy.ipynb" rel="nofollow" target="_blank">SymPy: Open Source Symbolic Mathematics</a>）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/844679a25b5ef219f307f8ccc6c9a00b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　运行，无输出，继续添加cell，输入代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/aba9572f1fd9880385a6d120b154e20e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击<img alt="" src="images/40305e93dfe879558456d88e258e856f.png" style="border:0px">，享受结果吧：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/643e9c37485e218892cacf210111c2f5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　</p>
+</div>
+</body></html>

@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（11）——Pycharm调试器之断点篇</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50100121" target="_blank">最全Pycharm教程（1）——定制外观</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50113593" target="_blank">最全Pycharm教程（2）——代码风格</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50130991" target="_blank">最全Pycharm教程（3）——代码的调试、运行</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50135135" target="_blank">最全Pycharm教程（4）——有关Python解释器的相关配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50144201" target="_blank">最全Pycharm教程（5）——Python快捷键相关设置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50148219" target="_blank">最全Pycharm教程（6）——将Pycharm作为Vim编辑器使用</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50170551" target="_blank">最全Pycharm教程（7）——虚拟机VM的配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50158239" target="_blank">最全Pycharm教程（8）——Django工程的创建和管理</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50183789" target="_blank">最全Pycharm教程（9）——创建并运行一个基本的Python测试程序</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50214459" target="_blank">最全Pycharm教程（10）——Pycharm调试器总篇</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Pycharm版本为3.0或者更高</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）至少安装了一个Python解释器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）已经创建了一个Python工程</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（4）使用<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Debugger#Debugger-Preparinganexample" rel="nofollow" target="_blank">Debugger tutorial</a>正在调试处理一个实例</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、什么是断点</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm提供了多种不同类型的断点<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/types-of-breakpoints.html" rel="nofollow" target="_blank">types of breakpoints</a>，并都有特定的图标<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/breakpoints-icons-and-statuses.html" rel="nofollow" target="_blank">icon</a>。本篇教程中我们将详细介绍行断点，即标记了一行待挂起的代码。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、断点属性</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　有两种方法来浏览和改变代码属性：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）首先，有一个单独的置顶窗口来显示断点属性。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）有一个断点对话框 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/breakpoints-2.html" rel="nofollow" target="_blank">Breakpoints dialog</a>来显示当前应用中所存在的所有断点及其属性。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、设置断点</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选中对应代码行，然后执行下面步骤（二选一）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）单击左边空白槽</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）按下Ctrl+F8快捷键</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这是一个触发开关式的操作，即可以不断的重复操作以移除/添加断点。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　作为练习，在第16行设置断点：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/657cd5326e3961b19abe1f54e96c7b01.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、浏览并改变断点属性</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　为了浏览单独一个断点的属性，只需右击它即可：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/51c83aa9a57480e9f23b8d95589eb581.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、启用和关闭断点</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，清空复选框中的<strong>Line 16 in ThreadSample.py enabled</strong>选项，此时断点会失效，同时图标中心会变为绿色：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/98bce62b098bb56c528225aa6c37a5fe.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　OK，再次勾选复选框，图标恢复原状，断点生效。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、条件性代码悬挂</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　假设你希望Pycharm在当前代码处只挂起某一个线程，而其他线程能够正常通过断点，操作非常简单，为断点添加一个条件即可：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/d2c238fd4d261e15082cf9194619a35b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们开始脚本调试（单击工具栏中的<img alt="" src="images/06829bd78d14f64e51baf0ac86b4244f.png" style="border:0px">按钮），你会看到实际上Pycharm只在当前断点处挂起了Thread-7，而Thread-6正常通过了该断点：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f26cd9e9c8d76113d281cc1b15172c51.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　8、如何忽略某些断点？</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　通常情况下，你只需要在某一个断点处停下来，而希望在其他断点能够正常通过。换句话说就是我们并不希望Pycharm在断点处停止，但我们仍需要保留对应断点来作为标记，如何实现？</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在对话框中取消<strong>Suspend</strong>复选框的勾选，此时断点属性对话框中会显示更详细的信息：<br>
+</br></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/eaf7718a5f8d13a8cf896a308c7218cb.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　勾选一下两个选项：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）<strong>Log messages to console</strong>：选中这个选项后，Pycharm会在命中该断点后在控制台上显示相关重要信息。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）<strong>Log evaluated expressions</strong>：选中这个选项之后，Pycharm会计算下方输入框中给出的特定表达式并显示在控制台上。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/7b7d5b84bfe48a8e8c7bcd02e8cf6e32.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　顺便说一下，在下发输入框中输入表达式时Pycharm同样提供了拼写提示功能（Ctrl+空格）。OK，重新运行调试，Pycharm会在调试控制台中显示一下信息：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　应用的基本信息。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　击中断点时的注册信息</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　表达式的计算结果</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/c4df66f4f259eb5b3b9af039855cd27b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　9、浏览所有断点</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　以上你使用到的所有断点相关的对话框都能帮助你获取断点的大部分重要信息。不过我们通常使用 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/breakpoints-2.html" rel="nofollow" target="_blank">Breakpoints dialog</a>对话框来完成大部分断点处理工作，它会显示当前项目中的所有断点的属性信息，并方便我们对其进行更改。<br>
+</br></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　我们可以通过以下几种方式来打开这个对话框：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Ctrl+Shift+F8快捷键</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）在主菜单中选中Run → View Breakpoints</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）在断点属性快捷对话框中单击<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/breakpoints-2.html" rel="nofollow" target="_blank">More (Ctrl+Shift+F8)</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（4）在调试窗口中单击<img alt="" src="images/11f4ede6b5adb1f052f14801ad811a60.png" style="border:0px">按钮。</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　10、创建一个临时断点</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　假设你希望这样一个断点，即Pycharm在命中它之后就将命中的断点删除。Pycharm提供了一个特殊的复选项<strong>Remove once hit</strong>，默认情况下是不会启动这个机制的。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　加入<strong>Suspend</strong>复选框已经选中，接下来再选中<strong>Remove once hit</strong>复选框，观察断点的图标的变化：<br>
+</br></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/3abaf5c02a6c1a4a2fa985a27d24d7a6.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　重新调试，发现Pycharm只会在断点处暂停一次，之后便会将其移除，以保证之后的程序执行不会受到阻碍：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/94cb4eda7f69c4583042d0a9415a861f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+</div>
+</body></html>

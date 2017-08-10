@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（17）——Pycharm编辑器功能之自动导入模块</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、导入模块</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　我们在编程过程中经常会不经意的使用到一些尚未导入的类和模块，在这种情况下Pycharm会帮助我们定位模块文件位置并将其添加到导入列表中，这也就是所谓的自动导入模块功能。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　为了研究这个功能，我们借用之前已经编写好的Solver类，输入以下代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/6abf70704aeabcc698092fcb8bf2aafd.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在输入math.sqrt(d)的时候，Pycharm会弹出一个菜单来提示你导入缺失的模块：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/03ac6378dd239bb7d5e8a9af7fba0d11.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　按下Alt+Enter，采取快捷菜单中的建议，此时import命令会被添加到导入模块的代码部分，并且输入光标仍留在原位，方便我们继续输入而无需重定位：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/1dfbbcbec7ee10fefa8da8e85b2af892.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　值得一提的是，如果当前有多个可选的导入资源，Pycharm会给出提示列表来供用户选择：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/a7fc04edb019d392f52911a90d7f5cfe.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、配置导入助手</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这里有一个小问题，如果这个窗口出现让你很烦恼，不要着急，单击右下角那个帅哥就可以关闭它了：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/3beaab185f5d6965f099b7d5eb0177ff.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击那个帅哥头像会弹出一个窗口，取消<strong>Import popup</strong>复选框，此时就取消了自动导入的功能。当然在配置对话框的<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/editor-auto-import.html" rel="nofollow" target="_blank">Auto-Import page</a>页面也可以进行同样操作（Settings → Editor → Auto-Import）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/be1a11b7ac59062fce241422dfcf4c7b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然，如果你希望关闭导入助手，直接取消这一项的勾选即可（Settings → Editor → Auto-Import）。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、快速导入</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当导入助手关闭时，不必惊慌。此时Pycharm不会直接给出提示，但会以红色波浪线标记缺失模块的代码位置，同时在左侧显示一个红色灯泡，单击这个灯泡，或者按下Alt+Enter快捷键：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/e27ce8fa3384870eaf75b35acbb446d2.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在我们这个例子中应选择导入对应的缺省库，导入完成，红色波浪线消失。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、导入助手的优化</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当你在完善代码的过程中，总会停止使用一些导入声明（例如调试代码所对应的库，在调试完成后就不再起作用）。然而这些import声明仍然存在于你的工程中，你不得不停下来从头搜索，找出并删除这些声明语句，这种做法不仅效率低而且容易出错，很可能会多删或者漏删。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm能够帮助我们处理掉这些冗余的import声明语句，也就是所谓的 <strong>Optimize Imports</strong>功能，这个功能能够帮助你随时删除工程中的冗余import声明语句。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　注意到，在Pycharm编辑环境中那些冗余的imports语句都是灰色显示的：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/def2230a2967d7535f852ceb06266ca2.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　为了移除这些冗余语句，按下Ctrl+Alt+O（或者选择Code → Optimize Imports菜单命令），Pycharm弹出如下对话框，提示你选择需要清理的文件（当前文件还是当前目录下的所有文件）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/fafa7daf739fd215b3cd87b55beb007c.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击OK，清理完成：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/867ec394075a153c0d0c16ab7b15ae64.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+</div>
+</body></html>

@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（10）——Pycharm调试器总篇</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50100121" target="_blank">最全Pycharm教程（1）——定制外观</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50113593" target="_blank">最全Pycharm教程（2）——代码风格</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50130991" target="_blank">最全Pycharm教程（3）——代码的调试、运行</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50135135" target="_blank">最全Pycharm教程（4）——有关Python解释器的相关配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50144201" target="_blank">最全Pycharm教程（5）——Python快捷键相关设置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50148219" target="_blank">最全Pycharm教程（6）——将Pycharm作为Vim编辑器使用</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50170551" target="_blank">最全Pycharm教程（7）——虚拟机VM的配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50158239" target="_blank">最全Pycharm教程（8）——Django工程的创建和管理</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50183789" target="_blank">最全Pycharm教程（9）——创建并运行一个基本的Python测试程序</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Pycharm版本为3.0或者更高版本</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）至少安装了一个Python解释器并且已经正确配置</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）已经创建了一个Python工程</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、主要内容</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　介绍如何通过Pycharm来调试脚本文件，以及各个工具按钮的作用等等，至于Python编程方法，请参见<a class="external-link" href="http://docs.python.org/" rel="nofollow" target="_blank">Python documentation</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、待复习知识</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　为了完成本篇教程的内容，需要用到前面的两个重要知识点：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Run/debug配置文件的相关知识</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）断点的相关知识</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、Run/debug 配置知识</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　每当你通过Pycharm来运行或者调试一个脚本文件时，都需要一个特殊的文件来记录脚本的名称、工作目录以及其他的重要调试信息。Pycharm已经针对特定模式预先创建好了配置文件，避免我们手动去创建。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　每次你单击运行或者调试按钮时（或者通过快捷菜单执行相同的操作），我们实际上都是在当前工作模式中加载了对应的配置文件。详见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/run-debug-configuration.html" rel="nofollow" target="_blank">product documentation</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、断点</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　一个断点标记了一个代码行，当Pycharm运行到该行代码时会将程序暂时挂起。Pycharm提供了几种形式的断点 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/types-of-breakpoints.html" rel="nofollow" target="_blank">types of breakpoints</a>，其图标 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/breakpoints-icons-and-statuses.html" rel="nofollow" target="_blank">icon</a>各不相同。详见 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/breakpoints.html" rel="nofollow" target="_blank">product
+ documentation</a>中的<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Breakpoints" rel="nofollow" target="_blank">Breakpoints tutorial</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、实例</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在你的Python工程中，创建一个新的Python文件，命名为ThreadSample.py，然后输入以下代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/dc6eb5df4a856ccc6413a4a80be8374a.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、设置断点</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，在源码中设置断点。通过单击代码左侧的空白槽来在对应位置生成断点：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/40c7e1685b2a17d3b5d6f5d75401250e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　8、开始调试</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选择 run/debug configuration "ThreadSample"，然后按下Shift+F9（或者单击工具栏中的绿色蜘蛛形式的按钮），调试开始，并在第一个断点处停止：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/751ee575a5a65d00e6fc2cb9e91f289f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　断点所在的行变为蓝色，说明Pycharm已经击中了这个断点，但尚未执行这行代码。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　9、更改调试窗口的布局</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时Pycharm进入调试界面模式<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debug-tool-window.html" rel="nofollow" target="_blank">Debug tool window</a>，各个控件的具体功能详见<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Code+running+assistance#Coderunningassistance-Debuggingsession" rel="nofollow" target="_blank">know
+ how to use this tool window</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　加入你并不喜欢当前的默认布局，例如你希望将调试器输出窗口作为一个独立的窗口显示以便更方便的观察当前的调试状态，你可以对布局进行个性化定制。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，我们先把调试工具窗口独立出来，只需要右击窗口的标题栏，然后选择<strong>Floating mode</strong>：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/15bda0fae6b307ada3d579a6bfabd985.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来将控制台窗口移动成为一个独立的窗口，只需要拖动控制台窗口将其拖出测试窗口即可：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/3953c4292a614f2fdb1b5ab572e5ee64.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　可以通过单击工具栏上的<img alt="" src="images/de998b286be9197cac1f122248faca00.png" style="border:0px">按钮来恢复到默认布局。</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多信息请参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/pycharm-tool-windows.html" rel="nofollow" target="_blank">PyCharm Tool Windows</a>和<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debug-tool-window.html#move" rel="nofollow" target="_blank">Moving
+ tabs and area</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　10、添加一个变量查看器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们介绍如何在调试过程中观察变量的状态。我们需要对其设置一个查看器。在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debug-tool-window-watches.html" rel="nofollow" target="_blank">Watches</a>窗口中，单击绿色的加号，输入期望查看的变量名称，例如这里输入delay，然后回车。当然你也可以采用另外一种方式：在编辑窗口中右击变量名，在快捷菜单中选择<strong>Add
+ to watches</strong>：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时观察Watches窗口，发现delay变量目前尚未定义：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/ce3da79e04f71501f26473cf88f87738.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　稍后你将会看到如何对这个变量进行负值，以及其在watches窗口中的变化。接下来我们为get_thread_name()函数设置一个查看器作为练习。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　11、浏览帧</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时你能看到一个名为MainThread的进程，其中包含三帧。单击每一帧来显示其变量状态以及相对应的py文件，同时会对有问题的代码行以高亮显示：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/604cf9808ee1b498e4abf2744b117e98.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　12、简单的调试</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在每个断点出都单击<img alt="" src="images/c55e24d45910da0a7be507e459345171.png" style="border:0px">按钮来时程序继续运行，观察控制台的脚本输出：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/e4f44f0561a34124b9415cf2e78c99de.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　13、步进式脚本调试</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　让我们对当前脚本进行进一步的调试。单击<img alt="" src="images/f4f446a1fef658c5309909118afd8845.png" style="border:0px">重启调试进程，程序再次运行到第一个断点处并暂停。</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在调试窗口的顶端，你会看到一列包含步进调试按钮的工具栏 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debug-tool-window.html#steptoolbar" rel="nofollow" target="_blank">stepping buttons</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击<img alt="" src="images/755d0ef4e9690531153ac8432e68016c.png" style="border:0px">，或者按下F8，你会发现蓝色标记移动到了下一行：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/55931438c305361bb1361268cf87b4ca.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　与此同时，当你暂停了脚本执行时（单击<img alt="" src="images/e27c4e96a3aba23b224c6763bc9a7ddc.png" style="border:0px">按钮），你能看到高亮表示的函数print_time（），你可以选择其中的任何一个进程，并观察变量的变化：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/00270114a9b438d1da4194349aaa820c.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　14、运行到当前光标处　　</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　假如你不想加入断点，但仍希望代码能够调试运行到某一指定的代码行，如何操作？</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　返回调试界面的第二个断点处，在对应行插入输入光标。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/707b7cb796570ab62fe3cc2bf0b4535c.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击<img alt="" src="images/e22bc143b505501f969b94dc3d6a4b3a.png" style="border:0px">按钮，或者按下Alt+F9快捷键，该行代码变为高亮显示：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/5b5e4e947237e8aad2c7f975f3317886.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　15、如何调用Debug命令</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　值得一提的是所有的调试操作不仅仅可以通过调试工具栏的对应按钮来完成，还可以通过主菜单中Run菜单下的命令来实现，以及相关的快捷菜单项。下面给出一些常用的调试菜单命令及其对应的快捷键列表：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/76e17b613fb844714e3b4aec8850b8fc.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多控件描述参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debug-tool-window.html" rel="nofollow" target="_blank">Debug tool window</a>。</p>
+</div>
+</body></html>

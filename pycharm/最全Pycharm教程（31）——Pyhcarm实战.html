@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（31）——Pyhcarm实战</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　介绍如何用Pycharm实打实的创建、运行、调试程序。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm版本为2.7或者更高。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　至少安装一个Python解释器，2.4到3.3均可</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、下载安装Pycharm　</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　下载地址：<a class="external-link" href="http://www.jetbrains.com/pycharm/download/index.html" rel="nofollow" target="_blank">this page</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、启动PyCharm</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　双击快捷方式（windows中为pycharm.exe或者 pycharm.bat；MacOS and Linux为pycharm.sh），进入欢迎界面<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/welcome-screen.html" rel="nofollow" target="_blank">Welcome screen</a>：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/55f35114ebdd031dea144bd026574d95.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、创建一个简单工程</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击Create New Project链接，进入创建工程对话框，进行相关工程设置。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然，也可以通过主菜单命令File → New Project来随时创建新的工程：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/c1363f737317919024af1ba05092007a.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先为工程命名，这里命名为MySimplePythonApplication。然后更改工程位置，既可以使用默认的位置，也可以通过单击浏览按钮来指定。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来选择工程类型，Pycharm预设了若干类型模板（Django, Google AppEngine等等），并默认创建相关文件。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这里我们选择<em>Empty project</em>类型（比较适合简单的Python工程），不需要Pycharm预设任何文件。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最后，指定Python解释器，在下拉列表中选择即可。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/8352b38462621d58a43eb6a75946306b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击OK按钮，工程创建完毕。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、浏览工程目录结构</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　初始工程目录 （<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/project-tool-window.html" rel="nofollow" target="_blank">Project tool window</a>中）如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/a13f5d2b88d9fece67fb0dd319a6aae9.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时只存在工程根目录以及定义了Python解释器的External Libraries目录。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击主工具栏的<img alt="" src="images/93e7a651abb434680dba44a8fa4e905d.png" style="border:0px">按钮，选择<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/project-structure-dialog.html" rel="nofollow" target="_blank">Project
+ Structure</a>页，查看详细工程目录信息：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/54dbc7d99187955df0374d0e90c783d8.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在工程根目录下的<span class="code">idea目录下存放了MySimplePythonApplication.iml文件，用以记录当前的工程结构；目录下还有若干XML文件，保存着相关的配置信息。idea目录在Project tool window窗口中是不可见的。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　接下来向根目录中添加工作目录。在Project Structure页，右击工程根目录，选择New Folder：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/4c65d557f6ef7899c21ff61bf4fd8450.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　输入目录名称：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/2d38204a42d5d0649054a7a9aabc2870.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最后，将该目录标记问源文件根目录：选择<span class="code">src目录，单击<img alt="" src="images/c4aa2238085c27b3e80f5e3ac4574d36.png" style="border:0px">，标记完成。</img></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　单击OK，关闭设置对话框。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　当然添加目录的方式并不是唯一的，也可以直接在工程根目录下创建Python文件，此时工程目录被默认为源文件根目录。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　7、创建Python类</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　在 project tool window窗口中选择src目录，按下Alt+Insert：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/0b3e8a11316536eca80f4f1ffd8ccdde.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选择Python file，输入名称（Solver）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/a0dd073ef3e297fb5cf20464a13fafde.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　类创建完成，打开编辑：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/654f222ef5627c9c5273ae76bed1e53a.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　8、编辑源码</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，文件中有两行默认生成的代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/e76fe4b5235894966d77fdf329eb40fe.png" style="border:0px"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这是Pycharm根据模板 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/file-templates.html" rel="nofollow" target="_blank">file template</a>生成的，并自动替换了形式变量$PROJECT_NAME和$USER。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们编写一个求解二次方程的小程序。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在编写代码的过程中Pycharm会提供各种各样的提示帮助，例如在创建类时，只需输入关键字，则会弹出提示列表：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/bef6685e07218bd824d8f76e4bfe9302.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选择关键字class，输入类名（Solver），Pycharm会提示你继续输入：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/a675de03d9f5f82538b06f0d2770a45f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时右槽会显示错误标记，鼠标悬停在上方时会给出错误提示。右槽顶部的指示灯标记了当前的代码检查状体，绿色代表一切正常，黄色代表有警告，红色代表有错误。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　继续创建“demo”成员函数，体会Pycharm代码的自动补全功能：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9d1f82c5ecce0d0539678e5026d23cdc.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　继续输入，未用到的变量以灰色显示：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/ad97b9e9c58785f9217d5ae68bc168aa.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来计算判别式，用到了math模块，由于尚未导入，Pycharm会报错（红色波浪线和红色灯泡）。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　红色灯泡的使用机制参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/intention-actions.html" rel="nofollow" target="_blank">intention actions and quick fixes</a>，格式问题为黄色灯泡，出现错误即为红色灯泡。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　按下Alt+Enter查看Pycharm给出的提示：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/04098019dc7ed90a531ddba41ab8c99f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选择导入<span class="code">math库，然后晚上Solver类中的<span class="code">demo函数，计算判别式：</span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/7cbeea131730fea29a6457b2a5dca36b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　按下Ctrl+Shift+F10运行脚本文件，出现一个控制台，输入a、b、c的值，发现Pycharm遇到一个错误：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/fe7cf79e4da86dbfe667a40c28545633.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这里是当d（判别式）为负数时，程序报错。为了避免这种情况，加入判断语句Ctrl+Alt+T（Code→Surround with）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/c42fe5d3d278811822cb7768bc808b96.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm会自动创建一个if语句结构。最后如果你希望多次执行该程序，需要再在外层嵌套一个while循环，代码最终效果如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/ecab2258e15a39a19ceede43988afd81.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来，准备调试。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　9、运行程序</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　三种运行脚本文件的方式：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Ctrl+Shift+F10快捷键</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）使用快捷菜单选项</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<img alt="" src="images/166796f4fa49f4054256e14d3875e2c4.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）使用主菜单的运行按钮</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/474718580c0d6322ecefba2721710162.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　查看运行结果：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/fea6bb5ce14a59c42dece5027a3cb940.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　10、运行/调试相关配置</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　每个脚本文件在运行和调试时都按照指定的配置文件的规定（ <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/running-and-debugging.html" rel="nofollow" target="_blank">run/debug configuration</a>）执行，包括脚本名称、工作目录、预处理等等。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm已经预设了若干中常规的配置文件类型（针对Python scripts, Django applications, tests,等等），可以在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/run-debug-configurations.html" rel="nofollow" target="_blank">Run/Debug Configurations dialog</a>对话框中浏览这些配置。可以通过Run→Edit
+ Configurations...命令或者单击主工具栏Run区域的下拉列表来打开这个对话框：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9fb680758136bb72a1155d3db11adaa8.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　详细查看Edit Configurations对话框，其包含两个主要部分：<span class="shortcut">Python 和 <span class="shortcut">Default</span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut"><img alt="" src="images/46f1bda3a7b1ae6d635f892b71a34cf0.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　default run/debug列表下的内容是默认的配置信息，他们没有具体名字，但会根据类型自动加载使用。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　上方名为<span class="shortcut">Python的节点只包含一个灰色显示的配置文件<em>Solver</em>。它是一个临时配置文件 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/temporary-and-permanent-run-debug-configurations.html" rel="nofollow" target="_blank">temporary profile</a>，是Pycharm创建的缺省配置 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/run-debug-configuration-python.html" rel="nofollow" target="_blank">default
+ configuration of the Python type</a>。<br>
+</br></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut">　　你可以永久保存你的配置文件，数量不限。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut">　　11、调试程序</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut">　　调试之前先设断点<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/breakpoints.html" rel="nofollow" target="_blank">breakpoints</a>，单击左槽即可：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut"><img alt="" src="images/0efb811fc0e4d7c37deb5f361c978844.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然后右击编辑区域，选择Debug 'Solver'：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/acf78b7d642fef1253a7fbba66d1c18a.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　显示 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debug-tool-window.html" rel="nofollow" target="_blank">Debug tool window</a>窗口，调试开始，调试窗口的默认布局如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/2198d68744a7596aae6f28b4ea382dd3.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这里显示了框架、变量、控制台灯。当然如果你希望控制台一直可见的话，将其拖动到指定区域即可：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/6a7d2ebe7679404ae8d6d35ef9836c69.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　使用<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/debug-tool-window.html#steptoolbar" rel="nofollow" target="_blank">stepping toolbar buttons</a>来单步调试：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/263cc9f61e3ed4aa8cc744e036dea968.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　命中断点，对应行变蓝：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/269f552d680857761acd860a1a57f4f9.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　12、导航功能初探</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　假如你编程过程中中途中断，回来时不知道该从哪里继续开始，这就用到一个重要的导航功能：跳转到最后编辑位置。按下Ctrl+Shift+Backspace即可。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　快速查看符号定义，例如将光标定位在<span class="code">sqrt的调用处，按下Ctrl+B，Pycharm会跳转到math.py的指定定义位置：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/8d2e9a9575ff082fc6b5e56ce86cb2ce.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　快速查找符号、类、文件。按下Ctrl+Alt+Shift+N，输入名称即可：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/d950a0d68ed3c6de9c9c89010bbf5b9f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多详情参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/navigating-through-the-source-code.html" rel="nofollow" target="_blank">here</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　13、代码重构</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　假如你更改了一个函数demo的名称，理论上对其所有的调用都需要进行更改，这里Pycharm提供了代码重构功能。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　按下Shift+F6，在对话框中输入新名称：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/465558746204924d0fb01d0c7141b223.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击Refactor，在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/find-tool-window.html" rel="nofollow" target="_blank">Find tool window</a>显示查找结果：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/b3a9bd2650ec9b334d8628b4cf2d1cce.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击Do Refacto按钮完成替换：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/cf12221aae5d50620d703b593174270c.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然我们还可以做更多改变，例如移动文件位置、改变函数的参数结构、提取变量等。这些都属于各种各样的重构。我们会在以后的教程中详细介绍。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut">　　</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut"><em>　　</em></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+ </p>
+</div>
+</body></html>

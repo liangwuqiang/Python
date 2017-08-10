@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（13）——Pycharm部署</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50100121" target="_blank">最全Pycharm教程（1）——定制外观</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50113593" target="_blank">最全Pycharm教程（2）——代码风格</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50130991" target="_blank">最全Pycharm教程（3）——代码的调试、运行</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50135135" target="_blank">最全Pycharm教程（4）——有关Python解释器的相关配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50144201" target="_blank">最全Pycharm教程（5）——Python快捷键相关设置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50148219" target="_blank">最全Pycharm教程（6）——将Pycharm作为Vim编辑器使用</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50170551" target="_blank">最全Pycharm教程（7）——虚拟机VM的配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50158239" target="_blank">最全Pycharm教程（8）——Django工程的创建和管理</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50183789" target="_blank">最全Pycharm教程（9）——创建并运行一个基本的Python测试程序</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50214459" target="_blank">最全Pycharm教程（10）——Pycharm调试器总篇</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50216015" target="_blank">最全Pycharm教程（11）——Pycharm调试器之断点篇</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50221825" target="_blank">最全Pycharm教程（12）——Pycharm调试器之Java脚本调试</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这篇教程将逐步介绍如何通过Pycharm将你的代码部署在远程服务器上。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Pycharm版本为3.0或者更高</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）拥有待部署远程服务器的访问权限</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　强调这篇教程是针对win7操作系统，使用了默认的快捷键配置方案，不同系统下的默认快捷键配置方案可能不同。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、准备实例</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　建议使用 <a href="http://confluence.jetbrains.com/display/PYH/Getting+Started+with+PyCharm" target="_blank">Getting Started</a>篇所介绍的实例，那里面已经将主要步骤描述清楚，直接借用即可。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、配置一个部署服务器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击主工具栏中的设置按钮来打开Settings/Preferences对话框，选择 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/deployment.html" rel="nofollow" target="_blank">Deployment</a>页面（也可以通过主菜单上的Tools→Deployment→Configuration命令来完成）。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击绿色加号，在Add Server对话框中，输入服务器的名称（<span class="code">MyRemoteServer</span>）并指定其类型（此处选择Local or mounted folder）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/878cc5444f3cec75eb88f2ea8412044f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时已经添加了一个新的服务器，但其内容为空。它只显示了Web服务的根域名（<a class="external-link" href="http://localhost/" rel="nofollow" target="_blank">http://localhost</a>），你需要在其中上传你的文件。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、如何定值连接表单</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选择带上传文件所在目录，这里为本地目录C:\xampp\htdocs（既可以手动输入，也可以通过Shift+Enter快捷键来打开<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/select-path-dialog.html" rel="nofollow" target="_blank">Select Path</a>对话框进行输入），详见 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/deployment-connection-tab.html" rel="nofollow" target="_blank">product
+ documentation</a>：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/729341295b73f9a7ace6eaa2ab9e4ac4.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、如何定制映射表单</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来，选择<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/deployment-mappings-tab.html" rel="nofollow" target="_blank">Mappings tab</a>，其中的Local path栏默认包含了工程根目录。当然你可以选择你的工程树中的任意目录，这里我们使用它的缺省值。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在Deployment path栏中（缺省值为空），需要定义服务器所在文件夹，将来Pycharm会从Local path文件夹向其中上传文件。这里选择为C:\xampp\htdocs。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最后在 Web path on the server <em>MyRemoteServer</em>栏中使用其缺省值：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/8f406cb2f7de13bdf3287e811a527b93.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　OK，保存设置，服务可用。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、浏览远端主机</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　你需要简单的确认一下你的服务器是否已上线并正常运行。打开<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/remote-host-tool-window.html" rel="nofollow" target="_blank">Remote Hosts tool window</a>（位于PyCharm窗口的右边缘）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/e9abc3834214461315755003ecc59db5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然，也可以通过Tools→Deployment→Browse Remote Hosts菜单命令来打开这个窗口。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　8、部署工具</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来开始执行部署操作。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　9、上传</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，向远端服务器上传文件，做法如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/project-tool-window.html" rel="nofollow" target="_blank">Project tool window</a>窗口中，右击待上传的文件，这里为Solver.py。在弹出的快捷菜单中，选择Deployment→Upload to MyRemoteServer，观察上载结果：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/59baa57e11ba51daccbe998527324d69.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然我们也可以上传工程目录下的所有文件。例如，右击Solver.py文件所在父目录（src），在快捷菜单中选择Upload to MyRemoteServer，就能够将目录下的所有文件上传到服务端：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/544063855d901a41108537f17880ba82.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/2b3ee282611930ffd964ebff2f6265e1.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　10、远程、本地版本比较</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时再远程服务端和本地服务端都有一份Solver.py文件，它们是完全相同的。此时切换到本地视图。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　做法很简单，将光标定位在函数声明语句上，按下Ctrl+Alt+Shift+T（或者主菜单上的Refactor→Refactor This命令）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/0ed9579894e7b4d5af10594d5d95fc65.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如你所见，快捷菜单中列出了当前文本下可用的所有代码重构，我们这里选择Rename refactoring，并且<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/rename-refactorings.html" rel="nofollow" target="_blank">rename a method</a>：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/7f44617dff66feeec2844d07c6fae42f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击Do Refactor，观察函数名称以及用法的改变。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时我们已经对一个本地版本进行了更改，接下来我们需要做的就是让Pycharm接收到这些更改。再次进入<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/project-tool-window.html" rel="nofollow" target="_blank">Project tool window</a>，右击Solver.py文件，在快捷菜单中选择Deployment→Compare with Deployed
+ Version on MyRemoteServer。Pycharm会打开<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/differences-viewer.html" rel="nofollow" target="_blank">differences viewer for files</a>对话框，在这里你可以通过<em>shevron</em>按钮来核对所做的改变：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/6a9898d5668588e34d86e9b46313108c.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多信息参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/comparing-deployed-files-and-folders-with-their-local-versions.html" rel="nofollow" target="_blank">product documentation</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　11、下载</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　右击Solver.py，选择Deployment→Download from MyRemoteServer，Pycharm会立即给出警告提示：<br>
+<img alt="" src="images/ba120cb41c56a36a170cb89743abed5d.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></br></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　不必惊慌，直接单击Continue即可：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4dac0b7ed78ecd494e9152d75beff67f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　对应的你也可以下载整个目录下的文件，前提是这些文件已经上传完成。例如，右击父目录src，执行相同操作，即会自动下载目录中所有嵌套文件。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然而如果你试图下载一个还未上传的文件，Pycharm会给出下载失败的提示：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/ce28bc3c5c331cac8ac3857587fe3711.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　12、同步机制调整</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先需要进行一步准备工作，就是将对Solver.py文件所做的更改撤销（Ctrl+Z），此时会再次看到Solver.py文件中类的成员函数重构名称。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来右击Solver.py，选择Deployment→Sync with Deployed to MyRemoteServer，Pycharm弹出 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/differences-viewer-for-folders-and-db-objects.html" rel="nofollow" target="_blank">differences viewer for folders</a>窗口，在这里你可以通过<em>shevron</em>按钮来核对所做的单独改变：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/eb17f7faaf9156128209d04f4272310c.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然也可以对整个文件夹进行同步操作。例如右击node_modules选择Deployment→Sync with Deployed to MyRemoteServer，此时会在左窗口中显示node_modules文件夹中的内容，但右侧窗口为空，因为该目录下的文件并未上传到服务端。我们可以在此处进行上传。选择待同步的文件，单击工具栏上的<img alt="" src="images/92faeefae2c37bfcbe627ba7d7abcd6a.png" style="border:0px">按钮：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/bfdfc008010c64262830c9f31f591e26.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　13、自动上传至缺省服务器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当用户需要在服务端使用与Pycharm工程中完全相同的文件时，自动上传功能就显得很用帮助。自动上传功能意味着无论在IDE中对代码进行了何种改变，Pycharm都会自动将其保存在已部署的默认的服务端。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　14、将服务器指定为缺省服务器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　缺省服务器的最大优点就是可以使用自动上传功能，指定方法如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/deployment.html" rel="nofollow" target="_blank">Deployment page</a>页面上选择一个服务器。有两种打开<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/deployment.html" rel="nofollow" target="_blank">Deployment
+ page</a>页面的方法：要么使用Settings/Preferences→Deployment菜单命令，要么使用Tools→Deployment→Configuration菜单命令。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）在server configurations列表中，单击缺省按钮：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/8deb126b2cd56fc62bd97ecbf9e78b24.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　15、启用自动上传功能</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　设置完缺省服务器之后，接下来就是开启自动上传功能。做法如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，打开<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/options.html" rel="nofollow" target="_blank">Options</a>部署选项（主菜单中的<span class="shortcut">Settings/Preferences→Deployment→Options 或者 <span class="shortcut">Tools→Deployment→Options命令</span></span>），在Upload
+ files automatically to the defaylt server选项中选择Always，或者On explicit save action选项：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/cca607638dcf6223ab57715d94370d1e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　以上两个选项之间的差别详见 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/options.html" rel="nofollow" target="_blank">in the field description</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　第二步，勾选主菜单Tools→Deployment→Automatic upload复选框，注意此时的automatic apload选项已经处于<em>Always</em>的模式：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/06b1ff0704d04cc29f41b945808ec6f5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　值得一提的是，我们并不推荐在发布的产品中使用<em>Always</em>模式，避免我们在部署过程中不经意上传了未开发完整的代码，从而破坏了产品的稳定性。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　16、上传外部更改</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　默认情况下Pycharm只上传文件自身的更改情况，如果我们通过其他途径对文件进行了更改，例如通过VCS branch、transpilation of SASS 或者 LESS or a File Watcher进行的更改，Pycharm是不会将这些更改自动上传的，为了保证这些更改也能顺利上传，需要启用Upload external changes功能：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9f06005631bf13b10f66277bcf7411fa.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"> </img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　</p>
+</div>
+</body></html>

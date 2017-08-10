@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（28）——Pycharm搜索导航之搜索应用实例</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这里我们将介绍Pycharm另外一项强力的搜索导航功能。假设你希望知道某个特定的类或方法都在工程中的哪些地方发挥了作用，也就是找出其所有的usages，这将是一个非常巨大而繁琐的工程，不过这里Pycharm会帮助我们实现。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　使用上一篇博客的<span class="code">Animals模块。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　3、搜索所有引用</span>usages</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　假设我们希望找出Mammalia类的所有使用环境，然后跳转到其中一处。将光标定位在类声明处，按下Alt+F7，在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/find-tool-window.html" rel="nofollow" target="_blank">Find tool window</a>窗口中显示当前类的usages：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4e395f05828f9062d2e148ebaa9f840a.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选择了一处引用之后，回车，Pycharm会打开相关文件：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4168d3aa769f9051e539485b1d710314.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　顺便提一句，你可以通过快捷菜单来实现这个功能，例如在<span class="code">Mammalia右击，观察弹出的快捷菜单内容：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/c174dfc8ed2ec51162ad7581d866c5cc.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　通过这种方式你可以在默认设置下找到某个符号的所有usages。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、其他查询方式</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　处理查找usages，Pycharm还提供了几种其他的查找方式，操作相似，目的相同，请看主菜单（Edit → Find）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/e2d6428232520c7ca5e7fbb30c23b98a.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这些操作一部分已经制定了相关快捷键，接下来我们详细介绍。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、改变搜索模式，通过对话框查找usages</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　将输入光标置于符号声明处，例如函数名feeds，按下Ctrl+Alt+Shift+F7，弹出对话框<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/find-usages-method-options.html" rel="nofollow" target="_blank">dialog box</a>，在这个对话框中可以更改搜索选项。例如希望在当前打开的文件范围内来搜索，并且在新的编辑框中显示搜索结果：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/793b0940e1aa7aba94592073fc4c176e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击Find按钮：Pycharm会通过一个新的编辑选项卡来显示feeds的搜索结果。双击（或者使用方向键选中并回车），Pycharm打开相关文件：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f172a60ed311d1f2819fe052c0292224.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、以列表形式显示usages</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在某些情况下通过搜索窗口来查看搜索结果并不是很方便，Pycharm允许将搜索结果以弹出列表的形式反馈出来。例如我们想查找Eutherian类的所用使用环境：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　将光标置于类声明处，按下Ctrl+Alt+F7（或者使用Edit→Find→Show Usages菜单命令）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/d1897804206413c182e90669974100b5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果你通过方向键选中对应条目（例如Cat类）然后回车，Pycharm会跳转到相关文件。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　现在回到弹出列表窗口，如果你想恢复到之前的Find tool window模式，只需单击<img alt="" src="images/f8e127fd40bb4abbbf13664d45c4e4f7.png" style="border:0px">即可。</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最后，如果你对当前的搜索模式不满意，单击<img alt="" src="images/6b1caa79ca2ba1af7cd73fc1914de875.png" style="border:0px">按钮打开设置对话框 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/find-usages-class-options.html" rel="nofollow" target="_blank">dialog
+ box</a>：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/7c8e07dfa9daaf90384b431f13c21bd2.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、在当前文件中查看usages</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更简单的，只需按下Ctrl+Shift+F7，或者使用Edit→Find→Highlight Usages主菜单命令，问题解决：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/634ce99e0138eff0e059b672250d4126.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　正如你所见，每个usages在右槽对应都有一个标记，当将鼠标指针悬停在对应标记上时，Pycharm会给出简要的提示声明。单击这些标记来实现不同usages间的切换。 </p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+ </p>
+</div>
+</body></html>

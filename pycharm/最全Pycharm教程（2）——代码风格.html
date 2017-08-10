@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（2）——代码风格</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span style="line-height:1.5">　　1、主题</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这部分教程主要介绍如何创建一个Python工程并使其具有Pycharm的代码风格。你将会看到Pycharm使你的源码变得非常简洁美观，带有合适的缩进、空格等等，因此Pycharm也是一款代码质量管理的利器。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这部分教程并不会介绍如何使用Python进行编程，更多有关Python编程的知识请参照：<a href="https://www.python.org/" target="_blank">Python编程</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在开始之前，请确认一下情况：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）安装了Pycharm2.7或更高版本的软件</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）已经新建了一个Python工程（File→New Project），详情参照：<a href="http://www.jetbrains.com/pycharm/help/creating-and-managing-projects.html" target="_blank">Pycharm新建工程文件</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）已经在工程下添加了两个目录：<span class="code">src和<span class="code">test_dir（<span class="shortcut">File→New or <span class="shortcut">Alt+Insert</span></span>），详情参照：<a href="http://www.jetbrains.com/pycharm/help/creating-and-managing-projects.html" target="_blank">Pycharm新建工程文件</a></span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><span class="code">　　（4）已经向工程目录下添加了对应的Python文件（<span class="shortcut">File→New or <span class="shortcut">Alt+Insert</span></span>），详情参照：<a href="http://www.jetbrains.com/pycharm/help/creating-and-managing-projects.html" target="_blank">Pycharm新建工程文件</a></span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　3、代码报错的高亮模式</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　打开一个新建的Python文件进行编辑（F4），这个文件中默认有两行代码：作者姓名和工程名称。之所以会出现这两行代码，是因为Python文件在创建时是基于<a href="http://www.jetbrains.com/pycharm/help/file-and-code-templates.html" target="_blank">文件模板</a>进行创建的，因此会预定义这两个变量。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　接下来输入关键字class，当你开始输入时，Pycharm的拼写提示机制会立即列出候选项来帮助你完成代码：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/96a561394d6f76924ebf7b499da629cd.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（参照<a href="http://www.jetbrains.com/pycharm/help/basic-code-completion-completing-names-and-keywords.html" target="_blank">Pycharm拼写提示</a>来了解Pycharm更多关于拼写提示的信息）</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这个红色波浪线标记了下次代码输入的期望位置，在这种情况下，它是一个预输入定义符。键入类名Solver，红色波浪线将会移动到类名之后。如果你将术鼠标指针悬停在波浪线上，将会看到所提示的错误信息（"Colon expected"），当然，此时位于右侧滚动栏的红色标志也会给出相同的错误信息。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/591679005c773af36bc3c048b480bba2.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　OK，输入冒号，回车。根据<a href="http://www.jetbrains.com/pycharm/help/code-style-python.html" target="_blank">Python代码风格标准</a>，需要定义下一个类声明，当然此时我们可以通过输入空格来取消它。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、聚焦PEP8代码风格检查</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然而，在默认情况下这些警告提醒是不可见的，所以首先需要做的就是提升它们的优先级以进行显示。单击<img alt="" src="images/bb746f36f8c25f3549495ec0af3ba440.png" style="border:0px">设置按钮，然后在Settings/Preferences对话框中的 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/inspections.html" rel="nofollow" target="_blank">Inspections </a>页面，键入PEP8来找到所有相关选项，在对应的下拉菜单中选中warning选项：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/7d07c291ee2355cc5df89ececa1144cf.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击应用，关闭对话框，返回源码编辑界面。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、详解PEP8代码风格</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　现在Ptcharm已经能够正常显示它的代码规范，确保你编写的代码格式的完整性。接下来当我们输入下一条语句（例如def demo(self,a,b,c):），Pycharm将根据PEP8的代码规范机制来报告当前存在的格式问题。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/286e61970edc5f912dd9fd92d9ded612.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　正如你所见到的那样，Pycharm将其所支持的<a class="external-link" href="http://www.python.org/dev/peps/pep-0008/" rel="nofollow" target="_blank">PEP8</a>规范设置为默认的正规Python代码格式标准。如果你打开inspections的列表，（Ctrl+Alt+S→Inspections），可以看到Pycharm在你的代码中加载了pep8.py工具，用来精确定位你的代码风格问题。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px; text-align:center">
+<img alt="" src="images/cf62177548a69ab2580498efd714031f.png" style="border:0px"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、代码检查以及相关设置</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　顺便说一下，如果你仔细观察 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/inspections.html" rel="nofollow" target="_blank">Inspections page</a>页面中 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/customizing-profiles.html" rel="nofollow" target="_blank">inspection
+ profile</a>的缺省设置（如果你是第一次进行设置的话）会发现，Pycharm已经将所有的代码规则用于当前的工程中了。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们对代码检查机制做两方面的改动：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）在测试脚本中，将拼写错误标记为绿色</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）在说明文档（注释）中，将拼写错误改为红色提示</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们一一进行介绍</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、创建一个作用域</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先我们需要创建两个作用域用来进行两个不同应用范围的设置。单击设置按钮进入 Settings/Preferences对话框，打开<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/scopes.html" rel="nofollow" target="_blank">Scopes</a>页面，单击上方绿色的加号来创建一个局部类型的作用域：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/e76a32b3f69022b5a6bf1b77fb4666b5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在Add New Scope对话框中，键入作用域名称，然后在工程管理器（树型结构）中选择需要包含到当前作用域中的目录：test_dir，注意此时的Pattern栏已经自动显示加载路径：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/c727b2093988f5a2d8205acc2dd8a44d.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　重复上述步骤再新建一个Production作用域。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　8、在新建的作用域中创建代码检查控制文件</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来，创建一份缺省代码控制文件的<a href="http://www.jetbrains.com/pycharm/help/customizing-profiles.html#d327211e402" target="_blank">拷贝文件</a>（处于安全考虑）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<img alt="" src="images/ef151d73052059c54172612ab90223fa.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然后在对它进行命名，例如我们这里命名为MyProjectProfile。这个新的配置文件是之前默认缺省配置文件的复制版，两者的设置内容完全相同。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来选中我们拷贝的代码控制文件，定位到Spelling项进行相应改动。为了快速找到Spelling选项叶，只需在搜索栏中输入Spel即可。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然后通过单击绿色的加号来添加我们之前新建的Test作用域，然后再次单击添加Production作用域：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/edbbe8d95b81e72b292e74be44e5f75c.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在Test作用域中，代码检查的严格等级如图中左侧所示，Production作用域中有类似设置，不过所选择的下拉列表中的安全等级不同：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/80ca92b7e78cd435271470b1b0511750.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　留意对话框中作用域名称的字体颜色，如果为灰色则说明未做改动，若是蓝色则说明已经更改了相关设置。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　应用更改设置然后关闭对话框。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时，按照要求修改后的配置文件已经完成，名为MyProjectProfile，其在Test作用域和Production作用域中有不同的拼写检查设置。接下来我们将这个配置应用于对应代码区域，在主程序菜单中选择Code→Inspect Code，在对话框中指定已经定义好的作用域和配置文件：<em><br>
+</br></em></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/701e8fe56acac28346789c5e8cc8bfce.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然我们需要操作两次，因为有两个定义域需要进行相关配置的更改，并且可以将相关的配置清单<a href="http://www.jetbrains.com/pycharm/help/exporting-inspection-results.html" target="_blank">导出</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　比较一下这两个作用域的拼写检查结果：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/3455ac25766ad7e7c1159b3e239171c8.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　正如你所见，在Production作用域为红色波浪线，在Test作用域为绿色波浪线。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　9、错误提示的高亮代码显示</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　除此之外，Pycharm还会根据配置文件控制，对当前的一些错误进行高亮显示处理。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　举个例子，如果你的拼写检查配置文件中包含"Unresolved references"这条检查规则，同时你又使用了一条尚未进行import的符号，Pycharm就会用下划线标出无法解释的符号来提示你导入相关模块：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/13a7c80c318a228ce2b188ac229f8db0.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　参考<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Auto-import" rel="nofollow" target="_blank">auto-import tutorial</a>来完成相关模块的导入工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　10、快速成型以及多次提示</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　你是否已经注意到在代码左端经常出现一个亮起的黄色或者红色的灯泡然而你却并不希望看到它？</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　11、源码自动生成</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm提供了很多代码自动生成机制，你可以参照<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/generating-code.html" rel="nofollow" target="_blank">product documentation</a>中有关自动生成代码的介绍：<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Auto-generating+code" rel="nofollow" target="_blank">Auto-generating
+ code</a>，接下来我们探讨一下Pycharm的主代码生成机制。当然我们需要先将 Solver.py中已有的内容删除，重新开始。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，创建一个类实例：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/b80f6d263d1d0e744ef18e057262bcf5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　OK，Pycharm成功创建出了一个类：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/15354ead8a8dd60402592af1cd78d1c5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们向类中添加一个成员方法，为了达到这个目的，首先需要在类实例后面输入一个点号，然后键入成员函数名称。此时这个成员函数是未定义的，因此Pycharm会提示我们来创建一个：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/28f9d3063a60939b6e3472877f24abfe.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然后在函数体中手动输入源码，例如我们输入一段计算二次方程判别式的程序，其中有一个函数<span class="code">sqrt（）来自math模块，但目前尚未被包含，我们继续输入，看Pycharm如何解决这个问题：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/682338120d1fa4c238d13a3697ccfcda.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　因此，我们源码最终如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/951862fe2ff3a5f267b2e5dfa49b4dc3.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然而，代码缺少一些重要的逻辑分析。我们需要分析判别式结果d，如果它是零或者正数，则正常求解方程的根；如果其为负数，我们需要抛出一个异常，Pycharm会如何帮助我们完成这个任务？</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　让我们用if语句来包含一块代码，即选中当d为非负数时需要执行的语句：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/6bb7b93c3b21540ac14ba06c4a50e545.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然后按下Ctrl+Alt+T，或者单击主菜单中的Code→Surround With选项，Pycharm将会弹出一个下拉菜单，显示当前情况下可用的范围控制结构：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/94f857f1ace5dcc75457ecb876d07dbb.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选择if选项，Pycharm会自动添加if True：语句到选中的行：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/12e13ecbc13579ec1b0fb71afac2367e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这里我们并不对布尔表达式做过多解释，根据需要我们直接将True替换成d &gt;= 0，接下里将光标定位到最后一行，回车，光标将会出现在下一行，和if保持相同的缩进，输入else：，然后观察Pycharm给出的预输入提示：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/ffaf99d12594e2c721dbc2fc7ac5f1a0.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　再次回车，移动光标，这里我们在Pycharm强大的拼写提示下输入抛出异常的代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f0294def5a9338f960f0d0c4d1b90c50.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　12、代码格式修改</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　再次观察Solver.py文件会发现，右边滚动槽中显示了很多黄色标记，将鼠标悬停在上边，Pycharm将会显示对应的代码格式问题：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/166d180ecf823601750fedc483e82e79.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　好在这些信息都是警告信息，并不会影响到代码的运行结果，但是格式问题实在是太多了，那么如何把代码格式调整得更为美观规范呢？</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这里所用到的就是<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/reformatting-source-code.html" rel="nofollow" target="_blank">code reformatting</a>了，不妨尝试一下。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　为了调用格式化操作，只需按下Ctrl+Alt+L快捷键，或者在主菜单中单击Code→Reformat Code，此时我们惊奇发现所有的PEP8类格式问题都已经消除。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然我们可以自定义格式化标准，打开 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/code-style.html" rel="nofollow" target="_blank">code style settings</a>对话框，选择指定语言（Python），进行必要的更改即可：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/2847279d5f3bb64a1acddf49d11e616b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　13、添加注释文档</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　代码格式调整完之后，左侧仍然留有一些黄色的标志位，鼠标悬停后提示类似于"Missing docstring"的警告信息，代码前方亮着的小黄灯泡也提示同样的信息：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/106764fa0dc6d9d929b4953566898f7d.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　解决方法也很简单，在弹出的下拉菜单中选择Insert docstring<strong>，</strong>Pycharm就会自动添加一段带格式的文本作为注释文档：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/e1093a3233d05cd74b6f03a3dffa30ab.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　注意这里有若干中注释文档的格式，你可以在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/python-integrated-tools.html" rel="nofollow" target="_blank">Python Integrated Tools</a>页面中设置当前需要插入哪种格式的注释文档，例如Epytext、plain text等</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　14、输入注释</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　注释文档用以解释函数的参数、返回值、变量的类型及含义。举个例子，我们需要控制demo()的输入参数类型，我们就需要在注释文档中添加相应的注释信息：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/a854d3eb218f3aa12bb6198d8a0d47e3.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　至此，主函数的注释文档完成。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来在函数调用的过程中，若出现参数类型不匹配的情况，Pycharm会依据注释文档来给出响应的错误提示信息：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/75a15cc724f6ebe8991cf8dface87f2e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多有关Pycharm注释文档的信息参见： <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/type-hinting-in-pycharm.html" rel="nofollow" target="_blank">type hinting</a>。</p>
+</div>
+</body></html>

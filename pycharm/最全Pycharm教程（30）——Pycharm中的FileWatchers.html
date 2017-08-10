@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（30）——Pycharm中的FileWatchers</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　详细介绍PyCharm中file watcher的使用。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Pycharm版本为3.1或者更高</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）File Watchers插件可用，这个插件在安装Pycharm应该会默认安装（若没有则需手动安装，参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/enabling-and-disabling-plugins.html" rel="nofollow" target="_blank">product documentation for details</a>）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9e3f723dcff8862a1b5cc3a972b2b557.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）提前熟悉相关使用要领，参见<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/using-file-watchers.html" rel="nofollow" target="_blank">Using File Watchers</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（4）这篇教程中我们会处理 <a class="external-link" href="http://lesscss.org/" rel="nofollow" target="_blank">LESS</a>以及 <a class="external-link" href="http://coffeescript.org/" rel="nofollow" target="_blank">CoffeeScript</a>文件。建议提前做一些预习工作。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、安装Node.js插件</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先需要下载安装Node.js插件。打开IDE设置的<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/plugins-2.html" rel="nofollow" target="_blank">Plugins</a>页面，搜索对应插件：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/8ca92560f1f7e974b21b3df97a334c8d.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　安装完成后，重启Pycharm。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、安装LESS和CoffeeScript编译器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这里有两种方式安装这两个编译器：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）第一，手动安装。打开 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/working-with-embedded-local-terminal.html" rel="nofollow" target="_blank">local terminal</a>（单击PyCharm窗口下边缘的Terminal窗口按钮），使用<span class="code">npm命令安装LESS和CoffeeScript：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/19fbb0f29ecb35e622a9dcd95875bf9b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　（2）第二，使用Pycharm界面安装：单击主工具栏的设置按钮，在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/node-js-and-npm.html" rel="nofollow" target="_blank">Node.js and NPM</a>页面单击绿色加号：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/caadaef8b26e8604bf5d9c762cd85e79.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在Available Packages对话框中，选择要安装的库（这里选择less），单击Install Package：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f8b4fc756cee50d92ff849ac6ebd455b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　安装完成后，相关编译器文件会写入工程的根目录下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/76ae68f890765f50da2c69eb8bef3498.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　稍后用到这些文件。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、配置File Watchers</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+ 　　这步由Pycharm自动完成。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、为LESS文件配置相应的file watcher</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在没有进行相应配置是，打开LESS文件后Pycharm会给出错误提示：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/3a115cd7bb5bff8e21f3197365a1e452.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击Add watcher连接按钮，在弹出的对话框中选择file watcher的可执行类型（这里选择LESS），并制定从标准输出中指定生成格式：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f6c17491ac3e8b7ab14ef74106191888.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　通过这个配置窗口你能够大致了解file watcher的实际功能;</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）监视项目中所有LESS文件的变化</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）使用外部扩展来编译文件，一般使用定义在Program域中的<em>lessc.cmd</em>编译器。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、为CofeeScript文件配置相应的file watcher</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在没有进行相应配置是，打开CofeeScript文件后Pycharm同样会给出错误提示：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/852b404febec046c38242ff951b8e13d.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击Add watcher连接按钮，在弹出的对话框中选择file watcher的可执行类型（这里选择CoffeeScript ）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f77350bac98765cfd638445dd6022614.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　通过这个配置窗口你能够大致了解file watcher的实际功能：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）跟踪项目中所有CoffeeScript文件的变化。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）使用外部扩展.coffee来编译处于外部扩展extension .js的文件，一般使用定义在Program域中的 <em>coffee.cmd</em>编译器。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）使用外部扩展.coffee来编译处于外部扩展extension .map的文件，一般使用定义在Program域中的 <em>coffee.cmd</em>编译器。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　8、编辑file watcher</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　打开LESS文件，做一些改动，例如重命名变量@myColor为@Color，并改变它的值。file watcher会立即处理改动后的文件，并通过外部<em>.css</em>将其变成一个输出文件：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/7ae4c6ea72b5a26f36e02ab2da401521.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来打开并编辑CoffeeScript文件，做一些修改，例如更改<em>opposite</em>变量的值，file watcher会生成一个JavaScript文件以及一个映射源文件：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4cb92ffe706f2a5eece2a85a6f3af7e6.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　注意PyCharm会在项目窗口中同时显示生成文件和源文件。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　9、有问题？</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　 File Watcher执行失败，PyCharm会给出提示以帮助修正：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/04ff0bd478a11849ee7a8d1dacabd379.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+</div>
+</body></html>

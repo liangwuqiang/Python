@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（34）——Pycharm内置终端以及远程SSH工具的使用</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如何使用Pycahrm内置终端以及远程SSH工具。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm版本为3.0或更高</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　连接SSH服务器</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、使用SSH客户端</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、开启连接</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选择Tools | Start SSH Session...的主菜单命令，单击Edit credentials：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/137f28c78f7997358345fa68c18331c1.png" style="border:0px; display:block; margin-left:auto; margin-right:auto">　　5、提供连接信息</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在<span class="shortcut">Session对话框中输入建立连接所需相关信息：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut"><img alt="" src="images/24bb0e7d6196f364d82418763eab1c99.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、建立连接</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击OK，连接开始：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f2a024cff98c0cc5cbb2f007e41e19f9.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、SSH会话功能</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　运行命令、粘贴复制、浏览历史命令……</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　8、远程SSH外部工具的作用</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　定义一个外部工具用来脱机运行命令，如显示一个日历。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　9、配置一个SSH外部工具</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　打开设置对话框，在IDE Settings节点下，选择 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/remote-ssh-external-tools.html" rel="nofollow" target="_blank">Remote SSH External Tool</a>页面，单击绿色加号创建一个新的远程工具，在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/create-copy-edit-tool-dialog-(remote-ssh-external-tools).html" rel="nofollow" target="_blank">Create
+ Tool dialog</a>窗口中进行一些必要设置：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Name</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　<span class="shortcut">Description栏提供多种类型的描述。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　　　<span class="shortcut">Group指定创建级联菜单，用以存放外部工具名</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）Show in指定新工具的显示位置，这里只勾选Main Menu</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）Connection settings区域选择Select server on every run的单选按钮，即每次运行服务都需要进行详细设置。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（4）在Tool settings区域，指定待远程执行的工具，参数和工作目录是可选的，也可以用宏来代替当前命令：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/734be3723db261183656e4c3a518c7d7.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击OK，关闭 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/create-copy-edit-tool-dialog-(remote-ssh-external-tools).html" rel="nofollow" target="_blank">Create Tool dialog</a>对话框，返回<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/remote-ssh-external-tools.html" rel="nofollow" target="_blank">Remote
+ SSH External Tool</a>页，在下拉列表中可以看到新创建的工具：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/cee2f633e8acf81551071164ffb7d648.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　其他控件信息详见 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/create-copy-edit-tool-dialog-(remote-ssh-external-tools).html" rel="nofollow" target="_blank">product documentation</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　10、加载SSH外部工具</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　设置好的工具会在menus中显示以供选择，这里显示在<span class="shortcut">Tools菜单下：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px; text-align:center">
+<img alt="" src="images/0e8c2054f6f5a94f69e134de3499ebe1.png" style="border:0px"> </img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来尝试使用这个命令。首先选择要连接的服务器：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/2c7bc893fd1c48554e315f5e2a28a5c6.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　进行相关设置：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/197c6bcf1826c55b6d5f4609d84d7c1d.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最后，顺利显示日历：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/7d57adca4129dbd803388bbd2316ddc0.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　SSH会话运行在终端工具窗口，外部工具在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/run-tool-window.html" rel="nofollow" target="_blank">Run tool window</a>窗口中进行加载：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/29df573260479d82fdc7b75187eab87e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+ </p>
+</div>
+</body></html>

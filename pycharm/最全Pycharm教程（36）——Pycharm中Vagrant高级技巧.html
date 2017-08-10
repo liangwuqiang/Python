@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（36）——Pycharm中Vagrant高级技巧</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　介绍Pycharm中Vagrant高级使用技巧。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、使用内置SSH连接一个Vagrant</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/running-ssh-terminal.html" rel="nofollow" target="_blank">built-in SSH terminal</a> </p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、开始连接</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　使用Tools→Start SSH session...主菜单命令：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f188706c29a92e64a931026638f2f089.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Getting+started+with+Vagrant+in+PyCharm" rel="nofollow" target="_blank">The configured Vagrant machine</a>已经被自动添加到了列表中，单击连接。这里的Edit credentials...菜单项是用于用户手动输入连接信息，我们这里只使用virtual box。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、使用SSH</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选定Vagrant之后，Pycharm使用SSH连接到Vagrant，并在本地终端显示相关信息：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9797818f5b20c724b1fc30eb8bb5bdfb.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在SSH终端可以进行以下操作：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　使用上下键浏览历史命令</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　使用剪贴板功能</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、使用共享文件夹</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm允许在host和Vagrant共享文件夹。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、添加映射路径</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　打开Vagrantfile文件<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/opening-and-reopening-files-in-the-editor.html" rel="nofollow" target="_blank">Open Vagrantfile for editing</a>，添加一个映射路径配置参数：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/c91dfd3d3ef12621b132f50e29ae377b.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、重载Vagrant</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　可以使用Tools→Vagrant→Reload主菜单命令来重新装载Vagrantfile：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9586d33b359cc5dc3ee5dd3d73b9a331.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　一旦重新装载了Vagrant之后，一个新的映射路径变得可用。例如我们使用SSH内置终端连接Vagrant之后，我们看到Pycharm将<em>/vagrant</em>文件夹中的内容映射到本地工程文件夹中，注意这里如果删除一处文件夹中的文件，两边的文件夹都会删除相应文件。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/409702a22816505b2865e2f18644cacc.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　8、指定Vagrant实例文件夹</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　默认情况下Vagrant相关文件被放置在工程的根目录下，我们可以在工程设置窗口的<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/vagrant.html" rel="nofollow" target="_blank">Vagrant</a>页面对其进行更改：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/19f3d53180d6626c5938fe8af879da10.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　9、在设置窗口管理Vagrant插件</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+ 　　可以在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/vagrant.html" rel="nofollow" target="_blank">Vagrant</a>设置中管理相关插件，在Plugins页，使用安装/卸载/更新插件 按钮来进行管理。例如通过 <a class="external-link" href="http://docs.vagrantup.com/v2/vmware/" rel="nofollow" target="_blank">VMWare
+ Fusion Provider</a>插件可以允许我们在VMWare环境中运行Vagrant。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/96e5da4efbe072f527adb95051becc70.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　10、供应商支持</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Vagrant默认与<a class="external-link" href="https://www.virtualbox.org/" rel="nofollow" target="_blank">Oracle VirtualBox</a>协同工作，这里我们可以更换供应商平台，例如<a class="external-link" href="http://www.vmware.com/" rel="nofollow" target="_blank">VMWare</a>、 <a class="external-link" href="http://aws.amazon.com/" rel="nofollow" target="_blank">Amazon
+ EC2</a>，具体参见供应商列表<a class="external-link" href="https://github.com/mitchellh/vagrant/wiki/Available-Vagrant-Plugins" rel="nofollow" target="_blank">Vagrant plugins list</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm将供应商名称自动绑定到命令行，方便通过其来使用Vagrant。选中一个电脑上安装并设置好的供应商之后，将会通过它来执行所有的Vagrant命令：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/a3e5623b269a759dfa5a80b6c14525e3.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　11、更换供应商支持</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+ 　　Tools→Vagrant→Provision用以切换供应商设置，无需关闭虚拟机。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　使用Tools→Vagrant菜单命令，运行<a class="external-link" href="http://docs.vagrantup.com/v2/provisioning/index.html" rel="nofollow" target="_blank">provisioning on a running environment</a>：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/4c6c693c1156ac21c2f206dbffb0e3c7.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　12、环境变量功能</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　环境变量有一下功能：</p>
+<ul style="margin-left:0px; padding-left:40px; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<li style="margin-left:0px; padding-left:0px">setting the Puppet node</li><li style="margin-left:0px; padding-left:0px">setting the Puppet environment</li><li style="margin-left:0px; padding-left:0px">setting custom facts</li><li style="margin-left:0px; padding-left:0px">setting AWS keys</li><li style="margin-left:0px; padding-left:0px">...</li></ul>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/vagrant.html" rel="nofollow" target="_blank">Vagrant</a>页面设置项目相关环境变量：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/ee0735170821c74d3f313ad22a4af3ea.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　设置完成后，这些环境变量就会被加入到Vagrantfile，以<em>#{ENV['name_of_variable']}</em>的形式：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/97ab65d55a932212df20ba90381794f8.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+</div>
+</body></html>

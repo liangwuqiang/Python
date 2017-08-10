@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（8）——Django工程的创建和管理</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50100121" target="_blank">最全Pycharm教程（1）——定制外观</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50113593" target="_blank">最全Pycharm教程（2）——代码风格</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50130991" target="_blank">最全Pycharm教程（3）——代码的调试、运行</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50135135" target="_blank">最全Pycharm教程（4）——有关Python解释器的相关配置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50144201" target="_blank">最全Pycharm教程（5）——Python快捷键相关设置</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<a href="http://blog.csdn.net/u013088062/article/details/50148219" target="_blank">最全Pycharm教程（6）——将Pycharm作为Vim编辑器使用</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这部分教程主要介绍如何通过Pycharm创建、管理、运行一个Django工程。对于Django模块的相关知识大家可以参考Python社区。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Pycharm为3.0或者更高版本。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）电脑上至少安装了一个Python解释器，2.4到3.3版本均可。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这部分教程所用的环境配置如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Django模块的版本为1.6.5</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）默认为Windows模式下的快捷键配置</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）这部分例子与Django模块的说明文档中所用的实例相同<a class="external-link" href="https://docs.djangoproject.com/en/1.6/" rel="nofollow" target="_blank">Django documentation</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、创建一个新工程</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　实际上所有工程的创建都可以通过单击<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/welcome-screen.html" rel="nofollow" target="_blank">Welcome screen</a>界面上的Create New Project按钮来实现。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果你已经打开了一个工程，可以通过菜单栏File → New Project...来创建一个新的工程。接下来在 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/create-new-project.html" rel="nofollow" target="_blank">Create New Project dialog</a>对话框中输入工程名字、选择类型以及用到的解释器版本：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/3d0854e75f1419235840f410b7fe41f8.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击OK，工程的个性化设置完成。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这就意味着对应目录已经创建完成，并且预先定义了一个<span class="code">.idea目录用来保存配置信息<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/project-and-ide-settings.html" rel="nofollow" target="_blank">project settings</a>。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　对于一个空的工程<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Getting+Started+with+PyCharm#GettingStartedwithPyCharm-CreatingasimplePythonprojectinPyCharm" rel="nofollow" target="_blank">empty project</a>，创建的环节已经完成了。接下里你就可以开始编写程序。但对于一些所支持的第三方框架，还有一些工作要做。根据所选择的工程类型，Pycharm会提示我们进行一些额外的框架设置。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在本实例中，让我们来创建开发一个Django应用。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、创建一个Django工程　　</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　因此，在<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/create-new-project.html" rel="nofollow" target="_blank">Create New Project</a>对话框中我们的工程类型选择为Django，注意Pycharm会提示我们安装Django框架，如果当前环境中没有可用的话。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们进行Django工程的相关设置：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9c62829fcdd2300436cd10293de6ce8e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击OK，设置完成。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、工程目录结构</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　正如上面所说，工程的根目录结构已经创建完成，主要包含基本的框架配置文件和目录，当你创建其他类型的工程时也会有类似操作，如t Pyramid, 或者Google App Engine。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们研究如何在Project窗口中显示工程结构。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、Project窗口中的目录结构<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/create-new-project.html" rel="nofollow" target="_blank"><br>
+</br></a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这是默认显示模式。窗口中将会显示的结构有<span class="code">polls和MyDjangoApp目录，当然还有两个Python文件：manage.py和settings.py。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　在这个窗口中你是无法看到.idea目录结构的。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/7737dc54b510bad31e84cbbb430a268f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、Project窗口下的工程文件</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果你想看到<span class="code">idea目录，只需选择view <em>Project</em> Files模式，这个视图所显示的文件和之前一样，只是多了idea目录：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/c27ce7f9b9cc60a16c431ff9862f2adb.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Ok,回到之前的视图模式。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　8、Project窗口中所显示的文件都是干什么用的？</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）<span class="code">untitled目录是工程的容器，在窗口中以加粗字体显示。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　（2）manage.py是一个命令行文件，帮助你操作你的Django工程，详见<a class="external-link" href="http://django.readthedocs.org/en/latest/ref/django-admin.html" rel="nofollow" target="_blank">product documentation</a></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　（3）嵌套子目录<span class="code">MyDjangoApp充当了当前工程的库 </span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　（4）MyDjangoApp/_<em>init</em>_.py是一个空文件，用来指示当前目录应该作为一个库来使用。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><span class="code">　　（5）MyDjangoApp/settings.py包含了当前工程的相关设置<a class="external-link" href="http://django.readthedocs.org/en/latest/topics/settings.html" rel="nofollow" target="_blank">configuration for your Django project</a></span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><span class="code">　　（6）MyDjangoApp/urls.py包含了当前工程响应的url信息<a class="external-link" href="http://django.readthedocs.org/en/latest/topics/http/urls.html" rel="nofollow" target="_blank">URL declarations for your Django project</a></span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><span class="code">　　（7）MyDjangoApp/wsgi.py定义了WSGI兼容模式下Web服务器的入口，详见<a class="external-link" href="http://django.readthedocs.org/en/latest/howto/deployment/wsgi/index.html" rel="nofollow" target="_blank">How to deploy with WSGI</a></span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><span class="code">　　（8）<span class="code">polls目录下包含了完善Django应用的所有文件（此时为空）：</span></span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　　　polls/_<em>init</em>_.py指示当前目录应该作为一个库来使用</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　　　polls/models.py保存我们所创建的应用程序模型</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　　　polls/views.py保存我们的views</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><span class="code"><span class="code">　　（9）<span class="code">templates为空，用以包含响应的模板文件</span></span></span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><span class="code"><span class="code"><span class="code">　　值得一提的是你可以创建很多Django应用，通过运行<span class="code">manage.py文件的<span class="code">startapp任务来将其添加到当前工程中（主菜单上的Tools→Run manage.py task）命令。</span></span></span></span></span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　9、配置数据库</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　根目录生成后，我们需要做一些微调。打开文件settings.py（选中后按F4）。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　首先确定准备在应用程序中使用哪种数据库。可以通过以下方法定位DATABASES变量：按下Ctrl+F，然后在搜索栏中输入需要查找的字符串，然后在'ENGINE'行的冒号后边输入使用的数据库管理系统（这里暂且设置为sqlite3）。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　在'NAME'行，输入预定义数据库的名称（无论其是否已经存在）：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/6d80e7781d369aae4c57f26380f82d42.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"><br>
+</br></img></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　10、加载</span>Django服务 </p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　由于我们在这里处于谨慎选择了sqlite3数据库。因此这里无需再定义其他变量（如用户证书、端口号、POST文件等）。接下来我们核实一下我们的设置是否正确，做法相当简单，至于要加载并运行 manage.py文件：按下Ctrl+Alt+R，在弹出的消息框中输入任务名称：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/43b86db77a17195366d18f009c82e5f0.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　11、创建一个模型</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来，打开并编辑（<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/opening-and-reopening-files-in-the-editor.html" rel="nofollow" target="_blank">open for editing</a>）models.py文件，注意此时Pycharm已经实现导入好了相关库，然后键入以下代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/fa3bfa8b472e482675285a3353c64808.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　事实上直接对上述代码进行复制粘贴即可，不过这里推荐大家手动输入以体会Pycharm强大的拼写提示功能：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/1df55be4f11adda5dd501b7a28b083b5.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　12、创建一个数据库</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们需要为新建模型添加一个表单。再次使用Ctrl+Alt+R快捷键：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先从提示列表中选择sql，然后选择预期的应用名称：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/cc075c33d85428d9e65b5e719b3d84b9.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这条命令会为当前类自动添加SQL声明：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/b769507510eba920ac7b11cf5770339f.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　第二步，在提示列表中选择syncdb语句，在提示列表中进行列表的创建，显示结果如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/f3ed6c0a3688e3655bd893fa51ee2326.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　13、完善管理控制函数</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　由于我们需要对应用进行账户管理，Pycharm已经在urls.py文件中定义好了相关命令。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然而，我们需要编辑函数的admin功能。在polls文件夹下创建一个admin.py的文件（Alt+Ins），然后输入一下代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/35214d7a553cda6b3e41d0c256d9ab02.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　再次展示一下Pycharm强大的拼写提示功能：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/074bbbc4bf42bf9267ff1171b4b65799.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　14、运行与调试</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　现在我们准备前往admin界面进行一些设置了。当然，我们很可能需要先运行Django服务，进入对应文件目录，在地址栏输入完整的URL地址。不过这里Pycharm提供了一个轻量级的修改方法：<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/run-debug-configuration-django-server.html" rel="nofollow" target="_blank">Django server
+ run configuration</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击主工具栏的 run/debug configurations选项来进入调试配置模式，然后选择Edit Configuration（或者在主菜单中选择Run→Edit Configurations）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/1fe95c27d76ff8ece06c91af7c674d52.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/run-debug-configuration-django-server.html" rel="nofollow" target="_blank">Run/Dug Configuration dialog box</a>对话框中，输入配置方案名称（这里为myapp）、默认的浏览器（勾选Run browser选项），个性化定制我们的节点界面：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/ae9967335121e765ae69dcd0e146ab83.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　15、加载用户界面</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　加载并运行这个应用，按下Shift+F10或者主工具栏中的run按钮，打开标准的administration页面，而且必须登录。接下来你可以创建一些polls并为其制定相应的问题及候选项：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/67ac6ebc9b6b5a066b4c39612d97a9b0.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　16、创建视图链接</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们准备为应用添加一些子视图，让它拥有"index"、"details"、"results"、"votes"等子页面。首先，我们向urls.py文件中添加这些子页面的模式（在Project窗口中选中该文件然后按F4）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/cf2503b00ebaeb27ce7d65beba149d46.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这些模式所涉及的页面目前还并不存在，因此需要手动向其中添加一些方法并进行模板关联，这些操作在Pycharm的帮助下会变得异常简单：你只需将鼠标指针悬停在一个未定义（Pycharm会高亮显示那些unresolved reference的代码），这是会亮起一个黄色的小灯泡，这就意味着Pycharm在此准备了一个快速提示，单击小灯泡（或者按下Alt+enter）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/68b79d287dfa2843f78537b5d2276b77.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选择Create Django view method选项来在views.py文件中创建一个视图的成员方法，并与特定的模板文件相关联。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们会看到以下变化：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　<span class="code">templates目录不再为空，其中包含了我们创建的根模板文件。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　views.py文件中已经包含了根视图的相关方法。</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/88fdbd7804e3c243b22ed36f5c0c7269.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　除了添加了view的相关方法外，Pycharm还自动导入的Django中的相关操作，并用render_to_response来标记。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　注意view method名称左侧的图标，可以通过该图标来查看该方法对应的模板。可以通过Create template&lt;name&gt;命令在快速创建视图以及对应模板，接下来我们向其中写入代码。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　例如我们希望看到polls的可用列表，打开views.py，输入以下代码：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/5eaa5cc7461a5a58706ec31f0eb10c31.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm会给出快捷的拼写提示：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9e6c640c553a8c21f2fb0b5a969110f4.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　完成后将会有如下显示：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/b2a26b7e9854f5ece099f94fe585ffa9.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　17、创建模板</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来我们向模板中添加一些代码。打开index.html文件，输入模板代码。这里需要注意的是大括号一定要成对出现，当你输入{%，Pycharm会在输入光标的后面自动添加另一个括号。这里你可以通过Ctrl+Space来进行拼写提示。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/cac42a2efe64ea755c96286fd53d40e4.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当需要输入HTML类型标签时，PyCharm同样设计了帮助系统：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Ctrl+Space调用拼写提示功能。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当输入一个括号时，会自动生成另一个括号以进行匹配</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来拟至于一步一步晚上你的模板代码，最终结果如下：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/ff22e745fc1f015414c1b2b75e0798de.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　18、大功告成</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　让我们核实一下polls的变量列表，发现我们的admin能够正常使用，并且能够在地址栏中显示对应的URL地址（/admin/, type /polls/）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/6f67f3ac8214458bb5e4e53d39bd67d3.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击以查看详细信息：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/02740df7c9ba66eb1684e33f6a313bf6.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+</div>
+</body></html>

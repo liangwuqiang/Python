@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（37）——Pycharm版本控制之基础篇</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、主题</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　介绍Pycharm的版本控制系统</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、准备工作</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Pycharm版本为2.7或者更高</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）已经创建一个工程，参见<a class="external-link" href="http://confluence.jetbrains.com/display/PYH/Getting+Started+with+PyCharm" rel="nofollow" target="_blank">Getting Started tutorial</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）安装并配置了VCS，有远程接入权限</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、启用VCS</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　Pycharm默认版本控制不可用，不过可以在<span class="shortcut">VCS菜单中找到相应命令：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="shortcut"><img alt="" src="images/b34b74cc4e9cc9dfbba9cb36775ec7e8.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时Pycharm会根据本地历史来浏览外部资源，甚至可以从这个菜单中启用版本控制系统，不过此时版本控制只针对工程根目录，跟多具体配置参见下面章节。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、启用版本控制</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击主工具栏上的控制按钮，单击 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/version-control.html" rel="nofollow" target="_blank">Version Control</a>，默认情况下这里只有根目录&lt;project&gt;。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　首先，单击绿色加号，在Add VCS Directory Mapping对话框中，单击省略号按钮，选择对应目录，在下面的下来菜单中指定版本控制系统（这里使用Git）。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/9785cce4de43f7c2e74efe06f651f845.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当然，可以对每个目录指定对应的版本控制系统。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　然后，单击应用，关闭对话框</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、对Pycharm外观的影响</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）Solver.py文件颜色改变，意味着其尚未添加版本控制</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（2）出现<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/changes-tool-window.html" rel="nofollow" target="_blank">Changes tool window</a>窗口，类似于一个按钮位于Pycharm下边缘。单击它可以打开窗口，查看尚未添加版本控制的文件。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（3）VCS菜单上出现更多命令，并且允许查看工程的更改以及更新整个工程，对应<img alt="" src="images/0d71954b3bbf19b3ac8b008db909a86c.png" style="border:0px">和<img alt="" src="images/fb3c54da2743283f6b15004e1f735287.png" style="border:0px">按钮。主工具栏对应也会添加响应命令</img></img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（4）VCS菜单以及工程快捷菜单中出现Git节点（取决于所选择的版本控制），其中包含特定的VCS命令</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（5）状态栏出现<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/accessing-git-branches-popup-menu.html" rel="nofollow" target="_blank">Git widget</a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/accessing-git-branches-popup-menu.html" rel="nofollow" target="_blank"><img alt="" src="images/c23cd87a07c8abfab5639acffa1f750c.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></a></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　6、对一个文件添加版本控制</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在Changes tool window窗口中未进行版本控制的文件显示如下:</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/fd60fa819eb20ffad173d7fa2e619711.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选中Solver.py，按下Ctrl+Alt+A来添加对应版本控制，文件颜色变为绿色，添加成功，但尚未进行托管。将文件移动到Default变更表下，按下Ctrl+K（或者<img alt="" src="images/0d71954b3bbf19b3ac8b008db909a86c.png" style="border:0px">）来进行托管：</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/686b9c3e5f45545c5d0d72407b1c50ac.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　核实无误，单击<span class="shortcut">Commit按钮：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/919af4249aae24e5c28ab946c34d6d89.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　大功告成，Solver.py文件名再次变为黑色，意味当前没有未更新的更改。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　7、.idea目录下的文件</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击 Changes tool window窗口中的<img alt="" src="images/6163f0dced74d029b5b855e935f1caf5.png" style="border:0px">按钮，发现工程根目录下的idea目录下的文件都未进行相关版本控制，并且这部分文件在工程窗口中不可见。</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这部分文件保存了工程的配置信息，我们需要对其进行替换，除了版本控制文件。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　8、忽略文件</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　打开设置对话框的<a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/ignored-files.html" rel="nofollow" target="_blank">Ignored Files page</a>页（设置→Version Control→Ignored Files），查看默认忽略文件列表：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/cf82b2a5111f6845191281f51053060a.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击绿色加号选择忽略更多文件，详见 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/configuring-ignored-files.html" rel="nofollow" target="_blank">Configuring Ignored Files</a>。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　9、编辑器的变化</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　编辑代码，左槽会标记出所有更改：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/85d18acde122cedd9c312e38ab6be089.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击一个标记，会弹出一个工具窗口：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/ea8d33f34ef22a878b6e9f457fceb8e1.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　这个弹出的工具栏能够帮助你进行导航、浏览更改等操作。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　更多信息参见 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/using-change-markers-to-view-and-navigate-through-changes-in-the-editor.html" rel="nofollow" target="_blank">Using Change Markers to View and Navigate Through Changes in the Editor</a> </p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　此时代码文件名变为蓝色，意味着当前存在尚未托管的更改。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　10、获取更新日期</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　按下Ctrl+T</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　单击<img alt="" src="images/fb3c54da2743283f6b15004e1f735287.png" style="border:0px">按钮</img></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　使用VCS→Update Project...菜单命令</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　</p>
+</div>
+</body></html>

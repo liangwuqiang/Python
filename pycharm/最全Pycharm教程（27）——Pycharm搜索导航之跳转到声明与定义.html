@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h3>最全Pycharm教程（27）——Pycharm搜索导航之跳转到声明与定义</h3></center>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　1、准备实例</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　（1）在工程目录下创建<span class="code">Animals模块（<span class="shortcut">Alt+Insert→<span class="shortcut">Python Package</span></span>）：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　（2）创建一个Python文件（<span class="shortcut">Alt+Insert→<span class="shortcut">Python File</span></span>）：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code">　　在Mammals.py文件中输入以下代码：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/e1f8c6db9f48e887891835f398939e4c.png" style="border:0px"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+ </p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　在<span class="code">Carnivore.py, <span class="code">Herbivore.py文件中输入以下代码：</span></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/158cb1112cd8ea35fbc37db838e8f0ae.png" style="border:0px"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　2、转到声明</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　将光标定位在Cat类实例的feeds（）函数名处，按下Ctrl+B。Pycharm会自动跳转到Mammalia类feeds成员的定义：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/e0d1bb53329ea433f32259d4ef4b4b8d.png" style="border:0px"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　3、转到引用</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　接下来吧光标至于<span class="code">Mammalia类名称处，查找其所有引用。按下Ctrl+Alt+B，会看到Mammalia类的引用列表：</span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<span class="code"><img alt="" src="images/bfeddcc70ed0d972b3ce5e8341984101.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></span></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　选择你想查看的引用（例如这里选择Cow），回车，Pycharm会跳转到对应引用位置：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/57eca98ac393c9eaebd7664277c01e26.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果你选择了位于另外一个文件中的引用，如Carnivore，Pycharm会在一个单独的编辑选项卡中打开它。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　4、注意侧边图钉图标</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　之前我们已经预见过类似的图钉图标，例如在查看快捷文档时（Ctrl+Q），如果你单击这个图标，则整个弹出窗口会被固定。在这里则意味着所遇到的引用已经添加到 <a class="external-link" href="http://www.jetbrains.com/pycharm/webhelp/find-tool-window.html" rel="nofollow" target="_blank">Find tool window</a>窗口中进行显示。</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　5、左槽图标的导航功能</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　最后我们观察窗口左槽，这里有很多附有指向箭头的图标，意味着？</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　如果你将鼠标指针悬停在图标上面，Pycharm会显示其子类或者重载方法（向下的箭头）、父类（向上箭头）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/7344396df050e9b00baeafcbd18c61f9.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　当你单击这个图标时，Pycharm会列出其子类或者重载方法（如果有的话）：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/b9598c18fc3dc9bb2cc4f097bdcd1bf2.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+　　之后Pycharm会跳转到所选条目，并将光标至于对应的声明部分。如果只存在一个子类、父类或者重载函数，则默认执行跳转操作：</p>
+<p style="margin:10px auto; font-family:verdana,Arial,Helvetica,sans-serif; font-size:14px; line-height:21px">
+<img alt="" src="images/1c9f374ab7a9fdfb144979e8983c802e.png" style="border:0px; display:block; margin-left:auto; margin-right:auto"/></p>
+</div>
+</body></html>
