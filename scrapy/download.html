@@ -1,0 +1,426 @@
+<html><!--<![endif]--><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+  <!-- Start of Baidu Transcode -->
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta name="applicable-device" content="pc,mobile">
+  <meta name="MobileOptimized" content="width">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="mobile-agent" content="format=html5;url=http://www.jianshu.com/p/a8aad3bf4dc4">
+  <!-- End of Baidu Transcode -->
+
+    <meta name="description" content="Scrapy介绍Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。所谓网络爬虫，就是一个在网上到处或定向抓取数据的程序，当然，这种说法不够专业，更专业的描述就是，抓取特定网站网页的HTML数据。抓取网页的一般方法...">
+
+  <meta name="360-site-verification" content="604a14b53c6b871206001285921e81d8">
+  <meta property="wb:webmaster" content="294ec9de89e7fadb">
+  <meta property="qc:admins" content="104102651453316562112116375">
+  <meta property="qc:admins" content="11635613706305617">
+  <meta property="qc:admins" content="1163561616621163056375">
+  <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4">
+  <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI">
+  <meta http-equiv="mobile-agent" content="format=html5; url=http://www.jianshu.com/p/a8aad3bf4dc4">
+
+  <!-- Apple -->
+  <meta name="apple-mobile-web-app-title" content="简书">
+
+    <!--  Meta for Smart App Banner -->
+  <meta name="apple-itunes-app" content="app-id=888237539, app-argument=jianshu://notes/568684">
+  <!-- End -->
+
+  <!--  Meta for Twitter Card -->
+  <meta content="summary" property="twitter:card">
+  <meta content="@jianshucom" property="twitter:site">
+  <meta content="【scrapy】学习Scrapy入门" property="twitter:title">
+  <meta content="Scrapy介绍Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。所谓网络爬虫，就是一个在网上到处或定向抓取数据的程序，当然，这种说法不够专业，更专业的描述就是，抓取特定网站网页的HTML数据。抓取网页的一般方法..." property="twitter:description">
+  <meta content="http://www.jianshu.com/p/a8aad3bf4dc4" property="twitter:url">
+  <!-- End -->
+
+  <!--  Meta for OpenGraph -->
+  <meta property="fb:app_id" content="865829053512461">
+  <meta property="og:site_name" content="简书">
+  <meta property="og:title" content="【scrapy】学习Scrapy入门">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://www.jianshu.com/p/a8aad3bf4dc4">
+  <meta property="og:description" content="Scrapy介绍Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。所谓网络爬虫，就是一个在网上到处或定向抓取数据...">
+  <!-- End -->
+
+  <!--  Meta for Facebook Applinks -->
+  <meta property="al:ios:url" content="jianshu://notes/568684">
+  <meta property="al:ios:app_store_id" content="888237539">
+  <meta property="al:ios:app_name" content="简书">
+
+  <meta property="al:android:url" content="jianshu://notes/568684">
+  <meta property="al:android:package" content="com.jianshu.haruki">
+  <meta property="al:android:app_name" content="简书">
+  <!-- End -->
+
+
+    <title>【scrapy】学习Scrapy入门 - 简书</title>
+
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="Wh55LMGtnGT2tSkhZz8JG/j2DJlzUJeuyU24hN2koxFhLWW4kULvxVxNCk/e3c3abWbU/JDSN6vq474Cp4Wf9A==">
+
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web-a22db2e2e120168cfb83.css">
+
+  <link rel="stylesheet" media="all" href="//cdn2.jianshu.io/assets/web/pages/notes/show/entry-a22db2e2e120168cfb83.css">
+
+  <link href="//cdn2.jianshu.io/assets/favicons/favicon-783beb88ed621ceab614de960376ac0c.ico" rel="icon">
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/57-47624b2e2161e8eb144462c85db0a5ff.png" sizes="57x57">
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/72-c00cde7cf98fc49e50cbb3ee1dcd5804.png" sizes="72x72">
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/76-e8af0bdeaf1ba31e303b1fde8b5e66c4.png" sizes="76x76">
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/114-f4c78569bbf1977e8382a5fd90c9237a.png" sizes="114x114">
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/120-cf10c3711dba269522743729efe66bbc.png" sizes="120x120">
+      <link rel="apple-touch-icon-precomposed" href="//cdn2.jianshu.io/assets/apple-touch-icons/152-7bd60457b5f3ecbf1343f0e6241be4f8.png" sizes="152x152">
+<link rel="stylesheet" href="blob:http://www.jianshu.com/a49ad2f5-c136-4fcd-a164-9abf9dadfd4b"></head>
+
+  <body class="reader-black-font" lang="zh-CN">
+    <!-- 全局顶部导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="width-limit">
+    <!-- 左上方 Logo -->
+    <a class="logo" href="/"><img src="//cdn2.jianshu.io/assets/web/logo-58fd04f6f0de908401aa561cda6a0688.png" alt="Logo"></a>
+
+    <!-- 右上角 -->
+      <!-- 未登录显示登录/注册/写文章 -->
+      <a class="btn write-btn" target="_blank" href="/writer#/">
+        <i class="iconfont ic-write"></i>写文章
+</a>      <a class="btn sign-up" href="/sign_up">注册</a>
+      <a class="btn log-in" href="/sign_in">登录</a>
+
+    <!-- 如果用户登录，显示下拉菜单 -->
+
+    <div class="style-mode"><a class="style-mode-btn"><i class="iconfont ic-navigation-mode"></i></a> <div class="popover-modal" style="left: 0px; display: none;"><div class="meta"><i class="iconfont ic-navigation-night"></i><span>夜间模式</span></div> <div class="switch day-night-group"><a class="switch-btn">开</a> <a class="switch-btn active">关</a></div> <hr> <div class="switch font-family-group"><a class="switch-btn font-song">宋体</a> <a class="switch-btn font-hei active">黑体</a></div> <div class="switch"><a class="switch-btn active">简</a> <a class="switch-btn">繁</a></div></div></div>
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="nav navbar-nav">
+            <li class="">
+              <a href="/">
+                <span class="menu-text">首页</span><i class="iconfont ic-navigation-discover menu-icon"></i>
+</a>            </li>
+            <li class="">
+              <a class="app-download-btn" href="/apps"><span class="menu-text">下载App</span><i class="iconfont ic-navigation-download menu-icon"></i></a>
+            </li>
+          <li class="search">
+            <form target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" value="✓" type="hidden">
+              <input name="q" id="q" value="" autocomplete="off" placeholder="搜索" class="search-input" type="text">
+              <a class="search-btn" href="javascript:void(null)"><i class="iconfont ic-search"></i></a>
+</form>          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="note">
+  <div class="post">
+    <div class="article">
+        <h1 class="title">【scrapy】学习Scrapy入门</h1>
+
+        <!-- 作者区域 -->
+        <div class="author">
+          <a class="avatar" href="/u/2bd9b48f6ea8">
+            <img src="//upload.jianshu.io/users/upload_avatars/72634/b6912bf5869e.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144" alt="144">
+</a>          <div class="info">
+            <span class="tag">作者</span>
+            <span class="name"><a href="/u/2bd9b48f6ea8">JasonDing</a></span>
+            <!-- 关注用户按钮 -->
+            <a class="btn btn-success follow"><i class="iconfont ic-follow"></i><span>关注</span></a>
+            <!-- 文章数据信息 -->
+            <div class="meta">
+              <!-- 如果文章更新时间大于发布时间，那么使用 tooltip 显示更新时间 -->
+                <span class="publish-time">2015.01.25 17:20</span>
+              <span class="wordage">字数 2820</span>
+            <span class="views-count">阅读 68130</span><span class="comments-count">评论 11</span><span class="likes-count">喜欢 84</span><span class="rewards-count ">赞赏 1</span></div>
+          </div>
+          <!-- 如果是当前作者，加入编辑按钮 -->
+        </div>
+        <!-- -->
+
+        <!-- 文章内容 -->
+        <div data-note-content="" class="show-content">
+          <h2>Scrapy介绍</h2>
+<p>Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。 可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。<br>所谓网络爬虫，就是一个在网上到处或定向抓取数据的程序，当然，这种说法不够专业，更专业的描述就是，抓取特定网站网页的HTML数据。抓取网页的一般方法是，定义一个入口页面，然后一般一个页面会有其他页面的URL，于是从当前页面获取到这些URL加入到爬虫的抓取队列中，然后进入到新页面后再递归的进行上述的操作，其实说来就跟深度遍历或广度遍历一样。<br>Scrapy 使用 Twisted这个异步网络库来处理网络通讯，架构清晰，并且包含了各种中间件接口，可以灵活的完成各种需求。</p>
+<h2>整体架构</h2>
+<div class="image-package">
+<img src="http://jason-images.qiniudn.com/@/python/scrapy/intro/scrapy_backbone.png" alt="" style="cursor: zoom-in;"><br><div class="image-caption"></div>
+</div>
+<blockquote><ul>
+<li>引擎(Scrapy Engine)，用来处理整个系统的数据流处理，触发事务。</li>
+<li>调度器(Scheduler)，用来接受引擎发过来的请求，压入队列中，并在引擎再次请求的时候返回。</li>
+<li>下载器(Downloader)，用于下载网页内容，并将网页内容返回给蜘蛛。</li>
+<li>蜘蛛(Spiders)，蜘蛛是主要干活的，用它来制订特定域名或网页的解析规则。编写用于分析response并提取item(即获取到的item)或额外跟进的URL的类。 每个spider负责处理一个特定(或一些)网站。</li>
+<li>项目管道(Item Pipeline)，负责处理有蜘蛛从网页中抽取的项目，他的主要任务是清晰、验证和存储数据。当页面被蜘蛛解析后，将被发送到项目管道，并经过几个特定的次序处理数据。</li>
+<li>下载器中间件(Downloader Middlewares)，位于Scrapy引擎和下载器之间的钩子框架，主要是处理Scrapy引擎与下载器之间的请求及响应。</li>
+<li>蜘蛛中间件(Spider Middlewares)，介于Scrapy引擎和蜘蛛之间的钩子框架，主要工作是处理蜘蛛的响应输入和请求输出。</li>
+<li>调度中间件(Scheduler Middlewares)，介于Scrapy引擎和调度之间的中间件，从Scrapy引擎发送到调度的请求和响应。</li>
+</ul></blockquote>
+<h3>爬取流程</h3>
+<p>上图绿线是数据流向，首先从初始URL开始，Scheduler会将其交给Downloader进行下载，下载之后会交给Spider进行分析，Spider分析出来的结果有两种：一种是需要进一步抓取的链接，例如之前分析的“下一页”的链接，这些东西会被传回Scheduler；另一种是需要保存的数据，它们则被送到Item Pipeline那里，那是对数据进行后期处理（详细分析、过滤、存储等）的地方。另外，在数据流动的通道里还可以安装各种中间件，进行必要的处理。</p>
+<h3>数据流</h3>
+<p>Scrapy中的数据流由执行引擎控制，其过程如下:</p>
+<blockquote><ol>
+<li>引擎打开一个网站(open a domain)，找到处理该网站的Spider并向该spider请求第一个要爬取的URL(s)。</li>
+<li>引擎从Spider中获取到第一个要爬取的URL并在调度器(Scheduler)以Request调度。</li>
+<li>引擎向调度器请求下一个要爬取的URL。</li>
+<li>调度器返回下一个要爬取的URL给引擎，引擎将URL通过下载中间件(请求(request)方向)转发给下载器(Downloader)。</li>
+<li>一旦页面下载完毕，下载器生成一个该页面的Response，并将其通过下载中间件(返回(response)方向)发送给引擎。</li>
+<li>引擎从下载器中接收到Response并通过Spider中间件(输入方向)发送给Spider处理。</li>
+<li>Spider处理Response并返回爬取到的Item及(跟进的)新的Request给引擎。</li>
+<li>引擎将(Spider返回的)爬取到的Item给Item Pipeline，将(Spider返回的)Request给调度器。</li>
+<li>(从第二步)重复直到调度器中没有更多地request，引擎关闭该网站。</li>
+</ol></blockquote>
+<h2>Scrapy项目基本流程</h2>
+<h3>默认的Scrapy项目结构</h3>
+<p>使用全局命令startproject创建项目，在project_name文件夹下创建一个名为project_name的Scrapy项目。</p>
+<blockquote><p>scrapy startproject myproject</p></blockquote>
+<p>虽然可以被修改，但所有的Scrapy项目默认有类似于下边的文件结构:</p>
+<pre class="hljs undefined"><code>scrapy.cfg
+myproject/
+    __init__.py
+    items.py
+    pipelines.py
+    settings.py
+    spiders/
+        __init__.py
+        spider1.py
+        spider2.py
+        ...</code></pre>
+<p>scrapy.cfg 存放的目录被认为是 项目的根目录 。该文件中包含python模块名的字段定义了项目的设置。</p>
+<h3>定义要抓取的数据</h3>
+<p>Item 是保存爬取到的数据的容器；其使用方法和python字典类似， 并且提供了额外保护机制来避免拼写错误导致的未定义字段错误。<br>类似在ORM中做的一样，您可以通过创建一个 scrapy.Item 类， 并且定义类型为 scrapy.Field 的类属性来定义一个Item。<br>首先根据需要从dmoz.org（DMOZ网站是一个著名的开放式分类目录（Open DirectoryProject），由来自世界各地的志愿者共同维护与建设的最大的全球目录社区）获取到的数据对item进行建模。 我们需要从dmoz中获取名字，url，以及网站的描述。 对此，在item中定义相应的字段。编辑items.py 文件:</p>
+<pre class="hljs python"><code class="python"><span class="hljs-keyword">import</span> scrapy
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DmozItem</span><span class="hljs-params">(scrapy.Item)</span>:</span>
+    title = scrapy.Field()
+    link = scrapy.Field()
+    desc = scrapy.Field()</code></pre>
+<h3>使用项目命令genspider创建Spider</h3>
+<blockquote><p>scrapy genspider [-t template] &lt;name&gt; &lt;domain&gt;</p></blockquote>
+<p>在当前项目中创建spider。<br>这仅仅是创建spider的一种快捷方法。该方法可以使用提前定义好的模板来生成spider。您也可以自己创建spider的源码文件。</p>
+<pre class="hljs python"><code class="python">$ scrapy genspider -l
+Available templates:
+  basic
+  crawl
+  csvfeed
+  xmlfeed
+
+$ scrapy genspider -d basic
+<span class="hljs-keyword">import</span> scrapy
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> $<span class="hljs-title">classname</span><span class="hljs-params">(scrapy.Spider)</span>:</span>
+    name = <span class="hljs-string">"$name"</span>
+    allowed_domains = [<span class="hljs-string">"$domain"</span>]
+    start_urls = (
+        <span class="hljs-string">'http://www.$domain/'</span>,
+        )
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">parse</span><span class="hljs-params">(self, response)</span>:</span>
+        <span class="hljs-keyword">pass</span>
+
+$ scrapy genspider -t basic example example.com
+Created spider <span class="hljs-string">'example'</span> using template <span class="hljs-string">'basic'</span> <span class="hljs-keyword">in</span> module:
+  mybot.spiders.example</code></pre>
+<h3>编写提取item数据的Spider</h3>
+<p>Spider是用户编写用于从单个网站(或者一些网站)爬取数据的类。<br>其包含了一个用于下载的初始URL，如何跟进网页中的链接以及如何分析页面中的内容， 提取生成 item 的方法。<br>为了创建一个Spider，您必须继承 scrapy.Spider 类，且定义以下三个属性:</p>
+<blockquote><ul>
+<li>name: 用于区别Spider。 该名字必须是唯一的，您不可以为不同的Spider设定相同的名字。</li>
+<li>start_urls: 包含了Spider在启动时进行爬取的url列表。 因此，第一个被获取到的页面将是其中之一。 后续的URL则从初始的URL获取到的数据中提取。</li>
+<li>parse() 是spider的一个方法。 被调用时，每个初始URL完成下载后生成的 Response 对象将会作为唯一的参数传递给该函数。 该方法负责解析返回的数据(response data)，提取数据(生成item)以及生成需要进一步处理的URL的 Request 对象。</li>
+</ul></blockquote>
+<pre class="hljs python"><code class="python"><span class="hljs-keyword">import</span> scrapy
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DmozSpider</span><span class="hljs-params">(scrapy.spider.Spider)</span>:</span>
+    name = <span class="hljs-string">"dmoz"</span>    <span class="hljs-comment">#唯一标识，启动spider时即指定该名称</span>
+    allowed_domains = [<span class="hljs-string">"dmoz.org"</span>]
+    start_urls = [
+        <span class="hljs-string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Books/"</span>,
+        <span class="hljs-string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/"</span>
+    ]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">parse</span><span class="hljs-params">(self, response)</span>:</span>
+        filename = response.url.split(<span class="hljs-string">"/"</span>)[<span class="hljs-number">-2</span>]
+        <span class="hljs-keyword">with</span> open(filename, <span class="hljs-string">'wb'</span>) <span class="hljs-keyword">as</span> f:
+            f.write(response.body)</code></pre>
+<h3>进行爬取</h3>
+<p>执行项目命令crawl，启动Spider：</p>
+<blockquote><p>scrapy crawl dmoz</p></blockquote>
+<p>在这个过程中：<br><strong>Scrapy为Spider的 start_urls 属性中的每个URL创建了 scrapy.Request 对象，并将 parse 方法作为回调函数(callback)赋值给了Request。</strong><br><strong>Request对象经过调度，执行生成 scrapy.http.Response 对象并送回给spider parse() 方法。</strong></p>
+<h3>通过选择器提取数据</h3>
+<p><strong>Selectors选择器简介：</strong><br>Scrapy提取数据有自己的一套机制。它们被称作选择器(seletors)，因为他们通过特定的 XPath 或者 CSS 表达式来“选择” HTML文件中的某个部分。<br>XPath 是一门用来在XML文件中选择节点的语言，也可以用在HTML上。 CSS 是一门将HTML文档样式化的语言。选择器由它定义，并与特定的HTML元素的样式相关连。</p>
+<p><strong>XPath表达式的例子和含义：</strong></p>
+<blockquote><ul>
+<li>/html/head/title: 选择HTML文档中 &lt;head&gt; 标签内的 &lt;title&gt; 元素</li>
+<li>/html/head/title/text(): 选择上面提到的 &lt;title&gt; 元素的文字</li>
+<li>//td: 选择所有的 &lt;td&gt; 元素</li>
+<li>//div[@class="mine"]: 选择所有具有 class="mine" 属性的 div 元素</li>
+</ul></blockquote>
+<p><strong>提取数据：</strong><br>观察HTML源码并确定合适的XPath表达式。<br>在查看了网页的源码后，您会发现网站的信息是被包含在 第二个 </p><ul> 元素中。<br>我们可以通过这段代码选择该页面中网站列表里所有 <li> 元素:<br>response.xpath('//ul/li')
+<p>Item 对象是自定义的python字典。 您可以使用标准的字典语法来获取到其每个字段的值。<br>一般来说，Spider将会将爬取到的数据以 Item 对象返回。所以为了将爬取的数据返回，我们最终的代码将是:</p>
+<pre class="hljs python"><code class="python"><span class="hljs-keyword">import</span> scrapy
+
+<span class="hljs-keyword">from</span> tutorial.items <span class="hljs-keyword">import</span> DmozItem
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DmozSpider</span><span class="hljs-params">(scrapy.Spider)</span>:</span>
+    name = <span class="hljs-string">"dmoz"</span>
+    allowed_domains = [<span class="hljs-string">"dmoz.org"</span>]
+    start_urls = [
+        <span class="hljs-string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Books/"</span>,
+        <span class="hljs-string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/"</span>
+    ]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">parse</span><span class="hljs-params">(self, response)</span>:</span>
+        <span class="hljs-keyword">for</span> sel <span class="hljs-keyword">in</span> response.xpath(<span class="hljs-string">'//ul/li'</span>):
+            item = DmozItem()
+            item[<span class="hljs-string">'title'</span>] = sel.xpath(<span class="hljs-string">'a/text()'</span>).extract()
+            item[<span class="hljs-string">'link'</span>] = sel.xpath(<span class="hljs-string">'a/@href'</span>).extract()
+            item[<span class="hljs-string">'desc'</span>] = sel.xpath(<span class="hljs-string">'text()'</span>).extract()
+            <span class="hljs-keyword">yield</span> item</code></pre>
+<p>现在对dmoz.org进行爬取将会产生 DmozItem 对象。</p>
+<h3>保存数据</h3>
+<p>最简单存储爬取的数据的方式是使用 Feed exports:</p>
+<blockquote><p>scrapy crawl dmoz -o items.json</p></blockquote>
+<p>该命令将采用 JSON 格式对爬取的数据进行序列化，生成 items.json 文件。<br> 如果需要对爬取到的item做更多更为复杂的操作，您可以编写 Item Pipeline 。类似于我们在创建项目时对Item做的，用于您编写自己的 tutorial/pipelines.py 也被创建。不过如果您仅仅想要保存item，您不需要实现任何的pipeline。</p>
+<h2>补充提示：Windows平台安装Scrapy的特别要求</h2>
+<p><a href="http://doc.scrapy.org/en/0.24/intro/install.html#windows" target="_blank">Windows specific installation notes</a><br>Windows平台下，安装Scrapy之前首先要进行以下操作：</p>
+<blockquote><ul>
+<li>安装OpenSSL<br>在<a href="http://slproweb.com/products/Win32OpenSSL.html" target="_blank">Win32 OpenSSL page</a>中下载安装Visual C++ 2008 redistributables和对应的OpenSSL安装包，并把其可执行文件目录“*\openssl-win32\bin”加入到环境变量Path中</li>
+<li>安装Scrapy依赖的二进制包<br><a href="http://sourceforge.net/projects/pywin32/files/" target="_blank">pywin32</a><br><a href="http://twistedmatrix.com/trac/wiki/Downloads" target="_blank">Twisted</a><br><a href="https://pypi.python.org/pypi/zope.interface" target="_blank">zope.interface</a><br><a href="http://pypi.python.org/pypi/lxml/" target="_blank">lxml</a><br><a href="https://launchpad.net/pyopenssl" target="_blank">pyOpenSSL</a>
+</li>
+</ul></blockquote>
+<h2>小结</h2>
+<p>第一篇关于Scrapy的文章主要依据Scrapy 0.24的中文文档，了解、熟悉Scrapy的使用和基本概念，在后面的相关文章中，将进一步加入自己的思考和自行编写的程序，期待能在这个过程中提高自己，也希望能对看到这些文章的读者有用。</p>
+<h2>参考资料</h2>
+<p><a href="http://scrapy-chs.readthedocs.org/zh_CN/latest/topics/architecture.html" target="_blank">Scrapy架构概览</a><br><a href="http://scrapy-chs.readthedocs.org/zh_CN/latest/intro/overview.html" target="_blank">初窥Scrapy</a><br><a href="http://scrapy-chs.readthedocs.org/zh_CN/latest/intro/tutorial.html" target="_blank">Scrapy入门教程</a><br><a href="http://www.zhihu.com/question/20899988" target="_blank">如何入门 Python 爬虫</a></p>
+<p><strong>转载请注明作者Jason Ding及其出处</strong><br><a href="http://jasonding1354.github.io/" target="_blank">Github博客主页(http://jasonding1354.github.io/)</a><br><a href="http://blog.csdn.net/jasonding1354" target="_blank">CSDN博客(http://blog.csdn.net/jasonding1354)</a><br><a href="http://www.jianshu.com/users/2bd9b48f6ea8/latest_articles" target="_blank">简书主页(http://www.jianshu.com/users/2bd9b48f6ea8/latest_articles)</a></p>
+</li>
+</ul>
+        </div>
+        <!--  -->
+
+        <div class="show-foot">
+          <a class="notebook" href="/nb/401948">
+            <i class="iconfont ic-search-notebook"></i> <span>Python Programming</span>
+</a>          <div class="copyright" data-toggle="tooltip" data-html="true" data-original-title="转载请联系作者获得授权，并标注“简书作者”。">
+            © 著作权归作者所有
+          </div>
+          <div class="modal-wrap" data-report-note="">
+            <a id="report-modal">举报文章</a>
+          </div>
+        </div>
+    </div>
+
+    <!-- 文章底部作者信息 -->
+      <div class="follow-detail">
+        <div class="info">
+          <a class="avatar" href="/u/2bd9b48f6ea8">
+            <img src="//upload.jianshu.io/users/upload_avatars/72634/b6912bf5869e.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/144/h/144" alt="144">
+</a>          <a class="btn btn-success follow"><i class="iconfont ic-follow"></i><span>关注</span></a>
+          <a class="title" href="/u/2bd9b48f6ea8">JasonDing</a>
+        <p>写了 322874 字，被 1994 人关注，获得了 1137 个喜欢</p></div>
+          <div class="signature">关注我
+http://blog.jasonding.top/
+通过微信二维码订阅我的微信公众号</div>
+      </div>
+
+      <div class="support-author"></div>
+
+    <div class="meta-bottom">
+      <div class="like"><div class="btn like-group"><div class="btn-like"><a href="/sign_in?utm_source=desktop&amp;utm_medium=not-signed-in-like-button"><i class="iconfont ic-like"></i>喜欢</a></div> <div class="modal-wrap"><a>84</a></div></div> <!----></div>
+      <div class="share-group">
+        <a class="share-circle" data-action="weixin-share" data-toggle="tooltip" data-original-title="分享到微信">
+          <i class="iconfont ic-wechat"></i>
+        </a>
+        <a class="share-circle" data-action="weibo-share" data-toggle="tooltip" href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f='http://v.t.sina.com.cn/share/share.php?appkey=1881139527',u=z||d.location,p=['&amp;url=',e(u),'&amp;title=',e(t||d.title),'&amp;source=',e(r),'&amp;sourceUrl=',e(l),'&amp;content=',c||'gb2312','&amp;pic=',e(p||'')].join('');function%20a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=440,height=430,left=',(s.width-440)/2,',top=',(s.height-430)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,'','','http://cwb.assets.jianshu.io/notes/images/568684/weibo/image_8c36d51c8fd2.jpg', '推荐 @JasonDing1354 的文章《【scrapy】学习Scrapy入门》（ 分享自 @简书 ）','http://www.jianshu.com/p/a8aad3bf4dc4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=weibo','页面编码gb2312|utf-8默认gb2312'));" data-original-title="分享到微博">
+          <i class="iconfont ic-weibo"></i>
+        </a>
+          <a class="share-circle" data-toggle="tooltip" href="http://cwb.assets.jianshu.io/notes/images/568684/weibo/image_8c36d51c8fd2.jpg" target="_blank" data-original-title="下载长微博图片">
+            <i class="iconfont ic-picture"></i>
+          </a>
+        <a class="share-circle more-share" tabindex="0" data-toggle="popover" data-placement="top" data-html="true" data-trigger="focus" href="javascript:void(0);" data-content="
+          <ul class=&quot;share-list&quot;>
+            <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+e('http://www.jianshu.com/p/a8aad3bf4dc4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=qzone')+'&amp;title='+e('推荐 JasonDing 的文章《【scrapy】学习Scrapy入门》'),x=function(){if(!window.open(r,'qzone','toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;><i class=&quot;social-icon-sprite social-icon-zone&quot;></i><span>分享到QQ空间</span></a></li>
+            <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r='https://twitter.com/share?url='+e('http://www.jianshu.com/p/a8aad3bf4dc4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=twitter')+'&amp;text='+e('推荐 JasonDing 的文章《【scrapy】学习Scrapy入门》（ 分享自 @jianshucom ）')+'&amp;related='+e('jianshucom'),x=function(){if(!window.open(r,'twitter','toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;><i class=&quot;social-icon-sprite social-icon-twitter&quot;></i><span>分享到Twitter</span></a></li>
+            <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r='https://www.facebook.com/dialog/share?app_id=483126645039390&amp;display=popup&amp;href=http://www.jianshu.com/p/a8aad3bf4dc4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=facebook',x=function(){if(!window.open(r,'facebook','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;><i class=&quot;social-icon-sprite social-icon-facebook&quot;></i><span>分享到Facebook</span></a></li>
+            <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r='https://plus.google.com/share?url='+e('http://www.jianshu.com/p/a8aad3bf4dc4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=google_plus'),x=function(){if(!window.open(r,'google_plus','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;><i class=&quot;social-icon-sprite social-icon-google&quot;></i><span>分享到Google+</span></a></li>
+            <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:'',r='http://www.douban.com/recommend/?url='+e('http://www.jianshu.com/p/a8aad3bf4dc4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=douban')+'&amp;title='+e('【scrapy】学习Scrapy入门')+'&amp;sel='+e(s)+'&amp;v=1',x=function(){if(!window.open(r,'douban','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r+'&amp;r=1'};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()&quot;><i class=&quot;social-icon-sprite social-icon-douban&quot;></i><span>分享到豆瓣</span></a></li>
+          </ul>
+        " data-original-title="" title="">更多分享</a>
+      </div>
+    </div>
+    <div id="vue_comment"></div>
+  </div>
+
+  <div class="side-tool"><ul><li data-placement="left" data-toggle="tooltip" data-container="body" data-original-title="回到顶部" style="display: none;"><a class="function-button"><i class="iconfont ic-backtop"></i></a></li> <!----> <!----> <li data-placement="left" data-toggle="tooltip" data-container="body" data-original-title="分享文章"><a tabindex="0" role="button" data-toggle="popover" data-placement="left" data-html="true" data-trigger="focus" href="javascript:void(0);" data-content="<ul class='share-list'>
+                <li><a class=&quot;weixin-share&quot;><i class=&quot;social-icon-sprite social-icon-weixin&quot;></i><span>分享到微信</span></a></li>
+                <li><a href=&quot;javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f='http://v.t.sina.com.cn/share/share.php?appkey=1881139527',u=z||d.location,p=['&amp;url=',e(u),'&amp;title=',e(t||d.title),'&amp;source=',e(r),'&amp;sourceUrl=',e(l),'&amp;content=',c||'gb2312','&amp;pic=',e(p||'')].join('');function%20a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=440,height=430,left=',(s.width-440)/2,',top=',(s.height-430)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,'','','http://cwb.assets.jianshu.io/notes/images/568684/weibo/image_8c36d51c8fd2.jpg', '推荐 @JasonDing1354 的文章《【scrapy】学习Scrapy入门》（ 分享自 @简书 ）','http://www.jianshu.com/p/a8aad3bf4dc4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=weibo','页面编码gb2312|utf-8默认gb2312'));&quot;><i class='social-icon-sprite social-icon-weibo'></i><span>分享到微博</span></a></li>
+                <li><a href=&quot;http://cwb.assets.jianshu.io/notes/images/568684/weibo/image_8c36d51c8fd2.jpg&quot; target=&quot;_blank&quot;><i class=&quot;social-icon-sprite social-icon-picture&quot;></i><span>下载长微博图片</span></a></li>
+                <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+e('http://www.jianshu.com/p/a8aad3bf4dc4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=qzone')+'&amp;title='+e('推荐 JasonDing 的文章《【scrapy】学习Scrapy入门》'),x=function(){if(!window.open(r,'qzone','toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;><i class='social-icon-sprite social-icon-zone'></i><span>分享到QQ空间</span></a></li>
+                <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r='https://twitter.com/share?url='+e('http://www.jianshu.com/p/a8aad3bf4dc4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=twitter')+'&amp;text='+e('推荐 JasonDing 的文章《【scrapy】学习Scrapy入门》（ 分享自 @jianshucom ）')+'&amp;related='+e('jianshucom'),x=function(){if(!window.open(r,'twitter','toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;><i class='social-icon-sprite social-icon-twitter'></i><span>分享到Twitter</span></a></li>
+                <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r='https://www.facebook.com/dialog/share?app_id=483126645039390&amp;display=popup&amp;href=http://www.jianshu.com/p/a8aad3bf4dc4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=facebook',x=function(){if(!window.open(r,'facebook','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;><i class='social-icon-sprite social-icon-facebook'></i><span>分享到Facebook</span></a></li>
+                <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,r='https://plus.google.com/share?url='+e('http://www.jianshu.com/p/a8aad3bf4dc4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=google_plus'),x=function(){if(!window.open(r,'google_plus','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();&quot;><i class='social-icon-sprite social-icon-google'></i><span>分享到Google+</span></a></li>
+                <li><a href=&quot;javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:'',r='http://www.douban.com/recommend/?url='+e('http://www.jianshu.com/p/a8aad3bf4dc4?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=reader_share&amp;utm_source=douban')+'&amp;title='+e('【scrapy】学习Scrapy入门')+'&amp;sel='+e(s)+'&amp;v=1',x=function(){if(!window.open(r,'douban','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r+'&amp;r=1'};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()&quot;><i class='social-icon-sprite social-icon-douban'></i><span>分享到豆瓣</span></a></li>
+              </ul>" data-original-title="" title="" class="function-button"><i class="iconfont ic-share"></i></a> <!----></li></ul></div>
+</div>
+<div class="note-bottom">
+  <div><div class="main"><div class="title">被以下专题收入，发现更多相似内容</div> <!----> <div class="include-collection"><!----> <a href="/c/6bc90d4942ff?utm_source=desktop&amp;utm_medium=notes-included-collection" target="_blank" class="item"><img src="//upload.jianshu.io/collections/images/10767/%E7%A8%8B%E5%BA%8F%E5%91%98.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"><div class="name">伪程序员</div></a><a href="/c/ae98cdcaa4bd?utm_source=desktop&amp;utm_medium=notes-included-collection" target="_blank" class="item"><img src="//upload.jianshu.io/collections/images/259445/android.graphics.Bitmap_1de9809f.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"><div class="name">python</div></a><a href="/c/1dabfc6aca5d?utm_source=desktop&amp;utm_medium=notes-included-collection" target="_blank" class="item"><img src="//upload.jianshu.io/collections/images/12490/1425984096.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"><div class="name">互联网技术</div></a><a href="/c/c4f398a77bfa?utm_source=desktop&amp;utm_medium=notes-included-collection" target="_blank" class="item"><img src="//upload.jianshu.io/collections/images/338986/android.graphics.Bitmap_d467241.jpeg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"><div class="name">爬虫</div></a><a href="/c/297f76b1f872?utm_source=desktop&amp;utm_medium=notes-included-collection" target="_blank" class="item"><img src="//upload.jianshu.io/collections/images/330395/ic_launcher.png?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"><div class="name">技术文章</div></a><a href="/c/01b451f659b4?utm_source=desktop&amp;utm_medium=notes-included-collection" target="_blank" class="item"><img src="//upload.jianshu.io/collections/images/336345/u_1240372403_2153081336_fm_58.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"><div class="name">专业学习</div></a><a href="/c/8434d537302e?utm_source=desktop&amp;utm_medium=notes-included-collection" target="_blank" class="item"><img src="//upload.jianshu.io/collections/images/359617/71e28d79gy1fd442ii4vzj21e00xch4z.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/64/h/64"><div class="name">python</div></a> <a class="show-more">
+        展开更多
+        <i class="iconfont ic-show"></i></a></div></div> <!----> <!----></div>
+  <div data-vcomp="recommended-notes" data-note-id="568684"></div>
+</div>
+
+    <script src="http://push.zhanzhang.baidu.com/push.js"></script><script src="//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="application/json" data-name="page-data">{"user_signed_in":false,"locale":"zh-CN","os":"linux","read_mode":"day","read_font":"font2","note_show":{"is_author":false,"is_following_author":false,"is_liked_note":false,"uuid":"e3b01d1b-d7e1-4800-8d96-f8a214be7a23"},"note":{"id":568684,"slug":"a8aad3bf4dc4","user_id":72634,"notebook_id":401948,"commentable":true,"likes_count":84,"views_count":68130,"public_wordage":2820,"comments_count":11,"total_rewards_count":1,"is_author":false,"author":{"nickname":"JasonDing","total_wordage":322874,"followers_count":1994,"total_likes_count":1137}}}</script>
+
+    <script src="//cdn2.jianshu.io/assets/babel-polyfill-edd4242643dcecaa8f83.js"></script>
+    <script src="//cdn2.jianshu.io/assets/web-base-a22db2e2e120168cfb83.js"></script>
+<script src="//cdn2.jianshu.io/assets/web-e6a947579b9bc5d33873.js"></script>
+
+    <script src="//cdn2.jianshu.io/assets/web/pages/notes/show/entry-a466d8549c0df2a450b5.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-35169517-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "//hm.baidu.com/hm.js?0c0e9d9b1e7d617b3e6842e85b9fb068";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<script>
+  (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+
+
+<!----><!----></body></html>

@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+
+    <div class="markdown-body">
+<center><h1>Scrapy简介</h1></center>
+<h1>Scrapy简介</h1>
+<p>Scrapy是Python开发的一个快速,高层次的屏幕抓取和Web抓取框架，用于抓取Web站点并从页面中提取结构化的数据。</p>
+<p>下图展示了Scrapy的大致架构，其中包含了主要组件和系统的数据处理流程（绿色箭头表示）。下面会对组件和流程进行了一个简单的解释。</p>
+<p><img alt="enter image description here" src="images/7e0a43e64e036d028127e417935ce0d3.jpg"/></p>
+<h2>组件</h2>
+<p><strong>1.Scrapy Engine（Scrapy引擎）</strong></p>
+<p>Scrapy引擎是用来控制整个系统的数据处理流程，并进行事务处理的触发。更多的详细内容可以看下面的数据处理流程。</p>
+<p><strong>2.Scheduler（调度程序）</strong></p>
+<p>调度程序从Scrapy引擎接受请求并排序列入队列，并在Scrapy引擎发出请求后返还给它们。</p>
+<p><strong>3.Downloader（下载器）</strong></p>
+<p>下载器的主要职责是抓取网页并将网页内容返还给蜘蛛（Spiders）。</p>
+<p><strong>4.Spiders（蜘蛛）</strong></p>
+<p>蜘蛛是有Scrapy用户自己定义用来解析网页并抓取制定URL返回的内容的类，每个蜘蛛都能处理一个域名或一组域名。换句话说就是用来定义特定网站的抓取和解析规则。</p>
+<p><strong>5.Item Pipeline（项目管道）</strong></p>
+<p>项目管道的主要责任是负责处理有蜘蛛从网页中抽取的项目，它的主要任务是清晰、验证和存储数据。当页面被蜘蛛解析后，将被发送到项目管道，并经过几个特定的次序处理数据。每个项目管道的组件都是有一个简单的方法组成的Python类。它们获取了项目并执行它们的方法，同时还需要确定的是是否需要在项目管道中继续执行下一步或是直接丢弃掉不处理。</p>
+<p>项目管道通常执行的过程有：</p>
+<p>清洗HTML数据
+验证解析到的数据（检查项目是否包含必要的字段）
+检查是否是重复数据（如果重复就删除）
+将解析到的数据存储到数据库中</p>
+<p><strong>6.Middlewares（中间件）</strong></p>
+<p>中间件是介于Scrapy引擎和其他组件之间的一个钩子框架，主要是为了提供一个自定义的代码来拓展Scrapy的功能。</p>
+<h2>数据处理流程</h2>
+<p>Scrapy的整个数据处理流程有Scrapy引擎进行控制，其主要的运行方式为：</p>
+<ol>
+<li>引擎打开一个域名，时蜘蛛处理这个域名，并让蜘蛛获取第一个爬取的URL。</li>
+<li>引擎从蜘蛛那获取第一个需要爬取的URL，然后作为请求在调度中进行调度。</li>
+<li>引擎从调度那获取接下来进行爬取的页面。</li>
+<li>调度将下一个爬取的URL返回给引擎，引擎将它们通过下载中间件发送到下载器。</li>
+<li>当网页被下载器下载完成以后，响应内容通过下载中间件被发送到引擎。</li>
+<li>引擎收到下载器的响应并将它通过蜘蛛中间件发送到蜘蛛进行处理。</li>
+<li>蜘蛛处理响应并返回爬取到的项目，然后给引擎发送新的请求。</li>
+<li>引擎将抓取到的项目项目管道，并向调度发送请求。</li>
+<li>系统重复第二部后面的操作，直到调度中没有请求，然后断开引擎与域之间的联系。</li>
+</ol>
+<h1>实例展示</h1>
+<p>在开始之前，我假定你已经安装了Scrapy。如果你还没有安装成功，具体的安装过程请参考<a href="http://doc.scrapy.org/en/latest/intro/install.html">官方文档</a>，Win7 64位的请参考此<a href="http://steamforge.net/wiki/index.php/How_to_Install_Scrapy_in_64-bit_Windows_7">链接</a>。（不过说实话，安装Scrapy真心蛋疼啊，因为它需要安装很多其他依赖的组件，出现各种异常问题在StackOverflow找解决办法吧。）</p>
+<h2>新建工程</h2>
+<p>这次我们来用爬虫获取豆瓣电影Top 250的电影信息吧。开始之前，我们新建一个Scrapy工程。因为我用的Win7，所以在CMD中进入一个我希望保存代码的目录，然后执行：</p>
+<pre><code>D:\WEB\Python&gt;scrapy startproject doubanmoive
+</code></pre>
+<p>这个命令会在当前目录下创建一个新的目录doubanmoive，目录结构如下：</p>
+<pre><code>D:\WEB\Python\doubanmoive&gt;tree /f
+Folder PATH listing for volume Data
+Volume serial number is 00000200 34EC:9CB9
+D:.
+│  scrapy.cfg
+│
+└─doubanmoive
+    │  items.py
+    │  pipelines.py
+    │  settings.py
+    │  __init__.py
+    │
+    └─spiders
+            __init__.py
+</code></pre>
+<p>这些文件主要为：</p>
+<ul>
+<li>doubanmoive/items.py：定义需要获取的内容字段，类似于实体类。</li>
+<li>doubanmoive/pipelines.py：项目管道文件，用来处理Spider抓取的数据。</li>
+<li>doubanmoive/settings.py：项目配置文件</li>
+<li>doubanmoive/spiders：放置spider的目录</li>
+</ul>
+<h2>定义项目(Item)</h2>
+<p>Item是用来装载抓取数据的容器，和Java里的实体类（Entity）比较像，打开doubanmoive/items.py可以看到默认创建了以下代码。</p>
+<pre><code>from scrapy.item import Item, Field
+
+class DoubanmoiveItem(Item):
+    pass
+</code></pre>
+<p>我们只需要在<code>Doubanmoive</code>类中增加需要抓取的字段即可，如<code>name=Field()</code>，最后根据我们的需求完成代码如下。</p>
+<pre><code>from scrapy.item import Item, Field
+
+class DoubanmoiveItem(Item):
+    name=Field()#电影名
+    year=Field()#上映年份
+    score=Field()#豆瓣分数
+    director=Field()#导演
+    classification=Field()#分类
+    actor=Field()#演员
+</code></pre>
+<h2>编写爬虫(Spider)</h2>
+<p>Spider是整个项目中最核心的类，在这个类里我们会定义抓取对象（域名、URL）以及抓取规则。Scrapy官方文档中的教程是基于<code>BaseSpider</code>的，但<code>BaseSpider</code>只能爬取给定的URL列表，无法根据一个初始的URL向外拓展。不过除了<code>BaseSpider</code>，还有很多可以直接继承<code>Spider</code>的类，比如<code>scrapy.contrib.spiders.CrawlSpider</code>。</p>
+<p>在<code>doubanmoive/spiders</code>目录下新建moive_spider.py文件，并填写代码。</p>
+<pre><code># -*- coding: utf-8 -*-
+from scrapy.selector import Selector
+from scrapy.contrib.spiders import CrawlSpider,Rule
+from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
+from doubanmoive.items import DoubanmoiveItem
+
+class MoiveSpider(CrawlSpider):
+    name="doubanmoive"
+    allowed_domains=["movie.douban.com"]
+    start_urls=["http://movie.douban.com/top250"]
+    rules=[
+        Rule(SgmlLinkExtractor(allow=(r'http://movie.douban.com/top250\?start=\d+.*'))),
+        Rule(SgmlLinkExtractor(allow=(r'http://movie.douban.com/subject/\d+')),callback="parse_item"),      
+    ]
+
+    def parse_item(self,response):
+        sel=Selector(response)
+        item=DoubanmoiveItem()
+        item['name']=sel.xpath('//*[@id="content"]/h1/span[1]/text()').extract()
+        item['year']=sel.xpath('//*[@id="content"]/h1/span[2]/text()').re(r'\((\d+)\)')
+        item['score']=sel.xpath('//*[@id="interest_sectl"]/div/p[1]/strong/text()').extract()
+        item['director']=sel.xpath('//*[@id="info"]/span[1]/a/text()').extract()
+        item['classification']= sel.xpath('//span[@property="v:genre"]/text()').extract()
+        item['actor']= sel.xpath('//*[@id="info"]/span[3]/a[1]/text()').extract()
+        return item
+</code></pre>
+<p>代码说明：<code>MoiveSpider</code>继承Scrapy中的<code>CrawlSpider</code>，<code>name</code> , <code>allow_domains</code> , <code>start_url</code>看名字就知道什么含义，其中rules稍微复杂一些，定义了URL的抓取规则，符合<code>allow</code>正则表达式的链接都会加入到Scheduler（调度程序）。通过分析豆瓣电影Top250的分页URL<code>http://movie.douban.com/top250?start=25&amp;filter=&amp;type=</code>可以得到以下规则：</p>
+<pre><code>Rule(SgmlLinkExtractor(allow=(r'http://movie.douban.com/top250\?start=\d+.*'))),
+</code></pre>
+<p>而我们真正要抓取的页面是每一个电影的详细介绍，如《肖申克的救赎》的链接为<code>http://movie.douban.com/subject/1292052/</code>，那只有<code>subject</code>后面的数字是变化的，根据正则表达式得到如下代码。我们需要抓取这种类型链接中的内容，于是加入callback属性，将Response交给parse_item函数来处理。</p>
+<pre><code>Rule(SgmlLinkExtractor(allow=(r'http://movie.douban.com/subject/\d+')),callback="parse_item"),      
+</code></pre>
+<p>在<code>parse_item</code>函数中的处理逻辑非常简单，获取符合条件链接的代码，然后根据一定的规则抓取内容赋给item并返回<code>Item Pipeline</code>。获取大部分标签的内容不需要编写复杂的正则表达式，我们可以使用<code>XPath</code>。
+XPath 是一门在 XML 文档中查找信息的语言，但它也可以用在HTML中。下表列出了常用表达式。</p>
+<table class="table table-bordered table-striped table-condensed">
+<tr>
+<td>表达式</td>
+<td>描述</td>
+</tr>
+<tr>
+<td>nodename</td>
+<td>选取此节点的所有子节点。</td>
+</tr>
+<tr>
+<td>/</td>
+<td>从根节点选取。</td>
+</tr>
+<tr>
+<td>//</td>
+<td>从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。</td>
+</tr>
+<tr>
+<td>.</td>
+<td>选取当前节点。</td>
+</tr>
+<tr>
+<td>..</td>
+<td>选取当前节点的父节点。</td>
+</tr>
+<tr>
+<td>@</td>
+<td>选取属性。</td>
+</tr>
+</table>
+<p>如<code>//*[@id="content"]/h1/span[1]/text()</code>获取的结果是在id为content的任意元素下h1元素下的span列表中第一个元素的文本内容。我们可以通过Chrome开发者工具(F12)来获取某内容的XPath表达式，具体操作为在需要抓取的内容上点击审查元素，下方就会出现开发者工具，并定位到该元素，在内容上点击右键，选择复制XPath。</p>
+<p><img alt="enter image description here" src="images/0f32fe3ae4cb5fd0fe858d7981a7935e.jpg"/></p>
+<h2>存储数据</h2>
+<p>爬虫获取到数据以后我们需要将其存储到数据库中，之前我们提到该操作需要靠项目管道（pipeline）来处理，其通常执行的操作为：</p>
+<ul>
+<li>清洗HTML数据</li>
+<li>验证解析到的数据（检查项目是否包含必要的字段）</li>
+<li>检查是否是重复数据（如果重复就删除）</li>
+<li>将解析到的数据存储到数据库中</li>
+</ul>
+<p>由于我们获取的数据格式多种多样，有一些存储在关系型数据库中并不方便，所以我在写完MySQL版本的Pipeline之后又写了一个MongoDB的。</p>
+<p><strong>MySQL代码：</strong></p>
+<pre><code># -*- coding: utf-8 -*-
+from scrapy import log
+from twisted.enterprise import adbapi
+from scrapy.http import Request
+
+import MySQLdb
+import MySQLdb.cursors
+
+
+class DoubanmoivePipeline(object):
+    def __init__(self):
+        self.dbpool = adbapi.ConnectionPool('MySQLdb',
+                db = 'python',
+                user = 'root',
+                passwd = 'root',
+                cursorclass = MySQLdb.cursors.DictCursor,
+                charset = 'utf8',
+                use_unicode = False
+        )
+    def process_item(self, item, spider):
+        query = self.dbpool.runInteraction(self._conditional_insert, item)
+        query.addErrback(self.handle_error)
+        return item
+
+    def _conditional_insert(self,tx,item):
+        tx.execute("select * from doubanmoive where m_name= %s",(item['name'][0],))
+        result=tx.fetchone()
+        log.msg(result,level=log.DEBUG)
+        print result
+        if result:
+            log.msg("Item already stored in db:%s" % item,level=log.DEBUG)
+        else:
+            classification=actor=''
+            lenClassification=len(item['classification'])
+            lenActor=len(item['actor'])
+            for n in xrange(lenClassification):
+                classification+=item['classification'][n]
+                if n&lt;lenClassification-1:
+                    classification+='/'
+            for n in xrange(lenActor):
+                actor+=item['actor'][n]
+                if n&lt;lenActor-1:
+                    actor+='/'
+
+            tx.execute(\
+                "insert into doubanmoive (m_name,m_year,m_score,m_director,m_classification,m_actor) values (%s,%s,%s,%s,%s,%s)",\
+                (item['name'][0],item['year'][0],item['score'][0],item['director'][0],classification,actor))
+            log.msg("Item stored in db: %s" % item, level=log.DEBUG)
+
+    def handle_error(self, e):
+        log.err(e)
+</code></pre>
+<p><strong>MongoDB代码:</strong></p>
+<pre><code># -*- coding: utf-8 -*-
+import pymongo
+
+from scrapy.exceptions import DropItem
+from scrapy.conf import settings
+from scrapy import log
+
+class MongoDBPipeline(object):
+    #Connect to the MongoDB database
+    def __init__(self):
+        connection = pymongo.Connection(settings['MONGODB_SERVER'], settings['MONGODB_PORT'])
+        db = connection[settings['MONGODB_DB']]
+        self.collection = db[settings['MONGODB_COLLECTION']]
+
+    def process_item(self, item, spider):
+        #Remove invalid data
+        valid = True
+        for data in item:
+          if not data:
+            valid = False
+            raise DropItem("Missing %s of blogpost from %s" %(data, item['url']))
+        if valid:
+        #Insert data into database
+            new_moive=[{
+                "name":item['name'][0],
+                "year":item['year'][0],
+                "score":item['score'][0],
+                "director":item['director'],
+                "classification":item['classification'],
+                "actor":item['actor']
+            }]
+            self.collection.insert(new_moive)
+            log.msg("Item wrote to MongoDB database %s/%s" %
+            (settings['MONGODB_DB'], settings['MONGODB_COLLECTION']),
+            level=log.DEBUG, spider=spider) 
+        return item
+</code></pre>
+<p>可以看到其基本的处理流程是一样，但是MySQL不太方便的一点就是需要将数组类型的数据通过分隔符转换。而MongoDB支持存入List、Dict等多种类型的数据。</p>
+<h2>配置文件</h2>
+<p>在运行爬虫之前还需要将在<code>settings.py</code>中增加一些配置信息。</p>
+<pre><code>BOT_NAME = 'doubanmoive'
+SPIDER_MODULES = ['doubanmoive.spiders']
+NEWSPIDER_MODULE = 'doubanmoive.spiders'
+ITEM_PIPELINES={
+    'doubanmoive.mongo_pipelines.MongoDBPipeline':300,
+    'doubanmoive.pipelines.DoubanmoivePipeline':400,
+}
+LOG_LEVEL='DEBUG'
+
+DOWNLOAD_DELAY = 2
+RANDOMIZE_DOWNLOAD_DELAY = True
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.54 Safari/536.5'
+COOKIES_ENABLED = True
+
+MONGODB_SERVER = 'localhost'
+MONGODB_PORT = 27017
+MONGODB_DB = 'python'
+MONGODB_COLLECTION = 'test'
+</code></pre>
+<p><code>ITEM_PIPELINES</code>中定义了MySQL和MongoDB两个Pipeline文件，后面的数字代表执行的优先级顺序，范围为0~1000。而中间的<code>DOWNLOAD_DELAY</code>等信息是为了防止爬虫被豆瓣Ban掉，增加了一些随机延迟，浏览器代理等。最后的就是MongoDB的配置信息，MySQL也可以参考这种方式来写。</p>
+<p>至此为止，抓取豆瓣电影的爬虫就已经完成了。在命令行中执行<code>Scrapy crawl doubanmoive</code>让蜘蛛开始爬行吧！</p>
+</div>
+    
+</body></html>
