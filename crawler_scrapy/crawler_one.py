@@ -10,15 +10,15 @@ import os
 # URL = r"http://www.jianshu.com/p/a8aad3bf4dc4"
 # TAG_TITLE = 'title'
 # TAG_CONTENT = "show-content"
-# """-----------伯乐在线-----------------"""
-# URL = r"http://python.jobbole.com/86584/"
-# TAG_TITLE = 'entry-header'
-# TAG_CONTENT = "entry"
+"""-----------伯乐在线-----------------"""
+URL = r"http://python.jobbole.com/86405/"
+TAG_TITLE = 'entry-header'
+TAG_CONTENT = "entry"
 """-----------图灵社区-----------------"""
-URL = r"http://www.ituring.com.cn/article/114408"
-TAG_TITLE = ''
-TAG_TITLEH = 'h1'
-TAG_CONTENT = "markdown-body"
+# URL = r"http://www.ituring.com.cn/article/114408"
+# TAG_TITLE = ''
+# TAG_TITLEH = 'h1'
+# TAG_CONTENT = "markdown-body"
 
 html_template = """
 <!DOCTYPE html>
@@ -37,7 +37,7 @@ soup = BeautifulSoup(html, 'html.parser')
 # if TAG_TITLE:
 #     title = soup.find(class_=TAG_TITLE).get_text()
 # elif TAG_TITLEH:
-title = soup.find(TAG_TITLEH).get_text()
+title = soup.find(class_=TAG_TITLE).get_text()
 title = ''.join(title.split())
 content = soup.find(class_=TAG_CONTENT)
 
@@ -55,13 +55,13 @@ if not os.path.exists("images"):
     os.mkdir("images")
 
 for url in re.compile(pattern).findall(html):
-    if url.startswith("http"):
-        path = url.encode("utf-8")
-        print("1")
-    else:
-        path = "http://www.ituring.com.cn" + url
-        print("2")
-    path = path.encode('utf-8')
+    # if url.startswith("http"):
+    #     path = url.encode("utf-8")
+    #     print("1")
+    # else:
+    #     path = "http://www.ituring.com.cn" + url
+    #     print("2")
+    path = url.encode('utf-8')
     md5.update(path)
     ext = os.path.splitext(path)[1].decode("utf-8")
 

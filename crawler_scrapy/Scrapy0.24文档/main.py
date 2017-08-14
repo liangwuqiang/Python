@@ -6,7 +6,7 @@ import re
 import os
 
 # 设置变量,要根据实际情况改动
-URL = r'http://scrapy-chs.readthedocs.io/zh_CN/0.24/index.html'  # Scrapy 0.24 文档
+URL = r'http://crawler_scrapy-chs.readthedocs.io/zh_CN/0.24/index.html'  # Scrapy 0.24 文档
 # URL = 
 TAG_TITLE = ''
 # TAG_CONTENT = 'wy-menu wy-menu-vertical'

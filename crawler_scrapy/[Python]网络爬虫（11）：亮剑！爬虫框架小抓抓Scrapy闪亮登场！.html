@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+
+    <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<center><h1>[Python]网络爬虫（11）：亮剑！爬虫框架小抓抓Scrapy闪亮登场！</h1></center>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">前面十章爬虫笔记陆陆续续记录了一些简单的Python爬虫知识，</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">用来解决简单的贴吧下载，绩点运算自然不在话下。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">不过要想批量下载大量的内容，比如知乎的所有的问答，那便显得游刃不有余了点。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">于是乎，爬虫框架Scrapy就这样出场了！</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">Scrapy = Scrach+Python，Scrach这个单词是抓取的意思，</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">暂且可以叫它：小抓抓吧。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px"><br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">小抓抓的官网地址：<a href="http://doc.scrapy.org/en/latest/" target="_blank">点我点我</a>。<br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px"><br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">那么下面来简单的演示一下小抓抓<span style="font-family:Microsoft YaHei; font-size:18px">Scrapy</span>的安装流程。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">具体流程参照：<a href="http://doc.scrapy.org/en/latest/intro/install.html#intro-install-platform-notes" target="_blank">官网教程</a><br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">友情提醒：一定要按照Python的版本下载，要不然安装的时候会提醒找不到Python。建议大家安装32位是因为有些版本的必备软件64位不好找。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px"><br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">1.安装Python（建议32位）</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">建议安装Python2.7.x，3.x貌似还不支持。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">安装完了记得配置环境，将python目录和python目录下的<span class="docutils literal"><span class="pre">Scripts</span></span>目录添加到系统环境变量的Path里。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">在cmd中输入python如果出现版本信息说明配置完毕。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px"><br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">2.安装lxml</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">lxml是一种使用 Python 编写的库，可以迅速、灵活地处理 XML。点击<a href="https://pypi.python.org/pypi/lxml/3.3.1" target="_blank">这里</a>选择对应的Python版本安装。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px"><br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">3.安装setuptools</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">用来安装egg文件，点击<a href="https://pypi.python.org/packages/2.7/s/setuptools/" target="_blank">这里</a>下载python2.7的对应版本的setuptools。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px"><br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">4.安装zope.interface</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">可以使用第三步下载的setuptools来安装egg文件，现在也有exe版本，点击<a href="https://pypi.python.org/pypi/zope.interface/4.1.0#downloads" target="_blank">这里</a>下载。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px"><br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">5.安装Twisted</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">Twisted是用Python实现的基于事件驱动的网络引擎框架，点击<a href="http://twistedmatrix.com/trac/wiki/Downloads" target="_blank">这里</a>下载。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px"><br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">6.安装pyOpenSSL</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">pyOpenSSL是Python的OpenSSL接口，点击<a href="https://launchpad.net/pyopenssl" target="_blank">这里</a>下载。</span></p>
+<p><br>
+</br></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">7.安装win32py</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">提供win32api，点击<a href="http://sourceforge.net/projects/pywin32/files/" target="_blank">这里</a>下载<br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px"><br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">8.安装</span><span style="font-family:Microsoft YaHei; font-size:18px">Scrapy<br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">终于到了激动人心的时候了！安装了那么多小部件之后终于轮到主角登场。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">直接在cmd中输入easy_install scrapy回车即可。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px"><br>
+</br></span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">9.检查安装</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px">打开一个cmd窗口，在任意位置执行scrapy命令，得到下列页面，表示环境配置成功。</span></p>
+<p><span style="font-family:Microsoft YaHei; font-size:18px"><img alt="" src="images/d4da3ddbe254e1217a6b23c8f9c0de6b"><br>
+</br></img></span></p>
+</div>
+
+</body></html>
