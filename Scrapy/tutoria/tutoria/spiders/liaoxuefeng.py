@@ -1,8 +1,7 @@
-# coding=utf-8
-
+# -*- coding: utf-8 -*-
 import scrapy
-
-from liaoxuefeng.items import MyItem
+import sys
+from items import TutoriaItem
 
 
 class LiaoxuefengSpider(scrapy.Spider):
@@ -18,8 +17,9 @@ class LiaoxuefengSpider(scrapy.Spider):
 
         items = []
         for site in sites:
-            item = MyItem()
+            item = TutoriaItem()
             item['title'] = site.xpath('a/text()').extract()
             item['link'] = site.xpath('a/@href').extract()
             items.append(item)
         return items
+
