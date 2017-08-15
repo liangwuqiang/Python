@@ -12,7 +12,7 @@ class LiaoxuefengSpider(scrapy.Spider):
         "http://https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000"
     ]
 
-    def parser(self, response):
+    def parse(self, response):
         sel = scrapy.selector.Selector(response)
         sites = sel.xpath('//div[@class="x-sidebar-left-content"]/ul[2]/li')
 
