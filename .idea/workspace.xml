@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b9ae41-d412-4b84-a590-5faa1375a688" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/__init__.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/scrapy.cfg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/items.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/middlewares.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/pipelines.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/settings.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/spiders/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/spiders/liaoxuefeng.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crawler/crawler_ibm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Python.iml" afterPath="$PROJECT_DIR$/.idea/Python.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scrapy/liaoxuefeng/liaoxuefeng/spiders/liaoxuefeng.py" afterPath="$PROJECT_DIR$/Scrapy/liaoxuefeng/liaoxuefeng/spiders/liaoxuefeng.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,7 +18,30 @@
     <favorites_list name="Python" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="crawler_csdn博客.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawler_scrapy/crawler_csdn博客.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="crawler_ibm.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crawler/crawler_ibm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-377">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="e#15#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -95,6 +111,7 @@
         <option value="$PROJECT_DIR$/Scrapy/tutoria/tutoria/spiders/liaoxuefeng.py" />
         <option value="$PROJECT_DIR$/tutoria/tutoria/spiders/liaoxuefeng.py" />
         <option value="$PROJECT_DIR$/Scrapy/liaoxuefeng/liaoxuefeng/spiders/liaoxuefeng.py" />
+        <option value="$PROJECT_DIR$/crawler/crawler_ibm.py" />
       </list>
     </option>
   </component>
@@ -141,14 +158,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Python" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler_scrapy" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Python" type="b2602c69:ProjectViewProjectNode" />
@@ -165,6 +190,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -196,7 +223,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.crawler_content">
+  <component name="RunManager" selected="Python.crawler_ibm">
     <configuration name="clarwer_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -248,19 +275,19 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="doc" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="crawler_ibm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="/usr/bin/python3.5" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crawler" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doc.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawler/crawler_ibm.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -284,18 +311,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.crawler" />
-      <item index="1" class="java.lang.String" itemvalue="Python.doc" />
-      <item index="2" class="java.lang.String" itemvalue="Python.html2doc" />
-      <item index="3" class="java.lang.String" itemvalue="Python.clarwer_list" />
-      <item index="4" class="java.lang.String" itemvalue="Python.crawler_content" />
+      <item index="1" class="java.lang.String" itemvalue="Python.html2doc" />
+      <item index="2" class="java.lang.String" itemvalue="Python.clarwer_list" />
+      <item index="3" class="java.lang.String" itemvalue="Python.crawler_content" />
+      <item index="4" class="java.lang.String" itemvalue="Python.crawler_ibm" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.crawler_content" />
-        <item index="1" class="java.lang.String" itemvalue="Python.clarwer_list" />
-        <item index="2" class="java.lang.String" itemvalue="Python.crawler" />
-        <item index="3" class="java.lang.String" itemvalue="Python.html2doc" />
-        <item index="4" class="java.lang.String" itemvalue="Python.doc" />
+        <item index="0" class="java.lang.String" itemvalue="Python.crawler_ibm" />
+        <item index="1" class="java.lang.String" itemvalue="Python.crawler_content" />
+        <item index="2" class="java.lang.String" itemvalue="Python.clarwer_list" />
+        <item index="3" class="java.lang.String" itemvalue="Python.crawler" />
+        <item index="4" class="java.lang.String" itemvalue="Python.html2doc" />
       </list>
     </recent_temporary>
   </component>
@@ -327,10 +354,10 @@
   <component name="ToolWindowManager">
     <frame x="1440" y="-4" width="1440" height="904" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17073171" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30129126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27135134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27096775" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -390,14 +417,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wxPython/simpleGUI4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wxPython/temp" />
     <entry file="file://$PROJECT_DIR$/wxPython/simpleGUI5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="804">
@@ -670,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -678,8 +696,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_scrapy/crawler_csdn博客.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler/crawler_ibm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-377">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#24#37#0" expanded="true" />
+            <element signature="e#15#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
