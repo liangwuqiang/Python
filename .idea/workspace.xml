@@ -2,15 +2,125 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b9ae41-d412-4b84-a590-5faa1375a688" name="Default" comment="">
-<<<<<<< HEAD
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawler_content.py" afterPath="$PROJECT_DIR$/crawler_content.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list.txt" afterPath="$PROJECT_DIR$/list.txt" />
-=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mongodb/my" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/0.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/0_002.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/0_002.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/0_003.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/0_004.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/0_005.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/index_data_002/62d8efadgw1ej30downrsj20hs0hq0ws.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/l.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/1_22.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/1_4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS1351573-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS1354749-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS1620410-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS1651285-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS2936668-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS2980781-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS2995721-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3007568-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3057496-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3151837-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3184218-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3221032-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3222097-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3222101-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3258293-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3308182-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3337625-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3408188-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3408270-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3417245-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3417273-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3432231-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/CS3488807-02A.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/IS432793-01-01-TN.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/IS551016-01-01-TN.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/IS551017-01-01-TN.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/IS571289-01-01-TN.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/IS571290-01-01-TN.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crawler/Pythonyield使用浅析.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/crawler/crawler_ibm.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mongodb/.idea/gradle.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mongodb/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mongodb/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mongodb/.idea/modules/lwq.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mongodb/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/.idea/markdown-navigator/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/.idea/my.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/log.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/my/items.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/my/items.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/my/middlewares.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/my/pipelines.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/my/run.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/my/settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/my/spiders/example.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my/scrapy.cfg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/.idea/markdown-navigator/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/.idea/tutoria.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/items.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/run.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/adsbygoogle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/all.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/all.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/hm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/index_002.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/index_data_002/gaea_1_19.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/index_data_002/show.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/index_data_002/skin05.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/index_data_002/suda.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/index_data_002/weiboShow.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/underscore.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/test_files/wb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/tutoria/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/tutoria/spiders/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tutoria/tutoria/spiders/example.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/analytics.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/css-common-downloads.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/javascript-common-5.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/search_solr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/trackjs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/html/Dance music downloads catalogue_files/widget_loader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/items.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/juno_crawler/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/juno_crawler/items.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/juno_crawler/middlewares.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/juno_crawler/pipelines.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/juno_crawler/settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/juno_crawler/spiders/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/juno_crawler/spiders/juno.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/run.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/scrapy.cfg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/scrapy.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/已学习Github中的项目/juno_crawler/setup.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crawler_scrapy/[Python]网络爬虫（一）：抓取网页的含义和URL基本构成.doc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/crawler_scrapy/[Python]网络爬虫（二）：利用urllib2通过指定的URL抓取网页内容.doc" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/scrapy.cfg" afterPath="$PROJECT_DIR$/tutoria/scrapy.cfg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/__init__.py" afterPath="$PROJECT_DIR$/my/my/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/items.py" afterPath="$PROJECT_DIR$/tutoria/tutoria/items.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/middlewares.py" afterPath="$PROJECT_DIR$/tutoria/tutoria/middlewares.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/pipelines.py" afterPath="$PROJECT_DIR$/tutoria/tutoria/pipelines.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/settings.py" afterPath="$PROJECT_DIR$/tutoria/tutoria/settings.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/spiders/__init__.py" afterPath="$PROJECT_DIR$/my/my/spiders/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Scrapy/tutoria/tutoria/spiders/liaoxuefeng.py" afterPath="$PROJECT_DIR$/tutoria/tutoria/spiders/liaoxuefeng.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawler_content.py" afterPath="$PROJECT_DIR$/crawler_content.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list.txt" afterPath="$PROJECT_DIR$/list.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
->>>>>>> 930707110a1902649f2bbb3a22e0ad5362809db2
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/学习笔记/精彩语句摘录.md" afterPath="$PROJECT_DIR$/学习笔记/精彩语句摘录.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,82 +129,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/test.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="246">
-                    <caret line="933" column="0" lean-forward="false" selection-start-line="933" selection-start-column="0" selection-end-line="933" selection-end-column="0" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="Python" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="crawler.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawler.py">
+      <file leaf-file-name="crawler_csdn博客.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawler_scrapy/crawler_csdn博客.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding>
-                <element signature="e#15#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crawler_content.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crawler_content.py">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="198">
-              <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-=======
-            <state relative-caret-position="138">
-              <caret line="48" column="24" lean-forward="true" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
->>>>>>> 930707110a1902649f2bbb3a22e0ad5362809db2
-              <folding>
-                <element signature="e#16#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/list.txt">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="22">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-=======
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> 930707110a1902649f2bbb3a22e0ad5362809db2
+            <state relative-caret-position="288">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crawler_list.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawler_list.py">
+      <file leaf-file-name="crawler_ibm.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/crawler/crawler_ibm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="64" lean-forward="true" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
+            <state relative-caret-position="22">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
-                <element signature="e#16#31#0" expanded="true" />
+                <element signature="e#15#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,14 +223,18 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/crawler_content.py" />
         <option value="$PROJECT_DIR$/list.txt" />
+        <option value="$PROJECT_DIR$/Scrapy/tutoria/tutoria/spiders/liaoxuefeng.py" />
+        <option value="$PROJECT_DIR$/tutoria/tutoria/spiders/liaoxuefeng.py" />
+        <option value="$PROJECT_DIR$/Scrapy/liaoxuefeng/liaoxuefeng/spiders/liaoxuefeng.py" />
+        <option value="$PROJECT_DIR$/crawler/crawler_ibm.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1780" />
-    <option name="y" value="432" />
-    <option name="width" value="1422" />
-    <option name="height" value="748" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="3840" />
+    <option name="y" value="24" />
+    <option name="width" value="720" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -213,8 +273,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -222,10 +280,59 @@
               <item name="Python" type="b2602c69:ProjectViewProjectNode" />
               <item name="Python" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="Scrapy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="Scrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="liaoxuefeng" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="someSimple" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="tutoria" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="wxPython" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="wxPythonInAction-src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="学习笔记" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="已学习Github中的项目" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Python" type="462c0819:PsiDirectoryNode" />
+              <item name="已学习Github中的项目" type="462c0819:PsiDirectoryNode" />
+              <item name="juno_crawler" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -233,16 +340,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="SearchEverywhereHistoryKey" value="Frame&#9;FILE&#9;file:///home/lwq/.PyCharmCE2017.2/system/python_stubs/-1247972723/gtk/_gtk/Frame.py&#10;App&#9;null&#9;null" />
     <property name="settings.editor.splitter.proportion" value="0.1799861" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/juno_crawler" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/pdf" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/wxPythonInAction-src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/pdf" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -257,7 +364,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.crawler_content">
+  <component name="RunManager" selected="Python.crawler_ibm">
     <configuration name="clarwer_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -309,19 +416,19 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="doc" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="crawler_ibm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="/usr/bin/python3.5" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crawler" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doc.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawler/crawler_ibm.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -345,18 +452,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.crawler" />
-      <item index="1" class="java.lang.String" itemvalue="Python.doc" />
-      <item index="2" class="java.lang.String" itemvalue="Python.html2doc" />
-      <item index="3" class="java.lang.String" itemvalue="Python.clarwer_list" />
-      <item index="4" class="java.lang.String" itemvalue="Python.crawler_content" />
+      <item index="1" class="java.lang.String" itemvalue="Python.html2doc" />
+      <item index="2" class="java.lang.String" itemvalue="Python.clarwer_list" />
+      <item index="3" class="java.lang.String" itemvalue="Python.crawler_content" />
+      <item index="4" class="java.lang.String" itemvalue="Python.crawler_ibm" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.crawler_content" />
-        <item index="1" class="java.lang.String" itemvalue="Python.clarwer_list" />
-        <item index="2" class="java.lang.String" itemvalue="Python.crawler" />
-        <item index="3" class="java.lang.String" itemvalue="Python.html2doc" />
-        <item index="4" class="java.lang.String" itemvalue="Python.doc" />
+        <item index="0" class="java.lang.String" itemvalue="Python.crawler_ibm" />
+        <item index="1" class="java.lang.String" itemvalue="Python.crawler_content" />
+        <item index="2" class="java.lang.String" itemvalue="Python.clarwer_list" />
+        <item index="3" class="java.lang.String" itemvalue="Python.crawler" />
+        <item index="4" class="java.lang.String" itemvalue="Python.html2doc" />
       </list>
     </recent_temporary>
   </component>
@@ -386,21 +493,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="-4" width="1680" height="1054" extended-state="6" />
-    <editor active="true" />
+    <frame x="3840" y="24" width="720" height="876" extended-state="4" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16585067" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7463127" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27870968" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27135134" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
->>>>>>> 930707110a1902649f2bbb3a22e0ad5362809db2
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27096775" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -451,42 +552,12 @@
           <line>12</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-<<<<<<< HEAD
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/crawler_content.py</url>
-          <line>79</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-=======
->>>>>>> 930707110a1902649f2bbb3a22e0ad5362809db2
       </breakpoints>
       <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wxPython/simpleGUI3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wxPython/simpleGUI3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wxPython/simpleGUI4.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wxPython/temp" />
     <entry file="file://$PROJECT_DIR$/wxPython/simpleGUI5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="804">
@@ -676,13 +747,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/n.html" />
-    <entry file="file://$PROJECT_DIR$/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/new.html" />
     <entry file="file://$PROJECT_DIR$/output/new.html" />
     <entry file="file:///usr/lib/python3.5/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -702,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1430">
           <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -718,7 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3366">
           <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -726,7 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5698">
           <caret line="264" column="0" lean-forward="false" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,7 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15818">
           <caret line="744" column="0" lean-forward="false" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,7 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4488">
           <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -750,62 +809,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8360">
           <caret line="394" column="0" lean-forward="false" selection-start-line="394" selection-start-column="0" selection-end-line="394" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="933" column="0" lean-forward="false" selection-start-line="933" selection-start-column="0" selection-end-line="933" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html" />
+    <entry file="file://$PROJECT_DIR$/crawler_list.py" />
+    <entry file="file://$PROJECT_DIR$/list.txt" />
+    <entry file="file://$PROJECT_DIR$/crawler_content.py" />
     <entry file="file://$PROJECT_DIR$/crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="22">
+          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
           <folding>
             <element signature="e#15#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler_list.py">
+    <entry file="file://$PROJECT_DIR$/Scrapy/liaoxuefeng/liaoxuefeng/spiders/liaoxuefeng.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="64" lean-forward="true" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
-          <folding>
-            <element signature="e#16#31#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="506">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/list.txt">
+    <entry file="file://$PROJECT_DIR$/tutoria/tutoria/spiders/liaoxuefeng.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="22">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-=======
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> 930707110a1902649f2bbb3a22e0ad5362809db2
+        <state relative-caret-position="418">
+          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler_scrapy/crawler_csdn博客.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawler_content.py">
+    <entry file="file://$PROJECT_DIR$/crawler/crawler_ibm.py">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="198">
-          <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-=======
-        <state relative-caret-position="138">
-          <caret line="48" column="24" lean-forward="true" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
->>>>>>> 930707110a1902649f2bbb3a22e0ad5362809db2
+        <state relative-caret-position="22">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#16#25#0" expanded="true" />
+            <element signature="e#15#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
