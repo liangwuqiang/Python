@@ -1,0 +1,265 @@
+link,tags,title,votes,body
+https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array,"java,c++,performance,optimization,branch-prediction",Why is it faster to process a sorted array than an unsorted array?,18878,"<div class=""post-text"" itemprop=""text"">
+
+<p>Here is a piece of C++ code that seems very peculiar. For some strange reason, sorting the data miraculously makes the code almost six times faster.</p>
+
+<pre class=""lang-cpp prettyprint-override""><code>#include &lt;algorithm&gt;
+#include &lt;ctime&gt;
+#include &lt;iostream&gt;
+
+int main()
+{
+    // Generate data
+    const unsigned arraySize = 32768;
+    int data[arraySize];
+
+    for (unsigned c = 0; c &lt; arraySize; ++c)
+        data[c] = std::rand() % 256;
+
+    // !!! With this, the next loop runs faster
+    std::sort(data, data + arraySize);
+
+    // Test
+    clock_t start = clock();
+    long long sum = 0;
+
+    for (unsigned i = 0; i &lt; 100000; ++i)
+    {
+        // Primary loop
+        for (unsigned c = 0; c &lt; arraySize; ++c)
+        {
+            if (data[c] &gt;= 128)
+                sum += data[c];
+        }
+    }
+
+    double elapsedTime = static_cast&lt;double&gt;(clock() - start) / CLOCKS_PER_SEC;
+
+    std::cout &lt;&lt; elapsedTime &lt;&lt; std::endl;
+    std::cout &lt;&lt; ""sum = "" &lt;&lt; sum &lt;&lt; std::endl;
+}
+</code></pre>
+
+<ul>
+<li>Without <code>std::sort(data, data + arraySize);</code>, the code runs in 11.54 seconds.</li>
+<li>With the sorted data, the code runs in 1.93 seconds.</li>
+</ul>
+
+<p>Initially, I thought this might be just a language or compiler anomaly. So I tried it in Java.</p>
+
+<pre class=""lang-java prettyprint-override""><code>import java.util.Arrays;
+import java.util.Random;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        // Generate data
+        int arraySize = 32768;
+        int data[] = new int[arraySize];
+
+        Random rnd = new Random(0);
+        for (int c = 0; c &lt; arraySize; ++c)
+            data[c] = rnd.nextInt() % 256;
+
+        // !!! With this, the next loop runs faster
+        Arrays.sort(data);
+
+        // Test
+        long start = System.nanoTime();
+        long sum = 0;
+
+        for (int i = 0; i &lt; 100000; ++i)
+        {
+            // Primary loop
+            for (int c = 0; c &lt; arraySize; ++c)
+            {
+                if (data[c] &gt;= 128)
+                    sum += data[c];
+            }
+        }
+
+        System.out.println((System.nanoTime() - start) / 1000000000.0);
+        System.out.println(""sum = "" + sum);
+    }
+}
+</code></pre>
+
+<p>With a somewhat similar but less extreme result.</p>
+
+<hr>
+
+<p>My first thought was that sorting brings the data into the cache, but then I thought how silly that is because the array was just generated.</p>
+
+<ul>
+<li>What is going on?</li>
+<li>Why is a sorted array faster to process than an unsorted array?</li>
+<li>The code is summing up some independent terms, and the order should not matter.</li>
+</ul>
+    </div>"
+https://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it,"javascript,syntax,jslint,use-strict","What does “use strict” do in JavaScript, and what is the reasoning behind it?",5906,"<div class=""post-text"" itemprop=""text"">
+
+<p>Recently, I ran some of my JavaScript code through Crockford's <a href=""http://www.jslint.com/"" rel=""noreferrer"">JSLint</a>, and it gave the following error:</p>
+
+<blockquote>
+  <p>Problem at line 1 character 1: Missing ""use strict"" statement.</p>
+</blockquote>
+
+<p>Doing some searching, I realized that some people add <code>""use strict"";</code> into their JavaScript code. Once I added the statement, the error stopped appearing. Unfortunately, Google did not reveal much of the history behind this string statement. Certainly it must have something to do with how the JavaScript is interpreted by the browser, but I have no idea what the effect would be.</p>
+
+<p>So what is <code>""use strict"";</code> all about, what does it imply, and is it still relevant?</p>
+
+<p>Do any of the current browsers respond to the <code>""use strict"";</code> string or is it for future use?</p>
+    </div>"
+https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap,"memory-management,language-agnostic,stack,heap",What and where are the stack and heap?,6292,"<div class=""post-text"" itemprop=""text"">
+
+<p>Programming language books explain that value types are created on the stack, and reference types are created on the heap, without explaining what these two things are. I haven't read a clear explanation of this.  I understand what <em>a stack</em> is, but where and what are they (physically in a real computer's memory)?  </p>
+
+<ul>
+<li>To what extent are they controlled by the OS or language runtime?</li>
+<li>What is their scope?</li>
+<li>What determines the size of each of them?</li>
+<li>What makes one faster? </li>
+</ul>
+    </div>"
+https://stackoverflow.com/questions/178325/how-do-i-check-if-an-element-is-hidden-in-jquery,"javascript,jquery,dom,visibility",How do I check if an element is hidden in jQuery?,5904,"<div class=""post-text"" itemprop=""text"">
+
+<p>It is possible to toggle the visibility of an element, using the functions <code>.hide()</code>, <code>.show()</code> or <code>.toggle()</code>.</p>
+
+<p>How would you test if an element is visible or hidden?</p>
+    </div>"
+https://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit,"git,version-control,git-stage",How to undo 'git add' before commit?,6312,"<div class=""post-text"" itemprop=""text"">
+
+<p>I mistakenly added files using the command:</p>
+
+<pre><code>git add myfile.txt
+</code></pre>
+
+<p>I have not yet run <code>git commit</code>. Is there a way to undo this, so these files won't be included in the commit?</p>
+    </div>"
+https://stackoverflow.com/questions/1789945/how-to-check-whether-a-string-contains-a-substring-in-javascript,"javascript,string,substring,contains,string-matching",How to check whether a string contains a substring in JavaScript?,6534,"<div class=""post-text"" itemprop=""text"">
+
+<p>Usually I would expect a <code>String.contains()</code> method but there doesn't seem to be one. What is a reasonable way to check for this?</p>
+    </div>"
+https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c,"c++,operators,code-formatting,standards-compliance",What is the “-->” operator in C++?,6809,"<div class=""post-text"" itemprop=""text"">
+
+<p>After reading <a href=""http://groups.google.com/group/comp.lang.c++.moderated/msg/33f173780d58dd20"" rel=""noreferrer"">Hidden Features and Dark Corners of C++/STL</a> on <code>comp.lang.c++.moderated</code>, I was completely surprised that the following snippet compiled and worked in both Visual Studio 2008 and G++ 4.4.</p>
+
+<p>Here's the code:</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+int main()
+{
+    int x = 10;
+    while (x --&gt; 0) // x goes to 0
+    {
+        printf(""%d "", x);
+    }
+}
+</code></pre>
+
+<p>I'd assume this is C, since it works in GCC as well. Where is this defined in the standard, and where has it come from?</p>
+    </div>"
+https://stackoverflow.com/questions/503093/how-to-redirect-to-another-webpage-in-javascript-jquery,"javascript,jquery,redirect",How to redirect to another webpage in JavaScript/jQuery?,6897,"<div class=""post-text"" itemprop=""text"">
+
+<p>How can I redirect the user from one page to another using JavaScript or jQuery?</p>
+    </div>"
+https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do,"python,iterator,generator,yield,coroutine",What does the “yield” keyword do?,6899,"<div class=""post-text"" itemprop=""text"">
+
+<p>What is the use of the <code>yield</code> keyword in Python? What does it do?</p>
+
+<p>For example, I'm trying to understand this code<sup><strong>1</strong></sup>:</p>
+
+<pre><code>def _get_child_candidates(self, distance, min_dist, max_dist):
+    if self._leftchild and distance - max_dist &lt; self._median:
+        yield self._leftchild
+    if self._rightchild and distance + max_dist &gt;= self._median:
+        yield self._rightchild  
+</code></pre>
+
+<p>And this is the caller:</p>
+
+<pre><code>result, candidates = list(), [self]
+while candidates:
+    node = candidates.pop()
+    distance = node._get_dist(obj)
+    if distance &lt;= max_dist and distance &gt;= min_dist:
+        result.extend(node._values)
+    candidates.extend(node._get_child_candidates(distance, min_dist, max_dist))
+return result
+</code></pre>
+
+<p>What happens when the method <code>_get_child_candidates</code> is called?
+Is a list returned? A single element? Is it called again? When will subsequent calls stop?</p>
+
+<hr>
+
+<p><sub>
+1. The code comes from Jochen Schulz (jrschulz), who made a great Python library for metric spaces. This is the link to the complete source: <a href=""http://well-adjusted.de/~jrschulz/mspace/"" rel=""noreferrer"">Module mspace</a>.</sub></p>
+    </div>"
+https://stackoverflow.com/questions/111102/how-do-javascript-closures-work,"javascript,function,variables,scope,closures",How do JavaScript closures work?,7669,"<div class=""post-text"" itemprop=""text"">
+
+<p>How would you explain JavaScript closures to someone with a knowledge of the concepts they consist of (for example functions, variables and the like), but does not understand closures themselves?</p>
+
+<p>I have seen <a href=""http://en.wikipedia.org/wiki/Scheme_%28programming_language%29"" rel=""noreferrer"">the Scheme example</a> given on Wikipedia, but unfortunately it did not help.</p>
+    </div>"
+https://stackoverflow.com/questions/477816/what-is-the-correct-json-content-type,"json,content-type",What is the correct JSON content type?,8224,"<div class=""post-text"" itemprop=""text"">
+
+<p>I've been messing around with <a href=""http://en.wikipedia.org/wiki/JSON"" rel=""noreferrer"">JSON</a> for some time, just pushing it out as text and it hasn't hurt anybody (that I know of), but I'd like to start doing things properly.</p>
+
+<p>I have seen <em>so</em> many purported ""standards"" for the JSON content type:</p>
+
+<pre><code>application/json
+application/x-javascript
+text/javascript
+text/x-javascript
+text/x-json
+</code></pre>
+
+<p>But which is correct, or best? I gather that there are security and browser support issues varying between them.</p>
+
+<p>I know there's a similar question, <em><a href=""https://stackoverflow.com/questions/404470/what-mime-type-if-json-is-being-returned-by-a-rest-api"">What MIME type if JSON is being returned by a REST API?</a></em>, but I'd like a slightly more targeted answer.</p>
+    </div>"
+https://stackoverflow.com/questions/179123/how-to-modify-existing-unpushed-commits,"git,git-commit,git-rewrite-history,amend","How to modify existing, unpushed commits?",7687,"<div class=""post-text"" itemprop=""text"">
+
+<p>I wrote the wrong thing in a commit message. Alternatively, I've forgotten to include some files.</p>
+
+<p>How can I change the commit message/files? The commit has not been pushed yet.</p>
+    </div>"
+https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch,"git,git-pull,git-fetch",What is the difference between 'git pull' and 'git fetch'?,8409,"<div class=""post-text"" itemprop=""text"">
+
+<p>What are the differences between <code>git pull</code> and <code>git fetch</code>?</p>
+    </div>"
+https://stackoverflow.com/questions/927358/how-to-undo-the-last-commits-in-git,"git,git-rebase,git-commit,git-reset,git-revert",How to undo the last commits in Git?,15010,"<div class=""post-text"" itemprop=""text"">
+
+<p>I committed wrong files into <a href=""https://git-scm.com"" rel=""noreferrer"">Git</a>. I haven't yet pushed the commit to the server.</p>
+
+<p>How can I undo those commits? </p>
+    </div>"
+https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely,"git,git-branch,git-remote",How do I delete a Git branch both locally and remotely?,11260,"<div class=""post-text"" itemprop=""text"">
+
+<p>I want to delete a branch both locally and on my remote project fork on <a href=""http://en.wikipedia.org/wiki/GitHub"" rel=""noreferrer"">GitHub</a>.</p>
+
+<h3>Failed Attempts to Delete Remote Branch</h3>
+
+<pre><code>$ git branch -d remotes/origin/bugfix
+error: branch 'remotes/origin/bugfix' not found.
+
+$ git branch -d origin/bugfix
+error: branch 'origin/bugfix' not found.
+
+$ git branch -rd origin/bugfix
+Deleted remote branch origin/bugfix (was 2a14ef7).
+
+$ git push
+Everything up-to-date
+
+$ git pull
+From github.com:gituser/gitproject
+* [new branch] bugfix -&gt; origin/bugfix
+Already up-to-date.
+</code></pre>
+
+<p>What do I need to do differently to successfully delete the
+<code>remotes/origin/bugfix</code> branch both locally and on GitHub?</p>
+    </div>"

@@ -1,0 +1,8 @@
+# coding=utf-8
+
+# <Selector xpath="descendant-or-self::*[@class and contains(concat(' ', normalize-space(@class), ' '), ' question-summary ')]/descendant-or-self::*/h3/descendant-or-self::*/a/@href" data='https://stackoverflow.com/questions/1122'>
+# <Selector xpath="descendant-or-self::*[@class and contains(concat(' ', normalize-space(@class), ' '), ' question-summary ')]/descendant-or-self::*/h3/descendant-or-self::*/a" data='<a href="https://stackoverflow.com/quest'>
+
+<class 'scrapy.selector.unified.Selector'>
+
+< class 'scrapy.selector.unified.Selector'>

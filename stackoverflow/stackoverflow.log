@@ -1,0 +1,1023 @@
+2017-08-18 11:16:07 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: stackoverflow)
+2017-08-18 11:16:07 [scrapy.utils.log] INFO: Overridden settings: {'SPIDER_MODULES': ['stackoverflow.spiders'], 'NEWSPIDER_MODULE': 'stackoverflow.spiders', 'LOG_FILE': 'stackoverflow.log', 'BOT_NAME': 'stackoverflow', 'ROBOTSTXT_OBEY': True}
+2017-08-18 11:16:07 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.memusage.MemoryUsage']
+2017-08-18 11:16:07 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-18 11:16:07 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-18 11:16:07 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-18 11:16:07 [scrapy.core.engine] INFO: Spider opened
+2017-08-18 11:16:07 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-18 11:16:07 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-18 11:16:07 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 1 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:16:07 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 2 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:16:07 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET file:///robots.txt> (failed 3 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:16:07 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET file:///robots.txt>: [Errno 2] No such file or directory: '/robots.txt'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+FileNotFoundError: [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:16:07 [scrapy.core.engine] DEBUG: Crawled (200) <GET file:///home/lwq/Desktop/lwq/stackoverflow/html/Highest%20Voted%20Questions%20-%20Stack%20Overflow.html> (referer: None)
+2017-08-18 11:16:07 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-08-18 11:16:07 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/builtins.FileNotFoundError': 3,
+ 'downloader/request_bytes': 917,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 124660,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 8, 18, 3, 16, 7, 459502),
+ 'log_count/DEBUG': 5,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 804671488,
+ 'memusage/startup': 804671488,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/builtins.FileNotFoundError': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 8, 18, 3, 16, 7, 318305)}
+2017-08-18 11:16:07 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-08-18 11:16:35 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: stackoverflow)
+2017-08-18 11:16:35 [scrapy.utils.log] INFO: Overridden settings: {'LOG_FILE': 'stackoverflow.log', 'NEWSPIDER_MODULE': 'stackoverflow.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['stackoverflow.spiders'], 'BOT_NAME': 'stackoverflow'}
+2017-08-18 11:16:35 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-08-18 11:16:35 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-18 11:16:35 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-18 11:16:35 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-18 11:16:35 [scrapy.core.engine] INFO: Spider opened
+2017-08-18 11:16:35 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-18 11:16:35 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-18 11:16:35 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 1 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:16:35 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 2 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:16:35 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET file:///robots.txt> (failed 3 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:16:35 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET file:///robots.txt>: [Errno 2] No such file or directory: '/robots.txt'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+FileNotFoundError: [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:16:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET file:///home/lwq/Desktop/lwq/stackoverflow/html/Highest%20Voted%20Questions%20-%20Stack%20Overflow.html> (referer: None)
+2017-08-18 11:16:35 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-08-18 11:16:35 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/builtins.FileNotFoundError': 3,
+ 'downloader/request_bytes': 917,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 124660,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 8, 18, 3, 16, 35, 837361),
+ 'log_count/DEBUG': 5,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 815001600,
+ 'memusage/startup': 815001600,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/builtins.FileNotFoundError': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 8, 18, 3, 16, 35, 709864)}
+2017-08-18 11:16:35 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-08-18 11:17:23 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: stackoverflow)
+2017-08-18 11:17:23 [scrapy.utils.log] INFO: Overridden settings: {'SPIDER_MODULES': ['stackoverflow.spiders'], 'ROBOTSTXT_OBEY': True, 'BOT_NAME': 'stackoverflow', 'LOG_FILE': 'stackoverflow.log', 'NEWSPIDER_MODULE': 'stackoverflow.spiders'}
+2017-08-18 11:17:23 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-08-18 11:17:23 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-18 11:17:23 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-18 11:17:23 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-18 11:17:23 [scrapy.core.engine] INFO: Spider opened
+2017-08-18 11:17:23 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-18 11:17:23 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-18 11:17:23 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 1 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:17:23 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 2 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:17:23 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET file:///robots.txt> (failed 3 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:17:23 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET file:///robots.txt>: [Errno 2] No such file or directory: '/robots.txt'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+FileNotFoundError: [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:17:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET file:///home/lwq/Desktop/lwq/stackoverflow/html/Highest%20Voted%20Questions%20-%20Stack%20Overflow.html> (referer: None)
+2017-08-18 11:17:23 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-08-18 11:17:23 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/builtins.FileNotFoundError': 3,
+ 'downloader/request_bytes': 917,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 124660,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 8, 18, 3, 17, 23, 449218),
+ 'log_count/DEBUG': 5,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 816553984,
+ 'memusage/startup': 816553984,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/builtins.FileNotFoundError': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 8, 18, 3, 17, 23, 305161)}
+2017-08-18 11:17:23 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-08-18 11:17:55 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: stackoverflow)
+2017-08-18 11:17:55 [scrapy.utils.log] INFO: Overridden settings: {'BOT_NAME': 'stackoverflow', 'SPIDER_MODULES': ['stackoverflow.spiders'], 'NEWSPIDER_MODULE': 'stackoverflow.spiders', 'LOG_FILE': 'stackoverflow.log', 'ROBOTSTXT_OBEY': True}
+2017-08-18 11:17:55 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2017-08-18 11:17:56 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-18 11:17:56 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-18 11:17:56 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-18 11:17:56 [scrapy.core.engine] INFO: Spider opened
+2017-08-18 11:17:56 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-18 11:17:56 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-18 11:17:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 1 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:17:56 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 2 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:17:56 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET file:///robots.txt> (failed 3 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:17:56 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET file:///robots.txt>: [Errno 2] No such file or directory: '/robots.txt'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+FileNotFoundError: [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:17:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET file:///home/lwq/Desktop/lwq/stackoverflow/html/Highest%20Voted%20Questions%20-%20Stack%20Overflow.html> (referer: None)
+2017-08-18 11:17:56 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-08-18 11:17:56 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/builtins.FileNotFoundError': 3,
+ 'downloader/request_bytes': 917,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 124660,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 8, 18, 3, 17, 56, 186066),
+ 'log_count/DEBUG': 5,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 817770496,
+ 'memusage/startup': 817770496,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/builtins.FileNotFoundError': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 8, 18, 3, 17, 56, 41375)}
+2017-08-18 11:17:56 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-08-18 11:29:25 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: stackoverflow)
+2017-08-18 11:29:25 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'stackoverflow.spiders', 'LOG_FILE': 'stackoverflow.log', 'SPIDER_MODULES': ['stackoverflow.spiders'], 'ROBOTSTXT_OBEY': True, 'BOT_NAME': 'stackoverflow'}
+2017-08-18 11:29:25 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2017-08-18 11:29:25 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-18 11:29:25 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-18 11:29:25 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-18 11:29:25 [scrapy.core.engine] INFO: Spider opened
+2017-08-18 11:29:25 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-18 11:29:25 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-18 11:29:25 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 1 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:29:25 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 2 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:29:25 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET file:///robots.txt> (failed 3 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:29:25 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET file:///robots.txt>: [Errno 2] No such file or directory: '/robots.txt'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+FileNotFoundError: [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:29:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET file:///home/lwq/Desktop/lwq/stackoverflow/html/Highest%20Voted%20Questions%20-%20Stack%20Overflow.html> (referer: None)
+2017-08-18 11:29:26 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-08-18 11:29:26 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/builtins.FileNotFoundError': 3,
+ 'downloader/request_bytes': 917,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 124660,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 8, 18, 3, 29, 26, 39361),
+ 'log_count/DEBUG': 5,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 848310272,
+ 'memusage/startup': 848310272,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/builtins.FileNotFoundError': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 8, 18, 3, 29, 25, 897406)}
+2017-08-18 11:29:26 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-08-18 11:30:16 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: stackoverflow)
+2017-08-18 11:30:16 [scrapy.utils.log] INFO: Overridden settings: {'ROBOTSTXT_OBEY': True, 'BOT_NAME': 'stackoverflow', 'NEWSPIDER_MODULE': 'stackoverflow.spiders', 'SPIDER_MODULES': ['stackoverflow.spiders'], 'LOG_FILE': 'stackoverflow.log'}
+2017-08-18 11:30:17 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-08-18 11:30:17 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-18 11:30:17 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-18 11:30:17 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-18 11:30:17 [scrapy.core.engine] INFO: Spider opened
+2017-08-18 11:30:17 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-18 11:30:17 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-18 11:30:17 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 1 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:30:17 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 2 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:30:17 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET file:///robots.txt> (failed 3 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:30:17 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET file:///robots.txt>: [Errno 2] No such file or directory: '/robots.txt'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+FileNotFoundError: [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:30:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET file:///home/lwq/Desktop/lwq/stackoverflow/html/Highest%20Voted%20Questions%20-%20Stack%20Overflow.html> (referer: None)
+2017-08-18 11:30:17 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-08-18 11:30:17 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/builtins.FileNotFoundError': 3,
+ 'downloader/request_bytes': 917,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 124660,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 8, 18, 3, 30, 17, 228346),
+ 'log_count/DEBUG': 5,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 850214912,
+ 'memusage/startup': 850214912,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/builtins.FileNotFoundError': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 8, 18, 3, 30, 17, 84700)}
+2017-08-18 11:30:17 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-08-18 11:33:39 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: stackoverflow)
+2017-08-18 11:33:39 [scrapy.utils.log] INFO: Overridden settings: {'SPIDER_MODULES': ['stackoverflow.spiders'], 'NEWSPIDER_MODULE': 'stackoverflow.spiders', 'ROBOTSTXT_OBEY': True, 'LOG_FILE': 'stackoverflow.log', 'BOT_NAME': 'stackoverflow'}
+2017-08-18 11:33:39 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-08-18 11:33:39 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-18 11:33:39 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-18 11:33:39 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-18 11:33:39 [scrapy.core.engine] INFO: Spider opened
+2017-08-18 11:33:39 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-18 11:33:39 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-18 11:33:39 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 1 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:33:39 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 2 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:33:39 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET file:///robots.txt> (failed 3 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:33:39 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET file:///robots.txt>: [Errno 2] No such file or directory: '/robots.txt'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+FileNotFoundError: [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:33:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET file:///home/lwq/Desktop/lwq/stackoverflow/html/Highest%20Voted%20Questions%20-%20Stack%20Overflow.html> (referer: None)
+2017-08-18 11:33:40 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-08-18 11:33:40 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/builtins.FileNotFoundError': 3,
+ 'downloader/request_bytes': 917,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 124660,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 8, 18, 3, 33, 40, 129581),
+ 'log_count/DEBUG': 5,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 862429184,
+ 'memusage/startup': 862429184,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/builtins.FileNotFoundError': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 8, 18, 3, 33, 39, 987187)}
+2017-08-18 11:33:40 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-08-18 11:34:21 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: stackoverflow)
+2017-08-18 11:34:21 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'stackoverflow.spiders', 'LOG_FILE': 'stackoverflow.log', 'SPIDER_MODULES': ['stackoverflow.spiders'], 'ROBOTSTXT_OBEY': True, 'BOT_NAME': 'stackoverflow'}
+2017-08-18 11:34:21 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.memusage.MemoryUsage']
+2017-08-18 11:34:21 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-18 11:34:21 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-18 11:34:21 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-18 11:34:21 [scrapy.core.engine] INFO: Spider opened
+2017-08-18 11:34:21 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-18 11:34:21 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-18 11:34:21 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 1 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:34:21 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 2 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:34:21 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET file:///robots.txt> (failed 3 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:34:21 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET file:///robots.txt>: [Errno 2] No such file or directory: '/robots.txt'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+FileNotFoundError: [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:34:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET file:///home/lwq/Desktop/lwq/stackoverflow/html/Highest%20Voted%20Questions%20-%20Stack%20Overflow.html> (referer: None)
+2017-08-18 11:34:21 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-08-18 11:34:21 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/builtins.FileNotFoundError': 3,
+ 'downloader/request_bytes': 917,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 124660,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 8, 18, 3, 34, 21, 573745),
+ 'log_count/DEBUG': 5,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 862773248,
+ 'memusage/startup': 862773248,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/builtins.FileNotFoundError': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 8, 18, 3, 34, 21, 429775)}
+2017-08-18 11:34:21 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-08-18 11:35:44 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: stackoverflow)
+2017-08-18 11:35:44 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'stackoverflow.spiders', 'ROBOTSTXT_OBEY': True, 'BOT_NAME': 'stackoverflow', 'LOG_FILE': 'stackoverflow.log', 'SPIDER_MODULES': ['stackoverflow.spiders']}
+2017-08-18 11:35:44 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats']
+2017-08-18 11:35:44 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-18 11:35:44 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-18 11:35:44 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-18 11:35:44 [scrapy.core.engine] INFO: Spider opened
+2017-08-18 11:35:44 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-18 11:35:44 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-18 11:35:44 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 1 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:35:44 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 2 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:35:44 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET file:///robots.txt> (failed 3 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:35:44 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET file:///robots.txt>: [Errno 2] No such file or directory: '/robots.txt'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+FileNotFoundError: [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:35:44 [scrapy.core.engine] DEBUG: Crawled (200) <GET file:///home/lwq/Desktop/lwq/stackoverflow/html/Highest%20Voted%20Questions%20-%20Stack%20Overflow.html> (referer: None)
+2017-08-18 11:35:44 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-08-18 11:35:44 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/builtins.FileNotFoundError': 3,
+ 'downloader/request_bytes': 917,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 124660,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 8, 18, 3, 35, 44, 372360),
+ 'log_count/DEBUG': 5,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 870445056,
+ 'memusage/startup': 870445056,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/builtins.FileNotFoundError': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 8, 18, 3, 35, 44, 232928)}
+2017-08-18 11:35:44 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-08-18 11:35:54 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: stackoverflow)
+2017-08-18 11:35:54 [scrapy.utils.log] INFO: Overridden settings: {'ROBOTSTXT_OBEY': True, 'LOG_FILE': 'stackoverflow.log', 'SPIDER_MODULES': ['stackoverflow.spiders'], 'NEWSPIDER_MODULE': 'stackoverflow.spiders', 'BOT_NAME': 'stackoverflow'}
+2017-08-18 11:35:54 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.memusage.MemoryUsage']
+2017-08-18 11:35:54 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-18 11:35:54 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-18 11:35:54 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-18 11:35:54 [scrapy.core.engine] INFO: Spider opened
+2017-08-18 11:35:54 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-18 11:35:54 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-18 11:35:54 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 1 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:35:54 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 2 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:35:54 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET file:///robots.txt> (failed 3 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:35:54 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET file:///robots.txt>: [Errno 2] No such file or directory: '/robots.txt'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+FileNotFoundError: [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:35:54 [scrapy.core.engine] DEBUG: Crawled (200) <GET file:///home/lwq/Desktop/lwq/stackoverflow/html/Highest%20Voted%20Questions%20-%20Stack%20Overflow.html> (referer: None)
+2017-08-18 11:35:54 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-08-18 11:35:54 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/builtins.FileNotFoundError': 3,
+ 'downloader/request_bytes': 917,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 124660,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 8, 18, 3, 35, 54, 597938),
+ 'log_count/DEBUG': 5,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 870445056,
+ 'memusage/startup': 870445056,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/builtins.FileNotFoundError': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 8, 18, 3, 35, 54, 454114)}
+2017-08-18 11:35:54 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-08-18 11:37:06 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: stackoverflow)
+2017-08-18 11:37:06 [scrapy.utils.log] INFO: Overridden settings: {'BOT_NAME': 'stackoverflow', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['stackoverflow.spiders'], 'LOG_FILE': 'stackoverflow.log', 'NEWSPIDER_MODULE': 'stackoverflow.spiders'}
+2017-08-18 11:37:06 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole']
+2017-08-18 11:37:06 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-18 11:37:06 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-18 11:37:06 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-18 11:37:06 [scrapy.core.engine] INFO: Spider opened
+2017-08-18 11:37:06 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-18 11:37:06 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-18 11:37:06 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 1 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:37:06 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 2 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:37:06 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET file:///robots.txt> (failed 3 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:37:06 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET file:///robots.txt>: [Errno 2] No such file or directory: '/robots.txt'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+FileNotFoundError: [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:37:06 [scrapy.core.engine] DEBUG: Crawled (200) <GET file:///home/lwq/Desktop/lwq/stackoverflow/html/Highest%20Voted%20Questions%20-%20Stack%20Overflow.html> (referer: None)
+2017-08-18 11:37:06 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-08-18 11:37:06 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/builtins.FileNotFoundError': 3,
+ 'downloader/request_bytes': 917,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 124660,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/200': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 8, 18, 3, 37, 6, 408730),
+ 'log_count/DEBUG': 5,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 870445056,
+ 'memusage/startup': 870445056,
+ 'response_received_count': 1,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/builtins.FileNotFoundError': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2017, 8, 18, 3, 37, 6, 266303)}
+2017-08-18 11:37:06 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-08-18 11:51:51 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: stackoverflow)
+2017-08-18 11:51:51 [scrapy.utils.log] INFO: Overridden settings: {'BOT_NAME': 'stackoverflow', 'FEED_FORMAT': 'csv', 'LOG_FILE': 'stackoverflow.log', 'NEWSPIDER_MODULE': 'stackoverflow.spiders', 'SPIDER_MODULES': ['stackoverflow.spiders'], 'ROBOTSTXT_OBEY': True, 'FEED_URI': 'temp.csv'}
+2017-08-18 11:51:51 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2017-08-18 11:51:51 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-18 11:51:51 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-18 11:51:51 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-18 11:51:51 [scrapy.core.engine] INFO: Spider opened
+2017-08-18 11:51:51 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-18 11:51:51 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-18 11:51:51 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 1 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:51:51 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 2 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:51:51 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET file:///robots.txt> (failed 3 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:51:51 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET file:///robots.txt>: [Errno 2] No such file or directory: '/robots.txt'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+FileNotFoundError: [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:51:51 [scrapy.core.engine] DEBUG: Crawled (200) <GET file:///home/lwq/Desktop/lwq/stackoverflow/html/Highest%20Voted%20Questions%20-%20Stack%20Overflow.html> (referer: None)
+2017-08-18 11:51:55 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/robots.txt> (referer: None)
+2017-08-18 11:51:56 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array> (referer: None)
+2017-08-18 11:51:56 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>Here is a piece of C++ code that seems very peculiar. For some strange reason, sorting the data miraculously makes the code almost six times faster.</p>\n\n<pre class="lang-cpp prettyprint-override"><code>#include &lt;algorithm&gt;\n#include &lt;ctime&gt;\n#include &lt;iostream&gt;\n\nint main()\n{\n    // Generate data\n    const unsigned arraySize = 32768;\n    int data[arraySize];\n\n    for (unsigned c = 0; c &lt; arraySize; ++c)\n        data[c] = std::rand() % 256;\n\n    // !!! With this, the next loop runs faster\n    std::sort(data, data + arraySize);\n\n    // Test\n    clock_t start = clock();\n    long long sum = 0;\n\n    for (unsigned i = 0; i &lt; 100000; ++i)\n    {\n        // Primary loop\n        for (unsigned c = 0; c &lt; arraySize; ++c)\n        {\n            if (data[c] &gt;= 128)\n                sum += data[c];\n        }\n    }\n\n    double elapsedTime = static_cast&lt;double&gt;(clock() - start) / CLOCKS_PER_SEC;\n\n    std::cout &lt;&lt; elapsedTime &lt;&lt; std::endl;\n    std::cout &lt;&lt; "sum = " &lt;&lt; sum &lt;&lt; std::endl;\n}\n</code></pre>\n\n<ul>\n<li>Without <code>std::sort(data, data + arraySize);</code>, the code runs in 11.54 seconds.</li>\n<li>With the sorted data, the code runs in 1.93 seconds.</li>\n</ul>\n\n<p>Initially, I thought this might be just a language or compiler anomaly. So I tried it in Java.</p>\n\n<pre class="lang-java prettyprint-override"><code>import java.util.Arrays;\nimport java.util.Random;\n\npublic class Main\n{\n    public static void main(String[] args)\n    {\n        // Generate data\n        int arraySize = 32768;\n        int data[] = new int[arraySize];\n\n        Random rnd = new Random(0);\n        for (int c = 0; c &lt; arraySize; ++c)\n            data[c] = rnd.nextInt() % 256;\n\n        // !!! With this, the next loop runs faster\n        Arrays.sort(data);\n\n        // Test\n        long start = System.nanoTime();\n        long sum = 0;\n\n        for (int i = 0; i &lt; 100000; ++i)\n        {\n            // Primary loop\n            for (int c = 0; c &lt; arraySize; ++c)\n            {\n                if (data[c] &gt;= 128)\n                    sum += data[c];\n            }\n        }\n\n        System.out.println((System.nanoTime() - start) / 1000000000.0);\n        System.out.println("sum = " + sum);\n    }\n}\n</code></pre>\n\n<p>With a somewhat similar but less extreme result.</p>\n\n<hr>\n\n<p>My first thought was that sorting brings the data into the cache, but then I thought how silly that is because the array was just generated.</p>\n\n<ul>\n<li>What is going on?</li>\n<li>Why is a sorted array faster to process than an unsorted array?</li>\n<li>The code is summing up some independent terms, and the order should not matter.</li>\n</ul>\n    </div>', 'tags': ['java', 'c++', 'performance', 'optimization', 'branch-prediction'], 'link': 'https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array', 'votes': '18878', 'title': 'Why is it faster to process a sorted array than an unsorted array?'}
+2017-08-18 11:51:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c> (referer: None)
+2017-08-18 11:51:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/178325/how-do-i-check-if-an-element-is-hidden-in-jquery> (referer: None)
+2017-08-18 11:51:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>After reading <a href="http://groups.google.com/group/comp.lang.c++.moderated/msg/33f173780d58dd20" rel="noreferrer">Hidden Features and Dark Corners of C++/STL</a> on <code>comp.lang.c++.moderated</code>, I was completely surprised that the following snippet compiled and worked in both Visual Studio 2008 and G++ 4.4.</p>\n\n<p>Here\'s the code:</p>\n\n<pre><code>#include &lt;stdio.h&gt;\nint main()\n{\n    int x = 10;\n    while (x --&gt; 0) // x goes to 0\n    {\n        printf("%d ", x);\n    }\n}\n</code></pre>\n\n<p>I\'d assume this is C, since it works in GCC as well. Where is this defined in the standard, and where has it come from?</p>\n    </div>', 'tags': ['c++', 'operators', 'code-formatting', 'standards-compliance'], 'link': 'https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c', 'votes': '6809', 'title': 'What is the “-->” operator in C++?'}
+2017-08-18 11:51:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/503093/how-to-redirect-to-another-webpage-in-javascript-jquery> (referer: None)
+2017-08-18 11:51:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/178325/how-do-i-check-if-an-element-is-hidden-in-jquery>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>It is possible to toggle the visibility of an element, using the functions <code>.hide()</code>, <code>.show()</code> or <code>.toggle()</code>.</p>\n\n<p>How would you test if an element is visible or hidden?</p>\n    </div>', 'tags': ['javascript', 'jquery', 'dom', 'visibility'], 'link': 'https://stackoverflow.com/questions/178325/how-do-i-check-if-an-element-is-hidden-in-jquery', 'votes': '5904', 'title': 'How do I check if an element is hidden in jQuery?'}
+2017-08-18 11:51:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit> (referer: None)
+2017-08-18 11:51:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap> (referer: None)
+2017-08-18 11:51:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/503093/how-to-redirect-to-another-webpage-in-javascript-jquery>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>How can I redirect the user from one page to another using JavaScript or jQuery?</p>\n    </div>', 'tags': ['javascript', 'jquery', 'redirect'], 'link': 'https://stackoverflow.com/questions/503093/how-to-redirect-to-another-webpage-in-javascript-jquery', 'votes': '6897', 'title': 'How to redirect to another webpage in JavaScript/jQuery?'}
+2017-08-18 11:51:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it> (referer: None)
+2017-08-18 11:51:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/1789945/how-to-check-whether-a-string-contains-a-substring-in-javascript> (referer: None)
+2017-08-18 11:51:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>I mistakenly added files using the command:</p>\n\n<pre><code>git add myfile.txt\n</code></pre>\n\n<p>I have not yet run <code>git commit</code>. Is there a way to undo this, so these files won\'t be included in the commit?</p>\n    </div>', 'tags': ['git', 'version-control', 'git-stage'], 'link': 'https://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit', 'votes': '6312', 'title': "How to undo 'git add' before commit?"}
+2017-08-18 11:51:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>Programming language books explain that value types are created on the stack, and reference types are created on the heap, without explaining what these two things are. I haven\'t read a clear explanation of this.  I understand what <em>a stack</em> is, but where and what are they (physically in a real computer\'s memory)?  </p>\n\n<ul>\n<li>To what extent are they controlled by the OS or language runtime?</li>\n<li>What is their scope?</li>\n<li>What determines the size of each of them?</li>\n<li>What makes one faster? </li>\n</ul>\n    </div>', 'tags': ['memory-management', 'language-agnostic', 'stack', 'heap'], 'link': 'https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap', 'votes': '6292', 'title': 'What and where are the stack and heap?'}
+2017-08-18 11:51:57 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do> (referer: None)
+2017-08-18 11:51:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>Recently, I ran some of my JavaScript code through Crockford\'s <a href="http://www.jslint.com/" rel="noreferrer">JSLint</a>, and it gave the following error:</p>\n\n<blockquote>\n  <p>Problem at line 1 character 1: Missing "use strict" statement.</p>\n</blockquote>\n\n<p>Doing some searching, I realized that some people add <code>"use strict";</code> into their JavaScript code. Once I added the statement, the error stopped appearing. Unfortunately, Google did not reveal much of the history behind this string statement. Certainly it must have something to do with how the JavaScript is interpreted by the browser, but I have no idea what the effect would be.</p>\n\n<p>So what is <code>"use strict";</code> all about, what does it imply, and is it still relevant?</p>\n\n<p>Do any of the current browsers respond to the <code>"use strict";</code> string or is it for future use?</p>\n    </div>', 'tags': ['javascript', 'syntax', 'jslint', 'use-strict'], 'link': 'https://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it', 'votes': '5906', 'title': 'What does “use strict” do in JavaScript, and what is the reasoning behind it?'}
+2017-08-18 11:51:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/1789945/how-to-check-whether-a-string-contains-a-substring-in-javascript>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>Usually I would expect a <code>String.contains()</code> method but there doesn\'t seem to be one. What is a reasonable way to check for this?</p>\n    </div>', 'tags': ['javascript', 'string', 'substring', 'contains', 'string-matching'], 'link': 'https://stackoverflow.com/questions/1789945/how-to-check-whether-a-string-contains-a-substring-in-javascript', 'votes': '6534', 'title': 'How to check whether a string contains a substring in JavaScript?'}
+2017-08-18 11:51:57 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>What is the use of the <code>yield</code> keyword in Python? What does it do?</p>\n\n<p>For example, I\'m trying to understand this code<sup><strong>1</strong></sup>:</p>\n\n<pre><code>def _get_child_candidates(self, distance, min_dist, max_dist):\n    if self._leftchild and distance - max_dist &lt; self._median:\n        yield self._leftchild\n    if self._rightchild and distance + max_dist &gt;= self._median:\n        yield self._rightchild  \n</code></pre>\n\n<p>And this is the caller:</p>\n\n<pre><code>result, candidates = list(), [self]\nwhile candidates:\n    node = candidates.pop()\n    distance = node._get_dist(obj)\n    if distance &lt;= max_dist and distance &gt;= min_dist:\n        result.extend(node._values)\n    candidates.extend(node._get_child_candidates(distance, min_dist, max_dist))\nreturn result\n</code></pre>\n\n<p>What happens when the method <code>_get_child_candidates</code> is called?\nIs a list returned? A single element? Is it called again? When will subsequent calls stop?</p>\n\n<hr>\n\n<p><sub>\n1. The code comes from Jochen Schulz (jrschulz), who made a great Python library for metric spaces. This is the link to the complete source: <a href="http://well-adjusted.de/~jrschulz/mspace/" rel="noreferrer">Module mspace</a>.</sub></p>\n    </div>', 'tags': ['python', 'iterator', 'generator', 'yield', 'coroutine'], 'link': 'https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do', 'votes': '6899', 'title': 'What does the “yield” keyword do?'}
+2017-08-18 11:51:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/111102/how-do-javascript-closures-work> (referer: None)
+2017-08-18 11:51:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/179123/how-to-modify-existing-unpushed-commits> (referer: None)
+2017-08-18 11:51:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/111102/how-do-javascript-closures-work>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>How would you explain JavaScript closures to someone with a knowledge of the concepts they consist of (for example functions, variables and the like), but does not understand closures themselves?</p>\n\n<p>I have seen <a href="http://en.wikipedia.org/wiki/Scheme_%28programming_language%29" rel="noreferrer">the Scheme example</a> given on Wikipedia, but unfortunately it did not help.</p>\n    </div>', 'tags': ['javascript', 'function', 'variables', 'scope', 'closures'], 'link': 'https://stackoverflow.com/questions/111102/how-do-javascript-closures-work', 'votes': '7669', 'title': 'How do JavaScript closures work?'}
+2017-08-18 11:51:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/179123/how-to-modify-existing-unpushed-commits>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>I wrote the wrong thing in a commit message. Alternatively, I\'ve forgotten to include some files.</p>\n\n<p>How can I change the commit message/files? The commit has not been pushed yet.</p>\n    </div>', 'tags': ['git', 'git-commit', 'git-rewrite-history', 'amend'], 'link': 'https://stackoverflow.com/questions/179123/how-to-modify-existing-unpushed-commits', 'votes': '7687', 'title': 'How to modify existing, unpushed commits?'}
+2017-08-18 11:51:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch> (referer: None)
+2017-08-18 11:51:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/927358/how-to-undo-the-last-commits-in-git> (referer: None)
+2017-08-18 11:51:58 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely> (referer: None)
+2017-08-18 11:51:58 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>What are the differences between <code>git pull</code> and <code>git fetch</code>?</p>\n    </div>', 'tags': ['git', 'git-pull', 'git-fetch'], 'link': 'https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch', 'votes': '8409', 'title': "What is the difference between 'git pull' and 'git fetch'?"}
+2017-08-18 11:51:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/927358/how-to-undo-the-last-commits-in-git>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>I committed wrong files into <a href="https://git-scm.com" rel="noreferrer">Git</a>. I haven\'t yet pushed the commit to the server.</p>\n\n<p>How can I undo those commits? </p>\n    </div>', 'tags': ['git', 'git-rebase', 'git-commit', 'git-reset', 'git-revert'], 'link': 'https://stackoverflow.com/questions/927358/how-to-undo-the-last-commits-in-git', 'votes': '15010', 'title': 'How to undo the last commits in Git?'}
+2017-08-18 11:51:59 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>I want to delete a branch both locally and on my remote project fork on <a href="http://en.wikipedia.org/wiki/GitHub" rel="noreferrer">GitHub</a>.</p>\n\n<h3>Failed Attempts to Delete Remote Branch</h3>\n\n<pre><code>$ git branch -d remotes/origin/bugfix\nerror: branch \'remotes/origin/bugfix\' not found.\n\n$ git branch -d origin/bugfix\nerror: branch \'origin/bugfix\' not found.\n\n$ git branch -rd origin/bugfix\nDeleted remote branch origin/bugfix (was 2a14ef7).\n\n$ git push\nEverything up-to-date\n\n$ git pull\nFrom github.com:gituser/gitproject\n* [new branch] bugfix -&gt; origin/bugfix\nAlready up-to-date.\n</code></pre>\n\n<p>What do I need to do differently to successfully delete the\n<code>remotes/origin/bugfix</code> branch both locally and on GitHub?</p>\n    </div>', 'tags': ['git', 'git-branch', 'git-remote'], 'link': 'https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely', 'votes': '11260', 'title': 'How do I delete a Git branch both locally and remotely?'}
+2017-08-18 11:52:00 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/477816/what-is-the-correct-json-content-type> (referer: None)
+2017-08-18 11:52:00 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/477816/what-is-the-correct-json-content-type>
+{'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>I\'ve been messing around with <a href="http://en.wikipedia.org/wiki/JSON" rel="noreferrer">JSON</a> for some time, just pushing it out as text and it hasn\'t hurt anybody (that I know of), but I\'d like to start doing things properly.</p>\n\n<p>I have seen <em>so</em> many purported "standards" for the JSON content type:</p>\n\n<pre><code>application/json\napplication/x-javascript\ntext/javascript\ntext/x-javascript\ntext/x-json\n</code></pre>\n\n<p>But which is correct, or best? I gather that there are security and browser support issues varying between them.</p>\n\n<p>I know there\'s a similar question, <em><a href="https://stackoverflow.com/questions/404470/what-mime-type-if-json-is-being-returned-by-a-rest-api">What MIME type if JSON is being returned by a REST API?</a></em>, but I\'d like a slightly more targeted answer.</p>\n    </div>', 'tags': ['json', 'content-type'], 'link': 'https://stackoverflow.com/questions/477816/what-is-the-correct-json-content-type', 'votes': '8224', 'title': 'What is the correct JSON content type?'}
+2017-08-18 11:52:00 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-08-18 11:52:00 [scrapy.extensions.feedexport] INFO: Stored csv feed (15 items) in: temp.csv
+2017-08-18 11:52:00 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/builtins.FileNotFoundError': 3,
+ 'downloader/request_bytes': 6071,
+ 'downloader/request_count': 20,
+ 'downloader/request_method_count/GET': 20,
+ 'downloader/response_bytes': 909143,
+ 'downloader/response_count': 17,
+ 'downloader/response_status_count/200': 17,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 8, 18, 3, 52, 0, 833978),
+ 'item_scraped_count': 15,
+ 'log_count/DEBUG': 36,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 8,
+ 'memusage/max': 883429376,
+ 'memusage/startup': 883429376,
+ 'request_depth_max': 1,
+ 'response_received_count': 17,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/builtins.FileNotFoundError': 2,
+ 'scheduler/dequeued': 16,
+ 'scheduler/dequeued/memory': 16,
+ 'scheduler/enqueued': 16,
+ 'scheduler/enqueued/memory': 16,
+ 'start_time': datetime.datetime(2017, 8, 18, 3, 51, 51, 864132)}
+2017-08-18 11:52:00 [scrapy.core.engine] INFO: Spider closed (finished)
+2017-08-18 11:55:22 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: stackoverflow)
+2017-08-18 11:55:22 [scrapy.utils.log] INFO: Overridden settings: {'ROBOTSTXT_OBEY': True, 'FEED_FORMAT': 'csv', 'SPIDER_MODULES': ['stackoverflow.spiders'], 'LOG_FILE': 'stackoverflow.log', 'NEWSPIDER_MODULE': 'stackoverflow.spiders', 'BOT_NAME': 'stackoverflow', 'FEED_URI': 'temp1.csv'}
+2017-08-18 11:55:22 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.feedexport.FeedExporter']
+2017-08-18 11:55:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-08-18 11:55:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-08-18 11:55:22 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-08-18 11:55:22 [scrapy.core.engine] INFO: Spider opened
+2017-08-18 11:55:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-08-18 11:55:22 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-08-18 11:55:22 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 1 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:55:22 [scrapy.downloadermiddlewares.retry] DEBUG: Retrying <GET file:///robots.txt> (failed 2 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:55:22 [scrapy.downloadermiddlewares.retry] DEBUG: Gave up retrying <GET file:///robots.txt> (failed 3 times): [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:55:22 [scrapy.downloadermiddlewares.robotstxt] ERROR: Error downloading <GET file:///robots.txt>: [Errno 2] No such file or directory: '/robots.txt'
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/twisted/internet/defer.py", line 1384, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "/usr/local/lib/python3.5/dist-packages/twisted/python/failure.py", line 393, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "/usr/local/lib/python3.5/dist-packages/scrapy/core/downloader/middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+FileNotFoundError: [Errno 2] No such file or directory: '/robots.txt'
+2017-08-18 11:55:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET file:///home/lwq/Desktop/lwq/stackoverflow/html/Highest%20Voted%20Questions%20-%20Stack%20Overflow.html> (referer: None)
+2017-08-18 11:55:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/robots.txt> (referer: None)
+2017-08-18 11:55:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array> (referer: None)
+2017-08-18 11:55:27 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array>
+{'link': 'https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array', 'tags': ['java', 'c++', 'performance', 'optimization', 'branch-prediction'], 'title': 'Why is it faster to process a sorted array than an unsorted array?', 'votes': '18878', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>Here is a piece of C++ code that seems very peculiar. For some strange reason, sorting the data miraculously makes the code almost six times faster.</p>\n\n<pre class="lang-cpp prettyprint-override"><code>#include &lt;algorithm&gt;\n#include &lt;ctime&gt;\n#include &lt;iostream&gt;\n\nint main()\n{\n    // Generate data\n    const unsigned arraySize = 32768;\n    int data[arraySize];\n\n    for (unsigned c = 0; c &lt; arraySize; ++c)\n        data[c] = std::rand() % 256;\n\n    // !!! With this, the next loop runs faster\n    std::sort(data, data + arraySize);\n\n    // Test\n    clock_t start = clock();\n    long long sum = 0;\n\n    for (unsigned i = 0; i &lt; 100000; ++i)\n    {\n        // Primary loop\n        for (unsigned c = 0; c &lt; arraySize; ++c)\n        {\n            if (data[c] &gt;= 128)\n                sum += data[c];\n        }\n    }\n\n    double elapsedTime = static_cast&lt;double&gt;(clock() - start) / CLOCKS_PER_SEC;\n\n    std::cout &lt;&lt; elapsedTime &lt;&lt; std::endl;\n    std::cout &lt;&lt; "sum = " &lt;&lt; sum &lt;&lt; std::endl;\n}\n</code></pre>\n\n<ul>\n<li>Without <code>std::sort(data, data + arraySize);</code>, the code runs in 11.54 seconds.</li>\n<li>With the sorted data, the code runs in 1.93 seconds.</li>\n</ul>\n\n<p>Initially, I thought this might be just a language or compiler anomaly. So I tried it in Java.</p>\n\n<pre class="lang-java prettyprint-override"><code>import java.util.Arrays;\nimport java.util.Random;\n\npublic class Main\n{\n    public static void main(String[] args)\n    {\n        // Generate data\n        int arraySize = 32768;\n        int data[] = new int[arraySize];\n\n        Random rnd = new Random(0);\n        for (int c = 0; c &lt; arraySize; ++c)\n            data[c] = rnd.nextInt() % 256;\n\n        // !!! With this, the next loop runs faster\n        Arrays.sort(data);\n\n        // Test\n        long start = System.nanoTime();\n        long sum = 0;\n\n        for (int i = 0; i &lt; 100000; ++i)\n        {\n            // Primary loop\n            for (int c = 0; c &lt; arraySize; ++c)\n            {\n                if (data[c] &gt;= 128)\n                    sum += data[c];\n            }\n        }\n\n        System.out.println((System.nanoTime() - start) / 1000000000.0);\n        System.out.println("sum = " + sum);\n    }\n}\n</code></pre>\n\n<p>With a somewhat similar but less extreme result.</p>\n\n<hr>\n\n<p>My first thought was that sorting brings the data into the cache, but then I thought how silly that is because the array was just generated.</p>\n\n<ul>\n<li>What is going on?</li>\n<li>Why is a sorted array faster to process than an unsorted array?</li>\n<li>The code is summing up some independent terms, and the order should not matter.</li>\n</ul>\n    </div>'}
+2017-08-18 11:55:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it> (referer: None)
+2017-08-18 11:55:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap> (referer: None)
+2017-08-18 11:55:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it>
+{'link': 'https://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it', 'tags': ['javascript', 'syntax', 'jslint', 'use-strict'], 'title': 'What does “use strict” do in JavaScript, and what is the reasoning behind it?', 'votes': '5906', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>Recently, I ran some of my JavaScript code through Crockford\'s <a href="http://www.jslint.com/" rel="noreferrer">JSLint</a>, and it gave the following error:</p>\n\n<blockquote>\n  <p>Problem at line 1 character 1: Missing "use strict" statement.</p>\n</blockquote>\n\n<p>Doing some searching, I realized that some people add <code>"use strict";</code> into their JavaScript code. Once I added the statement, the error stopped appearing. Unfortunately, Google did not reveal much of the history behind this string statement. Certainly it must have something to do with how the JavaScript is interpreted by the browser, but I have no idea what the effect would be.</p>\n\n<p>So what is <code>"use strict";</code> all about, what does it imply, and is it still relevant?</p>\n\n<p>Do any of the current browsers respond to the <code>"use strict";</code> string or is it for future use?</p>\n    </div>'}
+2017-08-18 11:55:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/178325/how-do-i-check-if-an-element-is-hidden-in-jquery> (referer: None)
+2017-08-18 11:55:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit> (referer: None)
+2017-08-18 11:55:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/1789945/how-to-check-whether-a-string-contains-a-substring-in-javascript> (referer: None)
+2017-08-18 11:55:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c> (referer: None)
+2017-08-18 11:55:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/503093/how-to-redirect-to-another-webpage-in-javascript-jquery> (referer: None)
+2017-08-18 11:55:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap>
+{'link': 'https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap', 'tags': ['memory-management', 'language-agnostic', 'stack', 'heap'], 'title': 'What and where are the stack and heap?', 'votes': '6292', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>Programming language books explain that value types are created on the stack, and reference types are created on the heap, without explaining what these two things are. I haven\'t read a clear explanation of this.  I understand what <em>a stack</em> is, but where and what are they (physically in a real computer\'s memory)?  </p>\n\n<ul>\n<li>To what extent are they controlled by the OS or language runtime?</li>\n<li>What is their scope?</li>\n<li>What determines the size of each of them?</li>\n<li>What makes one faster? </li>\n</ul>\n    </div>'}
+2017-08-18 11:55:28 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/178325/how-do-i-check-if-an-element-is-hidden-in-jquery>
+{'link': 'https://stackoverflow.com/questions/178325/how-do-i-check-if-an-element-is-hidden-in-jquery', 'tags': ['javascript', 'jquery', 'dom', 'visibility'], 'title': 'How do I check if an element is hidden in jQuery?', 'votes': '5904', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>It is possible to toggle the visibility of an element, using the functions <code>.hide()</code>, <code>.show()</code> or <code>.toggle()</code>.</p>\n\n<p>How would you test if an element is visible or hidden?</p>\n    </div>'}
+2017-08-18 11:55:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do> (referer: None)
+2017-08-18 11:55:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit>
+{'link': 'https://stackoverflow.com/questions/348170/how-to-undo-git-add-before-commit', 'tags': ['git', 'version-control', 'git-stage'], 'title': "How to undo 'git add' before commit?", 'votes': '6312', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>I mistakenly added files using the command:</p>\n\n<pre><code>git add myfile.txt\n</code></pre>\n\n<p>I have not yet run <code>git commit</code>. Is there a way to undo this, so these files won\'t be included in the commit?</p>\n    </div>'}
+2017-08-18 11:55:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/1789945/how-to-check-whether-a-string-contains-a-substring-in-javascript>
+{'link': 'https://stackoverflow.com/questions/1789945/how-to-check-whether-a-string-contains-a-substring-in-javascript', 'tags': ['javascript', 'string', 'substring', 'contains', 'string-matching'], 'title': 'How to check whether a string contains a substring in JavaScript?', 'votes': '6534', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>Usually I would expect a <code>String.contains()</code> method but there doesn\'t seem to be one. What is a reasonable way to check for this?</p>\n    </div>'}
+2017-08-18 11:55:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c>
+{'link': 'https://stackoverflow.com/questions/1642028/what-is-the-operator-in-c', 'tags': ['c++', 'operators', 'code-formatting', 'standards-compliance'], 'title': 'What is the “-->” operator in C++?', 'votes': '6809', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>After reading <a href="http://groups.google.com/group/comp.lang.c++.moderated/msg/33f173780d58dd20" rel="noreferrer">Hidden Features and Dark Corners of C++/STL</a> on <code>comp.lang.c++.moderated</code>, I was completely surprised that the following snippet compiled and worked in both Visual Studio 2008 and G++ 4.4.</p>\n\n<p>Here\'s the code:</p>\n\n<pre><code>#include &lt;stdio.h&gt;\nint main()\n{\n    int x = 10;\n    while (x --&gt; 0) // x goes to 0\n    {\n        printf("%d ", x);\n    }\n}\n</code></pre>\n\n<p>I\'d assume this is C, since it works in GCC as well. Where is this defined in the standard, and where has it come from?</p>\n    </div>'}
+2017-08-18 11:55:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/503093/how-to-redirect-to-another-webpage-in-javascript-jquery>
+{'link': 'https://stackoverflow.com/questions/503093/how-to-redirect-to-another-webpage-in-javascript-jquery', 'tags': ['javascript', 'jquery', 'redirect'], 'title': 'How to redirect to another webpage in JavaScript/jQuery?', 'votes': '6897', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>How can I redirect the user from one page to another using JavaScript or jQuery?</p>\n    </div>'}
+2017-08-18 11:55:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do>
+{'link': 'https://stackoverflow.com/questions/231767/what-does-the-yield-keyword-do', 'tags': ['python', 'iterator', 'generator', 'yield', 'coroutine'], 'title': 'What does the “yield” keyword do?', 'votes': '6899', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>What is the use of the <code>yield</code> keyword in Python? What does it do?</p>\n\n<p>For example, I\'m trying to understand this code<sup><strong>1</strong></sup>:</p>\n\n<pre><code>def _get_child_candidates(self, distance, min_dist, max_dist):\n    if self._leftchild and distance - max_dist &lt; self._median:\n        yield self._leftchild\n    if self._rightchild and distance + max_dist &gt;= self._median:\n        yield self._rightchild  \n</code></pre>\n\n<p>And this is the caller:</p>\n\n<pre><code>result, candidates = list(), [self]\nwhile candidates:\n    node = candidates.pop()\n    distance = node._get_dist(obj)\n    if distance &lt;= max_dist and distance &gt;= min_dist:\n        result.extend(node._values)\n    candidates.extend(node._get_child_candidates(distance, min_dist, max_dist))\nreturn result\n</code></pre>\n\n<p>What happens when the method <code>_get_child_candidates</code> is called?\nIs a list returned? A single element? Is it called again? When will subsequent calls stop?</p>\n\n<hr>\n\n<p><sub>\n1. The code comes from Jochen Schulz (jrschulz), who made a great Python library for metric spaces. This is the link to the complete source: <a href="http://well-adjusted.de/~jrschulz/mspace/" rel="noreferrer">Module mspace</a>.</sub></p>\n    </div>'}
+2017-08-18 11:55:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/111102/how-do-javascript-closures-work> (referer: None)
+2017-08-18 11:55:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/111102/how-do-javascript-closures-work>
+{'link': 'https://stackoverflow.com/questions/111102/how-do-javascript-closures-work', 'tags': ['javascript', 'function', 'variables', 'scope', 'closures'], 'title': 'How do JavaScript closures work?', 'votes': '7669', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>How would you explain JavaScript closures to someone with a knowledge of the concepts they consist of (for example functions, variables and the like), but does not understand closures themselves?</p>\n\n<p>I have seen <a href="http://en.wikipedia.org/wiki/Scheme_%28programming_language%29" rel="noreferrer">the Scheme example</a> given on Wikipedia, but unfortunately it did not help.</p>\n    </div>'}
+2017-08-18 11:55:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/477816/what-is-the-correct-json-content-type> (referer: None)
+2017-08-18 11:55:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/179123/how-to-modify-existing-unpushed-commits> (referer: None)
+2017-08-18 11:55:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch> (referer: None)
+2017-08-18 11:55:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/477816/what-is-the-correct-json-content-type>
+{'link': 'https://stackoverflow.com/questions/477816/what-is-the-correct-json-content-type', 'tags': ['json', 'content-type'], 'title': 'What is the correct JSON content type?', 'votes': '8224', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>I\'ve been messing around with <a href="http://en.wikipedia.org/wiki/JSON" rel="noreferrer">JSON</a> for some time, just pushing it out as text and it hasn\'t hurt anybody (that I know of), but I\'d like to start doing things properly.</p>\n\n<p>I have seen <em>so</em> many purported "standards" for the JSON content type:</p>\n\n<pre><code>application/json\napplication/x-javascript\ntext/javascript\ntext/x-javascript\ntext/x-json\n</code></pre>\n\n<p>But which is correct, or best? I gather that there are security and browser support issues varying between them.</p>\n\n<p>I know there\'s a similar question, <em><a href="https://stackoverflow.com/questions/404470/what-mime-type-if-json-is-being-returned-by-a-rest-api">What MIME type if JSON is being returned by a REST API?</a></em>, but I\'d like a slightly more targeted answer.</p>\n    </div>'}
+2017-08-18 11:55:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/179123/how-to-modify-existing-unpushed-commits>
+{'link': 'https://stackoverflow.com/questions/179123/how-to-modify-existing-unpushed-commits', 'tags': ['git', 'git-commit', 'git-rewrite-history', 'amend'], 'title': 'How to modify existing, unpushed commits?', 'votes': '7687', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>I wrote the wrong thing in a commit message. Alternatively, I\'ve forgotten to include some files.</p>\n\n<p>How can I change the commit message/files? The commit has not been pushed yet.</p>\n    </div>'}
+2017-08-18 11:55:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch>
+{'link': 'https://stackoverflow.com/questions/292357/what-is-the-difference-between-git-pull-and-git-fetch', 'tags': ['git', 'git-pull', 'git-fetch'], 'title': "What is the difference between 'git pull' and 'git fetch'?", 'votes': '8409', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>What are the differences between <code>git pull</code> and <code>git fetch</code>?</p>\n    </div>'}
+2017-08-18 11:55:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/927358/how-to-undo-the-last-commits-in-git> (referer: None)
+2017-08-18 11:55:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/927358/how-to-undo-the-last-commits-in-git>
+{'link': 'https://stackoverflow.com/questions/927358/how-to-undo-the-last-commits-in-git', 'tags': ['git', 'git-rebase', 'git-commit', 'git-reset', 'git-revert'], 'title': 'How to undo the last commits in Git?', 'votes': '15010', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>I committed wrong files into <a href="https://git-scm.com" rel="noreferrer">Git</a>. I haven\'t yet pushed the commit to the server.</p>\n\n<p>How can I undo those commits? </p>\n    </div>'}
+2017-08-18 11:55:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely> (referer: None)
+2017-08-18 11:55:30 [scrapy.core.scraper] DEBUG: Scraped from <200 https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely>
+{'link': 'https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-both-locally-and-remotely', 'tags': ['git', 'git-branch', 'git-remote'], 'title': 'How do I delete a Git branch both locally and remotely?', 'votes': '11260', 'body': '<div class="post-text" itemprop="text">\r\n\r\n<p>I want to delete a branch both locally and on my remote project fork on <a href="http://en.wikipedia.org/wiki/GitHub" rel="noreferrer">GitHub</a>.</p>\n\n<h3>Failed Attempts to Delete Remote Branch</h3>\n\n<pre><code>$ git branch -d remotes/origin/bugfix\nerror: branch \'remotes/origin/bugfix\' not found.\n\n$ git branch -d origin/bugfix\nerror: branch \'origin/bugfix\' not found.\n\n$ git branch -rd origin/bugfix\nDeleted remote branch origin/bugfix (was 2a14ef7).\n\n$ git push\nEverything up-to-date\n\n$ git pull\nFrom github.com:gituser/gitproject\n* [new branch] bugfix -&gt; origin/bugfix\nAlready up-to-date.\n</code></pre>\n\n<p>What do I need to do differently to successfully delete the\n<code>remotes/origin/bugfix</code> branch both locally and on GitHub?</p>\n    </div>'}
+2017-08-18 11:55:30 [scrapy.core.engine] INFO: Closing spider (finished)
+2017-08-18 11:55:30 [scrapy.extensions.feedexport] INFO: Stored csv feed (15 items) in: temp1.csv
+2017-08-18 11:55:30 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 3,
+ 'downloader/exception_type_count/builtins.FileNotFoundError': 3,
+ 'downloader/request_bytes': 6071,
+ 'downloader/request_count': 20,
+ 'downloader/request_method_count/GET': 20,
+ 'downloader/response_bytes': 913647,
+ 'downloader/response_count': 17,
+ 'downloader/response_status_count/200': 17,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2017, 8, 18, 3, 55, 30, 779912),
+ 'item_scraped_count': 15,
+ 'log_count/DEBUG': 36,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 8,
+ 'memusage/max': 888061952,
+ 'memusage/startup': 888061952,
+ 'request_depth_max': 1,
+ 'response_received_count': 17,
+ 'retry/count': 2,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/builtins.FileNotFoundError': 2,
+ 'scheduler/dequeued': 16,
+ 'scheduler/dequeued/memory': 16,
+ 'scheduler/enqueued': 16,
+ 'scheduler/enqueued/memory': 16,
+ 'start_time': datetime.datetime(2017, 8, 18, 3, 55, 22, 814704)}
+2017-08-18 11:55:30 [scrapy.core.engine] INFO: Spider closed (finished)
