@@ -1,0 +1,696 @@
+<!DOCTYPE html><html>
+<head><meta charset="UTF-8"></head>
+<body>
+<center><h1>爬虫框架Scrapy的第一个爬虫示例入门教程</h1></center>
+<div id="cnblogs_post_body"><p><span style="font-family: Microsoft YaHei; font-size: 18px;">我们使用<a href="http://www.dmoz.org/" target="_blank">dmoz.org</a>这个网站来作为小抓抓一展身手的对象。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">首先先要回答一个问题。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">问：把网站装进爬虫里，总共分几步？</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">答案很简单，四步：</span></p>
+<ul>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">新建项目 (Project)：新建一个新的爬虫项目</span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">明确目标（Items）：明确你想要抓取的目标</span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">制作爬虫（Spider）：制作爬虫开始爬取网页</span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">存储内容（Pipeline）：设计管道存储爬取内容</span></li>
+
+
+</ul>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">好的，基本流程既然确定了，那接下来就一步一步的完成就可以了。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><strong>1.新建项目（Project）</strong></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">在空目录下按住Shift键右击，选择“在此处打开命令窗口”，输入一下命令：</span></p>
+<p> </p>
+<div class="dp-highlighter bg_plain">
+<div class="bar">
+<div class="tools"><strong>[plain]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol start="1">
+<li class="alt">scrapy startproject tutorial  </li>
+
+
+</ol></div>
+<p>
+<br>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;">其中，tutorial为项目名称。</span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">可以看到将会创建一个tutorial文件夹，目录结构如下：</span></p>
+<p> </p>
+<div class="dp-highlighter bg_plain">
+<div class="bar">
+<div class="tools"><strong>[plain]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol start="1">
+<li class="alt">tutorial/  </li>
+<li>    scrapy.cfg  </li>
+<li class="alt">    tutorial/  </li>
+<li>        __init__.py  </li>
+<li class="alt">        items.py  </li>
+<li>        pipelines.py  </li>
+<li class="alt">        settings.py  </li>
+<li>        spiders/  </li>
+<li class="alt">            __init__.py  </li>
+<li>            ...  </li>
+
+
+</ol></div>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+<br></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">下面来简单介绍一下各个文件的作用：</span></p>
+<ul class="simple">
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;"><span class="docutils literal"><span class="pre">scrapy.cfg：项目的配置文件<br>
+</span></span></span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;"><span class="docutils literal"><span class="pre">tutorial/：项目的Python模块，将会从这里引用代码</span></span></span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;"><span class="docutils literal"><span class="pre">tutorial/items.py：项目的items文件</span></span></span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;"><span class="docutils literal"><span class="pre">tutorial/pipelines.py：项目的pipelines文件</span></span></span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;"><span class="docutils literal"><span class="pre">tutorial/settings.py：项目的设置文件</span></span></span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;"><span class="docutils literal"><span class="pre">tutorial/spiders/：存储爬虫的目录</span></span></span></li>
+
+
+</ul>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><strong>2.明确目标（Item）</strong></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">在Scrap<span style="font-family: Microsoft YaHei; font-size: 18px;">y中，items是用来加载抓取内容的容器，有点像<a class="replace_word" style="color: #df3434; font-weight: bold;" title="Python知识库" href="http://lib.csdn.net/base/11" target="_blank">Python</a>中的Dic，也就是字典，但是提供了一些额外的保护减少错误。</span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">一般来说，item可以用<span class="reference internal">scrapy.item.Item类来创建，并且用<span class="reference internal">scrapy.item.Field对象来定义属性<span style="font-family: Microsoft YaHei; font-size: 18px;">（可以理解成类似于ORM的映射关系）。</span></span></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">接下来，我们开始来构建item模型（model）。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">首先，我们想要的内容有：</span></p>
+<ul>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">名称（name）</span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">链接（url）</span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">描述（description）</span></li>
+
+
+</ul>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">修改tutorial目录下的items.py文件，在原本的class后面添加我们自己的class。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">因为要抓dmoz.org网站的内容，所以我们可以将其命名为DmozItem：</span></p>
+<p> </p>
+<div class="dp-highlighter bg_python">
+<div class="bar">
+<div class="tools"><strong>[python]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol class="dp-py" start="1">
+<li class="alt"><span class="comment"># Define here the models for your scraped items  </span></li>
+<li><span class="comment">#  </span></li>
+<li class="alt"><span class="comment"># See documentation in:  </span></li>
+<li><span class="comment"># http://doc.scrapy.org/en/latest/topics/items.html  </span></li>
+<li class="alt">  </li>
+<li><span class="keyword">from scrapy.item <span class="keyword">import Item, Field  </span></span></li>
+<li class="alt">  </li>
+<li><span class="keyword">class TutorialItem(Item):  </span></li>
+<li class="alt">    <span class="comment"># define the fields for your item here like:  </span></li>
+<li>    <span class="comment"># name = Field()  </span></li>
+<li class="alt">    <span class="keyword">pass  </span></li>
+<li>  </li>
+<li class="alt"><span class="keyword">class DmozItem(Item):  </span></li>
+<li>    title = Field()  </li>
+<li class="alt">    link = Field()  </li>
+<li>    desc = Field()  </li>
+
+
+</ol></div>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><br></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">刚开始看起来可能会<span style="font-family: Microsoft YaHei; font-size: 18px;">有些看不懂，但是定义这些item能让你用其他组件的时候知道你的 items到底是什么。</span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">可以把Item简单的理解成封装好的类对象。<br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><strong><span style="font-family: Microsoft YaHei; font-size: 18px;">3.制作爬虫（Spider）</span></strong></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">制作爬虫，总体分两步：先爬再取。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">也就是说，首先你要获取整个网页的所有内容，然后再取出其中对你有用的部分。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><strong>3.1爬</strong><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">Spider是用户自己编写的类，用来从一个域（或域组）中抓取信息。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">他们定义了用于下载的URL列表、跟踪链接的方案、解析网页内容的方式，以此来提取items。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">要建立一个Spider，你必须用scrapy.spider.BaseSpider创建一个子类，并确定三个强制的属性：</span></p>
+<ul>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">name：爬虫的识别名称，必须是唯一的，在不同的爬虫中你必须定义不同的名字。</span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">start_urls：爬取的URL列表。爬虫从这里开始抓取数据，所以，第一次下载的数据将会从这些urls开始。其他子URL将会从这些起始URL中继承性生成。</span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">parse()：解析的方法，调用的时候传入从每一个URL传回的Response对象作为唯一参数，负责解析并匹配抓取的数据(解析为item)，跟踪更多的URL。</span></li>
+
+
+</ul>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"> </span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">这里可以参考宽度爬虫教程中提及的思想来帮助理解，<span class="link_title">教程传送：<a href="http://blog.csdn.net/pleasecallmewhy/article/details/18010015" target="_blank">[Java] 知乎下巴第5集：使用HttpClient工具包和宽度爬虫</a>。<span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">也就是把Url存储下来并依此为起点逐步扩散开去，抓取所有符合条件的网页Url存储起来继续爬取。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">下面我们来写第一只爬虫，命名为dmoz_spider.py，保存在tutorial\spiders目录下。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">dmoz_spider.py<span style="font-family: Microsoft YaHei; font-size: 18px;">代码如下：</span></span></p>
+<div class="dp-highlighter bg_python">
+<div class="bar">
+<div class="tools"><strong>[python]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol class="dp-py" start="1">
+<li class="alt"><span class="keyword">from scrapy.spider <span class="keyword">import Spider  </span></span></li>
+<li>  </li>
+<li class="alt"><span class="keyword">class DmozSpider(Spider):  </span></li>
+<li>    name = <span class="string">"dmoz"  </span></li>
+<li class="alt">    allowed_domains = [<span class="string">"dmoz.org"]  </span></li>
+<li>    start_urls = [  </li>
+<li class="alt">        <span class="string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Books/",  </span></li>
+<li>        <span class="string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/"  </span></li>
+<li class="alt">    ]  </li>
+<li>  </li>
+<li class="alt">    <span class="keyword">def parse(<span class="special">self, response):  </span></span></li>
+<li>        filename = response.url.split(<span class="string">"/")[-<span class="number">2]  </span></span></li>
+<li class="alt">        open(filename, <span class="string">'wb').write(response.body)  </span></li>
+
+
+</ol></div>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;">allow_domains是搜索的域名范围，也就是爬虫的约束区域，规定爬虫只爬取这个域名下的网页。</span></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">从parse函数可以看出，将链接的最后两个地址取出作为文件名进行存储。<br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">然后运行一下看看，在tutorial目录下按住shift右击，在此处打开命令窗口，输入：<br>
+</span></p>
+<div class="dp-highlighter bg_plain">
+<div class="bar">
+<div class="tools"><strong>[plain]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol start="1">
+<li class="alt">scrapy crawl dmoz  </li>
+
+
+</ol></div>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+<span style="font-family: Microsoft YaHei; font-size: 18px;">运行结果如图：</span></span></span></span></p>
+<p><img src="test_files/20140222155840234.jpeg" alt=""></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">报错了：</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">UnicodeDecodeError: 'ascii' codec can't decode byte 0xb0 in position 1: ordinal not in range(128)</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">运行第一个Scrapy项目就报错，真是命运多舛。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">应该是出了编码问题，谷歌了一下找到了解决方案：</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px; line-height: 21px;">在python的Lib\site-packages文件夹下新建一个sitecustomize.py：</span></p>
+<div class="dp-highlighter bg_python">
+<div class="bar">
+<div class="tools"><strong>[python]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol class="dp-py" start="1">
+<li class="alt"><span class="keyword">import sys    </span></li>
+<li>sys.setdefaultencoding(<span class="string">'gb2312')    </span></li>
+
+
+</ol></div>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><br></span></span></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">再次运行，OK，问题解决了，看一下结果：</span></p>
+<p><img src="test_files/20140222160217703.jpeg" alt=""><br>
+</p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">最后一句INFO: Closing spider (finished)表明爬虫已经成功运行并且自行关闭了。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">包含 [dmoz]的行 ，那对应着我们的爬虫运行的结果。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">可以看到start_urls中定义的每个URL都有日志行。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">还记得我们的start_urls吗？</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">http://www.dmoz.org/Computers/Programming/Languages/Python/Books<br>
+http://www.dmoz.org/Computers/Programming/Languages/Python/Resources</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">因为这些URL是起始页面，所以他们没有引用(referrers)，所以在它们的每行末尾你会看到 (referer: &lt;None&gt;)。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">在parse 方法的作用下，两个文件被创建：分别是 Books 和 Resources，这两个文件中有URL的页面内容。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">那么在刚刚的电闪雷鸣之中到底发生了什么呢？</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">首先，Scrapy为爬虫的 start_urls属性中的每个URL创建了一个 scrapy.http.Request 对象 ，并将爬虫的parse 方法指定为回调函数。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">然后，这些 Request被调度并执行，之后通过parse()方法返回scrapy.http.Response对象，并反馈给爬虫。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><strong>3.2取</strong><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">爬取整个网页完毕，接下来的就是的取过程了。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">光存储一整个网页还是不够用的。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">在基础的爬虫里，这一步可以用正则表达式来抓。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">在Scrapy里，使用一种叫做 XPath selectors的机制，它基于 XPath表达式。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">如果你想了解更多selectors和其他机制你可以查阅资料：<a href="http://doc.scrapy.org/en/latest/topics/selectors.html#topics-selectors" target="_blank">点我点我</a><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">这是一些XPath表达式的例子和他们的含义</span></p>
+<ul>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">/html/head/title: 选择HTML文档&lt;head&gt;元素下面的&lt;title&gt; 标签。</span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">/html/head/title/text(): 选择前面提到的&lt;title&gt; 元素下面的文本内容</span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">//td: 选择所有 &lt;td&gt; 元素</span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;">//div[@class="mine"]: 选择所有包含 class="mine" 属性的div 标签元素</span></li>
+
+
+</ul>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">以上只是几个使用XPath的简单例子，但是实际上XPath非常强大。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">可以参照W3C教程：<a href="http://www.w3school.com.cn/xpath/" target="_blank">点我点我</a>。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;">
+<span style="font-family: Microsoft YaHei; font-size: 18px;">为了方便使用XPaths，Scrapy提供XPathSelector 类，有两种可以选择，HtmlXPathSelector(HTML数据解析)和XmlXPathSelector(XML数据解析)。<br></span></span></span></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">必须通过一个 Response 对象对他们进行实例化操作。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">你会发现Selector对象展示了文档的节点结构。因此，第一个实例化的selector必与根节点或者是整个目录有关 。<br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">在Scrapy里面，Selectors 有四种基础的方法<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-size: 18px;"><span class="reference internal"><span class="xref py py-meth docutils literal"><span class="pre">（点击查看API文档）：<a class="reference internal" title="scrapy.selector.Selector.xpath" href="http://doc.scrapy.org/en/latest/topics/selectors.html#scrapy.selector.Selector.xpath" target="_blank"><span class="xref py py-meth docutils literal"><span class="pre"><br>
+</span></span></a></span></span></span></span></span></span></p>
+<ul>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;"><a class="reference internal" title="scrapy.selector.Selector.xpath" href="http://doc.scrapy.org/en/latest/topics/selectors.html#scrapy.selector.Selector.xpath" target="_blank"><span class="xref py py-meth docutils literal"><span class="pre">xpath()</span></span></a>：返回一系列的selectors，每一个select表示一个xpath参数表达式选择的节点<a class="reference internal" title="scrapy.selector.Selector.css" href="http://doc.scrapy.org/en/latest/topics/selectors.html#scrapy.selector.Selector.css" target="_blank"><span class="xref py py-meth docutils literal"><span class="pre"><br>
+</span></span></a></span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;"><a class="reference internal" title="scrapy.selector.Selector.css" href="http://doc.scrapy.org/en/latest/topics/selectors.html#scrapy.selector.Selector.css" target="_blank"><span class="xref py py-meth docutils literal"><span class="pre">css()</span></span></a>：返回一系列的selectors，每一个select表示一个css参数表达式选择的节点<a class="reference internal" title="scrapy.selector.Selector.extract" href="http://doc.scrapy.org/en/latest/topics/selectors.html#scrapy.selector.Selector.extract" target="_blank"><span class="xref py py-meth docutils literal"><span class="pre"><br>
+</span></span></a></span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;"><a class="reference internal" title="scrapy.selector.Selector.extract" href="http://doc.scrapy.org/en/latest/topics/selectors.html#scrapy.selector.Selector.extract" target="_blank"><span class="xref py py-meth docutils literal"><span class="pre">extract()</span></span></a>：返回一个unicode字符串，为选中的数据<a class="reference internal" title="scrapy.selector.Selector.re" href="http://doc.scrapy.org/en/latest/topics/selectors.html#scrapy.selector.Selector.re" target="_blank"><span class="xref py py-meth docutils literal"><span class="pre"><br>
+</span></span></a></span></li>
+<li><span style="font-family: Microsoft YaHei; font-size: 18px;"><a class="reference internal" title="scrapy.selector.Selector.re" href="http://doc.scrapy.org/en/latest/topics/selectors.html#scrapy.selector.Selector.re" target="_blank"><span class="xref py py-meth docutils literal"><span class="pre">re()</span></span></a>：返回一串一个unicode字符串，为使用正则表达式抓取出来的内容</span></li>
+
+
+</ul>
+<p><br>
+</p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><strong>3.3xpath实验</strong><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">下面我们在Shell里面尝试一下Selector的用法。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">实验的网址：<a href="http://www.dmoz.org/Computers/Programming/Languages/Python/Books/" target="_blank">http://www.dmoz.org/Computers/Programming/Languages/Python/Books/</a><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><img src="test_files/20140223184151500.png" alt=""><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">熟悉完了实验的小白鼠，接下来就是用Shell爬取网页了。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">进入到项目的顶层目录，也就是第一层tutorial文件夹下，在cmd中输入：</span></p>
+<p> </p>
+<div class="dp-highlighter bg_plain">
+<div class="bar">
+<div class="tools"><strong>[plain]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol start="1">
+<li class="alt">scrapy shell http://www.dmoz.org/Computers/Programming/Languages/Python/Books/  </li>
+
+
+</ol></div>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+<span style="font-family: Microsoft YaHei; font-size: 18px;">回车后可以看到如下的内容：</span></span></span></span></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><img src="test_files/20140223180446718.png" alt=""></span></p>
+<p> </p>
+<p><br>
+</p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">在Shell载入后，你将获得response回应，存储在本地变量 response中。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">所以如果你输入response.body，你将会看到response的body部分，也就是抓取到的页面内容：</span></p>
+<p><img src="test_files/20140223180722687.png" alt=""><br>
+</p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">或者输入response.headers 来查看它的 header部分：</span></p>
+<p><img src="test_files/20140223180822125.png" alt=""><br>
+</p>
+<p><br>
+</p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">现在就像是一大堆沙子握在手里，里面藏着我们想要的金子，所以下一步，就是用筛子摇两下，把杂质出去，选出关键的内容。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">selector就是这样一个筛子。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">在旧的版本中，Shell实例化两种selectors，一个是解析HTML的 hxs 变量，一个是解析XML 的 xxs 变量。<span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">而现在的Shell为我们准备好的selector对象，sel，可以根据返回的数据类型自动选择最佳的解析方案(XML or HTML)。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">然后我们来捣弄一下！~</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">要彻底搞清楚这个问题，首先先要知道，抓到的页面到底是个什么样子。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">比如，我们要抓取网页的标题，也就是&lt;title&gt;这个标签：</span></p>
+<p><img src="test_files/20140223185047812.png" alt=""><br>
+</p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">可以输入：</span></p>
+<div class="dp-highlighter bg_python">
+<div class="bar">
+<div class="tools"><strong>[python]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol class="dp-py" start="1">
+<li class="alt">sel.xpath(<span class="string">'//title')  </span></li>
+
+
+</ol></div>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+<span style="font-family: Microsoft YaHei; font-size: 18px;">结果就是：</span></span></span></span></span></span></span></p>
+<p><img src="test_files/20140223184954390.png" alt=""><br>
+</p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">这样就能把这个标签取出来了，用extract()和text()还可以进一步做处理。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">备注：简单的罗列一下有用的xpath路径表达式：</span></p>
+<p> </p>
+<table class="dataintable        ">
+<tbody>
+<tr><th style="width: 25%;"><span style="font-family: Microsoft YaHei; font-size: 18px;">表达式</span></th><th><span style="font-family: Microsoft YaHei; font-size: 18px;">描述</span></th>
+</tr>
+<tr>
+<td><span style="font-family: Microsoft YaHei; font-size: 18px;">nodename</span></td>
+<td><span style="font-family: Microsoft YaHei; font-size: 18px;">选取此节点的所有子节点。</span></td>
+
+
+
+</tr>
+<tr>
+<td><span style="font-family: Microsoft YaHei; font-size: 18px;">/</span></td>
+<td><span style="font-family: Microsoft YaHei; font-size: 18px;">从根节点选取。</span></td>
+
+
+
+</tr>
+<tr>
+<td><span style="font-family: Microsoft YaHei; font-size: 18px;">//</span></td>
+<td><span style="font-family: Microsoft YaHei; font-size: 18px;">从匹配选择的当前节点选择文档中的节点，而不考虑它们的位置。</span></td>
+
+
+
+</tr>
+<tr>
+<td><span style="font-family: Microsoft YaHei; font-size: 18px;">.</span></td>
+<td><span style="font-family: Microsoft YaHei; font-size: 18px;">选取当前节点。</span></td>
+
+
+
+</tr>
+<tr>
+<td><span style="font-family: Microsoft YaHei; font-size: 18px;">..</span></td>
+<td><span style="font-family: Microsoft YaHei; font-size: 18px;">选取当前节点的父节点。</span></td>
+
+
+
+</tr>
+<tr>
+<td><span style="font-family: Microsoft YaHei; font-size: 18px;">@</span></td>
+<td><span style="font-family: Microsoft YaHei; font-size: 18px;">选取属性。</span></td>
+
+
+
+</tr>
+
+
+
+</tbody>
+
+
+
+</table>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;">
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><br></span></span></span></span></span></span></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">全部的实验结果如下，In[i]表示第i次实验的输入，Out[i]表示第i次结果的输出（建议大家参照：<a href="http://www.w3school.com.cn/xpath/xpath_nodes.asp" target="_blank">W3C教程</a>）：</span></p>
+<div class="dp-highlighter bg_python">
+<div class="bar">
+<div class="tools"><strong>[python]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol class="dp-py" start="1">
+<li class="alt">In [<span class="number">1]: sel.xpath(<span class="string">'//title')  </span></span></li>
+<li>Out[<span class="number">1]: [&lt;Selector xpath=<span class="string">'//title' data=u<span class="string">'&lt;title&gt;Open Directory - Computers: Progr'&gt;]  </span></span></span></li>
+<li class="alt">  </li>
+<li>In [<span class="number">2]: sel.xpath(<span class="string">'//title').extract()  </span></span></li>
+<li class="alt">Out[<span class="number">2]: [u<span class="string">'&lt;title&gt;Open Directory - Computers: Programming: Languages: Python: Books&lt;/title&gt;']  </span></span></li>
+<li>  </li>
+<li class="alt">In [<span class="number">3]: sel.xpath(<span class="string">'//title/text()')  </span></span></li>
+<li>Out[<span class="number">3]: [&lt;Selector xpath=<span class="string">'//title/text()' data=u<span class="string">'Open Directory - Computers: Programming:'&gt;]  </span></span></span></li>
+<li class="alt">  </li>
+<li>In [<span class="number">4]: sel.xpath(<span class="string">'//title/text()').extract()  </span></span></li>
+<li class="alt">Out[<span class="number">4]: [u<span class="string">'Open Directory - Computers: Programming: Languages: Python: Books']  </span></span></li>
+<li>  </li>
+<li class="alt">In [<span class="number">5]: sel.xpath(<span class="string">'//title/text()').re(<span class="string">'(\w+):')  </span></span></span></li>
+<li>Out[<span class="number">5]: [u<span class="string">'Computers', u<span class="string">'Programming', u<span class="string">'Languages', u<span class="string">'Python']  </span></span></span></span></span></li>
+
+
+</ol></div>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+<br></span></span></span></span></span></span></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">当然title这个标签对我们来说没有太多的价值，下面我们就来真正抓取一些有意义的东西。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">使用火狐的审查元素我们可以清楚地看到，我们需要的东西如下：</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><img src="test_files/20140223193423843.png" alt=""><br>
+</span></p>
+<p><br>
+</p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">我们可以用如下代码来抓取这个&lt;li&gt;标签：</span></p>
+<p> </p>
+<div class="dp-highlighter bg_python">
+<div class="bar">
+<div class="tools"><strong>[python]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol class="dp-py" start="1">
+<li class="alt">sel.xpath(<span class="string">'//ul/li')  </span></li>
+
+
+</ol></div>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">从&lt;li&gt;标签中，可以这样获取网站的描述：</span></p>
+<div class="dp-highlighter bg_python">
+<div class="bar">
+<div class="tools"><strong>[python]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol class="dp-py" start="1">
+<li class="alt">sel.xpath(<span class="string">'//ul/li/text()').extract()  </span></li>
+
+
+</ol></div>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+<br>
+</span></span></span></span></span></span></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">可以这样获取网站的标题：</span></p>
+<div class="dp-highlighter bg_python">
+<div class="bar">
+<div class="tools"><strong>[python]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol class="dp-py" start="1">
+<li class="alt">sel.xpath(<span class="string">'//ul/li/a/text()').extract()  </span></li>
+
+
+</ol></div>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">可以这样获取网站的超链接：</span></p>
+<div class="dp-highlighter bg_python">
+<div class="bar">
+<div class="tools"><strong>[python]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol class="dp-py" start="1">
+<li class="alt">sel.xpath(<span class="string">'//ul/li/a/@href').extract()  </span></li>
+
+
+</ol></div>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">当然，前面的这些例子是直接获取属性的方法。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">我们注意到xpath返回了一个对象列表，</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">那么我们也可以直接调用这个列表中对象的属性挖掘更深的节点<br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">（参考：<a class="reference internal" href="http://doc.scrapy.org/en/latest/topics/selectors.html#topics-selectors-nesting-selectors" target="_blank"><em>Nesting selectors</em></a> and<a class="reference internal" href="http://doc.scrapy.org/en/latest/topics/selectors.html#topics-selectors-relative-xpaths" target="_blank"><em>Working
+ with relative XPaths</em></a> in the <a class="reference internal" href="http://doc.scrapy.org/en/latest/topics/selectors.html#topics-selectors" target="_blank">
+<em>Selectors</em></a>）：</span></p>
+<p> </p>
+<div class="highlight-python">
+<div class="highlight">
+<pre><span class="n">sites <span class="o">= <span class="n">sel<span class="o">.<span class="n">xpath<span class="p">(<span class="s">'//ul/li'<span class="p">)
+<span class="k">for <span class="n">site <span class="ow">in <span class="n">sites<span class="p">:
+    <span class="n">title <span class="o">= <span class="n">site<span class="o">.<span class="n">xpath<span class="p">(<span class="s">'a/text()'<span class="p">)<span class="o">.<span class="n">extract<span class="p">()
+    <span class="n">link <span class="o">= <span class="n">site<span class="o">.<span class="n">xpath<span class="p">(<span class="s">'a/@href'<span class="p">)<span class="o">.<span class="n">extract<span class="p">()
+    <span class="n">desc <span class="o">= <span class="n">site<span class="o">.<span class="n">xpath<span class="p">(<span class="s">'text()'<span class="p">)<span class="o">.<span class="n">extract<span class="p">()
+    <span class="k">print <span class="n">title<span class="p">, <span class="n">link<span class="p">, <span class="n">desc
+</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></pre>
+</div>
+</div>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"> </span></span></span></span></span></span></span></span></span></p>
+<p><strong><span style="font-family: Microsoft YaHei; font-size: 18px;">3.4xpath实战</span></strong></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">我们用shell做了这么久的实战，最后我们可以把前面学习到的内容应用到dmoz_spider这个爬虫中。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">在原爬虫的parse函数中做如下修改：</span></p>
+<p> </p>
+<div class="dp-highlighter bg_python">
+<div class="bar">
+<div class="tools"><strong>[python]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+</div>
+<ol class="dp-py" start="1">
+<li class="alt"><span class="keyword">from scrapy.spider <span class="keyword">import Spider  </span></span></li>
+<li><span class="keyword">from scrapy.selector <span class="keyword">import Selector  </span></span></li>
+<li class="alt">  </li>
+<li><span class="keyword">class DmozSpider(Spider):  </span></li>
+<li class="alt">    name = <span class="string">"dmoz"  </span></li>
+<li>    allowed_domains = [<span class="string">"dmoz.org"]  </span></li>
+<li class="alt">    start_urls = [  </li>
+<li>        <span class="string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Books/",  </span></li>
+<li class="alt">        <span class="string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/"  </span></li>
+<li>    ]  </li>
+<li class="alt">  </li>
+<li>    <span class="keyword">def parse(<span class="special">self, response):  </span></span></li>
+<li class="alt">        sel = Selector(response)  </li>
+<li>        sites = sel.xpath(<span class="string">'//ul/li')  </span></li>
+<li class="alt">        <span class="keyword">for site <span class="keyword">in sites:  </span></span></li>
+<li>            title = site.xpath(<span class="string">'a/text()').extract()  </span></li>
+<li class="alt">            link = site.xpath(<span class="string">'a/@href').extract()  </span></li>
+<li>            desc = site.xpath(<span class="string">'text()').extract()  </span></li>
+<li class="alt">            <span class="keyword">print title  </span></li>
+</ol></div>
+<p> <span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><br></span></span></span></span></span></span></span></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">注意，我们从scrapy.selector中导入了Selector类，并且实例化了一个新的Selector对象。这样我们就可以像Shell中一样操作xpath了。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">我们来试着输入一下命令运行爬虫（在tutorial根目录里面）：<br>
+</span></p>
+<div class="highlight-python">
+<pre>scrapy crawl dmoz</pre>
+</div>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"> </span></span></span></span></span></span></span></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">运行结果如下：</span></p>
+<p><img src="test_files/20140223202410593.png" alt=""></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">果然，成功的抓到了所有的标题。但是好像不太对啊，怎么Top，Python这种导航栏也抓取出来了呢？</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">我们只需要红圈中的内容：</span></p>
+<p><img src="test_files/20140223202712468.png" alt=""><br>
+</p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">看来是我们的xpath语句有点问题，没有仅仅把我们需要的项目名称抓取出来，也抓了一些无辜的但是xpath语法相同的元素。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">审查元素我们发现我们需要的&lt;ul&gt;具有class='directory-url'的属性，</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">那么只要把xpath语句改成sel.xpath('//ul[@class="directory-url"]/li')即可<br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">将xpath语句做如下调整：</span></p>
+<div class="dp-highlighter bg_python">
+<div class="bar">
+<div class="tools"><strong>[python]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol class="dp-py" start="1">
+<li class="alt"><span class="keyword">from scrapy.spider <span class="keyword">import Spider  </span></span></li>
+<li><span class="keyword">from scrapy.selector <span class="keyword">import Selector  </span></span></li>
+<li class="alt">  </li>
+<li><span class="keyword">class DmozSpider(Spider):  </span></li>
+<li class="alt">    name = <span class="string">"dmoz"  </span></li>
+<li>    allowed_domains = [<span class="string">"dmoz.org"]  </span></li>
+<li class="alt">    start_urls = [  </li>
+<li>        <span class="string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Books/",  </span></li>
+<li class="alt">        <span class="string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/"  </span></li>
+<li>    ]  </li>
+<li class="alt">  </li>
+<li>    <span class="keyword">def parse(<span class="special">self, response):  </span></span></li>
+<li class="alt">        sel = Selector(response)  </li>
+<li>        sites = sel.xpath(<span class="string">'//ul[@class="directory-url"]/li')  </span></li>
+<li class="alt">        <span class="keyword">for site <span class="keyword">in sites:  </span></span></li>
+<li>            title = site.xpath(<span class="string">'a/text()').extract()  </span></li>
+<li class="alt">            link = site.xpath(<span class="string">'a/@href').extract()  </span></li>
+<li>            desc = site.xpath(<span class="string">'text()').extract()  </span></li>
+<li class="alt">            <span class="keyword">print title  </span></li>
+
+
+</ol></div>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+<span style="font-family: Microsoft YaHei; font-size: 18px;">成功抓出了所有的标题，绝对没有滥杀无辜：</span></span></span></span></span></span></span></span></span></span></p>
+<p><img src="test_files/20140223203218843.png" alt=""></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><strong>3.5使用Item</strong><br>
+</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">接下来我们来看一看如何使用Item。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">前面我们说过，Item 对象是自定义的python字典，可以使用标准字典语法获取某个属性的值：</span></p>
+<div class="dp-highlighter bg_python">
+<div class="bar">
+<div class="tools"><strong>[python]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol class="dp-py" start="1">
+<li class="alt">&gt;&gt;&gt; item = DmozItem()  </li>
+<li>&gt;&gt;&gt; item[<span class="string">'title'] = <span class="string">'Example title'  </span></span></li>
+<li class="alt">&gt;&gt;&gt; item[<span class="string">'title']  </span></li>
+<li><span class="string">'Example title'  </span></li>
+
+
+</ol></div>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+<span style="font-family: Microsoft YaHei; font-size: 18px;">作为一只爬虫，Spiders希望能将其抓取的数据存放到Item对象中。为了返回我们抓取数据，spider的最终代码应当是这样:<br></span></span></span></span></span></span></span></span></span></span></span></p>
+<p> </p>
+<div class="dp-highlighter bg_python">
+<div class="bar">
+<div class="tools"><strong>[python]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol class="dp-py" start="1">
+<li class="alt"><span class="keyword">from scrapy.spider <span class="keyword">import Spider  </span></span></li>
+<li><span class="keyword">from scrapy.selector <span class="keyword">import Selector  </span></span></li>
+<li class="alt">  </li>
+<li><span class="keyword">from tutorial.items <span class="keyword">import DmozItem  </span></span></li>
+<li class="alt">  </li>
+<li><span class="keyword">class DmozSpider(Spider):  </span></li>
+<li class="alt">    name = <span class="string">"dmoz"  </span></li>
+<li>    allowed_domains = [<span class="string">"dmoz.org"]  </span></li>
+<li class="alt">    start_urls = [  </li>
+<li>        <span class="string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Books/",  </span></li>
+<li class="alt">        <span class="string">"http://www.dmoz.org/Computers/Programming/Languages/Python/Resources/"  </span></li>
+<li>    ]  </li>
+<li class="alt">  </li>
+<li>    <span class="keyword">def parse(<span class="special">self, response):  </span></span></li>
+<li class="alt">        sel = Selector(response)  </li>
+<li>        sites = sel.xpath(<span class="string">'//ul[@class="directory-url"]/li')  </span></li>
+<li class="alt">        items = []  </li>
+<li>        <span class="keyword">for site <span class="keyword">in sites:  </span></span></li>
+<li class="alt">            item = DmozItem()  </li>
+<li>            item[<span class="string">'title'] = site.xpath(<span class="string">'a/text()').extract()  </span></span></li>
+<li class="alt">            item[<span class="string">'link'] = site.xpath(<span class="string">'a/@href').extract()  </span></span></li>
+<li>            item[<span class="string">'desc'] = site.xpath(<span class="string">'text()').extract()  </span></span></li>
+<li class="alt">            items.append(item)  </li>
+<li>        <span class="keyword">return items  </span></li>
+
+
+</ol></div>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+<br></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;"><strong>4.存储内容（Pipeline）</strong></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">保存信息的最简单的方法是通过<a href="http://doc.scrapy.org/en/0.14/topics/feed-exports.html#topics-feed-exports" target="_blank"><em>Feed exports</em></a>，主要有四种：JSON，JSON lines，CSV，XML。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">我们将结果用最常用的JSON导出，命令如下：</span></p>
+<p><br>
+</p>
+<div class="dp-highlighter bg_plain">
+<div class="bar">
+<div class="tools"><strong>[plain]</strong> <a class="ViewSource" title="view plain" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">view plain</a><span data-mod="popu_168"> <a class="CopyToClipboard" title="copy" href="http://blog.csdn.net/pleasecallmewhy/article/details/19642329/">copy</a><span data-mod="popu_169"> <span class="tracking-ad" data-mod="popu_167"><a style="text-indent: 0;" title="在CODE上查看代码片" href="https://code.csdn.net/snippets/201087" target="_blank"><img style="position: relative; top: 1px; left: 2px;" src="test_files/CODE_ico.png" alt="在CODE上查看代码片" width="12" height="12"></a><span class="tracking-ad" data-mod="popu_170"><a style="text-indent: 0;" title="派生到我的代码片" href="https://code.csdn.net/snippets/201087/fork" target="_blank"><img style="position: relative; top: 2px; left: 2px;" src="test_files/ico_fork.svg" alt="派生到我的代码片" width="12" height="12"></a></span></span></span></span></div>
+
+
+</div>
+<ol start="1">
+<li class="alt">scrapy crawl dmoz -o items.json -t json  </li>
+
+
+</ol></div>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><br>
+</span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">-o 后面是导出文件名，-t 后面是导出类型。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">然后来看一下导出的结果，用文本编辑器打开json文件即可（为了方便显示，在item中删去了除了title之外的属性）：</span></p>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;">
+<img src="test_files/20140223211204000.png" alt=""><br></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><br>
+</p>
+<p><br>
+</p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">因为这个只是一个小型的例子，所以这样简单的处理就可以了。</span></p>
+<p><span style="font-family: Microsoft YaHei; font-size: 18px;">如果你想用抓取的items做更复杂的事情，你可以写一个 Item Pipeline(条目管道)。</span></p>
+<p>
+<span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;"><span style="font-family: Microsoft YaHei; font-size: 18px;">
+<span style="font-family: Microsoft YaHei; font-size: 18px;">这个我们以后再慢慢玩^_^</span></span></span></span></span></span></span></span></span></span></span></span></p></div>
+</body></html>

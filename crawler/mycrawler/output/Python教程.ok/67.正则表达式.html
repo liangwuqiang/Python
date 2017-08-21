@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 5.1.6.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2017-08-21T11:17:04.233311579"/>
+	<meta name="" content=""/>
+	<style type="text/css">
+		h3.cjk { font-family: "Noto Sans CJK SC Regular" }
+		h3.ctl { font-family: "FreeSans" }
+		pre.cjk { font-family: "Courier New", monospace }
+		code.cjk { font-family: "Courier New", monospace }
+	</style>
+</head>
+<body lang="en-US" dir="ltr">
+<h1 align="center"><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><font size="6" style="font-size: 22pt"><span lang="zh-CN">正则表达式</span></font></font></span></h1>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">字符串是编程时涉及到的最多的一种数据结构，对字符串进行操作的需求几乎无处不在。比如判断一个字符串是否是合法的</span></font>Email<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">地址，虽然可以编程提取</span></span></font><code class="western"><span style="background: #ffff00">@</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">前后的子串，再分别判断是否是单词和域名，但这样做不但麻烦，而且代码难以复用。</span></span></font></p>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">正则表达式是一种用来匹配字符串的强有力的武器。它的设计思想是用一种描述性的语言来给字符串定义一个规则，凡是符合规则的字符串，我们就认为它“匹配”了，否则，该字符串就是不合法的。</span></span></font></p>
+<p><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">所以我们判断一个字符串是否是合法的</span></font>Email<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">的方法是：</span></font></span></p>
+<ol>
+	<li/>
+<p><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">创建一个匹配</span></font>Email<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">的正则表达式；</span></font></span></p>
+	<li/>
+<p><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">用该正则表达式去匹配用户的输入来判断是否合法。</span></font></span></p>
+</ol>
+<p><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">因为正则表达式也是用字符串表示的，所以，我们要首先了解如何用字符来描述字符。</span></font></span></p>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">在正则表达式中，如果直接给出字符，就是精确匹配。用</span></span></font><code class="western"><span style="background: #ffff00">\d</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">可以匹配一个数字，</span></span></font><code class="western"><span style="background: #ffff00">\w</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">可以匹配一个字母或数字，所以：</span></span></font></p>
+<ul>
+	<li/>
+<p><code class="western"><span style="background: #ffff00">'00\d'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">可以匹配</span></span></font><code class="western"><span style="background: #ffff00">'007'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">，但无法匹配</span></span></font><code class="western"><span style="background: #ffff00">'00A'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">；</span></span></font></p>
+	<li/>
+<p><code class="western"><span style="background: #ffff00">'\d\d\d'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">可以匹配</span></span></font><code class="western"><span style="background: #ffff00">'010'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">；</span></span></font></p>
+	<li/>
+<p><code class="western"><span style="background: #ffff00">'\w\w\d'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">可以匹配</span></span></font><code class="western"><span style="background: #ffff00">'py3'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">；</span></span></font></p>
+</ul>
+<p><code class="western"><span style="background: #ffff00">.</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">可以匹配任意字符，所以：</span></span></font></p>
+<ul>
+	<li/>
+<p><code class="western"><span style="background: #ffff00">'py.'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">可以匹配</span></span></font><code class="western"><span style="background: #ffff00">'pyc'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">、</span></span></font><code class="western"><span style="background: #ffff00">'pyo'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">、</span></span></font><code class="western"><span style="background: #ffff00">'py!'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">等等。
+	</span></span></font>
+	</p>
+</ul>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">要匹配变长的字符，在正则表达式中，用</span></span></font><code class="western"><span style="background: #ffff00">*</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示任意个字符（包括</span></font>0<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">个），用</span></span></font><code class="western"><span style="background: #ffff00">+</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示至少一个字符，用</span></span></font><code class="western"><span style="background: #ffff00">?</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示</span></font>0<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">个或</span></font>1<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">个字符，用</span></span></font><code class="western"><span style="background: #ffff00">{n}</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示</span></font>n<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">个字符，用</span></span></font><code class="western"><span style="background: #ffff00">{n,m}</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示</span></font>n-m<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">个字符：</span></span></font></p>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">来看一个复杂的例子：</span></span></font><code class="western"><span style="background: #ffff00">\d{3}\s+\d{3,8}</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">。</span></span></font></p>
+<p><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">我们来从左到右解读一下：</span></font></span></p>
+<ol>
+	<li/>
+<p><code class="western"><span style="background: #ffff00">\d{3}</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示匹配</span></font>3<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">个数字，例如</span></span></font><code class="western"><span style="background: #ffff00">'010'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">；</span></span></font></p>
+	<li/>
+<p><code class="western"><span style="background: #ffff00">\s</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">可以匹配一个空格（也包括</span></font>Tab<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">等空白符），所以</span></span></font><code class="western"><span style="background: #ffff00">\s+</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示至少有一个空格，例如匹配</span></span></font><code class="western"><span style="background: #ffff00">'
+	'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">，</span></span></font><code class="western"><span style="background: #ffff00">'
+	'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">等；</span></span></font></p>
+	<li/>
+<p><code class="western"><span style="background: #ffff00">\d{3,8}</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示</span></font>3-8<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">个数字，例如</span></span></font><code class="western"><span style="background: #ffff00">'1234567'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">。</span></span></font></p>
+</ol>
+<p><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">综合起来，上面的正则表达式可以匹配以任意个空格隔开的带区号的电话号码。</span></font></span></p>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">如果要匹配</span></span></font><code class="western"><span style="background: #ffff00">'010-12345'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">这样的号码呢？由于</span></span></font><code class="western"><span style="background: #ffff00">'-'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">是特殊字符，在正则表达式中，要用</span></span></font><code class="western"><span style="background: #ffff00">'\'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">转义，所以，上面的正则是</span></span></font><code class="western"><span style="background: #ffff00">\d{3}\-\d{3,8}</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">。</span></span></font></p>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">但是，仍然无法匹配</span></span></font><code class="western"><span style="background: #ffff00">'010
+- 12345'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">，因为带有空格。所以我们需要更复杂的匹配方式。</span></span></font></p>
+<h3 class="western"><a name="#-E8-BF-9B-E9-98-B6"></a><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">进阶</span></font></span></h3>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">要做更精确地匹配，可以用</span></span></font><code class="western"><span style="background: #ffff00">[]</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示范围，比如：</span></span></font></p>
+<ul>
+	<li/>
+<p><code class="western"><span style="background: #ffff00">[0-9a-zA-Z\_]</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">可以匹配一个数字、字母或者下划线；</span></span></font></p>
+	<li/>
+<p><code class="western"><span style="background: #ffff00">[0-9a-zA-Z\_]+</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">可以匹配至少由一个数字、字母或者下划线组成的字符串，比如</span></span></font><code class="western"><span style="background: #ffff00">'a100'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">，</span></span></font><code class="western"><span style="background: #ffff00">'0_Z'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">，</span></span></font><code class="western"><span style="background: #ffff00">'Py3000'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">等等；</span></span></font></p>
+	<li/>
+<p><code class="western"><span style="background: #ffff00">[a-zA-Z\_][0-9a-zA-Z\_]*</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">可以匹配由字母或下划线开头，后接任意个由一个数字、字母或者下划线组成的字符串，也就是</span></font>Python<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">合法的变量；</span></span></font></p>
+	<li/>
+<p><code class="western"><span style="background: #ffff00">[a-zA-Z\_][0-9a-zA-Z\_]{0,
+	19}</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">更精确地限制了变量的长度是</span></font>1-20<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">个字符（前面</span></font>1<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">个字符</span></font>+<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">后面最多</span></font>19<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">个字符）。</span></span></font></p>
+</ul>
+<p><code class="western"><span style="background: #ffff00">A|B</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">可以匹配</span></font>A<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">或</span></font>B<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">，所以</span></span></font><code class="western"><span style="background: #ffff00">(P|p)ython</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">可以匹配</span></span></font><code class="western"><span style="background: #ffff00">'Python'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">或者</span></span></font><code class="western"><span style="background: #ffff00">'python'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">。</span></span></font></p>
+<p><code class="western"><span style="background: #ffff00">^</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示行的开头，</span></span></font><code class="western"><span style="background: #ffff00">^\d</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示必须以数字开头。</span></span></font></p>
+<p><code class="western"><span style="background: #ffff00">$</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示行的结束，</span></span></font><code class="western"><span style="background: #ffff00">\d$</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示必须以数字结束。</span></span></font></p>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">你可能注意到了，</span></span></font><code class="western"><span style="background: #ffff00">py</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">也可以匹配</span></span></font><code class="western"><span style="background: #ffff00">'python'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">，但是加上</span></span></font><code class="western"><span style="background: #ffff00">^py$</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">就变成了整行匹配，就只能匹配</span></span></font><code class="western"><span style="background: #ffff00">'py'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">了。</span></span></font></p>
+<h3 class="western"><a name="#re-E6-A8-A1-E5-9D-97"></a><span style="background: #ffff00">re<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">模块</span></font></span></h3>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">有了准备知识，我们就可以在</span></font>Python<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">中使用正则表达式了。</span></font>Python<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">提供</span></span></font><code class="western"><span style="background: #ffff00">re</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">模块，包含所有正则表达式的功能。由于</span></font>Python<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">的字符串本身也用</span></span></font><code class="western"><span style="background: #ffff00">\</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">转义，所以要特别注意：</span></span></font></p>
+<pre class="western"><code class="western"><span style="background: #ffff00">s = 'ABC\\-001' # Python</code><font face="Courier New, monospace"><span lang="zh-CN"><code class="cjk">的字符串</span></code></span></font>
+<code class="western"><span style="background: #ffff00"># </code><font face="Courier New, monospace"><span lang="zh-CN"><code class="cjk">对应的正则表达式字符串变成：</span></code></span></font>
+<code class="western"><span style="background: #ffff00"># 'ABC\-001'</span></code></pre><p>
+<font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">因此我们强烈建议使用</span></font>Python<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">的</span></span></font><code class="western"><span style="background: #ffff00">r</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">前缀，就不用考虑转义的问题了：</span></span></font></p>
+<pre class="western"><code class="western"><span style="background: #ffff00">s = r'ABC\-001' # Python</code><font face="Courier New, monospace"><span lang="zh-CN"><code class="cjk">的字符串</span></code></span></font>
+<code class="western"><span style="background: #ffff00"># </code><font face="Courier New, monospace"><span lang="zh-CN"><code class="cjk">对应的正则表达式字符串不变：</span></code></span></font>
+<code class="western"><span style="background: #ffff00"># 'ABC\-001'</span></code></pre><p>
+<span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">先看看如何判断正则表达式是否匹配：</span></font></span></p>
+<pre class="western"><code class="western"><span style="background: #ffff00">&gt;&gt;&gt; import re</span></code>
+<code class="western"><span style="background: #ffff00">&gt;&gt;&gt; re.match(r'^\d{3}\-\d{3,8}$', '010-12345')</span></code>
+<code class="western"><span style="background: #ffff00">&lt;_sre.SRE_Match object; span=(0, 9), match='010-12345'&gt;</span></code>
+<code class="western"><span style="background: #ffff00">&gt;&gt;&gt; re.match(r'^\d{3}\-\d{3,8}$', '010 12345')</span></code>
+<code class="western"><span style="background: #ffff00">&gt;&gt;&gt;</span></code></pre><p>
+<code class="western"><span style="background: #ffff00">match()</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">方法判断是否匹配，如果匹配成功，返回一个</span></span></font><code class="western"><span style="background: #ffff00">Match</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">对象，否则返回</span></span></font><code class="western"><span style="background: #ffff00">None</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">。常见的判断方法就是：</span></span></font></p>
+<pre class="western"><code class="western"><span style="background: #ffff00">test = '</code><font face="Courier New, monospace"><span lang="zh-CN"><code class="cjk">用户输入的字符串</code></span></font><code class="western">'</span></code>
+<code class="western"><span style="background: #ffff00">if re.match(r'</code><font face="Courier New, monospace"><span lang="zh-CN"><code class="cjk">正则表达式</code></span></font><code class="western">', test):</span></code>
+<code class="western"><span style="background: #ffff00">    </code><code class="western">print('ok')</span></code>
+<code class="western"><span style="background: #ffff00">else:</span></code>
+<code class="western"><span style="background: #ffff00">    </code><code class="western">print('failed')</span></code></pre><h3 class="western">
+<a name="#-E5-88-87-E5-88-86-E5-AD-97-E7-AC-A6-E4-B8-B2"></a><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">切分字符串</span></font></span></h3>
+<p><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">用正则表达式切分字符串比用固定的字符更灵活，请看正常的切分代码：</span></font></span></p>
+<pre class="western"><code class="western"><span style="background: #ffff00">&gt;&gt;&gt; 'a b   c'.split(' ')</span></code>
+<code class="western"><span style="background: #ffff00">['a', 'b', '', '', 'c']</span></code></pre><p>
+<span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">嗯，无法识别连续的空格，用正则表达式试试：</span></font></span></p>
+<pre class="western"><code class="western"><span style="background: #ffff00">&gt;&gt;&gt; re.split(r'\s+', 'a b   c')</span></code>
+<code class="western"><span style="background: #ffff00">['a', 'b', 'c']</span></code></pre><p>
+<font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">无论多少个空格都可以正常分割。加入</span></span></font><code class="western"><span style="background: #ffff00">,</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">试试：</span></span></font></p>
+<pre class="western"><code class="western"><span style="background: #ffff00">&gt;&gt;&gt; re.split(r'[\s\,]+', 'a,b, c  d')</span></code>
+<code class="western"><span style="background: #ffff00">['a', 'b', 'c', 'd']</span></code></pre><p>
+<font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">再加入</span></span></font><code class="western"><span style="background: #ffff00">;</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">试试：</span></span></font></p>
+<pre class="western"><code class="western"><span style="background: #ffff00">&gt;&gt;&gt; re.split(r'[\s\,\;]+', 'a,b;; c  d')</span></code>
+<code class="western"><span style="background: #ffff00">['a', 'b', 'c', 'd']</span></code></pre><p>
+<span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">如果用户输入了一组标签，下次记得用正则表达式来把不规范的输入转化成正确的数组。</span></font></span></p>
+<h3 class="western"><a name="#-E5-88-86-E7-BB-84"></a><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">分组</span></font></span></h3>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">除了简单地判断是否匹配之外，正则表达式还有提取子串的强大功能。用</span></span></font><code class="western"><span style="background: #ffff00">()</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">表示的就是要提取的分组（</span></font>Group<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">）。比如：</span></span></font></p>
+<p><code class="western"><span style="background: #ffff00">^(\d{3})-(\d{3,8})$</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">分别定义了两个组，可以直接从匹配的字符串中提取出区号和本地号码：</span></span></font></p>
+<pre class="western"><a name="__DdeLink__9_1562237119"></a><code class="western"><span style="background: #ffff00">&gt;&gt;&gt; m = re.match(r'^(\d{3})-(\d{3,8})$', '010-12345')</span></code>
+<code class="western"><span style="background: #ffff00">&gt;&gt;&gt; m</span></code>
+<code class="western"><span style="background: #ffff00">&lt;_sre.SRE_Match object; span=(0, 9), match='010-12345'&gt;</span></code>
+<code class="western"><span style="background: #ffff00">&gt;&gt;&gt; m.group(0)</span></code>
+<code class="western"><span style="background: #ffff00">'010-12345'</span></code>
+<code class="western"><span style="background: #ffff00">&gt;&gt;&gt; m.group(1)</span></code>
+<code class="western"><span style="background: #ffff00">'010'</span></code>
+<code class="western"><span style="background: #ffff00">&gt;&gt;&gt; m.group(2)</span></code>
+<code class="western"><span style="background: #ffff00">'12345'</span></code></pre><p>
+<font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">如果正则表达式中定义了组，就可以在</span></span></font><code class="western"><span style="background: #ffff00">Match</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">对象上用</span></span></font><code class="western"><span style="background: #ffff00">group()</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">方法提取出子串来。</span></span></font></p>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">注意到</span></span></font><code class="western"><span style="background: #ffff00">group(0)</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">永远是原始字符串，</span></span></font><code class="western"><span style="background: #ffff00">group(1)</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">、</span></span></font><code class="western"><span style="background: #ffff00">group(2)</span></code><span style="background: #ffff00">……<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">表示第</span></font>1<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">、</span></font>2<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">、……个子串。</span></span></font></p>
+<p><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">提取子串非常有用。来看一个更凶残的例子：</span></font></span></p>
+<pre class="western"><a name="__DdeLink__11_1562237119"></a><code class="western"><span style="background: #ffff00">&gt;&gt;&gt; t = '19:05:30'</span></code>
+<a name="__DdeLink__13_1562237119"></a><code class="western"><span style="background: #ffff00">&gt;&gt;&gt; m = re.match(r'^(0[0-9]|1[0-9]|2[0-3]|[0-9])\:(0[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|[0-9])\:(0[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|[0-9])$', t)</span></code>
+<a name="__DdeLink__15_1562237119"></a><code class="western"><span style="background: #ffff00">&gt;&gt;&gt; m.groups()</span></code>
+<code class="western"><span style="background: #ffff00">('19', '05', '30')</span></code></pre><p>
+<font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">这个正则表达式可以直接识别合法的时间。但是有些时候，用正则表达式也无法做到完全验证，比如识别日期：</span></span></font></p>
+<pre class="western" style="margin-bottom: 0.2in"><a name="__DdeLink__17_1562237119"></a><code class="western"><span style="background: #ffff00">'^(0[1-9]|1[0-2]|[0-9])-(0[1-9]|1[0-9]|2[0-9]|3[0-1]|[0-9])$'</span></code></pre><p>
+<font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">对于</span></span></font><code class="western"><span style="background: #ffff00">'2-30'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">，</span></span></font><code class="western"><span style="background: #ffff00">'4-31'</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">这样的非法日期，用正则还是识别不了，或者说写出来非常困难，这时就需要程序配合识别了。</span></span></font></p>
+<h3 class="western"><a name="#-E8-B4-AA-E5-A9-AA-E5-8C-B9-E9-85-8D"></a>
+<span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">贪婪匹配</span></font></span></h3>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">最后需要特别指出的是，正则匹配默认是贪婪匹配，也就是匹配尽可能多的字符。举例如下，匹配出数字后面的</span></span></font><code class="western"><span style="background: #ffff00">0</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">：</span></span></font></p>
+<pre class="western"><code class="western"><span style="background: #ffff00">&gt;&gt;&gt; re.match(r'^(\d+)(0*)$', '102300').groups()</span></code>
+<code class="western"><span style="background: #ffff00">('102300', '')</span></code></pre><p>
+<font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">由于</span></span></font><code class="western"><span style="background: #ffff00">\d+</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">采用贪婪匹配，直接把后面的</span></span></font><code class="western"><span style="background: #ffff00">0</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">全部匹配了，结果</span></span></font><code class="western"><span style="background: #ffff00">0*</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">只能匹配空字符串了。</span></span></font></p>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">必须让</span></span></font><code class="western"><span style="background: #ffff00">\d+</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">采用非贪婪匹配（也就是尽可能少匹配），才能把后面的</span></span></font><code class="western"><span style="background: #ffff00">0</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">匹配出来，加个</span></span></font><code class="western"><span style="background: #ffff00">?</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">就可以让</span></span></font><code class="western"><span style="background: #ffff00">\d+</span></code><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">采用非贪婪匹配：</span></span></font></p>
+<pre class="western"><code class="western"><span style="background: #ffff00">&gt;&gt;&gt; re.match(r'^(\d+?)(0*)$', '102300').groups()</span></code>
+<code class="western"><span style="background: #ffff00">('1023', '00')</span></code></pre><h3 class="western">
+<a name="#-E7-BC-96-E8-AF-91"></a><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">编译</span></font></span></h3>
+<p><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">当我们在</span></font>Python<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">中使用正则表达式时，</span></font>re<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">模块内部会干两件事情：</span></font></span></p>
+<ol>
+	<li/>
+<p><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">编译正则表达式，如果正则表达式的字符串本身不合法，会报错；</span></font></span></p>
+	<li/>
+<p><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">用编译后的正则表达式去匹配字符串。</span></font></span></p>
+</ol>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">如果一个正则表达式要重复使用几千次，出于效率的考虑，我们可以预编译该正则表达式，接下来重复使用时就不需要编译这个步骤了，直接匹配：</span></span></font></p>
+<pre class="western"><code class="western"><span style="background: #ffff00">&gt;&gt;&gt; import re</span></code>
+<code class="western"><span style="background: #ffff00"># </code><font face="Courier New, monospace"><span lang="zh-CN"><code class="cjk">编译</code></span></font><code class="western">:</span></code>
+<code class="western"><span style="background: #ffff00">&gt;&gt;&gt; re_telephone = re.compile(r'^(\d{3})-(\d{3,8})$')</span></code>
+<code class="western"><span style="background: #ffff00"># </code><font face="Courier New, monospace"><span lang="zh-CN"><code class="cjk">使用：</span></code></span></font>
+<code class="western"><span style="background: #ffff00">&gt;&gt;&gt; re_telephone.match('010-12345').groups()</span></code>
+<code class="western"><span style="background: #ffff00">('010', '12345')</span></code>
+<code class="western"><span style="background: #ffff00">&gt;&gt;&gt; re_telephone.match('010-8086').groups()</span></code>
+<code class="western"><span style="background: #ffff00">('010', '8086')</span></code></pre><p>
+<font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">编译后生成</span></font>Regular
+Expression<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">对象，由于该对象自己包含了正则表达式，所以调用对应的方法时不用给出正则字符串。</span></span></font></p>
+<h3 class="western"><a name="#-E5-B0-8F-E7-BB-93"></a><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">小结</span></font></span></h3>
+<p><font face="Noto Sans CJK SC Regular"><span lang="zh-CN"><span style="background: #ffff00">正则表达式非常强大，要在短短的一节里讲完是不可能的。要讲清楚正则的所有内容，可以写一本厚厚的书了。如果你经常遇到正则表达式的问题，你可能需要一本正则表达式的参考书。</span></span></font></p>
+<h3 class="western"><a name="#-E7-BB-83-E4-B9-A0"></a><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">练习</span></font></span></h3>
+<p><span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">请尝试写一个验证</span></font>Email<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">地址的正则表达式。版本一应该可以验证出类似的</span></font>Email<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">：</span></font></span></p>
+<pre class="western"><a name="__DdeLink__19_1562237119"></a><code class="western"><span style="background: #ffff00">someone@gmail.com</span></code>
+<code class="western"><span style="background: #ffff00">bill.gates@microsoft.com</span></code></pre><p>
+<span style="background: #ffff00"><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">版本二可以验证并提取出带名字的</span></font>Email<font face="Noto Sans CJK SC Regular"><span lang="zh-CN">地址：</span></font></span></p>
+<pre class="western" style="margin-bottom: 0.2in"><code class="western">&lt;Tom Paris&gt; tom@voyager.org</code></pre><h3 class="western">
+<a name="#-E5-8F-82-E8-80-83-E6-BA-90-E7-A0-81"></a><font face="Noto Sans CJK SC Regular"><span lang="zh-CN">参考源码</span></font></h3>
+<p><a href="https://github.com/michaelliao/learn-python3/blob/master/samples/regex/regex.py" target="_blank">regex.py</a></p>
+</body>
+</html>
