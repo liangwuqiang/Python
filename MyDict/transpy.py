@@ -38,12 +38,11 @@ def translate(message):
 
 
 def deal(line, message):
-    # newline = line
-    if not line:
-        message = translate(message)
-        newline = line.rstrip() + ' #--> ' + message + '\n'
-        # logging.debug(line)
-        return newline
+    if not line.rstrip():
+        return line
+    message = translate(message)
+    line = line.rstrip() + ' #--> ' + message + '\n'
+    # logging.debug(line)
     return line
 
 
@@ -55,28 +54,30 @@ def handle(lines):
         if not newline:
             newline = '\n'
         elif re_comment.findall(line):
-            message = re_comment.search(line).group(1)
+            message = re_comment.search(line).group(1).strip()
             newline = deal(line, message)
-            # print(newline.rstrip())
+            print(newline.rstrip())
         elif re_oneline.findall(line):
-            message = re_oneline.search(line).group(1)
+            message = re_oneline.search(line).group(1).strip()
             newline = deal(line, message)
             # print(newline.rstrip())
         elif tag[0] is True and line.find('"""') == -1:
             message = line.strip()
             newline = deal(line, message)
-            print(newline.rstrip())
+            # print(newline.rstrip())
         elif len(re_explain.findall(line)) == 1:
             if tag[0] is False:
                 tag[0] = True
-                message = re_explain.search(line).group(2)  # 右边部分
+                message = re_explain.search(line).group(2).strip()  # 右边部分
                 if message:
                     newline = deal(line, message)
+                # print(newline.rstrip())
             else:
                 tag[0] = False
-                message = re_explain.search(line).group(1)  # 左边部分
+                message = re_explain.search(line).group(1).strip()  # 左边部分
                 if message:
                     newline = deal(line, message)
+                # print(newline.rstrip())
         content.append(newline)
     return ''.join(content)
 
