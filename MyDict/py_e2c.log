@@ -1,0 +1,2043 @@
+已完成: /home/lwq/Python/MyDict/test/appendix_d/hello_world.py
+========================================
+# Create a D6 and a D10.
+# ## 创建一个D6 D10。
+
+# Make some rolls, and store results in a list.
+# ## 做一些卷,并将结果存储在一个列表。
+
+# Analyze the results.
+# ## 分析结果。
+
+# Visualize the results.
+# ## 可视化结果。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_15/different_dice.py
+========================================
+# Keep making new walks, as long as the program is active.
+# ## 保证新走,只要程序是活跃的。
+
+    # Make a random walk, and plot the points.
+    # ## 做一个随机游走,情节点。
+
+    # Set the size of the plotting window.
+    # ## 设置绘图窗口的大小。
+
+    # Emphasize the first and last points.
+    # ## 强调第一个和最后一个点。
+
+    # Remove the axes.
+    # ## 删除轴。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_15/rw_visual.py
+========================================
+# Create two D6 dice.
+# ## 创建两个D6骰子。
+
+# Make some rolls, and store results in a list.
+# ## 做一些卷,并将结果存储在一个列表。
+
+# Analyze the results.
+# ## 分析结果。
+
+# Visualize the results.
+# ## 可视化结果。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_15/dice_visual.py
+========================================
+# Create a D6.
+# ## 创建一个D6。
+
+# Make some rolls, and store results in a list.
+# ## 做一些卷,并将结果存储在一个列表。
+
+# Analyze the results.
+# ## 分析结果。
+
+# Visualize the results.
+# ## 可视化结果。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_15/die_visual.py
+========================================
+# Set chart title and label axes.
+# ## 设置图表标题和标签的轴。
+
+# Set size of tick labels.
+# ## 设置标记标签的大小。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_15/mpl_squares.py
+========================================
+# Set chart title, and label axes.
+# ## 设置图表标题、标签和轴。
+
+# Set size of tick labels.
+# ## 设置标记标签的大小。
+
+# Set the range for each axis.
+# ## 设置每个轴的范围。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_15/scatter_squares.py
+========================================
+    """A class representing a single die."""
+    # ## 一个类代表一个死。
+
+        """Assume a six-sided die."""
+        # ## 假设一个六面骰子。
+
+        """"Return a random value between 1 and number of sides."""
+        # ## “返回一个随机的值介于1和许多。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_15/die.py
+========================================
+    """A class to generate random walks."""
+    # ## 一个类来生成随机漫步。
+
+        """Initialize attributes of a walk."""
+        # ## 初始化属性的行走。
+
+        # All walks start at (0, 0).
+        # ## 各行各业开始(0,0)。
+
+        """Calculate all the points in the walk."""
+        # ## 计算所有的点在走。
+
+        # Keep taking steps until the walk reaches the desired length.
+        # ## 继续采取措施,直到走到所需长度。
+
+            # Decide which direction to go, and how far to go in that direction.
+            # ## 决定去哪个方向,朝这个方向走多远。
+
+            # Reject moves that go nowhere.
+            # ## 拒绝行动,无处可去。
+
+            # Calculate the next x and y values.
+            # ## 计算下一个x和y值。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_15/random_walk.py
+========================================
+# Create a D6 and a D10.
+# ## 创建一个D6 D10。
+
+# Make some rolls, and store results in a list.
+# ## 做一些卷,并将结果存储在一个列表。
+
+# Analyze the results.
+# ## 分析结果。
+
+# Visualize the results.
+# ## 可视化结果。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_15/pygal2_update/different_dice.py
+========================================
+# Create two D6 dice.
+# ## 创建两个D6骰子。
+
+# Make some rolls, and store results in a list.
+# ## 做一些卷,并将结果存储在一个列表。
+
+# Analyze the results.
+# ## 分析结果。
+
+# Visualize the results.
+# ## 可视化结果。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_15/pygal2_update/dice_visual.py
+========================================
+# Create a D6.
+# ## 创建一个D6。
+
+# Make some rolls, and store results in a list.
+# ## 做一些卷,并将结果存储在一个列表。
+
+# Analyze the results.
+# ## 分析结果。
+
+# Visualize the results.
+# ## 可视化结果。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_15/pygal2_update/die_visual.py
+========================================
+    """A class representing a single die."""
+    # ## 一个类代表一个死。
+
+        """Assume a six-sided die."""
+        # ## 假设一个六面骰子。
+
+        """"Return a random value between 1 and number of sides."""
+        # ## “返回一个随机的值介于1和许多。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_15/pygal2_update/die.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_18/manage.py
+========================================
+"""
+
+WSGI config for learning_log project.
+# ## WSGI learning_log项目配置。
+
+
+
+It exposes the WSGI callable as a module-level variable named ``application``.
+# ## 它使WSGI可调用的模块级变量命名为“应用程序”。
+
+
+
+For more information on this file, see
+# ## 关于这个文件的更多信息,请参阅
+
+https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/
+# ## https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/
+
+"""
+
+已完成: /home/lwq/Python/MyDict/test/chapter_18/learning_log/wsgi.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_18/learning_log/__init__.py
+========================================
+"""
+
+Django settings for learning_log project.
+# ## Django learning_log项目设置。
+
+
+
+Generated by 'django-admin startproject' using Django 1.8.4.
+# ## 使用Django 1.8.4由“django-admin startproject”。
+
+
+
+For more information on this file, see
+# ## 关于这个文件的更多信息,请参阅
+
+https://docs.djangoproject.com/en/1.8/topics/settings/
+# ## https://docs.djangoproject.com/en/1.8/topics/settings/
+
+
+
+For the full list of settings and their values, see
+# ## 设置的完整列表和他们的价值观,明白了
+
+https://docs.djangoproject.com/en/1.8/ref/settings/
+# ## https://docs.djangoproject.com/en/1.8/ref/settings/
+
+"""
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# ## 在项目构建路径:os.path。加入(BASE_DIR…)
+
+# Quick-start development settings - unsuitable for production
+# ## 快速启动开发设置,不适合生产
+
+# See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
+# ## 参见https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+# ## 安全警告:生产中使用的密钥保密!
+
+# SECURITY WARNING: don't run with debug turned on in production!
+# ## 安全警告:不要在生产运行与调试打开!
+
+# Application definition
+# ## 应用程序定义
+
+    # My apps
+    # ## 我的应用程序
+
+# Database
+# ## 数据库
+
+# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+# ## https://docs.djangoproject.com/en/1.8/ref/settings/数据库
+
+# Internationalization
+# ## 国际化
+
+# https://docs.djangoproject.com/en/1.8/topics/i18n/
+# ## https://docs.djangoproject.com/en/1.8/topics/i18n/
+
+# Static files (CSS, JavaScript, Images)
+# ## 静态文件(CSS、JavaScript、图像)
+
+# https://docs.djangoproject.com/en/1.8/howto/static-files/
+# ## https://docs.djangoproject.com/en/1.8/howto/static-files/
+
+已完成: /home/lwq/Python/MyDict/test/chapter_18/learning_log/settings.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_18/learning_log/urls.py
+========================================
+    """The home page for Learning Log."""
+    # ## 学习主页的日志。
+
+    """Show all topics."""
+    # ## 显示所有主题。
+
+    """Show a single topic, and all its entries."""
+    # ## 显示单个主题,及其所有条目。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_18/learning_logs/views.py
+========================================
+# Create your tests here.
+# ## 创建您的测试。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_18/learning_logs/tests.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_18/learning_logs/__init__.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_18/learning_logs/admin.py
+========================================
+"""Defines url patterns for learning_logs."""
+# ## 定义了learning_logs url模式。
+
+    # Home page.
+    # ## 主页。
+
+    # Show all topics.
+    # ## 显示所有主题。
+
+    # Detail page for a single topic.
+    # ## 单个主题的详细信息页面。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_18/learning_logs/urls.py
+========================================
+    """A topic the user is learning about."""
+    # ## 主题用户学习。
+
+        """Return a string representation of the model."""
+        # ## 返回一个字符串表示的模型。
+
+    """Something specific learned about a topic."""
+    # ## 具体了解了主题的东西。
+
+        """Return a string representation of the model."""
+        # ## 返回一个字符串表示的模型。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_18/learning_logs/models.py
+========================================
+# -*- coding: utf-8 -*-
+# ## - * -编码:utf - 8 - *
+
+已完成: /home/lwq/Python/MyDict/test/chapter_18/learning_logs/migrations/0001_initial.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_18/learning_logs/migrations/__init__.py
+========================================
+# -*- coding: utf-8 -*-
+# ## - * -编码:utf - 8 - *
+
+已完成: /home/lwq/Python/MyDict/test/chapter_18/learning_logs/migrations/0002_entry.py
+========================================
+# Make an API call, and store the response.
+# ## 做一个API调用和存储的响应。
+
+# Store API response in a variable.
+# ## API响应存储在一个变量中。
+
+# Explore information about the repositories.
+# ## 探索关于存储库的信息。
+
+# Make visualization.
+# ## 使可视化。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_17/python_repos.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_17/bar_descriptions.py
+========================================
+# Make an API call, and store the response.
+# ## 做一个API调用和存储的响应。
+
+# Process information about each submission.
+# ## 每个提交的信息的过程。
+
+    # Make a separate API call for each submission.
+    # ## 让每个提交的一个单独的API调用。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_17/hn_submissions.py
+========================================
+# Make an API call, and store the response.
+# ## 做一个API调用和存储的响应。
+
+# Store API response in a variable.
+# ## API响应存储在一个变量中。
+
+# Explore information about the repositories.
+# ## 探索关于存储库的信息。
+
+# Make visualization.
+# ## 使可视化。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_17/pygal2_update/python_repos.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_17/pygal2_update/bar_descriptions.py
+========================================
+    """A class to represent a single alien in the fleet."""
+    # ## 一个类代表一个外星舰队中。
+
+        """Initialize the alien, and set its starting position."""
+        # ## 初始化外星人,并设置其起始位置。
+
+        # Load the alien image, and set its rect attribute.
+        # ## 加载外星人的形象,并设置其矩形属性。
+
+        # Start each new alien near the top left of the screen.
+        # ## 开始每一个新的外星人在屏幕的左上角。
+
+        # Store the alien's exact position.
+        # ## 存储外星人的确切位置。
+
+        """Return True if alien is at edge of screen."""
+        # ## 返回True,如果外星人是在屏幕的边缘。
+
+        """Move the alien right or left."""
+        # ## 外星人的左右移动。
+
+        """Draw the alien at its current location."""
+        # ## 画出外星人在其当前位置。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_14/alien.py
+========================================
+        """Initialize the ship, and set its starting position."""
+        # ## 初始化,并设置其起始位置。
+
+        # Load the ship image, and get its rect.
+        # ## 负载船形象,和矩形。
+
+        # Start each new ship at the bottom center of the screen.
+        # ## 开始每个新船屏幕底部的中心。
+
+        # Store a decimal value for the ship's center.
+        # ## 为船舶中心存储一个十进制值。
+
+        # Movement flags.
+        # ## 运动的旗帜。
+
+        """Center the ship on the screen."""
+        # ## 中心屏幕上的船。
+
+        """Update the ship's position, based on movement flags."""
+        # ## 更新船的位置,基于运动的旗帜。
+
+        # Update the ship's center value, not the rect.
+        # ## 更新船的中心价值,而不是矩形。
+
+        # Update rect object from self.center.
+        # ## 更新从self.center矩形对象。
+
+        """Draw the ship at its current location."""
+        # ## 画船在它的当前位置。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_14/ship.py
+========================================
+    """A class to store all settings for Alien Invasion."""
+    # ## 外星人入侵的一个类来存储所有设置。
+
+        """Initialize the game's static settings."""
+        # ## 初始化游戏的静态设置。
+
+        # Screen settings.
+        # ## 屏幕上设置。
+
+        # Ship settings.
+        # ## 船设置。
+
+        # Bullet settings.
+        # ## 子弹的设置。
+
+        # Alien settings.
+        # ## 外星人的设置。
+
+        # How quickly the game speeds up.
+        # ## 游戏加速的速度有多快。
+
+        # How quickly the alien point values increase.
+        # ## 外星人点值的速度增加。
+
+        """Initialize settings that change throughout the game."""
+        # ## 初始化设置改变整个游戏。
+
+        # Scoring.
+        # ## 得分。
+
+        # fleet_direction of 1 represents right, -1 represents left.
+        # ## 
+
+        """Increase speed settings and alien point values."""
+        # ## 提高速度设置和外星人点值。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_14/settings.py
+========================================
+        """Initialize button attributes."""
+        # ## 初始化按钮属性。
+
+        # Set the dimensions and properties of the button.
+        # ## 的维度和属性设置按钮。
+
+        # Build the button's rect object, and center it.
+        # ## 建立按钮的矩形对象,中心。
+
+        # The button message only needs to be prepped once.
+        # ## 按钮的消息只需要准备一次。
+
+        """Turn msg into a rendered image, and center text on the button."""
+        # ## 把味精变成呈现的形象,中心按钮上的文本。
+
+        # Draw blank button, then draw message.
+        # ## 绘制空白按钮,然后画出消息。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_14/button.py
+========================================
+    """Respond to keypresses."""
+    # ## 响应按键。
+
+    """Respond to key releases."""
+    # ## 应对关键版本。
+
+    """Respond to keypresses and mouse events."""
+    # ## 响应按键和鼠标事件。
+
+    """Start a new game when the player clicks Play."""
+    # ## 当玩家点击开始一个新的游戏。
+
+        # Reset the game settings.
+        # ## 重置游戏设置。
+
+        # Hide the mouse cursor.
+        # ## 隐藏鼠标光标。
+
+        # Reset the game statistics.
+        # ## 重置游戏统计数据。
+
+        # Reset the scoreboard images.
+        # ## 重置记分板图片。
+
+        # Empty the list of aliens and bullets.
+        # ## 空的外星人和子弹的列表。
+
+        # Create a new fleet and center the ship.
+        # ## 创建一个新的船舰队和中心。
+
+    """Fire a bullet, if limit not reached yet."""
+    # ## 火一颗子弹,如果没有达到极限。
+
+    # Create a new bullet, add to bullets group.
+    # ## 创建一个新的子弹,子弹群。
+
+    """Update images on the screen, and flip to the new screen."""
+    # ## 更新图像在屏幕上,翻转到新屏幕。
+
+    # Redraw the screen, each pass through the loop.
+    # ## 屏幕重绘,每个通过循环。
+
+    # Redraw all bullets, behind ship and aliens.
+    # ## 重画所有的子弹,在船和外星人。
+
+    # Draw the score information.
+    # ## 画出得分信息。
+
+    # Draw the play button if the game is inactive.
+    # ## 画出播放按钮,如果游戏活动。
+
+    # Make the most recently drawn screen visible.
+    # ## 使最近绘制屏幕可见。
+
+    """Update position of bullets, and get rid of old bullets."""
+    # ## 更新子弹的位置,摆脱旧的子弹。
+
+    # Update bullet positions.
+    # ## 更新子弹的位置。
+
+    # Get rid of bullets that have disappeared.
+    # ## 摆脱已经消失的子弹。
+
+    """Check to see if there's a new high score."""
+    # ## 检查是否有新的高分。
+
+    """Respond to bullet-alien collisions."""
+    # ## 应对bullet-alien碰撞。
+
+    # Remove any bullets and aliens that have collided.
+    # ## 删除任何子弹和外星人相撞。
+
+        # If the entire fleet is destroyed, start a new level.
+        # ## 如果整个舰队摧毁,开始一个新的水平。
+
+        # Increase level.
+        # ## 提高水平。
+
+    """Respond appropriately if any aliens have reached an edge."""
+    # ## 如果任何外星人已经达到优势做出适当的回应。
+
+    """Drop the entire fleet, and change the fleet's direction."""
+    # ## 降低整个舰队,舰队的方向改变。
+
+    """Respond to ship being hit by alien."""
+    # ## 应对船舶被外星人袭击。
+
+        # Decrement ships_left.
+        # ## 减量ships_left。
+
+        # Update scoreboard.
+        # ## 更新记分牌。
+
+    # Empty the list of aliens and bullets.
+    # ## 空的外星人和子弹的列表。
+
+    # Create a new fleet, and center the ship.
+    # ## 创建一个新的车队,船中心。
+
+    # Pause.
+    # ## 休息。
+
+    """Check if any aliens have reached the bottom of the screen."""
+    # ## 检查是否有外星人到达底部的屏幕上。
+
+            # Treat this the same as if the ship got hit.
+            # ## 如果船上有治疗这种一样的打击。
+
+    """
+
+    Check if the fleet is at an edge,
+    # ## 检查是否在一个舰队,
+
+      then update the postions of all aliens in the fleet.
+      # ## 然后更新岗位的外星人舰队。
+
+    """
+
+    # Look for alien-ship collisions.
+    # ## 寻找外星船只碰撞。
+
+    # Look for aliens hitting the bottom of the screen.
+    # ## 寻找外星人触及屏幕底部的。
+
+    """Determine the number of aliens that fit in a row."""
+    # ## 确定合适的外国人数量。
+
+    """Determine the number of rows of aliens that fit on the screen."""
+    # ## 确定外星人的行数,适合在屏幕上。
+
+    """Create an alien, and place it in the row."""
+    # ## 创建一个外星人,并把它的行。
+
+    """Create a full fleet of aliens."""
+    # ## 创建一个完整的外星人。
+
+    # Create an alien, and find number of aliens in a row.
+    # ## 创建一个外星人,发现外星人在一行的数量。
+
+    # Create the fleet of aliens.
+    # ## 创建的外星人。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_14/game_functions.py
+========================================
+    """A class to manage bullets fired from the ship."""
+    # ## 一个类来管理从船上子弹。
+
+        """Create a bullet object, at the ship's current position."""
+        # ## 创建一个子弹对象,在船的当前位置。
+
+        # Create bullet rect at (0, 0), then set correct position.
+        # ## 创建子弹矩形在(0,0),然后设置正确的位置。
+
+        # Store a decimal value for the bullet's position.
+        # ## 存储一个十进制值子弹的位置。
+
+        """Move the bullet up the screen."""
+        # ## 子弹的屏幕上移动。
+
+        # Update the decimal position of the bullet.
+        # ## 子弹的小数点位置更新。
+
+        # Update the rect position.
+        # ## 矩形的位置更新。
+
+        """Draw the bullet to the screen."""
+        # ## 画出子弹到屏幕上。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_14/bullet.py
+========================================
+    # Initialize pygame, settings, and screen object.
+    # ## pygame进行初始化,设置,和屏幕对象。
+
+    # Make the Play button.
+    # ## 播放按钮。
+
+    # Create an instance to store game statistics, and a scoreboard.
+    # ## 创建一个实例存储游戏数据,和一个记分牌。
+
+    # Set the background color.
+    # ## 设置背景颜色。
+
+    # Make a ship, a group of bullets, and a group of aliens.
+    # ## 一艘船,一群子弹,和一群外星人。
+
+    # Create the fleet of aliens.
+    # ## 创建的外星人。
+
+    # Start the main loop for the game.
+    # ## 开始为游戏主循环。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_14/alien_invasion.py
+========================================
+    """A class to report scoring information."""
+    # ## 一个类来报告得分信息。
+
+        """Initialize scorekeeping attributes."""
+        # ## 初始化业务记录的属性。
+
+        # Font settings for scoring information.
+        # ## 字体设置得分信息。
+
+        # Prepare the initial score images.
+        # ## 准备初始图像。
+
+        """Turn the score into a rendered image."""
+        # ## 把比分变成呈现的形象。
+
+        # Display the score at the top right of the screen.
+        # ## 分数显示在屏幕的右上角。
+
+        """Turn the high score into a rendered image."""
+        # ## 把高分数变成呈现的形象。
+
+        # Center the high score at the top of the screen.
+        # ## 中心屏幕的顶部的高分。
+
+        """Turn the level into a rendered image."""
+        # ## 把水平变成呈现的形象。
+
+        # Position the level below the score.
+        # ## 位置水平低于得分。
+
+        """Show how many ships are left."""
+        # ## 显示有多少船只离开。
+
+        """Draw score to the screen."""
+        # ## 画分数到屏幕上。
+
+        # Draw ships.
+        # ## 画船。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_14/scoreboard.py
+========================================
+    """Track statistics for Alien Invasion."""
+    # ## 外星人入侵的跟踪统计。
+
+        """Initialize statistics."""
+        # ## 初始化数据。
+
+        # Start game in an inactive state.
+        # ## 开始游戏的活性。
+
+        # High score should never be reset.
+        # ## 高分不能重置。
+
+        """Initialize statistics that can change during the game."""
+        # ## 初始化统计数据可以在游戏中改变。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_14/game_stats.py
+========================================
+    """A class to represent a single alien in the fleet."""
+    # ## 一个类代表一个外星舰队中。
+
+        """Initialize the alien, and set its starting position."""
+        # ## 初始化外星人,并设置其起始位置。
+
+        # Load the alien image, and set its rect attribute.
+        # ## 
+
+        # Start each new alien near the top left of the screen.
+        # ## 开始每一个新的外星人在屏幕的左上角。
+
+        # Store the alien's exact position.
+        # ## 存储外星人的确切位置。
+
+        """Return True if alien is at edge of screen."""
+        # ## 返回True,如果外星人是在屏幕的边缘。
+
+        """Move the alien right or left."""
+        # ## 外星人的左右移动。
+
+        """Draw the alien at its current location."""
+        # ## 画出外星人在其当前位置。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_13/alien.py
+========================================
+        """Initialize the ship, and set its starting position."""
+        # ## 初始化,并设置其起始位置。
+
+        # Load the ship image, and get its rect.
+        # ## 
+
+        # Start each new ship at the bottom center of the screen.
+        # ## 开始每个新船屏幕底部的中心。
+
+        # Store a decimal value for the ship's center.
+        # ## 为船舶中心存储一个十进制值。
+
+        # Movement flags.
+        # ## 运动的旗帜。
+
+        """Center the ship on the screen."""
+        # ## 中心屏幕上的船。
+
+        """Update the ship's position, based on movement flags."""
+        # ## 更新船的位置,基于运动的旗帜。
+
+        # Update the ship's center value, not the rect.
+        # ## 更新船的中心价值,而不是矩形。
+
+        # Update rect object from self.center.
+        # ## 更新从self.center矩形对象。
+
+        """Draw the ship at its current location."""
+        # ## 画船在它的当前位置。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_13/ship.py
+========================================
+    """A class to store all settings for Alien Invasion."""
+    # ## 外星人入侵的一个类来存储所有设置。
+
+        """Initialize the game's settings."""
+        # ## 初始化游戏的设置。
+
+        # Screen settings.
+        # ## 屏幕上设置。
+
+        # Ship settings.
+        # ## 船设置。
+
+        # Bullet settings.
+        # ## 子弹的设置。
+
+        # Alien settings.
+        # ## 外星人的设置。
+
+        # fleet_direction of 1 represents right, -1 represents left.
+        # ## fleet_direction 1代表正确,1代表了。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_13/settings.py
+========================================
+    """Respond to keypresses."""
+    # ## 响应按键。
+
+    """Respond to key releases."""
+    # ## 应对关键版本。
+
+    """Respond to keypresses and mouse events."""
+    # ## 响应按键和鼠标事件。
+
+    """Fire a bullet, if limit not reached yet."""
+    # ## 火一颗子弹,如果没有达到极限。
+
+    # Create a new bullet, add to bullets group.
+    # ## 创建一个新的子弹,子弹群。
+
+    """Update images on the screen, and flip to the new screen."""
+    # ## 更新图像在屏幕上,翻转到新屏幕。
+
+    # Redraw the screen, each pass through the loop.
+    # ## 屏幕重绘,每个通过循环。
+
+    # Redraw all bullets, behind ship and aliens.
+    # ## 重画所有的子弹,在船和外星人。
+
+    # Make the most recently drawn screen visible.
+    # ## 使最近绘制屏幕可见。
+
+    """Update position of bullets, and get rid of old bullets."""
+    # ## 更新子弹的位置,摆脱旧的子弹。
+
+    # Update bullet positions.
+    # ## 更新子弹的位置。
+
+    # Get rid of bullets that have disappeared.
+    # ## 摆脱已经消失的子弹。
+
+    """Respond to bullet-alien collisions."""
+    # ## 应对bullet-alien碰撞。
+
+    # Remove any bullets and aliens that have collided.
+    # ## 删除任何子弹和外星人相撞。
+
+        # Destroy existing bullets, and create new fleet.
+        # ## 破坏现有的子弹,并创造新的舰队。
+
+    """Respond appropriately if any aliens have reached an edge."""
+    # ## 如果任何外星人已经达到优势做出适当的回应。
+
+    """Drop the entire fleet, and change the fleet's direction."""
+    # ## 降低整个舰队,舰队的方向改变。
+
+    """Respond to ship being hit by alien."""
+    # ## 应对船舶被外星人袭击。
+
+        # Decrement ships_left.
+        # ## 减量ships_left。
+
+    # Empty the list of aliens and bullets.
+    # ## 空的外星人和子弹的列表。
+
+    # Create a new fleet, and center the ship.
+    # ## 创建一个新的车队,船中心。
+
+    # Pause.
+    # ## 休息。
+
+    """Check if any aliens have reached the bottom of the screen."""
+    # ## 检查是否有外星人到达底部的屏幕上。
+
+            # Treat this the same as if the ship got hit.
+            # ## 如果船上有治疗这种一样的打击。
+
+    """
+
+    Check if the fleet is at an edge,
+    # ## 检查是否在一个舰队,
+
+      then update the postions of all aliens in the fleet.
+      # ## 然后更新岗位的外星人舰队。
+
+    """
+
+    # Look for alien-ship collisions.
+    # ## 寻找外星船只碰撞。
+
+    # Look for aliens hitting the bottom of the screen.
+    # ## 寻找外星人触及屏幕底部的。
+
+    """Determine the number of aliens that fit in a row."""
+    # ## 确定合适的外国人数量。
+
+    """Determine the number of rows of aliens that fit on the screen."""
+    # ## 确定外星人的行数,适合在屏幕上。
+
+    """Create an alien, and place it in the row."""
+    # ## 创建一个外星人,并把它的行。
+
+    """Create a full fleet of aliens."""
+    # ## 创建一个完整的外星人。
+
+    # Create an alien, and find number of aliens in a row.
+    # ## 
+
+    # Create the fleet of aliens.
+    # ## 创建的外星人。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_13/game_functions.py
+========================================
+    """A class to manage bullets fired from the ship."""
+    # ## 一个类来管理从船上子弹。
+
+        """Create a bullet object, at the ship's current position."""
+        # ## 创建一个子弹对象,在船的当前位置。
+
+        # Create bullet rect at (0, 0), then set correct position.
+        # ## 创建子弹矩形在(0,0),然后设置正确的位置。
+
+        # Store a decimal value for the bullet's position.
+        # ## 存储一个十进制值子弹的位置。
+
+        """Move the bullet up the screen."""
+        # ## 子弹的屏幕上移动。
+
+        # Update the decimal position of the bullet.
+        # ## 子弹的小数点位置更新。
+
+        # Update the rect position.
+        # ## 矩形的位置更新。
+
+        """Draw the bullet to the screen."""
+        # ## 画出子弹到屏幕上。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_13/bullet.py
+========================================
+    # Initialize pygame, settings, and screen object.
+    # ## pygame进行初始化,设置,和屏幕对象。
+
+    # Create an instance to store game statistics.
+    # ## 创建一个实例存储游戏数据。
+
+    # Set the background color.
+    # ## 设置背景颜色。
+
+    # Make a ship, a group of bullets, and a group of aliens.
+    # ## 一艘船,一群子弹,和一群外星人。
+
+    # Create the fleet of aliens.
+    # ## 创建的外星人。
+
+    # Start the main loop for the game.
+    # ## 开始为游戏主循环。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_13/alien_invasion.py
+========================================
+    """Track statistics for Alien Invasion."""
+    # ## 外星人入侵的跟踪统计。
+
+        """Initialize statistics."""
+        # ## 初始化数据。
+
+        # Start Alien Invasion in an active state.
+        # ## 开始在一个活跃的外星人入侵的状态。
+
+        """Initialize statistics that can change during the game."""
+        # ## 初始化统计数据可以在游戏中改变。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_13/game_stats.py
+========================================
+        """Initialize the ship, and set its starting position."""
+        # ## 初始化,并设置其起始位置。
+
+        # Load the ship image, and get its rect.
+        # ## 负载船形象,和矩形。
+
+        # Start each new ship at the bottom center of the screen.
+        # ## 开始每个新船屏幕底部的中心。
+
+        # Store a decimal value for the ship's center.
+        # ## 为船舶中心存储一个十进制值。
+
+        # Movement flags.
+        # ## 运动的旗帜。
+
+        """Update the ship's position, based on movement flags."""
+        # ## 更新船的位置,基于运动的旗帜。
+
+        # Update the ship's center value, not the rect.
+        # ## 更新船的中心价值,而不是矩形。
+
+        # Update rect object from self.center.
+        # ## 更新从self.center矩形对象。
+
+        """Draw the ship at its current location."""
+        # ## 画船在它的当前位置。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/ship.py
+========================================
+    """一个类用来存储《外星人入侵》的设置"""
+    # ## A class used to store the alien invasion
+
+        """初始化游戏设置"""
+        # ## Initialize the game Settings
+
+        # 屏幕设置
+        # ## Set up the screen
+
+        # 飞船设置
+        # ## Ship set
+
+        # 子弹设置
+        # ## The bullet set
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/settings.py
+========================================
+    """Respond to keypresses."""
+    # ## 响应按键。
+
+    """Respond to key releases."""
+    # ## 应对关键版本。
+
+    """Respond to keypresses and mouse events."""
+    # ## 响应按键和鼠标事件。
+
+    """Fire a bullet, if limit not reached yet."""
+    # ## 火一颗子弹,如果没有达到极限。
+
+    # Create a new bullet, add to bullets group.
+    # ## 创建一个新的子弹,子弹群。
+
+    """Update images on the screen, and flip to the new screen."""
+    # ## 更新图像在屏幕上,翻转到新屏幕。
+
+    # Redraw the screen, each pass through the loop.
+    # ## 屏幕重绘,每个通过循环。
+
+    # Redraw all bullets, behind ship and aliens.
+    # ## 重画所有的子弹,在船和外星人。
+
+    # Make the most recently drawn screen visible.
+    # ## 使最近绘制屏幕可见。
+
+    """Update position of bullets, and get rid of old bullets."""
+    # ## 更新子弹的位置,摆脱旧的子弹。
+
+    # Update bullet positions.
+    # ## 更新子弹的位置。
+
+    # Get rid of bullets that have disappeared.
+    # ## 摆脱已经消失的子弹。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/game_functions.py
+========================================
+    """A class to manage bullets fired from the ship."""
+    # ## 一个类来管理从船上子弹。
+
+        """Create a bullet object, at the ship's current position."""
+        # ## 创建一个子弹对象,在船的当前位置。
+
+        # Create bullet rect at (0, 0), then set correct position.
+        # ## 创建子弹矩形在(0,0),然后设置正确的位置。
+
+        # Store a decimal value for the bullet's position.
+        # ## 存储一个十进制值子弹的位置。
+
+        """Move the bullet up the screen."""
+        # ## 子弹的屏幕上移动。
+
+        # Update the decimal position of the bullet.
+        # ## 子弹的小数点位置更新。
+
+        # Update the rect position.
+        # ## 矩形的位置更新。
+
+        """Draw the bullet to the screen."""
+        # ## 画出子弹到屏幕上。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/bullet.py
+========================================
+    # Initialize pygame, settings, and screen object.
+    # ## pygame进行初始化,设置,和屏幕对象。
+
+    # Set the background color.
+    # ## 设置背景颜色。
+
+    # Make a ship.
+    # ## 一艘船。
+
+    # Make a group to store bullets in.
+    # ## 让子弹存储在一组。
+
+    # Start the main loop for the game.
+    # ## 开始为游戏主循环。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/alien_invasion.py
+========================================
+        """Initialize the ship and set its starting position."""
+        # ## 初始化该船并设置其起始位置。
+
+        # Load the ship image and get its rect.
+        # ## 装载船形象和矩形。
+
+        # Start each new ship at the bottom center of the screen.
+        # ## 开始每个新船屏幕底部的中心。
+
+        # Store a decimal value for the ship's center.
+        # ## 为船舶中心存储一个十进制值。
+
+        # Movement flags
+        # ## 运动的旗帜
+
+        """Update the ship's position based on movement flags."""
+        # ## 更新基于运动旗帜的船舶位置。
+
+        # Update the ship's center value, not the rect.
+        # ## 更新船的中心价值,而不是矩形。
+
+        # Update rect object from self.center.
+        # ## 更新从self.center矩形对象。
+
+        """Draw the ship at its current location."""
+        # ## 
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_3_end_chapter_12/ship.py
+========================================
+    """A class to store all settings for Alien Invasion."""
+    # ## 外星人入侵的一个类来存储所有设置。
+
+        """Initialize the game's settings."""
+        # ## 初始化游戏的设置。
+
+        # Screen settings
+        # ## 屏幕设置
+
+        # Ship settings
+        # ## 船设置
+
+        # Bullet settings
+        # ## 子弹的设置
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_3_end_chapter_12/settings.py
+========================================
+    """Respond to keypresses."""
+    # ## 响应按键。
+
+    """Fire a bullet if limit not reached yet."""
+    # ## 火一颗子弹如果没有达到极限。
+
+    # Create a new bullet and add it to the bullets group.
+    # ## 创建一个新的子弹,并将它添加到子弹。
+
+    """Respond to key releases."""
+    # ## 应对关键版本。
+
+    """Respond to keypresses and mouse events."""
+    # ## 响应按键和鼠标事件。
+
+    """Update position of bullets and get rid of old bullets."""
+    # ## 更新的子弹和摆脱旧的子弹。
+
+    # Update bullet positions.
+    # ## 更新子弹的位置。
+
+    # Get rid of bullets that have disappeared.
+    # ## 摆脱已经消失的子弹。
+
+    """Update images on the screen and flip to the new screen."""
+    # ## 更新图像在屏幕上和翻转到新屏幕。
+
+    # Redraw the screen during each pass through the loop.
+    # ## 屏幕重绘在每个通过循环。
+
+    # Redraw all bullets behind ship and aliens.
+    # ## 重画所有子弹船和外星人。
+
+    # Make the most recently drawn screen visible.
+    # ## 使最近绘制屏幕可见。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_3_end_chapter_12/game_functions.py
+========================================
+    """A class to manage bullets fired from the ship"""
+    # ## 一个类来管理从船上子弹
+
+        """Create a bullet object at the ship's current position."""
+        # ## 创建一个子弹对象在船的当前位置。
+
+        # Create a bullet rect at (0, 0) and then set correct position.
+        # ## 创建一个矩形子弹在(0,0),然后设置正确的位置。
+
+        # Store the bullet's position as a decimal value.
+        # ## 将子弹的位置存储为一个十进制值。
+
+        """Move the bullet up the screen."""
+        # ## 子弹的屏幕上移动。
+
+        # Update the decimal position of the bullet.
+        # ## 子弹的小数点位置更新。
+
+        # Update the rect position.
+        # ## 矩形的位置更新。
+
+        """Draw the bullet to the screen."""
+        # ## 画出子弹到屏幕上。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_3_end_chapter_12/bullet.py
+========================================
+    # Initialize pygame, settings, and screen object.
+    # ## pygame进行初始化,设置,和屏幕对象。
+
+    # Set the background color.
+    # ## 设置背景颜色。
+
+    # Make a ship.
+    # ## 一艘船。
+
+    # Make a group to store bullets in.
+    # ## 让子弹存储在一组。
+
+    # Start the main loop for the game.
+    # ## 开始为游戏主循环。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_3_end_chapter_12/alien_invasion.py
+========================================
+        """Initialize the ship, and set its starting position."""
+        # ## 初始化,并设置其起始位置。
+
+        # Load the ship image, and get its rect.
+        # ## 负载船形象,和矩形。
+
+        # Start each new ship at the bottom center of the screen.
+        # ## 开始每个新船屏幕底部的中心。
+
+        # Store a decimal value for the ship's center.
+        # ## 为船舶中心存储一个十进制值。
+
+        # Movement flags.
+        # ## 运动的旗帜。
+
+        """Update the ship's position, based on movement flags."""
+        # ## 更新船的位置,基于运动的旗帜。
+
+        # Update the ship's center value, not the rect.
+        # ## 更新船的中心价值,而不是矩形。
+
+        # Update rect object from self.center.
+        # ## 更新从self.center矩形对象。
+
+        """Draw the ship at its current location."""
+        # ## 画船在它的当前位置。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_1_ship_moves/ship.py
+========================================
+    """A class to store all settings for Alien Invasion."""
+    # ## 外星人入侵的一个类来存储所有设置。
+
+        """Initialize the game's settings."""
+        # ## 初始化游戏的设置。
+
+        # Screen settings
+        # ## 屏幕设置
+
+        # Ship settings
+        # ## 船设置
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_1_ship_moves/settings.py
+========================================
+    """响应按键按下"""
+    # ## Response to a button press
+
+    """响应按键弹起"""
+    # ## The response button pop-up
+
+    """响应按键和鼠标事件"""
+    # ## Response keys and mouse events
+
+    """更新屏幕图像，弹到新屏幕"""
+    # ## Update the screen image, play to the new screen
+
+    # 重画屏幕，在每次过场循环中
+    # ## Redraw the screen every time cut cycle
+
+    # 使最近回执的屏幕可见
+    # ## Recent receipt screen is visible
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_1_ship_moves/game_functions.py
+========================================
+    # 初始化 pygame, settings, 和 screen 对象.
+    # ## Initialize the pygame, Settings, and the screen object.
+
+    pygame.init()   # pygame 初始化
+    # ## Pygame initialization
+
+    ai_settings = Settings()    # 实例化设置类
+    # ## Instantiated set up the class
+
+    screen = pygame.display.set_mode(   # 取得屏幕参数
+    # ## Get the screen parameters
+
+    pygame.display.set_caption("外星人入侵")     # 设置标题
+    # ## Set the title
+
+    # 设置背景色
+    # ## Set the background color
+
+    # 创建飞船
+    # ## Create a spaceship
+
+    # 启动游戏循环
+    # ## Start the game loop
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_1_ship_moves/alien_invasion.py
+========================================
+        """Initialize the ship and set its starting position."""
+        # ## 初始化该船并设置其起始位置。
+
+        # Load the ship image and get its rect.
+        # ## 装载船形象和矩形。
+
+        # Start each new ship at the bottom center of the screen.
+        # ## 开始每个新船屏幕底部的中心。
+
+        # Store a decimal value for the ship's center.
+        # ## 为船舶中心存储一个十进制值。
+
+        # Movement flags
+        # ## 运动的旗帜
+
+        """Update the ship's position based on movement flags."""
+        # ## 更新基于运动旗帜的船舶位置。
+
+        # Update the ship's center value, not the rect.
+        # ## 更新船的中心价值,而不是矩形。
+
+        # Update rect object from self.center.
+        # ## 更新从self.center矩形对象。
+
+        """Draw the ship at its current location."""
+        # ## 画船在它的当前位置。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_2_fires_bullets/ship.py
+========================================
+    """A class to store all settings for Alien Invasion."""
+    # ## 外星人入侵的一个类来存储所有设置。
+
+        """Initialize the game's settings."""
+        # ## 初始化游戏的设置。
+
+        # Screen settings
+        # ## 屏幕设置
+
+        # Ship settings
+        # ## 船设置
+
+        # Bullet settings
+        # ## 子弹的设置
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_2_fires_bullets/settings.py
+========================================
+    """Respond to keypresses."""
+    # ## 响应按键。
+
+        # Create a new bullet and add it to the bullets group.
+        # ## 创建一个新的子弹,并将它添加到子弹。
+
+    """Respond to key releases."""
+    # ## 应对关键版本。
+
+    """Respond to keypresses and mouse events."""
+    # ## 响应按键和鼠标事件。
+
+    """Update images on the screen and flip to the new screen."""
+    # ## 更新图像在屏幕上和翻转到新屏幕。
+
+    # Redraw the screen during each pass through the loop.
+    # ## 屏幕重绘在每个通过循环。
+
+    # Redraw all bullets behind ship and aliens.
+    # ## 重画所有子弹船和外星人。
+
+    # Make the most recently drawn screen visible.
+    # ## 使最近绘制屏幕可见。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_2_fires_bullets/game_functions.py
+========================================
+    """A class to manage bullets fired from the ship"""
+    # ## 一个类来管理从船上子弹
+
+        """Create a bullet object at the ship's current position."""
+        # ## 创建一个子弹对象在船的当前位置。
+
+        # Create a bullet rect at (0, 0) and then set correct position.
+        # ## 创建一个矩形子弹在(0,0),然后设置正确的位置。
+
+        # Store the bullet's position as a decimal value.
+        # ## 将子弹的位置存储为一个十进制值。
+
+        """Move the bullet up the screen."""
+        # ## 子弹的屏幕上移动。
+
+        # Update the decimal position of the bullet.
+        # ## 子弹的小数点位置更新。
+
+        # Update the rect position.
+        # ## 矩形的位置更新。
+
+        """Draw the bullet to the screen."""
+        # ## 画出子弹到屏幕上。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_2_fires_bullets/bullet.py
+========================================
+    # Initialize pygame, settings, and screen object.
+    # ## pygame进行初始化,设置,和屏幕对象。
+
+    # Set the background color.
+    # ## 设置背景颜色。
+
+    # Make a ship.
+    # ## 一艘船。
+
+    # Make a group to store bullets in.
+    # ## 让子弹存储在一组。
+
+    # Start the main loop for the game.
+    # ## 开始为游戏主循环。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_12/restore_points/restore_point_2_fires_bullets/alien_invasion.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/appendix_b/hello_world.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_16/countries.py
+========================================
+    """Return the Pygal 2-digit country code for the given country."""
+    # ## 返回臀的便是特定国家的国家代码。
+
+    # If the country wasn't found, return None.
+    # ## 如果这个国家没有发现,还没有。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_16/country_codes.py
+========================================
+# Get dates, high, and low temperatures from file.
+# ## 日期,高和低的温度从文件。
+
+# Plot data.
+# ## 图数据。
+
+# Format plot.
+# ## 格式的阴谋。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_16/highs_lows.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_16/na_populations.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_16/americas.py
+========================================
+# Load the data into a list.
+# ## 将数据加载到一个列表。
+
+# Build a dictionary of population data.
+# ## 建立一个字典的人口数据。
+
+# Group the countries into 3 population levels.
+# ## 组3人口的国家的水平。
+
+# See how many countries are in each level.        
+# ## 看到很多国家在每个级别。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_16/world_population.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_16/pygal2_update/countries.py
+========================================
+    """Return the Pygal 2-digit country code for the given country."""
+    # ## 返回臀的便是特定国家的国家代码。
+
+    # If the country wasn't found, return None.
+    # ## 如果这个国家没有发现,还没有。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_16/pygal2_update/country_codes.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_16/pygal2_update/na_populations.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_16/pygal2_update/americas.py
+========================================
+# Load the data into a list.
+# ## 将数据加载到一个列表。
+
+# Build a dictionary of population data.
+# ## 建立一个字典的人口数据。
+
+# Group the countries into 3 population levels.
+# ## 组3人口的国家的水平。
+
+# See how many countries are in each level.        
+# ## 看到很多国家在每个级别。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_16/pygal2_update/world_population.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_19/manage.py
+========================================
+"""
+
+WSGI config for learning_log project.
+# ## WSGI learning_log项目配置。
+
+
+
+It exposes the WSGI callable as a module-level variable named ``application``.
+# ## 它使WSGI可调用的模块级变量命名为“应用程序”。
+
+
+
+For more information on this file, see
+# ## 关于这个文件的更多信息,请参阅
+
+https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/
+# ## https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/
+
+"""
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_log/wsgi.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_log/__init__.py
+========================================
+"""
+
+Django settings for learning_log project.
+# ## Django learning_log项目设置。
+
+
+
+Generated by 'django-admin startproject' using Django 1.8.4.
+# ## 使用Django 1.8.4由“django-admin startproject”。
+
+
+
+For more information on this file, see
+# ## 关于这个文件的更多信息,请参阅
+
+https://docs.djangoproject.com/en/1.8/topics/settings/
+# ## https://docs.djangoproject.com/en/1.8/topics/settings/
+
+
+
+For the full list of settings and their values, see
+# ## 设置的完整列表和他们的价值观,明白了
+
+https://docs.djangoproject.com/en/1.8/ref/settings/
+# ## https://docs.djangoproject.com/en/1.8/ref/settings/
+
+"""
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# ## 在项目构建路径:os.path。加入(BASE_DIR…)
+
+# Quick-start development settings - unsuitable for production
+# ## Quick-start unsuitable for development暴露减少-生产
+
+# See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
+# ## 参见https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+# ## 安全警告:生产中使用的密钥保密!
+
+# SECURITY WARNING: don't run with debug turned on in production!
+# ## 安全警告:不要在生产运行与调试打开!
+
+# Application definition
+# ## 应用程序定义
+
+    # My apps
+    # ## 我的应用程序
+
+# Database
+# ## 数据库
+
+# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+# ## https://docs.djangoproject.com/en/1.8/ref/settings/数据库
+
+# Internationalization
+# ## 国际化
+
+# https://docs.djangoproject.com/en/1.8/topics/i18n/
+# ## https://docs.djangoproject.com/en/1.8/topics/i18n/
+
+# Static files (CSS, JavaScript, Images)
+# ## 静态文件(CSS、JavaScript、图像)
+
+# https://docs.djangoproject.com/en/1.8/howto/static-files/
+# ## https://docs.djangoproject.com/en/1.8/howto/static-files/
+
+# My settings
+# ## 我的设置
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_log/settings.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_log/urls.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_logs/forms.py
+========================================
+    """The home page for Learning Log."""
+    # ## 学习主页的日志。
+
+    """Show all topics."""
+    # ## 显示所有主题。
+
+    """Show a single topic, and all its entries."""
+    # ## 显示单个主题,及其所有条目。
+
+    # Make sure the topic belongs to the current user.
+    # ## 确保这个话题属于当前用户。
+
+    """Add a new topic."""
+    # ## 添加一个新的话题。
+
+        # No data submitted; create a blank form.
+        # ## 没有提交的数据;创建一个空白的表格。
+
+        # POST data submitted; process data.
+        # ## POST数据提交;流程数据。
+
+    """Add a new entry for a particular topic."""
+    # ## 为一个特定的主题添加一个新条目。
+
+        # No data submitted; create a blank form.
+        # ## 没有提交的数据;创建一个空白的表格。
+
+        # POST data submitted; process data.
+        # ## POST数据提交;流程数据。
+
+    """Edit an existing entry."""
+    # ## 编辑现有条目。
+
+        # Initial request; pre-fill form with the current entry.
+        # ## 初始请求;预先填充表单与当前条目。
+
+        # POST data submitted; process data.
+        # ## POST数据提交;流程数据。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_logs/views.py
+========================================
+# Create your tests here.
+# ## 创建您的测试。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_logs/tests.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_logs/__init__.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_logs/admin.py
+========================================
+"""Defines url patterns for learning_logs."""
+# ## 定义了learning_logs url模式。
+
+    # Home page.
+    # ## 主页。
+
+    # Show all topics.
+    # ## 显示所有主题。
+
+    # Detail page for a single topic.
+    # ## 单个主题的详细信息页面。
+
+    # Page for adding a new topic.
+    # ## 页面添加一个新话题。
+
+    # Page for adding a new entry.
+    # ## 页面添加一个新条目。
+
+    # Page for editing an entry.
+    # ## 页面编辑条目。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_logs/urls.py
+========================================
+    """A topic the user is learning about."""
+    # ## 主题用户学习。
+
+        """Return a string representation of the model."""
+        # ## 返回一个字符串表示的模型。
+
+    """Something specific learned about a topic."""
+    # ## 具体了解了主题的东西。
+
+        """Return a string representation of the model."""
+        # ## 返回一个字符串表示的模型。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_logs/models.py
+========================================
+# -*- coding: utf-8 -*-
+# ## - * -编码:utf - 8 - *
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_logs/migrations/0001_initial.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_logs/migrations/__init__.py
+========================================
+# -*- coding: utf-8 -*-
+# ## - * -编码:utf - 8 - *
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_logs/migrations/0003_topic_owner.py
+========================================
+# -*- coding: utf-8 -*-
+# ## - * -编码:utf - 8 - *
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/learning_logs/migrations/0002_entry.py
+========================================
+    """Log the user out."""
+    # ## 登录用户。
+
+    """Register a new user."""
+    # ## 注册一个新用户。
+
+        # Display blank registration form.   
+        # ## 显示空白注册表单。
+
+        # Process completed form.
+        # ## 过程完成的形式。
+
+            # Log the user in, and then redirect to home page.
+            # ## 用户登录,然后重定向到主页。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/users/views.py
+========================================
+# Create your tests here.
+# ## 创建您的测试。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/users/tests.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_19/users/__init__.py
+========================================
+# Register your models here.
+# ## 注册您的模型。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/users/admin.py
+========================================
+"""Defines url patterns for users."""
+# ## 为用户定义的url模式。
+
+    # Login page.
+    # ## 登录页面。
+
+    # Logout page.
+    # ## Logout页。
+
+    # Registration page. 
+    # ## 岳父页。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/users/urls.py
+========================================
+# Create your models here.
+# ## 创建您的模型。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_19/users/models.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_19/users/migrations/__init__.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_20/manage.py
+========================================
+"""
+
+WSGI config for learning_log project.
+# ## WSGI learning_log项目配置。
+
+
+
+It exposes the WSGI callable as a module-level variable named ``application``.
+# ## 它使WSGI可调用的模块级变量命名为“应用程序”。
+
+
+
+For more information on this file, see
+# ## 关于这个文件的更多信息,请参阅
+
+https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/
+# ## https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/
+
+"""
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_log/wsgi.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_log/__init__.py
+========================================
+"""
+
+Django settings for learning_log project.
+# ## Django learning_log项目设置。
+
+
+
+Generated by 'django-admin startproject' using Django 1.8.4.
+# ## 使用Django 1.8.4由“django-admin startproject”。
+
+
+
+For more information on this file, see
+# ## 关于这个文件的更多信息,请参阅
+
+https://docs.djangoproject.com/en/1.8/topics/settings/
+# ## https://docs.djangoproject.com/en/1.8/topics/settings/
+
+
+
+For the full list of settings and their values, see
+# ## 设置的完整列表和他们的价值观,明白了
+
+https://docs.djangoproject.com/en/1.8/ref/settings/
+# ## https://docs.djangoproject.com/en/1.8/ref/settings/
+
+"""
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# ## 在项目构建路径:os.path。加入(BASE_DIR…)
+
+# Quick-start development settings - unsuitable for production
+# ## 快速启动开发设置,不适合生产
+
+# See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
+# ## 参见https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+# ## 安全警告:生产中使用的密钥保密!
+
+# SECURITY WARNING: don't run with debug turned on in production!
+# ## 安全警告:不要在生产运行与调试打开!
+
+# Application definition
+# ## 应用程序定义
+
+    # Third party apps
+    # ## 第三方应用程序
+
+    # My apps
+    # ## 我的应用程序
+
+# Database
+# ## 数据库
+
+# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+# ## https://docs.djangoproject.com/en/1.8/ref/settings/数据库
+
+# Internationalization
+# ## 国际化
+
+# https://docs.djangoproject.com/en/1.8/topics/i18n/
+# ## https://docs.djangoproject.com/en/1.8/topics/i18n/
+
+# Static files (CSS, JavaScript, Images)
+# ## 静态文件(CSS、JavaScript、图像)
+
+# https://docs.djangoproject.com/en/1.8/howto/static-files/
+# ## https://docs.djangoproject.com/en/1.8/howto/static-files/
+
+# My settings
+# ## 我的设置
+
+# Settings for django-bootstrap3
+# ## 设置django-bootstrap3
+
+# Heroku settings
+# ## Heroku的设置
+
+    # Honor the 'X-Forwarded-Proto' header for request.is_secure().
+    # ## 尊重“X-Forwarded-Proto”头request.is_secure()。
+
+    # Only allow heroku to host the project.
+    # ## 只允许heroku主办项目。
+
+    # Static asset configuration
+    # ## 静态资产配置
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_log/settings.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_log/urls.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_logs/forms.py
+========================================
+    """The home page for Learning Log."""
+    # ## 学习主页的日志。
+
+    """Show all topics."""
+    # ## 显示所有主题。
+
+    """Show a single topic, and all its entries."""
+    # ## 显示单个主题,及其所有条目。
+
+    # Make sure the topic belongs to the current user.
+    # ## 确保这个话题属于当前用户。
+
+    """Add a new topic."""
+    # ## 添加一个新的话题。
+
+        # No data submitted; create a blank form.
+        # ## 没有提交的数据;创建一个空白的表格。
+
+        # POST data submitted; process data.
+        # ## POST数据提交;流程数据。
+
+    """Add a new entry for a particular topic."""
+    # ## 为一个特定的主题添加一个新条目。
+
+        # No data submitted; create a blank form.
+        # ## 没有提交的数据;创建一个空白的表格。
+
+        # POST data submitted; process data.
+        # ## POST数据提交;流程数据。
+
+    """Edit an existing entry."""
+    # ## 编辑现有条目。
+
+        # Initial request; pre-fill form with the current entry.
+        # ## 初始请求;预先填充表单与当前条目。
+
+        # POST data submitted; process data.
+        # ## POST数据提交;流程数据。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_logs/views.py
+========================================
+# Create your tests here.
+# ## 创建您的测试。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_logs/tests.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_logs/__init__.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_logs/admin.py
+========================================
+"""Defines url patterns for learning_logs."""
+# ## 定义了learning_logs url模式。
+
+    # Home page.
+    # ## 主页。
+
+    # Show all topics.
+    # ## 显示所有主题。
+
+    # Detail page for a single topic.
+    # ## 单个主题的详细信息页面。
+
+    # Page for adding a new topic.
+    # ## 页面添加一个新话题。
+
+    # Page for adding a new entry.
+    # ## 页面添加一个新条目。
+
+    # Page for editing an entry.
+    # ## 页面编辑条目。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_logs/urls.py
+========================================
+    """A topic the user is learning about."""
+    # ## 主题用户学习。
+
+        """Return a string representation of the model."""
+        # ## 返回一个字符串表示的模型。
+
+    """Something specific learned about a topic."""
+    # ## 具体了解了主题的东西。
+
+        """Return a string representation of the model."""
+        # ## 返回一个字符串表示的模型。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_logs/models.py
+========================================
+# -*- coding: utf-8 -*-
+# ## - * -编码:utf - 8 - *
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_logs/migrations/0001_initial.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_logs/migrations/__init__.py
+========================================
+# -*- coding: utf-8 -*-
+# ## - * -编码:utf - 8 - *
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_logs/migrations/0003_topic_owner.py
+========================================
+# -*- coding: utf-8 -*-
+# ## - * -编码:utf - 8 - *
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/learning_logs/migrations/0002_entry.py
+========================================
+    """Log the user out."""
+    # ## 登录用户。
+
+    """Register a new user."""
+    # ## 注册一个新用户。
+
+        # Display blank registration form.   
+        # ## 显示空白注册表单。
+
+        # Process completed form.
+        # ## 过程完成的形式。
+
+            # Log the user in, and then redirect to home page.
+            # ## 用户登录,然后重定向到主页。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/users/views.py
+========================================
+# Create your tests here.
+# ## 创建您的测试。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/users/tests.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_20/users/__init__.py
+========================================
+# Register your models here.
+# ## 注册您的模型。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/users/admin.py
+========================================
+"""Defines url patterns for users."""
+# ## 为用户定义的url模式。
+
+    # Login page.
+    # ## 登录页面。
+
+    # Logout page.
+    # ## Logout页。
+
+    # Registration page. 
+    # ## 岳父页。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/users/urls.py
+========================================
+# Create your models here.
+# ## 创建您的模型。
+
+已完成: /home/lwq/Python/MyDict/test/chapter_20/users/models.py
+========================================
+已完成: /home/lwq/Python/MyDict/test/chapter_20/users/migrations/__init__.py
+========================================
