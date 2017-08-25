@@ -6,7 +6,6 @@ from bullet import Bullet
 
 def check_keydown_events(event, ai_settings, screen, ship, bullets):
     """Respond to keypresses."""
-    # ## 响应按键。
     if event.key == pygame.K_RIGHT:
         ship.moving_right = True
     elif event.key == pygame.K_LEFT:
@@ -16,7 +15,6 @@ def check_keydown_events(event, ai_settings, screen, ship, bullets):
         
 def check_keyup_events(event, ship):
     """Respond to key releases."""
-    # ## 应对关键版本。
     if event.key == pygame.K_RIGHT:
         ship.moving_right = False
     elif event.key == pygame.K_LEFT:
@@ -24,7 +22,6 @@ def check_keyup_events(event, ship):
 
 def check_events(ai_settings, screen, ship, bullets):
     """Respond to keypresses and mouse events."""
-    # ## 响应按键和鼠标事件。
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
@@ -35,39 +32,30 @@ def check_events(ai_settings, screen, ship, bullets):
             
 def fire_bullet(ai_settings, screen, ship, bullets):
     """Fire a bullet, if limit not reached yet."""
-    # ## 火一颗子弹,如果没有达到极限。
     # Create a new bullet, add to bullets group.
-    # ## 创建一个新的子弹,子弹群。
     if len(bullets) < ai_settings.bullets_allowed:
         new_bullet = Bullet(ai_settings, screen, ship)
         bullets.add(new_bullet)
 
 def update_screen(ai_settings, screen, ship, bullets):
     """Update images on the screen, and flip to the new screen."""
-    # ## 更新图像在屏幕上,翻转到新屏幕。
     # Redraw the screen, each pass through the loop.
-    # ## 屏幕重绘,每个通过循环。
     screen.fill(ai_settings.bg_color)
     
     # Redraw all bullets, behind ship and aliens.
-    # ## 重画所有的子弹,在船和外星人。
     for bullet in bullets.sprites():
         bullet.draw_bullet()
     ship.blitme()
 
     # Make the most recently drawn screen visible.
-    # ## 使最近绘制屏幕可见。
     pygame.display.flip()
     
 def update_bullets(bullets):
     """Update position of bullets, and get rid of old bullets."""
-    # ## 更新子弹的位置,摆脱旧的子弹。
     # Update bullet positions.
-    # ## 更新子弹的位置。
     bullets.update()
 
     # Get rid of bullets that have disappeared.
-    # ## 摆脱已经消失的子弹。
     for bullet in bullets.copy():
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)

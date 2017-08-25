@@ -36,10 +36,8 @@ def check_events(ship):
 def update_screen(ai_settings, screen, ship):
     """更新屏幕图像，弹到新屏幕"""
     # ## Update the screen image, play to the new screen
-    # 重画屏幕，在每次过场循环中
     # ## Redraw the screen every time cut cycle
     screen.fill(ai_settings.bg_color)
     ship.blitme()
-    # 使最近回执的屏幕可见
     # ## Recent receipt screen is visible
     pygame.display.flip()

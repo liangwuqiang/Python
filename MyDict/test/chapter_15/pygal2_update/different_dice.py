@@ -3,19 +3,16 @@ from die import Die
 import pygal
 
 # Create a D6 and a D10.
-# ## 创建一个D6 D10。
 die_1 = Die()
 die_2 = Die(10)
 
 # Make some rolls, and store results in a list.
-# ## 做一些卷,并将结果存储在一个列表。
 results = []
 for roll_num in range(50000):
     result = die_1.roll() + die_2.roll()
     results.append(result)
     
 # Analyze the results.
-# ## 分析结果。
 frequencies = []
 max_result = die_1.num_sides + die_2.num_sides
 for value in range(2, max_result+1):
@@ -23,7 +20,6 @@ for value in range(2, max_result+1):
     frequencies.append(frequency)
     
 # Visualize the results.
-# ## 可视化结果。
 hist = pygal.Bar()
 hist.force_uri_protocol = 'http'
 

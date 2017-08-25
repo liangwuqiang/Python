@@ -8,7 +8,7 @@ As you probably saw in [Chapter 15](chapter_15/README.md#updates) and [Chapter 1
 
 <pre>
 chart = pygal.Bar()
-<b>chart.force_uri_protocol = 'http'</b>
+<b><color='red'>chart.force_uri_protocol = 'http'</color></b>
 </pre>
 
 Page by page updates

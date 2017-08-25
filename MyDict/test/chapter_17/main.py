@@ -17,7 +17,7 @@ repo_dicts = response_dict['items']
 names, plot_dicts = [], []
 for repo_dict in repo_dicts:
     names.append(repo_dict['name'])
-    
+
     plot_dict = {
         'value': repo_dict['stargazers_count'],
         'label': repo_dict['description'],
@@ -29,7 +29,6 @@ for repo_dict in repo_dicts:
 my_style = LS('#333366', base_style=LCS)
 
 my_config = pygal.Config()
-my_config.force_uri_protocol = 'http'
 my_config.x_label_rotation = 45
 my_config.show_legend = False
 my_config.title_font_size = 24
@@ -44,4 +43,6 @@ chart.title = 'Most-Starred Python Projects on GitHub'
 chart.x_labels = names
 
 chart.add('', plot_dicts)
-chart.render_to_file('python_repos.svg')
+# chart.render_to_file('python_repos.svg')
+
+print()

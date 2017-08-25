@@ -3,18 +3,15 @@ import requests
 from operator import itemgetter
 
 # Make an API call, and store the response.
-# ## 做一个API调用和存储的响应。
 url = 'https://hacker-news.firebaseio.com/v0/topstories.json'
 r = requests.get(url)
 print("Status code:", r.status_code)
 
 # Process information about each submission.
-# ## 每个提交的信息的过程。
 submission_ids = r.json()
 submission_dicts = []
 for submission_id in submission_ids[:30]:
     # Make a separate API call for each submission.
-    # ## 让每个提交的一个单独的API调用。
     url = ('https://hacker-news.firebaseio.com/v0/item/' +
             str(submission_id) + '.json')
     submission_r = requests.get(url)

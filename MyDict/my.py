@@ -7,7 +7,6 @@ import json
 from urllib import quote
 from urllib2 import urlopen
 
-# regular = '.*?[\.\?](?=\s+(?:[A-Z]|$))'  # 匹配句子
 regular = '[^ A-Za-z0-9,.?:@\-\n]'
 re_program = re.compile(regular)
 

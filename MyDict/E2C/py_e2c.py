@@ -14,32 +14,28 @@ from urllib.request import quote, urlopen
 import json
 import re
 
-istest = True  # True / False 调试程序用
+isTest = True  # True / False 调试程序用
+# isTest = False  # True / False 调试程序用
+isClear = True  # 是否去掉翻译
+# isClear = False  # 是否去掉翻译
 
-rootdir = '.'  # 当前目录, 可修改为特定目录
+rootDir = '.'  # 当前目录, 可修改为特定目录
 
-regular = r'# (.*)'
-re_comment = re.compile(regular)
-regular = r'"""(.*?)"""'
-re_one_line = re.compile(regular)
-regular = r'.*?"""(.*)'
-re_multi_line_start = re.compile(regular)
-regular = r'(.*?)""".*'
-re_multi_line_end = re.compile(regular)
-regular = r'(.*?)# >>'
-re_translate = re.compile(regular)
-regular = r':\s+#'
-re_indent = re.compile(regular)
-regular = r'(.*)'
-re_whole_line = re.compile(regular)
-regular = r'#.*?coding.*?utf-8.*'
-re_utf_8 = re.compile(regular)
+re_comment = re.compile(r' # (.*)')
+re_one_line = re.compile(r'"""(.*?)"""')
+re_multi_line_start = re.compile(r'.*?"""(.*)')
+re_multi_line_end = re.compile(r'(.*?)""".*')
+re_translate = re.compile(r'(.*?)# >>')
+re_indent = re.compile(r':\s+#')
+re_whole_line = re.compile(r'(.*)')
+re_utf_8 = re.compile(r'#.*?coding.*?utf-8.*')  # 匹配utf-8
+re_cn = re.compile('[\u4e00-\u9fa5]+')  # 匹配中文
 
 
 def translate(message):
     """ 翻译 """
-    if istest is True:
-        return '(翻译略, 修改istest变量可实现在线翻译)'
+    if isTest is True:
+        return '翻译测试, (修改isTest变量可实现在线翻译)'
     else:
         api = 'http://fanyi.youdao.com/openapi.do' \
               '?keyfrom=wufeifei&key=716426270&type=data&doctype=json&version=1.1&q='
@@ -60,7 +56,7 @@ def handle_line(line, re_compile):
     comment_en = re_compile.search(line).group(1).strip()
     if comment_en.strip():
         comment_cn = translate(comment_en.strip())
-        blank_num = re.search('["#\w]', line).span()[0]
+        blank_num = re.search('["#\w]', line).start()
         if re_indent.search(line):
             blank_num = blank_num + 4
         newline = line + ' ' * blank_num + '# >> ' + comment_cn + '\n'
@@ -73,29 +69,36 @@ def handle_whole(lines):
     tag = [False]
     for line in lines:
         newline = line
-        if not newline:  # 空行跳过
-            newline = '\n'
-        elif re_translate.search(line):  # 行中存在翻译,清除
-            continue
-        elif re_comment.search(line):  # 单行注释#的处理
-            if not re_utf_8.match(line):
+        if isClear is True:
+            if re_translate.search(line):  # 行中存在翻译,清除
+                continue
+        else:
+            if newline:  # 空行跳过
+                pass
+            elif re_utf_8.match(line):
+                pass
+            elif re_translate.search(line):  # 行中存在翻译,清除
+                continue
+            elif re_cn.search(line):  # 句中有中文,略过
+                pass
+            elif re_comment.search(line):  # 单行注释#的处理
                 newline = handle_line(line, re_comment)
                 logging.info(newline)  # ok
-        elif re_one_line.findall(line):  # 单行说明"""xxx"""的处理
-            newline = handle_line(line, re_one_line)
-            logging.info(newline)  # ok
-        elif tag[0] is True and line.find('"""') == -1:  # 多行注释"""的处理
-            newline = handle_line(line, re_whole_line)
-            logging.info(newline)  # ok
-        elif len(re_multi_line_start.findall(line)) == 1:  # 多行注释"""前后的处理
-            if tag[0] is False:
-                tag[0] = True
-                newline = handle_line(line, re_multi_line_start)
+            elif re_one_line.findall(line):  # 单行说明"""xxx"""的处理
+                newline = handle_line(line, re_one_line)
                 logging.info(newline)  # ok
-            else:
-                tag[0] = False
-                newline = handle_line(line, re_multi_line_end)
+            elif tag[0] is True and line.find('"""') == -1:  # 多行注释"""的处理
+                newline = handle_line(line, re_whole_line)
                 logging.info(newline)  # ok
+            elif len(re_multi_line_start.findall(line)) == 1:  # 多行注释"""前后的处理
+                if tag[0] is False:
+                    tag[0] = True
+                    newline = handle_line(line, re_multi_line_start)
+                    logging.info(newline)  # ok
+                else:
+                    tag[0] = False
+                    newline = handle_line(line, re_multi_line_end)
+                    logging.info(newline)  # ok
         content.append(newline)
         print(newline)
     return ''.join(content)
@@ -119,8 +122,8 @@ def read_file(path):
 
 def main():
     """在目录中遍历文件,找到 *.py 文件交 handle_whole() """
-    for parent, dirnames, filenames in os.walk(rootdir):
-        for filename in filenames:
+    for parent, dirNames, fileNames in os.walk(rootDir):
+        for filename in fileNames:
             path = os.path.join(parent, filename)
             ext = os.path.splitext(path)[-1]
             if ext == '.py' and filename != 'py_e2c.py':

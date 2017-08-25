@@ -88,7 +88,6 @@ class Dict:
             else:
                 print('\033[1;31m# \033[0m Explains None')
 
-            print('\033[1;31m# \033[0m')  # 空出一行
 
             if phrase != 'None':
                 for p in phrase:
