@@ -14,6 +14,7 @@ print("Total repositories:", response_dict['total_count'])
 # Explore information about the repositories.
 repo_dicts = response_dict['items']
 
+temps = []
 names, plot_dicts = [], []
 for repo_dict in repo_dicts:
     names.append(repo_dict['name'])
@@ -23,7 +24,12 @@ for repo_dict in repo_dicts:
         'label': repo_dict['description'],
         'xlink': repo_dict['html_url'],
         }
-    plot_dicts.append(plot_dict)
+    temps.append(plot_dict['xlink'])
+    plot_dicts.append(plot_dict['value'])
+
+with open('temp1.txt', 'w') as f:
+    for each in temps:
+        f.write(str(each) + '\n')
 
 # Make visualization.
 my_style = LS('#333366', base_style=LCS)
@@ -43,6 +49,6 @@ chart.title = 'Most-Starred Python Projects on GitHub'
 chart.x_labels = names
 
 chart.add('', plot_dicts)
-# chart.render_to_file('python_repos.svg')
+chart.render_to_file('python_repos.svg')
 
-print()
+# print()

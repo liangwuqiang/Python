@@ -1,0 +1,89 @@
+A curated list of awesome Python frameworks, libraries, software and resources
+策划的了不起的Python框架列表、库软件和资源
+
+Modern command line HTTP client – user-friendly curl alternative with intuitive UI, JSON support, syntax highlighting, wget-like downloads, extensions, etc.  https://httpie.org
+现代HTTP客户端 用户友好的curl命令行替代和直观的用户界面,JSON支持语法高亮,wget-like下载,https://httpie.org扩展等
+
+Magnificent app which corrects your previous console command.
+宏伟的应用程序,纠正了以前的控制台命令。
+
+A microframework based on Werkzeug, Jinja2 and good intentions
+基于Werkzeug microframework,Jinja2和善意
+
+Command-line program to download videos from YouTube.com and other video sites
+命令行程序从YouTube.com下载视频和其他视频网站
+
+The Web framework for perfectionists with deadlines.
+完美主义者的Web框架的最后期限。
+
+Python HTTP Requests for Humans™ ✨🍰✨
+Python的HTTP请求Humans™✨🍰✨
+
+A curated list of awesome Machine Learning frameworks, libraries and software.
+策划的了不起的机器学习框架列表、库和软件。
+
+Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy. Avoid writing scripts or custom code to deploy and update your applications— automate in a language that approaches plain English, using SSH, with no agents to install on remote systems.
+Ansible是一个彻底的简单自动化平台,使您的应用程序和系统更容易部署。避免编写脚本或自定义代码部署和更新您的应用程序——自动化语言,方法简明英语,使用SSH,没有代理安装在远程系统上。
+
+Scrapy, a fast high-level web crawling & scraping framework for Python.
+Scrapy,快速高层为Python web爬行和抓取框架。
+
+The Big List of Naughty Strings is a list of strings which have a high probability of causing issues when used as user-input data.
+淘气的大列表字符串的字符串列表,有很高的概率作为用户输入数据时导致问题。
+
+scikit-learn: machine learning in Python
+在Python scikit-learn:机器学习
+
+Models built with TensorFlow
+模型建立与TensorFlow
+
+None
+没有一个
+
+Certbot, previously the Let's Encrypt Client, is EFF's tool to obtain certs from Let's Encrypt, and (optionally) auto-enable HTTPS on your server.  It can also act as a client for any other CA that uses the ACME protocol.
+以前我们加密客户端,Certbot EFF的工具获得确实的事情从我们加密,和(可选)auto-enable HTTPS服务器上。它也可以作为一个客户对任何其他使用ACME协议的CA。
+
+Deep Learning library for Python. Runs on TensorFlow, Theano, or CNTK.
+深度学习Python库。运行在TensorFlow、Theano或CNTK。
+
+Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.
+学习如何设计大规模系统。系统设计面试的准备工作。包括Anki抽认卡。
+
+a web proxy tool
+一个web代理工具
+
+Apache Superset (incubating) is a modern, enterprise-ready business intelligence web application
+Apache超集(孵化)是一个现代的、企业级商业智能web应用程序
+
+The C++ Core Guidelines are a set of tried-and-true guidelines, rules, and best practices about coding in C++
+c++的核心原则是一组可靠的指南,规则,和最佳实践在c++编码
+
+A code-completion engine for Vim
+Vim的补全引擎
+
+:arrow_double_down: Dumb downloader that scrapes the web
+:arrow_double_down:愚蠢的下载器,刮伤
+
+Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed.
+龙卷风是一个Python web框架和 异步网络图书馆,最初在FriendFeed开发。
+
+the code that powers reddit.com
+权力reddit.com的代码
+
+Sentry is a cross-platform crash reporting and aggregation platform.
+哨兵是一个跨平台的事故报告和聚合平台。
+
+Deep Learning papers reading roadmap for anyone who are eager to learn this amazing tech!
+深度学习论文阅读路线图对于那些渴望了解这个神奇的科技!
+
+The Python programming language
+Python编程语言
+
+A collection of design patterns/idioms in Python
+设计模式/在Python中习语的集合
+
+Official repository for IPython itself. Other repos in the IPython organization contain things like the website, documentation builds, etc.
+官方库IPython本身。IPython中的其他回购组织包含诸如网站文档构建等。
+
+A practical guide to securing macOS.
+确保macOS实用指南。
