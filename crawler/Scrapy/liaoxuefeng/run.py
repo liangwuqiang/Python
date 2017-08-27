@@ -1,9 +1,9 @@
 # coding=utf-8
 
-import os
+from scrapy import cmdline
 
 name = 'liaoxuefeng'
 
 cmdline = 'scrapy crawl {0} -o items.json -t json'.format(name)
 
-os.cmdline.excute(cmdline)
+cmdline.execute(cmd.split())
