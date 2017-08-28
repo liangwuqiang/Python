@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+</head><body>
+
+<p><center><h1>Jupyter Notebook 快速入门（上）</h1></center></p>
+    
+    <div class="article-content">
+<blockquote>
+<p>本文作者为 <a href="https://www.packtpub.com/books/content/getting-started-jupyter-notebook-part-1">Marin Gilles</a>，他是来自法国的一位物理学博士生，用 Python 开发了自己的物理学模拟框架。本文分为两部分，是<a href="https://github.com/PythonTG/PythonTG"><strong> Python 翻译组</strong></a>成立后的第一篇译文，译者 <a href="http://codingpy.com">EarlGrey</a>。</p>
+</blockquote>
+<p>Jupyter Notebook（此前被称为 IPython notebook）是一个交互式笔记本，支持运行 40 多种编程语言。在本文中，我们将介绍 Jupyter notebook 的主要特性，以及为什么对于希望编写漂亮的交互式文档的人来说是一个强大工具。</p>
+<p>在开始使用 notebook 之前，我们先需要安装该库。你可以在<a href="https://jupyter.readthedocs.org/en/latest/install.html"> Jupyter 官网</a>上找到完整的步骤。</p>
+<blockquote>
+<p>译者注：其实只要<code>pip install jupyter</code>就可以了</p>
+</blockquote>
+<div class="codehilite"><pre>jupyter notebook
+</pre></div>
+<p>运行上面的命令之后，你将看到类似下面这样的输出：</p>
+<div class="codehilite"><pre>[I 20:06:36.367 NotebookApp] Writing notebook server cookie secret to /run/user/1000/jupyter/notebook_cookie_secret
+[I 20:06:36.813 NotebookApp] Serving notebooks from local directory: /home/your_username
+[I 20:06:36.813 NotebookApp] 0 active kernels
+[I 20:06:36.813 NotebookApp] The IPython Notebook is running at: http://localhost:8888/
+[I 20:06:36.813 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+</pre></div>
+<p>同时，会在你开启 notebook 的文件夹中启动 Jupyter 主界面，如下所示：</p>
+<p><img alt="Jupyter 主界面" src="images/c5ccdd860e2916c107ea885fa9e0cf1b.jpg"/></p>
+<p>如果想新建一个 notebook，只需要点击<code>New</code>，选择你希望启动的 notebook 类型即可。</p>
+<p><img alt="notebook 类型" src="images/23798728306ce76f1d9ffc156ed42124.jpg"/></p>
+<p>这里，因为我只有一个 Python 内核，所以我们运行一个 Python notebook。在新打开的标签页中，我们会看到 notebook 界面，目前里面什么也没有。</p>
+<p><img alt=" notebook 界面" src="images/b27a14c22a448741c016a4c15192ec77.jpg"/></p>
+<p>notebook 界面由以下部分组成：</p>
+<ol>
+<li>notebook 的名称</li>
+<li>主工具栏，提供了保存、导出、重载 notebook，以及重启内核等选项</li>
+<li>快捷键</li>
+<li>notebook 主要区域，包含了 notebook 的内容编辑区</li>
+</ol>
+<p>慢慢熟悉这些菜单和选项。如果想要详细了解有关 notebook 或一些库的具体话题，可以使用菜单栏右侧的帮助菜单。</p>
+<p>下方的主要区域，由被称为单元格的部分组成。每个 notebook 由多个单元格构成，而每个单元格又可以有不同的用途。</p>
+<p>下方截图中看到的是一个代码单元格（code cell），以<code>[ ]</code>开头。在这种类型的单元格中，可以输入任意代码并执行。例如，输入<code>1 + 2</code>并按下<code>Shift + Enter</code>。之后，单元格中的代码就会被计算，光标也会被移动动一个新的单元格中。你会得到如下结果：</p>
+<p><img alt="代码单元格" src="images/bef88706551d564ced5c90511639adc8.jpg"/></p>
+<p>根据绿色边框线，我们可以轻松地识别出当前工作的单元格。接下来，我们在第二个单元格中输入些其他代码，例如：</p>
+<div class="codehilite"><pre><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+<p>对上面的代码求值时，你会得到：</p>
+<p><img alt="jupyter 代码执行实例" src="images/fc6c7595c754c47d96cdd097f42e61a7.jpg"/></p>
+<p>和前一个示例一样，代码被计算之后，马上就会显示结果。你应该注意到了，这次没有出现类似<code>Out[2]</code>这样的文字。这是因为我们将结果打印出来了，没有返回任何的值。</p>
+<p>notebook 有一个非常有趣的特性，就是可以修改之前的单元格，对其重新计算，这样就可以更新整个文档了。试着把光标移回第一个单元格，并将<code>1 + 2</code>修改成<code>2 + 3</code>，然后按下<code>Shift + Enter</code>重新计算该单元格。你会发现结果马上就更新成了 5。如果你不想重新运行整个脚本，只想用不同的参数测试某个程式的话，这个特性显得尤其强大。不过，你也可以重新计算整个 notebook，只要点击<code>Cell</code> -&gt; <code>Run all</code>即可。</p>
+<p>现在我们已经知道了如何输入代码，为什么不尝试着让这个 notebook 更加漂亮、内容更丰富？为此，我们需要使用其他类型的单元格，即 Header单元格和 Markdown单元格。</p>
+<p>首先，我们在顶部添加一个 notebook 的标题。选中第一个单元格，然后点击<code>Insert</code> -&gt; <code>Insert单元格above</code>（在上方插入单元格）。你会发现，文档的顶部马上就出现了一个新的单元格。点击在快捷键栏中的单元格类型，将其变成一个标题单元格（heading cell）：</p>
+<p><img alt="变成一个标题 cell" src="images/4a79aa9a6988d1c58e83cb889191f726.jpg"/></p>
+<p>选中下拉选项中的 Heading。然后会出现一个弹出消息，告诉你如何创建不同层级的标题，这样你就有了一个不同类型的 cell：</p>
+<p><img alt="一个不同类型的 cell" src="images/2b9bfd2fa221dd1cb764a7e6b4ce2222.jpg"/></p>
+<p>这个单元格以<code>#</code>标记开头，意味着这是一个一级标题。如果需要子标题，可以使用以下标记表示（改变单元格类型时弹出消息中有解释）：</p>
+<div class="codehilite"><pre># : 一级标题
+## : 二级标题
+### : 三级标题
+...
+</pre></div>
+<p>在<code>#</code>之后写下文档的标题，然后计算该单元格。你会发现一个样式非常好看的标题。作为示例和练习，我还添加了其他几个标题单元格：</p>
+<p><img alt="添加了其他几个标题 cell" src="images/2ebda88f3aabf93d8a59d04850f82071.jpg"/></p>
+<p>添加好标题之后，我们在编写一些解释，介绍每个代码单元格中的情况。为此，我们要在相应的地方插入单元格，然后将其类型变成 Markdown。然后，计算新的单元格。就这样，你的解释文本就漂亮地渲染出来了！</p>
+<p><img alt="解释文本就漂亮地渲染出来了" src="images/df2be693d26b696aa73c938f6f58d6c2.jpg"/></p>
+<p>最后，你可以重命名该 notebook，点击<code>Fiel</code> -&gt; <code>Rename</code>，然后输入新的名称。这样，新的名称将会出现在窗口的左上角，在 Jupyter 的标志旁边。</p>
+<p>在下一篇中，我们将更深入地了解 notebook 的能力，以及如何继承其他 Python 库。</p>
+<hr/>
+<p><a href="https://www.packtpub.com/books/content/getting-started-jupyter-notebook-part-1">点此查看原文链接。</a></p>
+<div class="copyright-box ui segment secondary grey">
+<p>本站文章除注明转载外，均为本站原创或编译，如需转载，请联系微信公众号“编程派”获得授权。转载时，应注明来源、作者及原文链接。</p>
+</div>
+<div class="ui divider"></div>
+<div class="nearby">
+<div class="ui animated basic button teal" data-content="Python开发必备神器之一：virtualenv" data-variation="wide">
+<div class="visible content">上一篇</div>
+<a href="http://www.codingpy.com/article/virtualenv-must-have-tool-for-python-development/"><div class="hidden content">
+<i class="left arrow icon"></i>
+</div></a>
+</div>
+<div class="ui animated basic button teal" data-content="Jupyter Notebook 快速入门（下）" data-variation="wide">
+<div class="visible content">下一篇</div>
+<a href="http://www.codingpy.com/article/getting-started-with-jupyter-notebook-part-2/"><div class="hidden content">
+<i class="right arrow icon"></i>
+</div></a>
+</div>
+<div class="share-article ui button teal icon basic">
+<i class="share alternate icon"></i>
+</div>
+<div class="ui popup">
+<div class="bdsharebuttonbox bdshare-button-style1-24" data-bd-bind="1444833783821">
+<a class="item bds_qzone" data-cmd="qzone" href="#" title="分享到QQ空间"></a>
+<a class="item bds_tsina" data-cmd="tsina" href="#" title="分享到新浪微博"></a>
+<a class="item bds_tqq" data-cmd="tqq" href="#" title="分享到腾讯微博"></a>
+<a class="item bds_renren" data-cmd="renren" href="#" title="分享到人人网"></a>
+<a class="item bds_weixin" data-cmd="weixin" href="#" title="分享到微信"></a>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

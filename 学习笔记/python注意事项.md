@@ -46,3 +46,13 @@ re.DOTALL
 
 for key, value in dict.items():
 
+###
+
+hashlib.md5(data)函数中，data参数的类型应该是bytes。
+下面是正确的示例：
+data = "你好"
+m = hashlib.md5(data.encode("gb2312"))
+print(m.hexdigest())
+如果需要utf8编码下的md5&值，就该是m = hashlib.md5(data.encode("utf8"))。
+
+
