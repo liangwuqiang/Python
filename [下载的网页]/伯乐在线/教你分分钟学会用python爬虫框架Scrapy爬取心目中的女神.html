@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+            <html><head><meta charset="UTF-8">
+            </head><body>
+            <p><center><h1>教你分分钟学会用python爬虫框架Scrapy爬取心目中的女神</h1></center></p>
+                <div class="entry">
+<div class="copyright-area">原文出处： <a href="http://www.cnblogs.com/wanghzh/p/5824181.html" target="_blank">战神王恒</a>   </div><div class="para">Scrapy，Python开发的一个快速,高层次的屏幕抓取和web抓取框架，用于抓取web站点并从页面中提取结构化的数据。Scrapy用途广泛，可以用于数据挖掘、监测和<a href="http://baike.baidu.com/view/1303916.htm" target="_blank">自动化测试</a>。</div>
+<div class="para">Scrapy吸引人的地方在于它是一个框架，任何人都可以根据需求方便的修改。它也提供了多种类型爬虫的基类，如BaseSpider、sitemap爬虫等，最新版本又提供了web2.0爬虫的支持。</div>
+<div class="para">Scratch，是抓取的意思，这个Python的爬虫框架叫Scrapy，大概也是这个意思吧，就叫它：小刮刮吧。</div>
+<div class="para"></div>
+<div class="para">Scrapy 使用了 Twisted异步网络库来处理网络通讯。整体架构大致如下</div>
+<p><img alt="" src="images/02fd5279c1280a7cc91d3d5f7e0926ee.png"/>Scrapy主要包括了以下组件：</p>
+<ul>
+<li><strong>引擎(Scrapy)</strong><br/>
+<em>用来处理整个系统的数据流处理, 触发事务(框架核心)</em></li>
+<li><strong>调度器(Scheduler)</strong><br/>
+<em>用来接受引擎发过来的请求, 压入队列中, 并在引擎再次请求的时候返回. 可以想像成一个URL（抓取网页的网址或者说是链接）的优先队列, 由它来决定下一个要抓取的网址是什么, 同时去除重复的网址</em></li>
+<li><strong>下载器(Downloader)</strong><br/>
+<em>用于下载网页内容, 并将网页内容返回给蜘蛛(Scrapy下载器是建立在twisted这个高效的异步模型上的)</em></li>
+<li><strong>爬虫(Spiders)</strong><br/>
+<em>爬虫是主要干活的, 用于从特定的网页中提取自己需要的信息, 即所谓的实体(Item)。用户也可以从中提取出链接,让Scrapy继续抓取下一个页面</em></li>
+<li><strong>项目管道(Pipeline)</strong><br/>
+<em>负责处理爬虫从网页中抽取的实体，主要的功能是持久化实体、验证实体的有效性、清除不需要的信息。当页面被爬虫解析后，将被发送到项目管道，并经过几个特定的次序处理数据。</em></li>
+<li><strong>下载器中间件(Downloader Middlewares)</strong><br/>
+<em>位于Scrapy引擎和下载器之间的框架，主要是处理Scrapy引擎与下载器之间的请求及响应。</em></li>
+<li><strong>爬虫中间件(Spider Middlewares)</strong><br/>
+<em>介于Scrapy引擎和爬虫之间的框架，主要工作是处理蜘蛛的响应输入和请求输出。</em></li>
+<li><strong>调度中间件(Scheduler Middewares)</strong><br/>
+<em>介于Scrapy引擎和调度之间的中间件，从Scrapy引擎发送到调度的请求和响应。</em></li>
+</ul>
+<p>Scrapy运行流程大概如下：</p>
+<ol>
+<li>引擎从调度器中取出一个链接(URL)用于接下来的抓取</li>
+<li>引擎把URL封装成一个请求(Request)传给下载器</li>
+<li>下载器把资源下载下来，并封装成应答包(Response)</li>
+<li>爬虫解析Response</li>
+<li>解析出实体（Item）,则交给实体管道进行进一步的处理</li>
+<li>解析出的是链接（URL）,则把URL交给调度器等待抓取</li>
+</ol>
+<h3>一、安装</h3>
+<p>因为python3并不能完全支持Scrapy，因此为了完美运行Scrapy，我们使用python2.7来编写和运行Scrapy。</p>
+<div>
+<!-- Crayon Syntax Highlighter v2.7.1.1 -->
+<div class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" touchscreen minimize scroll-mouseover" id="crayon-59a5d82a092f9383994171" style=" margin-top: 12px; margin-bottom: 12px; font-size: 13px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button" title="切换是否显示行编号"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="纯文本显示代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="切换自动换行"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="点击展开代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="在新窗口中显示代码"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 13px !important; line-height: 15px !important;" wrap="soft">
+pip install Scrapy</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-59a5d82a092f9383994171-1">1</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-59a5d82a092f9383994171-1"><span class="crayon-e">pip </span><span class="crayon-e">install </span><span class="crayon-v">Scrapy</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- [Format Time: 0.0004 seconds] -->
+</div>
+<p>注：windows平台需要依赖pywin32，请根据自己系统32/64位选择下载安装，https://sourceforge.net/projects/pywin32/</p>
+<p>其它可能依赖的安装包：lxml-3.6.4-cp27-cp27m-win_amd64.whl，VCForPython27.msi百度下载即可</p>
+<h3>二、基本使用</h3>
+<p>1、创建项目</p>
+<p>运行命令:</p>
+<div>
+<!-- Crayon Syntax Highlighter v2.7.1.1 -->
+<div class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" touchscreen minimize scroll-mouseover" id="crayon-59a5d82a09304575917948" style=" margin-top: 12px; margin-bottom: 12px; font-size: 13px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button" title="切换是否显示行编号"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="纯文本显示代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="切换自动换行"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="点击展开代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="在新窗口中显示代码"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 13px !important; line-height: 15px !important;" wrap="soft">
+scrapy startproject p1（your_project_name）</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-59a5d82a09304575917948-1">1</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-59a5d82a09304575917948-1"><span class="crayon-e">scrapy </span><span class="crayon-e">startproject </span><span class="crayon-i">p1</span>（<span class="crayon-v">your_project</span><span class="crayon-sy">_</span>name）</div></div></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- [Format Time: 0.0004 seconds] -->
+</div>
+<p>2.自动创建目录的结果：</p>
+<p><img alt="" src="images/a702fbd3f7def1b605a339b650b62406.png"/></p>
+<p>文件说明：</p>
+<ul>
+<li>scrapy.cfg  项目的配置信息，主要为Scrapy命令行工具提供一个基础的配置信息。（真正爬虫相关的配置信息在settings.py文件中）</li>
+<li>items.py    设置数据存储模板，用于结构化数据，如：Django的Model</li>
+<li>pipelines    数据处理行为，如：一般结构化的数据持久化</li>
+<li>settings.py 配置文件，如：递归的层数、并发数，延迟下载等</li>
+<li>spiders      爬虫目录，如：创建文件，编写爬虫规则</li>
+</ul>
+<p>注意：一般创建爬虫文件时，以网站域名命名</p>
+<p>3、编写爬虫</p>
+<p>在spiders目录中新建 xiaohuar_spider.py 文件</p>
+<p><img alt="" src="images/5ab45240612567d3a3b230b779d51519.png"/></p>
+<p>示例代码：</p>
+<div>
+<!-- Crayon Syntax Highlighter v2.7.1.1 -->
+<div class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" touchscreen minimize scroll-mouseover" id="crayon-59a5d82a09308837475231" style=" margin-top: 12px; margin-bottom: 12px; font-size: 13px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button" title="切换是否显示行编号"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="纯文本显示代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="切换自动换行"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="点击展开代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="在新窗口中显示代码"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 13px !important; line-height: 15px !important;" wrap="soft">
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+import scrapy
+ 
+class XiaoHuarSpider(scrapy.spiders.Spider):
+    name = "xiaohuar"
+    allowed_domains = ["xiaohuar.com"]
+    start_urls = [
+        "http://www.xiaohuar.com/hua/",
+    ]
+ 
+    def parse(self, response):
+        # print(response, type(response))
+        # from scrapy.http.response.html import HtmlResponse
+        # print(response.body_as_unicode())
+ 
+        current_url = response.url #爬取时请求的url
+        body = response.body  #返回的html
+        unicode_body = response.body_as_unicode()#返回的html unicode编码</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-59a5d82a09308837475231-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09308837475231-2">2</div><div class="crayon-num" data-line="crayon-59a5d82a09308837475231-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09308837475231-4">4</div><div class="crayon-num" data-line="crayon-59a5d82a09308837475231-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09308837475231-6">6</div><div class="crayon-num" data-line="crayon-59a5d82a09308837475231-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09308837475231-8">8</div><div class="crayon-num" data-line="crayon-59a5d82a09308837475231-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09308837475231-10">10</div><div class="crayon-num" data-line="crayon-59a5d82a09308837475231-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09308837475231-12">12</div><div class="crayon-num" data-line="crayon-59a5d82a09308837475231-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09308837475231-14">14</div><div class="crayon-num" data-line="crayon-59a5d82a09308837475231-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09308837475231-16">16</div><div class="crayon-num" data-line="crayon-59a5d82a09308837475231-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09308837475231-18">18</div><div class="crayon-num" data-line="crayon-59a5d82a09308837475231-19">19</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-59a5d82a09308837475231-1"><span class="crayon-p">#!/usr/bin/env python</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09308837475231-2"><span class="crayon-p"># -*- coding:utf-8 -*-</span></div><div class="crayon-line" id="crayon-59a5d82a09308837475231-3"><span class="crayon-e">import </span><span class="crayon-e">scrapy</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09308837475231-4"><span class="crayon-e"> </span></div><div class="crayon-line" id="crayon-59a5d82a09308837475231-5"><span class="crayon-t">class</span><span class="crayon-h"> </span><span class="crayon-e">XiaoHuarSpider</span><span class="crayon-sy">(</span><span class="crayon-v">scrapy</span><span class="crayon-sy">.</span><span class="crayon-v">spiders</span><span class="crayon-sy">.</span><span class="crayon-v">Spider</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09308837475231-6"><span class="crayon-h">    </span><span class="crayon-v">name</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-s">"xiaohuar"</span></div><div class="crayon-line" id="crayon-59a5d82a09308837475231-7"><span class="crayon-h">    </span><span class="crayon-v">allowed_domains</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">[</span><span class="crayon-s">"xiaohuar.com"</span><span class="crayon-sy">]</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09308837475231-8"><span class="crayon-h">    </span><span class="crayon-v">start_urls</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">[</span></div><div class="crayon-line" id="crayon-59a5d82a09308837475231-9"><span class="crayon-h">        </span><span class="crayon-s">"http://www.xiaohuar.com/hua/"</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09308837475231-10"><span class="crayon-h">    </span><span class="crayon-sy">]</span></div><div class="crayon-line" id="crayon-59a5d82a09308837475231-11"><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09308837475231-12"><span class="crayon-h">    </span><span class="crayon-e">def </span><span class="crayon-e">parse</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">response</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line" id="crayon-59a5d82a09308837475231-13"><span class="crayon-h">        </span><span class="crayon-p"># print(response, type(response))</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09308837475231-14"><span class="crayon-h">        </span><span class="crayon-p"># from scrapy.http.response.html import HtmlResponse</span></div><div class="crayon-line" id="crayon-59a5d82a09308837475231-15"><span class="crayon-h">        </span><span class="crayon-p"># print(response.body_as_unicode())</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09308837475231-16"><span class="crayon-h"> </span></div><div class="crayon-line" id="crayon-59a5d82a09308837475231-17"><span class="crayon-h">        </span><span class="crayon-v">current_url</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">response</span><span class="crayon-sy">.</span><span class="crayon-v">url</span><span class="crayon-h"> </span><span class="crayon-p">#爬取时请求的url</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09308837475231-18"><span class="crayon-h">        </span><span class="crayon-v">body</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">response</span><span class="crayon-sy">.</span><span class="crayon-v">body</span><span class="crayon-h">  </span><span class="crayon-p">#返回的html</span></div><div class="crayon-line" id="crayon-59a5d82a09308837475231-19"><span class="crayon-h">        </span><span class="crayon-v">unicode_body</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">response</span><span class="crayon-sy">.</span><span class="crayon-e">body_as_unicode</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-p">#返回的html unicode编码</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- [Format Time: 0.0021 seconds] -->
+</div>
+<p>备注：</p>
+<ul>
+<li>1.爬虫文件需要定义一个类，并继承scrapy.spiders.Spider</li>
+<li>2.必须定义name，即爬虫名，如果没有name，会报错。因为源码中是这样定义的：</li>
+</ul>
+<p><img alt="" src="images/e221d35ea0bab157ba1e4f3451c1adf1.png"/></p>
+<ul>
+<li>3.编写函数parse，这里需要注意的是，该函数名不能改变，因为Scrapy源码中默认callback函数的函数名就是parse；</li>
+<li>4.定义需要爬取的url，放在列表中，因为可以爬取多个url，Scrapy源码是一个For循环，从上到下爬取这些url，使用生成器迭代将url发送给下载器下载url的html。源码截图：</li>
+</ul>
+<p><img alt="" src="images/225e546e32a487f29276d1ffacdb72d4.png"/></p>
+<p><img alt="" src="images/2c90b0b3108bfe0a77ac7dbda7df398f.png"/></p>
+<p><img alt="" src="images/14bfeb5ac00c83f34495e3951bde94c6.png"/></p>
+<p>4、运行</p>
+<p>进入p1目录，运行命令</p>
+<div>
+<!-- Crayon Syntax Highlighter v2.7.1.1 -->
+<div class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" touchscreen minimize scroll-mouseover" id="crayon-59a5d82a0930d596573990" style=" margin-top: 12px; margin-bottom: 12px; font-size: 13px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button" title="切换是否显示行编号"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="纯文本显示代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="切换自动换行"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="点击展开代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="在新窗口中显示代码"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 13px !important; line-height: 15px !important;" wrap="soft">
+scrapy crawl xiaohau --nolog</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-59a5d82a0930d596573990-1">1</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-59a5d82a0930d596573990-1"><span class="crayon-e">scrapy </span><span class="crayon-e">crawl </span><span class="crayon-v">xiaohau</span><span class="crayon-h"> </span><span class="crayon-o">--</span><span class="crayon-v">nolog</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- [Format Time: 0.0004 seconds] -->
+</div>
+<p>格式：scrapy crawl+爬虫名  –nolog即不显示日志</p>
+<p>5.scrapy查询语法：</p>
+<p>当我们爬取大量的网页，如果自己写正则匹配，会很麻烦，也很浪费时间，令人欣慰的是，scrapy内部支持更简单的查询语法，帮助我们去html中查询我们需要的标签和标签内容以及标签属性。下面逐一进行介绍：</p>
+<ul>
+<li>查询子子孙孙中的某个标签(以div标签为例)：//div</li>
+<li>查询儿子中的某个标签(以div标签为例)：/div</li>
+<li>查询标签中带有某个class属性的标签：//div[@class=’c1′]即子子孙孙中标签是div且class=‘c1’的标签</li>
+<li>查询标签中带有某个class=‘c1’并且自定义属性name=‘alex’的标签：//div[@class=’c1′][@name=’alex’]</li>
+<li>查询某个标签的文本内容：//div/span/text() 即查询子子孙孙中div下面的span标签中的文本内容</li>
+<li>查询某个属性的值（例如查询a标签的href属性）：//a/@href</li>
+</ul>
+<p>示例代码：</p>
+<div>
+<!-- Crayon Syntax Highlighter v2.7.1.1 -->
+<div class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" touchscreen minimize scroll-mouseover" id="crayon-59a5d82a0931e771757617" style=" margin-top: 12px; margin-bottom: 12px; font-size: 13px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button" title="切换是否显示行编号"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="纯文本显示代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="切换自动换行"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="点击展开代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="在新窗口中显示代码"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 13px !important; line-height: 15px !important;" wrap="soft">
+def parse(self, response):
+       # 分析页面
+       # 找到页面中符合规则的内容（校花图片），保存
+       # 找到所有的a标签，再访问其他a标签，一层一层的搞下去
+ 
+       hxs = HtmlXPathSelector(response)#创建查询对象
+ 
+       # 如果url是 http://www.xiaohuar.com/list-1-\d+.html
+       if re.match('http://www.xiaohuar.com/list-1-\d+.html', response.url): #如果url能够匹配到需要爬取的url，即本站url
+           items = hxs.select('//div[@class="item_list infinite_scroll"]/div') #select中填写查询目标，按scrapy查询语法书写
+           for i in range(len(items)):
+               src = hxs.select('//div[@class="item_list infinite_scroll"]/div[%d]//div[@class="img"]/a/img/@src' % i).extract()#查询所有img标签的src属性，即获取校花图片地址
+               name = hxs.select('//div[@class="item_list infinite_scroll"]/div[%d]//div[@class="img"]/span/text()' % i).extract() #获取span的文本内容，即校花姓名
+               school = hxs.select('//div[@class="item_list infinite_scroll"]/div[%d]//div[@class="img"]/div[@class="btns"]/a/text()' % i).extract() #校花学校
+               if src:
+                   ab_src = "http://www.xiaohuar.com" + src[0]#相对路径拼接
+                   file_name = "%s_%s.jpg" % (school[0].encode('utf-8'), name[0].encode('utf-8')) #文件名，因为python27默认编码格式是unicode编码，因此我们需要编码成utf-8
+                   file_path = os.path.join("/Users/wupeiqi/PycharmProjects/beauty/pic", file_name)
+                   urllib.urlretrieve(ab_src, file_path)</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-59a5d82a0931e771757617-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a0931e771757617-2">2</div><div class="crayon-num" data-line="crayon-59a5d82a0931e771757617-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a0931e771757617-4">4</div><div class="crayon-num" data-line="crayon-59a5d82a0931e771757617-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a0931e771757617-6">6</div><div class="crayon-num" data-line="crayon-59a5d82a0931e771757617-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a0931e771757617-8">8</div><div class="crayon-num" data-line="crayon-59a5d82a0931e771757617-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a0931e771757617-10">10</div><div class="crayon-num" data-line="crayon-59a5d82a0931e771757617-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a0931e771757617-12">12</div><div class="crayon-num" data-line="crayon-59a5d82a0931e771757617-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a0931e771757617-14">14</div><div class="crayon-num" data-line="crayon-59a5d82a0931e771757617-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a0931e771757617-16">16</div><div class="crayon-num" data-line="crayon-59a5d82a0931e771757617-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a0931e771757617-18">18</div><div class="crayon-num" data-line="crayon-59a5d82a0931e771757617-19">19</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-59a5d82a0931e771757617-1"><span class="crayon-e">def </span><span class="crayon-e">parse</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">response</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a0931e771757617-2"><span class="crayon-h">       </span><span class="crayon-p"># 分析页面</span></div><div class="crayon-line" id="crayon-59a5d82a0931e771757617-3"><span class="crayon-h">       </span><span class="crayon-p"># 找到页面中符合规则的内容（校花图片），保存</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a0931e771757617-4"><span class="crayon-h">       </span><span class="crayon-p"># 找到所有的a标签，再访问其他a标签，一层一层的搞下去</span></div><div class="crayon-line" id="crayon-59a5d82a0931e771757617-5"><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a0931e771757617-6"><span class="crayon-h">       </span><span class="crayon-v">hxs</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">HtmlXPathSelector</span><span class="crayon-sy">(</span><span class="crayon-v">response</span><span class="crayon-sy">)</span><span class="crayon-p">#创建查询对象</span></div><div class="crayon-line" id="crayon-59a5d82a0931e771757617-7"><span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a0931e771757617-8"><span class="crayon-h">       </span><span class="crayon-p"># 如果url是 http://www.xiaohuar.com/list-1-\d+.html</span></div><div class="crayon-line" id="crayon-59a5d82a0931e771757617-9"><span class="crayon-h">       </span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-v">re</span><span class="crayon-sy">.</span><span class="crayon-e">match</span><span class="crayon-sy">(</span><span class="crayon-s">'http://www.xiaohuar.com/list-1-\d+.html'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">response</span><span class="crayon-sy">.</span><span class="crayon-v">url</span><span class="crayon-sy">)</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-p">#如果url能够匹配到需要爬取的url，即本站url</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a0931e771757617-10"><span class="crayon-h">           </span><span class="crayon-v">items</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">hxs</span><span class="crayon-sy">.</span><span class="crayon-e">select</span><span class="crayon-sy">(</span><span class="crayon-s">'//div[@class="item_list infinite_scroll"]/div'</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-p">#select中填写查询目标，按scrapy查询语法书写</span></div><div class="crayon-line" id="crayon-59a5d82a0931e771757617-11"><span class="crayon-h">           </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-i">i</span><span class="crayon-h"> </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-e">range</span><span class="crayon-sy">(</span><span class="crayon-e">len</span><span class="crayon-sy">(</span><span class="crayon-v">items</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a0931e771757617-12"><span class="crayon-h">               </span><span class="crayon-v">src</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">hxs</span><span class="crayon-sy">.</span><span class="crayon-e">select</span><span class="crayon-sy">(</span><span class="crayon-s">'//div[@class="item_list infinite_scroll"]/div[%d]//div[@class="img"]/a/img/@src'</span><span class="crayon-h"> </span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-v">i</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">extract</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-p">#查询所有img标签的src属性，即获取校花图片地址</span></div><div class="crayon-line" id="crayon-59a5d82a0931e771757617-13"><span class="crayon-h">               </span><span class="crayon-v">name</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">hxs</span><span class="crayon-sy">.</span><span class="crayon-e">select</span><span class="crayon-sy">(</span><span class="crayon-s">'//div[@class="item_list infinite_scroll"]/div[%d]//div[@class="img"]/span/text()'</span><span class="crayon-h"> </span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-v">i</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">extract</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-p">#获取span的文本内容，即校花姓名</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a0931e771757617-14"><span class="crayon-h">               </span><span class="crayon-v">school</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">hxs</span><span class="crayon-sy">.</span><span class="crayon-e">select</span><span class="crayon-sy">(</span><span class="crayon-s">'//div[@class="item_list infinite_scroll"]/div[%d]//div[@class="img"]/div[@class="btns"]/a/text()'</span><span class="crayon-h"> </span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-v">i</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">extract</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-p">#校花学校</span></div><div class="crayon-line" id="crayon-59a5d82a0931e771757617-15"><span class="crayon-h">               </span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-v">src</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a0931e771757617-16"><span class="crayon-h">                   </span><span class="crayon-v">ab_src</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-s">"http://www.xiaohuar.com"</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-v">src</span><span class="crayon-sy">[</span><span class="crayon-cn">0</span><span class="crayon-sy">]</span><span class="crayon-p">#相对路径拼接</span></div><div class="crayon-line" id="crayon-59a5d82a0931e771757617-17"><span class="crayon-h">                   </span><span class="crayon-v">file_name</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-s">"%s_%s.jpg"</span><span class="crayon-h"> </span><span class="crayon-o">%</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-v">school</span><span class="crayon-sy">[</span><span class="crayon-cn">0</span><span class="crayon-sy">]</span><span class="crayon-sy">.</span><span class="crayon-e">encode</span><span class="crayon-sy">(</span><span class="crayon-s">'utf-8'</span><span class="crayon-sy">)</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">name</span><span class="crayon-sy">[</span><span class="crayon-cn">0</span><span class="crayon-sy">]</span><span class="crayon-sy">.</span><span class="crayon-e">encode</span><span class="crayon-sy">(</span><span class="crayon-s">'utf-8'</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-p">#文件名，因为python27默认编码格式是unicode编码，因此我们需要编码成utf-8</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a0931e771757617-18"><span class="crayon-h">                   </span><span class="crayon-v">file_path</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">os</span><span class="crayon-sy">.</span><span class="crayon-v">path</span><span class="crayon-sy">.</span><span class="crayon-e">join</span><span class="crayon-sy">(</span><span class="crayon-s">"/Users/wupeiqi/PycharmProjects/beauty/pic"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">file_name</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-59a5d82a0931e771757617-19"><span class="crayon-h">                   </span><span class="crayon-v">urllib</span><span class="crayon-sy">.</span><span class="crayon-e">urlretrieve</span><span class="crayon-sy">(</span><span class="crayon-v">ab_src</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">file_path</span><span class="crayon-sy">)</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- [Format Time: 0.0045 seconds] -->
+</div>
+<p>注：urllib.urlretrieve(ab_src, file_path) ，接收文件路径和需要保存的路径，会自动去文件路径下载并保存到我们指定的本地路径。</p>
+<p>5.递归爬取网页</p>
+<p>上述代码仅仅实现了一个url的爬取，如果该url的爬取的内容中包含了其他url，而我们也想对其进行爬取，那么如何实现递归爬取网页呢？</p>
+<p>示例代码：</p>
+<div>
+<!-- Crayon Syntax Highlighter v2.7.1.1 -->
+<div class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" touchscreen minimize scroll-mouseover" id="crayon-59a5d82a09324411475939" style=" margin-top: 12px; margin-bottom: 12px; font-size: 13px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button" title="切换是否显示行编号"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="纯文本显示代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="切换自动换行"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="点击展开代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="在新窗口中显示代码"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 13px !important; line-height: 15px !important;" wrap="soft">
+ # 获取所有的url，继续访问，并在其中寻找相同的url
+        all_urls = hxs.select('//a/@href').extract()
+        for url in all_urls:
+            if url.startswith('http://www.xiaohuar.com/list-1-'):
+                yield Request(url, callback=self.parse)</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-59a5d82a09324411475939-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09324411475939-2">2</div><div class="crayon-num" data-line="crayon-59a5d82a09324411475939-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09324411475939-4">4</div><div class="crayon-num" data-line="crayon-59a5d82a09324411475939-5">5</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-59a5d82a09324411475939-1"><span class="crayon-h"> </span><span class="crayon-p"># 获取所有的url，继续访问，并在其中寻找相同的url</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09324411475939-2"><span class="crayon-h">        </span><span class="crayon-v">all_urls</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">hxs</span><span class="crayon-sy">.</span><span class="crayon-e">select</span><span class="crayon-sy">(</span><span class="crayon-s">'//a/@href'</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">extract</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-59a5d82a09324411475939-3"><span class="crayon-h">        </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-e">url </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-v">all_urls</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09324411475939-4"><span class="crayon-h">            </span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-v">url</span><span class="crayon-sy">.</span><span class="crayon-e">startswith</span><span class="crayon-sy">(</span><span class="crayon-s">'http://www.xiaohuar.com/list-1-'</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line" id="crayon-59a5d82a09324411475939-5"><span class="crayon-h">                </span><span class="crayon-e">yield </span><span class="crayon-e">Request</span><span class="crayon-sy">(</span><span class="crayon-v">url</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">callback</span><span class="crayon-o">=</span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">parse</span><span class="crayon-sy">)</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- [Format Time: 0.0012 seconds] -->
+</div>
+<p>即通过yield生成器向每一个url发送request请求，并执行返回函数parse，从而递归获取校花图片和校花姓名学校等信息。</p>
+<p>注：可以修改settings.py 中的配置文件，以此来指定“递归”的层数，如： DEPTH_LIMIT = 1</p>
+<p>6.scrapy查询语法中的正则：</p>
+<div>
+<!-- Crayon Syntax Highlighter v2.7.1.1 -->
+<div class="crayon-syntax crayon-theme-github crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" touchscreen minimize scroll-mouseover" id="crayon-59a5d82a09328075449942" style=" margin-top: 12px; margin-bottom: 12px; font-size: 13px !important; line-height: 15px !important;">
+<div class="crayon-toolbar" data-settings=" show" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><span class="crayon-title"></span>
+<div class="crayon-tools" style="font-size: 13px !important;height: 19.5px !important; line-height: 19.5px !important;"><div class="crayon-button crayon-nums-button" title="切换是否显示行编号"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="纯文本显示代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="切换自动换行"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="点击展开代码"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="在新窗口中显示代码"><div class="crayon-button-icon"></div></div></div></div>
+<div class="crayon-info" style="min-height: 18.2px !important; line-height: 18.2px !important;"></div>
+<div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 13px !important; line-height: 15px !important;" wrap="soft">
+from scrapy.selector import Selector
+from scrapy.http import HtmlResponse
+html = """&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head lang="en"&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;li class="item-"&gt;&lt;a href="link.html"&gt;first item&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="item-0"&gt;&lt;a href="link1.html"&gt;first item&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="item-1"&gt;&lt;a href="link2.html"&gt;second item&lt;/a&gt;&lt;/li&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"""
+response = HtmlResponse(url='http://example.com', body=html,encoding='utf-8')
+ret = Selector(response=response).xpath('//li[re:test(@class, "item-\d*")]//@href').extract()
+print(ret)</textarea></div>
+<div class="crayon-main" style="">
+<table class="crayon-table">
+<tr class="crayon-row">
+<td class="crayon-nums " data-settings="show">
+<div class="crayon-nums-content" style="font-size: 13px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-59a5d82a09328075449942-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09328075449942-2">2</div><div class="crayon-num" data-line="crayon-59a5d82a09328075449942-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09328075449942-4">4</div><div class="crayon-num" data-line="crayon-59a5d82a09328075449942-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09328075449942-6">6</div><div class="crayon-num" data-line="crayon-59a5d82a09328075449942-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09328075449942-8">8</div><div class="crayon-num" data-line="crayon-59a5d82a09328075449942-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09328075449942-10">10</div><div class="crayon-num" data-line="crayon-59a5d82a09328075449942-11">11</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09328075449942-12">12</div><div class="crayon-num" data-line="crayon-59a5d82a09328075449942-13">13</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09328075449942-14">14</div><div class="crayon-num" data-line="crayon-59a5d82a09328075449942-15">15</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09328075449942-16">16</div><div class="crayon-num" data-line="crayon-59a5d82a09328075449942-17">17</div><div class="crayon-num crayon-striped-num" data-line="crayon-59a5d82a09328075449942-18">18</div></div>
+</td>
+<td class="crayon-code"><div class="crayon-pre" style="font-size: 13px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-59a5d82a09328075449942-1"><span class="crayon-e">from </span><span class="crayon-v">scrapy</span><span class="crayon-sy">.</span><span class="crayon-e">selector </span><span class="crayon-e">import </span><span class="crayon-e">Selector</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09328075449942-2"><span class="crayon-e">from </span><span class="crayon-v">scrapy</span><span class="crayon-sy">.</span><span class="crayon-e">http </span><span class="crayon-e">import </span><span class="crayon-e">HtmlResponse</span></div><div class="crayon-line" id="crayon-59a5d82a09328075449942-3"><span class="crayon-v">html</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-s">""</span><span class="crayon-s">"&lt;!DOCTYPE html&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09328075449942-4"><span class="crayon-s">&lt;html&gt;</span></div><div class="crayon-line" id="crayon-59a5d82a09328075449942-5"><span class="crayon-s">&lt;head lang="</span><span class="crayon-i">en</span><span class="crayon-s">"&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09328075449942-6"><span class="crayon-s">    &lt;meta charset="</span><span class="crayon-v">UTF</span><span class="crayon-o">-</span><span class="crayon-cn">8</span><span class="crayon-s">"&gt;</span></div><div class="crayon-line" id="crayon-59a5d82a09328075449942-7"><span class="crayon-s">    &lt;title&gt;&lt;/title&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09328075449942-8"><span class="crayon-s">&lt;/head&gt;</span></div><div class="crayon-line" id="crayon-59a5d82a09328075449942-9"><span class="crayon-s">&lt;body&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09328075449942-10"><span class="crayon-s">    &lt;li class="</span><span class="crayon-v">item</span><span class="crayon-o">-</span><span class="crayon-s">"&gt;&lt;a href="</span><span class="crayon-v">link</span><span class="crayon-sy">.</span><span class="crayon-i">html</span><span class="crayon-s">"&gt;first item&lt;/a&gt;&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-59a5d82a09328075449942-11"><span class="crayon-s">    &lt;li class="</span><span class="crayon-v">item</span><span class="crayon-o">-</span><span class="crayon-cn">0</span><span class="crayon-s">"&gt;&lt;a href="</span><span class="crayon-v">link1</span><span class="crayon-sy">.</span><span class="crayon-i">html</span><span class="crayon-s">"&gt;first item&lt;/a&gt;&lt;/li&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09328075449942-12"><span class="crayon-s">    &lt;li class="</span><span class="crayon-v">item</span><span class="crayon-o">-</span><span class="crayon-cn">1</span><span class="crayon-s">"&gt;&lt;a href="</span><span class="crayon-v">link2</span><span class="crayon-sy">.</span><span class="crayon-i">html</span><span class="crayon-s">"&gt;second item&lt;/a&gt;&lt;/li&gt;</span></div><div class="crayon-line" id="crayon-59a5d82a09328075449942-13"><span class="crayon-s">&lt;/body&gt;</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09328075449942-14"><span class="crayon-s">&lt;/html&gt;</span></div><div class="crayon-line" id="crayon-59a5d82a09328075449942-15"><span class="crayon-s">"</span><span class="crayon-s">""</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09328075449942-16"><span class="crayon-v">response</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">HtmlResponse</span><span class="crayon-sy">(</span><span class="crayon-v">url</span><span class="crayon-o">=</span><span class="crayon-s">'http://example.com'</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">body</span><span class="crayon-o">=</span><span class="crayon-v">html</span><span class="crayon-sy">,</span><span class="crayon-v">encoding</span><span class="crayon-o">=</span><span class="crayon-s">'utf-8'</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-59a5d82a09328075449942-17"><span class="crayon-v">ret</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">Selector</span><span class="crayon-sy">(</span><span class="crayon-v">response</span><span class="crayon-o">=</span><span class="crayon-v">response</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">xpath</span><span class="crayon-sy">(</span><span class="crayon-s">'//li[re:test(@class, "item-\d*")]//@href'</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">extract</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="crayon-59a5d82a09328075449942-18"><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-v">ret</span><span class="crayon-sy">)</span></div></div></td>
+</tr>
+</table>
+</div>
+</div>
+<!-- [Format Time: 0.0022 seconds] -->
+</div></div>
+            </body></html>
