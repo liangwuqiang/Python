@@ -54,10 +54,14 @@ class WebPageDownload:
         for imageUrl in re_image.findall(content):
             if not os.path.exists('images'):
                 os.mkdir('images')
+            # if 'http' not in imageUrl:         # 有空再修改
+            #     imageUrl = self.url.split('/')
+            #     pass
             filename = 'images/' + self.md5(imageUrl) + os.path.splitext(imageUrl)[-1]
             try:
                 request.urlretrieve(imageUrl, filename)
             except Exception as e:
+                print(imageUrl)
                 print('图片出错', e)
             else:
                 content = content.replace(imageUrl, filename)
@@ -94,18 +98,31 @@ def main():
     # """ IBM """
     # url = r"https://www.ibm.com/developerworks/cn/opensource/os-cn-python-yield/"
     # title_key = '.ibm-h1'
-    # content_key = ".ibm-col-6-4"
+    # content_key = '.ibm-col-6-4'
     # """ 伯乐在线 (测试通过)"""
-    # url = r"http://python.jobbole.com/86405/"
+    # url = r"http://python.jobbole.com/87527/?repeat=w3tc"
     # title_key = '.entry-header'
-    # content_key = ".entry"
+    # content_key = '.entry'
     # """ CSDN博客 (测试通过)"""
-    # url = r"http://blog.csdn.net/pleasecallmewhy/article/details/24021695"
+    # url = r"http://blog.csdn.net/tina_ttl/article/details/51031113"
     # title_key = '.article_title'
-    # content_key = ".article_content"
-
-    """ 其它 """
-
+    # content_key = '.article_content'
+    # """ 知乎 (效果不好,编程逐条拼接吧)"""
+    # url = r"https://www.zhihu.com/question/37490497"
+    # title_key = '.QuestionHeader-title'
+    # content_key = '.Question-mainColumn'
+    # """ 豆瓣 (测试通过)"""
+    # url = r"https://www.douban.com/review/7890354/"
+    # title_key = 'span[property="v:summary"]'
+    # content_key = '.main-bd'
+    """ ZAKER (出错403)"""
+    url = r"http://www.myzaker.com/article/58212d117f780b6d7f004766/"
+    title_key = '.article_header'
+    content_key = '.article_content'
+    # """ 其它 (图片下载出问题)"""
+    # url = r"http://liuchengxu.org/pelican-blog/jupyter-notebook-tips.html"
+    # title_key = '.page-header'
+    # content_key = '.entry-content'
     """ =============================================== """
     download = WebPageDownload(url, title_key, content_key)
     download.run()

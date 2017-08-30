@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+            <html><head><meta charset="UTF-8">
+            </head><body>
+            <p><a href="https://www.douban.com/review/7890354/">原文链接</a></p>
+            <p><center><h1>一些微小的关于使用Jupyter Notebook的经验</h1></center></p>
+                <div class="main-bd">
+<div id="link-report">
+<div class="review-content clearfix" data-author="子珂" data-original="0" data-url="https://www.douban.com/review/7890354/" property="v:description">
+<p>我的硕士论文，是用Jupyter Notebook做的 (<a href="https://github.com/cqcn1991/Wind-Speed-Analysis" rel="nofollow" target="_blank">https://github.com/cqcn1991/Wind-Speed-Analysis</a>)
+写一些自己用Jupyter Notebook的一些经验，或者说是我希望早就知道的东西
+
+1. 一些插件
+① 侧边栏目录导航</p><div class="image-container image-float-center image-badge-gif"><div class="image-wrapper"><img data-original-url="https://img3.doubanio.com/view/thing_review/raw/public/p153460.jpg" data-render-type="gif" src="images/3ad14183f22c36ef8ed1bccf3e10aa4b.jpg" width=""/></div></div><p>当文章内容非常长的时候，前后找内容，很麻烦，不如加一个sidebar，方便导航
+地址：<a href="https://github.com/ipython-contrib/IPython-notebook-extensions/tree/master/nbextensions/usability/toc2" rel="nofollow" target="_blank">https://github.com/ipython-contrib/IPython-notebook-extensions/tree/master/nbextensions/usability/toc2</a>
+
+② 隐藏代码按钮
+有时候，希望代码可以隐藏，这样子文档看起来，就会干净一些</p><div class="image-container image-float-center"><div class="image-wrapper"><img src="images/900265737f7ee62f68e1d77133aa2e75.jpg" width=""/></div></div><p>点击按钮，就可以隐藏所有的代码，具体做法：
+<a href="http://stackoverflow.com/questions/27934885/how-to-hide-code-from-cells-in-ipython-notebook-visualized-with-nbviewer" rel="nofollow" target="_blank">http://stackoverflow.com/questions/27934885/how-to-hide-code-from-cells-in-ipython-notebook-visualized-with-nbviewer</a>
+
+当然，还有更多的extention可见<a href="https://github.com/ipython-contrib/IPython-notebook-extensions/" rel="nofollow" target="_blank">https://github.com/ipython-contrib/IPython-notebook-extensions/</a>
+
+2. 文件的组织
+还是上面那张图，</p><div class="image-container image-float-center"><div class="image-wrapper"><img src="images/12f056a018c6f6904c84f3841c4a04da.jpg" width=""/></div></div><p>①因为import很多，所以干脆就整理了出去（<a href="https://github.com/cqcn1991/Wind-Speed-Analysis/blob/master/import_file.py" rel="nofollow" target="_blank">https://github.com/cqcn1991/Wind-Speed-Analysis/blob/master/import_file.py</a>），这样notebook里面看起来比较清爽
+②注意设置autoreload, 这样子外部文件改了，里面也会跟着改。
+
+其实相应的，Python缺一个类似Ruby里的gemfile和bundler,不知道有没有类似的程序可以管理库。
+
+3. 运行完自动保存
+我的notebook其实就是一个小的计算软件。根据不同的输入文件，算出分析结果。
+这样一个问题，就是每次运行完，需要手动保存HTML，还是挺麻烦的，于是就设置了一下，运行到最后的cell时，就会自动导出成HTML
+见<a href="http://stackoverflow.com/questions/37657547/how-to-save-jupyter-notebook-to-html-by-code/38331227" rel="nofollow" target="_blank">http://stackoverflow.com/questions/37657547/how-to-save-jupyter-notebook-to-html-by-code/38331227</a>
+
+4. 别再用fig.add_subplot(1,2,2)了
+notebook里面，图很多。有的时候，想要节约空间，于是就想，把图放成一排。但是这样就要
+fig.add_subplot(1,2,1)了，平白无故多了好几行代码，挺麻烦。其实可以不用这样做的，</p><div class="image-container image-float-center"><div class="image-wrapper"><img src="images/61900f11e86385c9509b981ca1815fa5.jpg" width=""/></div></div><p>参见
+<a href="http://stackoverflow.com/questions/38318166/jupyter-notebook-output-image-in-previous-line/38320547" rel="nofollow" target="_blank">http://stackoverflow.com/questions/38318166/jupyter-notebook-output-image-in-previous-line/38320547</a></p>
+</div>
+<script id="template-report-popup" type="text/html">
+  <div id='report_value'>
+    <ul>
+      <li>
+      <label>
+          <input type='radio' name='reason' value='0'
+          checked
+          /> 广告或垃圾信息
+      </label>
+      </li>
+      <li>
+      <label>
+          <input type='radio' name='reason' value='1'
+          /> 色情、淫秽或低俗内容
+      </label>
+      </li>
+      <li>
+      <label>
+          <input type='radio' name='reason' value='2'
+          /> 激进时政或意识形态话题
+      </label>
+      </li>
+      <li>
+      <label>
+          <input type='radio' name='reason' value='other' /> 其他原因
+      </label>
+      </li>
+    </ul>
+  </div>
+  <div class='bn-flat'>
+      <input type='submit' class='btn-report' value='举报'>
+  </div>
+  </script>
+</div>
+<div class="main-author">
+</div>
+</div>
+            </body></html>

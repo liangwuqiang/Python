@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+            <html><head><meta charset="UTF-8">
+            </head><body>
+            <p><a href="http://blog.csdn.net/tina_ttl/article/details/51031113">原文链接</a></p>
+            <p><center><h1>Python·Jupyter Notebook各种使用方法记录·持续更新</h1></center></p>
+                <div class="article_content tracking-ad" data-dsm="post" data-mod="popu_307" id="article_content">
+<div class="markdown_views"><h1 id="pythonjupyter-notebook各种使用方法记录持续更新">Python·Jupyter Notebook各种使用方法记录·持续更新</h1>
+<p>标签（空格分隔）： Python</p>
+<hr/>
+<p><div class="toc">
+<ul>
+<li><a href="#pythonjupyter-notebook各种使用方法记录持续更新">PythonJupyter Notebook各种使用方法记录持续更新</a></li>
+<li><a href="#一-jupyter-notebook的安装">一 Jupyter NoteBook的安装</a><ul>
+<li><a href="#11-新版本anaconda自带jupyter">1 新版本Anaconda自带Jupyter</a></li>
+<li><a href="#12-老版本anacodna需自己安装jupyter">2 老版本Anacodna需自己安装Jupyter</a></li>
+</ul>
+</li>
+<li><a href="#二-更改jupyter-notebook的工作空间">二 更改Jupyter notebook的工作空间</a><ul>
+<li><a href="#21-jupyter的工作空间在哪里指定">1 Jupyter的工作空间在哪里指定</a></li>
+<li><a href="#22-如何找到该配置文件">2 如何找到该配置文件</a></li>
+</ul>
+</li>
+<li><a href="#三jupyter的各种快捷键">三Jupyter的各种快捷键</a></li>
+<li><a href="#四jupyter-notebook如何导入代码">四Jupyter Notebook如何导入代码</a><ul>
+<li><a href="#41-将本地的py文件load到jupyter的一个cell中">1 将本地的py文件load到jupyter的一个cell中</a></li>
+<li><a href="#42-从网络load代码到jupyter">2 从网络load代码到jupyter</a></li>
+</ul>
+</li>
+<li><a href="#五jupyter运行python文件">五Jupyter运行python文件</a></li>
+<li><a href="#六jupyter一些其他琐碎用法">六Jupyter一些其他琐碎用法</a><ul>
+<li><a href="#61-jupyter的cell可以作为unix-command使用">1 jupyter的cell可以作为unix command使用</a></li>
+<li><a href="#62-magic-functions">2 Magic functions</a></li>
+<li><a href="#63-获取current-working-directory">3 获取current working directory</a></li>
+<li><a href="#64-使用matplotlib绘图">4 使用Matplotlib绘图</a></li>
+</ul>
+</li>
+<li><a href="#七jupyter中的markdown">七Jupyter中的Markdown</a><ul>
+<li><a href="#71-在jupyter中设置link需要设置两部分">1 在jupyter中设置link需要设置两部分</a></li>
+<li><a href="#72-为jupyter-notebook添加目录功能">2 为Jupyter Notebook添加目录功能</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</p>
+<hr/>
+<blockquote>
+<p>Jupyter notebook )前身为IPython Notebook，学习时，可以找两者的教程</p>
+<ul>
+<li><a href="http://jupyter.readthedocs.io/en/latest/">Jupyter Project Documentation</a></li>
+<li><a href="http://jupyter-notebook.readthedocs.io/en/latest/">Jupyter Notebook Documentation</a></li>
+<li><a href="http://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/index.html">Jupyter/IPython Notebook Quick Start Guide</a></li>
+<li><a href="http://ipython.org/notebook.html">Old IPython Notebook Homepage</a></li>
+</ul>
+</blockquote>
+<hr/>
+<h1 id="一-jupyter-notebook的安装">一、 Jupyter NoteBook的安装</h1>
+<h2 id="11-新版本anaconda自带jupyter">1.1 新版本Anaconda自带Jupyter</h2>
+<ul>
+<li>目前，最新版本的Anaconda是自带Jupyter NoteBook的，不需要再单独安装 <br/>
+<img alt="image_1b4e5l3s6r5i18ok1rnd195i1u549.png-31.6kB" src="images/bba8efc2d62051044027caea86023c0b.png" title=""/></li>
+</ul>
+<h2 id="12-老版本anacodna需自己安装jupyter">1.2 老版本Anacodna需自己安装Jupyter</h2>
+<blockquote>
+<p><a href="http://jupyter.readthedocs.io/en/latest/install.html">Jupyter Notebook安装的官方网站</a></p>
+</blockquote>
+<ul>
+<li><p>安装Jupyter Notebook的<strong>先决条件</strong>：已经安装了python（python 2.7 或者是python3.3）</p></li>
+<li><p>具体的安装方法：</p>
+<ul><li>官方建议利用Anaconda安装Jupyter</li>
+<li>安装完成Anaconda后，如果该Anaconda并不自带Jupyter Noterbook，那么，打开cmd，输入：<code>conda install jupyter</code></li></ul></li>
+<li><p><strong>这样安装完的jupyter不具有New a terminal的功能</strong> <br/>
+经过各种查询才知道，原来是因为windows不具有terminal需要的TTY，所以，windows下的jupyter是不支持Terminal模式的，而且短期内也没有增加这种支持的计划</p></li>
+</ul>
+<p><img alt="这里写图片描述" src="images/16c597cc29f7010cae15fc533a207592" title=""/></p>
+<h1 id="二-更改jupyter-notebook的工作空间">二、 更改Jupyter notebook的工作空间</h1>
+<h2 id="21-jupyter的工作空间在哪里指定">2.1 Jupyter的工作空间在哪里指定？</h2>
+<p>在其配置文件ipython_notebook_config.py中，有如下一句</p>
+<pre class="prettyprint"><code class=" hljs fsharp"># The directory <span class="hljs-keyword">to</span> <span class="hljs-keyword">use</span> <span class="hljs-keyword">for</span> notebooks <span class="hljs-keyword">and</span> kernels.
+# c.NotebookApp.notebook_dir = u''
+</code></pre>
+<p>该句就是用来指定其工作空间的，例如，默认的工作空间是：用户名文件夹，例如，现在想要将工作空间变为D:\Jupyter，那么，需要做如下更改(要记得删掉注释#)</p>
+<pre class="prettyprint"><code class=" hljs python"><span class="hljs-comment"># The directory to use for notebooks and kernels.</span>
+c.NotebookApp.notebook_dir = <span class="hljs-string">u'D:\Jupyter'</span>
+</code></pre>
+<p>注意：路径最后一级后面不要加符号“\”</p>
+<h2 id="22-如何找到该配置文件">2.2 如何找到该配置文件？</h2>
+<ul>
+<li>在cmd中输入<code>jupyter notebook --generate-config</code></li>
+<li>如果该配置文件已经存在，那么，会出现如下信息,从中可以见到配置文件存在的位置，注意，此时，输入N，不要overwrite <br/>
+<img alt="image_1b4e641ot340t3g1asfdv81972m.png-16.9kB" src="images/916d5749c567542093e82ec074a667fc.png" title=""/></li>
+<li>如果该配置文件不存在，那么，将会初始化产生一个配置文件</li>
+</ul>
+<p>在cmd中输入：<code>ipython profile create</code> <br/>
+可以找到关于jupyter的配置文件的位置</p>
+<h1 id="三jupyter的各种快捷键">三、Jupyter的各种快捷键</h1>
+<ul>
+<li><p>执行当前cell，并自动跳到下一个cell：<code>Shift Enter</code></p></li>
+<li><p>执行当前cell，执行后不自动调转到下一个cell：<code>Ctrl-Enter</code></p></li>
+<li><p>是当前的cell进入编辑模式：<code>Enter</code></p></li>
+<li><p>退出当前cell的编辑模式：<code>Esc</code></p></li>
+<li><p>删除当前的cell：双D</p></li>
+<li><p>为当前的cell加入line number：单L</p></li>
+<li><p>将当前的cell转化为具有一级标题的maskdown：单1</p></li>
+<li><p>将当前的cell转化为具有二级标题的maskdown：单2</p></li>
+<li><p>将当前的cell转化为具有三级标题的maskdown：单3</p></li>
+<li><p>为一行或者多行添加/取消注释：<code>Crtl /</code></p></li>
+<li><p>撤销对某个cell的删除：<code>z</code></p></li>
+<li><p>浏览器的各个Tab之间切换：<code>Crtl PgUp</code>和<code>Crtl PgDn</code></p></li>
+<li><p>快速跳转到首个cell：<code>Crtl Home</code></p></li>
+<li><p>快速跳转到最后一个cell：<code>Crtl End</code></p></li>
+</ul>
+<h1 id="四jupyter-notebook如何导入代码">四、Jupyter Notebook如何导入代码</h1>
+<blockquote>
+<p>即导入代码到jupyter notebook的cell中</p>
+</blockquote>
+<h2 id="41-将本地的py文件load到jupyter的一个cell中">4.1 将本地的.py文件load到jupyter的一个cell中</h2>
+<p><strong>问题背景</strong>：有一个test.py文件，需要将其载入到jupyter的一个cell中 <br/>
+test.py内容如下：</p>
+<pre class="prettyprint"><code class=" hljs java"><span class="hljs-keyword">import</span> caffe
+SolverName = <span class="hljs-string">"/root/workspace"</span>
+sovler = caffe.AdamSolver(SolverName)</code></pre>
+<p><strong>方法步骤</strong>： <br/>
+（1）在需要导入该段代码的cell中输入</p>
+<pre class="prettyprint"><code class=" hljs haml"><span class="hljs-tag">%<span class="hljs-title">load</span></span> test.py #test.py是当前路径下的一个python文件</code></pre>
+<p><img alt="这里写图片描述" src="images/a7f0ee128fe86966a1ea21b97c0fffbe" title=""/></p>
+<p>（2）运行该cell <br/>
+利用快捷键“Shift+Enter”，可以看到如下结果： <br/>
+<img alt="这里写图片描述" src="images/5af44562d5f8faa03fc78d11c8af99b4" title=""/></p>
+<p>（3）可以看到，运行后，<code>%load test.py</code>被自动加入了注释符号#，test.py中的所有代码都被load到了当前的cell中</p>
+<h2 id="42-从网络load代码到jupyter">4.2 从网络load代码到jupyter</h2>
+<ul>
+<li><p>在cell中输入<code>%load http://.....</code>，然后运行该cell，就会将load后面所对应地址的代码load到当前的cell中；</p></li>
+<li><p>下面给出一个例子，导入<a href="http://matplotlib.org/">matplotlib</a>中的一个小例子<a href="http://matplotlib.org/examples/color/color_cycle_demo.html">color example code</a></p>
+<ul><li><p>首先，在想要导入该段代码的cell中输入</p>
+<pre class="prettyprint"><code class=" hljs haml"><span class="hljs-tag">%<span class="hljs-title">load</span></span> test.py #test.py是当前路径下的一个python文件</code></pre></li>
+<li><p>然后，Shift+Enter运行，可以看到如下结果： <br/>
+<img alt="利用load导入python文件" src="images/fce5412901f397d53a334353ce5bd12a" title=""/> <br/>
+可以看到，运行后，<code>%load test.py</code>被自动加入了注释符号#，test.py中的所有代码都被load到了当前的cell中</p></li></ul></li>
+</ul>
+<h1 id="五jupyter运行python文件">五、Jupyter运行python文件</h1>
+<ul>
+<li>利用jupyter的cell是可以运行python文件的，即在cell中运行如下代码：</li>
+</ul>
+<pre class="prettyprint"><code class=" hljs haml"><span class="hljs-tag">%<span class="hljs-title">run</span></span> file.py</code></pre>
+<p>file.py为要运行的python程序，结果会显示在该cell中 <br/>
+<img alt="这里写图片描述" src="images/3d9ae2af0158be4cd5f043664274432a" title=""/> <br/>
+<img alt="这里写图片描述" src="images/fb50624ba74dc8fa5074eb5894da8ec3" title=""/></p>
+<h1 id="六jupyter一些其他琐碎用法">六、Jupyter一些其他琐碎用法</h1>
+<h2 id="61-jupyter的cell可以作为unix-command使用">6.1 jupyter的cell可以作为unix command使用</h2>
+<p>具体方法为：在unitx command前面加入一个感叹号“！”</p>
+<blockquote>
+<p>例子： <br/>
+  查看python版本：<code>!python --version</code> <br/>
+  运行python文件：<code>!python myfile.py</code> </p>
+</blockquote>
+<h2 id="62-magic-functions">6.2 Magic functions</h2>
+<p>还没有太明白，具体细节见<a href="http://nbviewer.jupyter.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb#The-cell-magics-in-IPython">The cell magics in IPython</a></p>
+<h2 id="63-获取current-working-directory">6.3 获取current working directory</h2>
+<p>即当前运行的代码所在的路径 <br/>
+具体方法：<code>current_path = %pwd</code> <br/>
+这样得到的current_path就是当前工作路径的字符转</p>
+<h2 id="64-使用matplotlib绘图">6.4 使用Matplotlib绘图</h2>
+<p>在Jupyter Notebook中，如果使用Matplotlib绘图，有时是弹不出图像框的，此时，可以在开头加入</p>
+<pre class="prettyprint"><code class=" hljs haml"><span class="hljs-tag">%<span class="hljs-title">matplotlib</span></span> inline</code></pre>
+<h1 id="七jupyter中的markdown">七、Jupyter中的Markdown</h1>
+<blockquote>
+<p><a href="http://sebastianraschka.com/Articles/2014_ipython_internal_links.html">参考1</a> <br/>
+<a href="http://blog.leanote.com/post/freewalk/Markdown-%E8%AF%AD%E6%B3%95%E6%89%8B%E5%86%8C">Markdown 语法手册 （完整整理版）参考</a></p>
+</blockquote>
+<h2 id="71-在jupyter中设置link需要设置两部分">7.1 在jupyter中设置link，需要设置两部分：</h2>
+<ul>
+<li><p>要跳到的位置(the destination) <br/>
+需要在要跳转到的位置添加下面语句:</p>
+<pre class="prettyprint"><code class=" hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">'the_destination'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span></code></pre>
+<p>这里的id取值任意赋值，下面在添加链接时要用</p></li>
+<li><p>需要添加链接的文字（an internal hyperlink to the destination），即点击该处可以跳转到the destination，在需要添加链接的文字后面加入：</p>
+<pre class="prettyprint"><code class=" hljs markdown">[<span class="hljs-link_label">需要添加连接的文字</span>](<span class="hljs-link_url">#the_destination</span>)</code></pre></li>
+<li><p>下面是一个例子： <br/>
+源码： <br/>
+<img alt="这里写图片描述" src="images/f44f137b20e8f4a604fc636532b7182b" title=""/> <br/>
+效果图： <br/>
+<img alt="这里写图片描述" src="images/378e1c8020b31dfbe2af4760ef94b470" title=""/></p></li>
+</ul>
+<h2 id="72-为jupyter-notebook添加目录功能">7.2 为Jupyter Notebook添加目录功能</h2>
+<ul>
+<li>原始的Jupyter是不支持markdown添加目录功能的</li>
+<li>实际上，可以利用<a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions">Jupyter notebook extensions</a>去使得这种功能实现</li>
+<li>具体方法： <br/>
+<ul><li>利用Anaconda安装Jupyter Notebook extensions <br/>
+<code>conda install -c conda-forge jupyter_contrib_nbextensions</code> <br/>
+<img alt="image_1b4e9lcot1eo9ing1kk19l3t2713.png-71.7kB" src="images/03f500a1d1dc3d3f80d018ff163621c4.png" title=""/></li>
+<li>打开Jupyter Notebook，在它的（新增的）Nbextensions标签下勾选“Table of Contents(2)” <br/>
+<img alt="image_1b4ea0o2i1jofnhlu1avj53jl9.png-105.3kB" src="images/10c5d3c7fc428440204fe801e8b29fe2.png" title=""/></li>
+<li>打开一个.jpynb文件，发现，目录功能可用了！ <br/>
+<img alt="image_1b4ea6tov2ld1pckpnlujf4g513.png-101kB" src="images/63df51430110a602ffe75ad08733bc3b.png" title=""/></li></ul></li>
+</ul>
+<hr/>
+<blockquote>
+<p>参考文献 <br/>
+  [1] <a href="https://zhuanlan.zhihu.com/p/24029578?refer=learnMLb/jupyter_contrib_nbextensions">为Jupyter Notebook添加目录</a></p>
+</blockquote>
+<hr/></div>
+<script type="text/javascript">
+            $(function () {
+                $('pre.prettyprint code').each(function () {
+                    var lines = $(this).text().split('\n').length;
+                    var $numbering = $('<ul/>').addClass('pre-numbering').hide();
+                    $(this).addClass('has-numbering').parent().append($numbering);
+                    for (i = 1; i <= lines; i++) {
+                        $numbering.append($('<li/>').text(i));
+                    };
+                    $numbering.fadeIn(1700);
+                });
+            });
+        </script>
+</div>
+            </body></html>
